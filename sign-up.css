@@ -1,0 +1,403 @@
+/* =================================
+   PLACEWICK — GLOBAL STYLES
+================================= */
+
+:root {
+    --primary: #3155F5;
+    --primary-dark: #243FC2;
+
+    --text: #101A43;
+    --text-light: #667085;
+
+    --background: #FFFFFF;
+    --card-background: #F8F9FC;
+
+    --border: #E5E7EB;
+
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =================================
+   SIGN UP PAGE
+================================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =================================
+   MAIN SIGN UP CONTAINER
+================================= */
+
+.sign-up-container {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 45px 55px 40px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.10);
+
+    border-radius: 30px;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.sign-up-top {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+
+/* =================================
+   SIGN UP HEADER
+================================= */
+
+.sign-up-header {
+    text-align: center;
+}
+
+
+.sign-up-header h1 {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.8px;
+}
+
+
+.sign-up-header p {
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   QUESTION
+================================= */
+
+.question {
+    text-align: center;
+
+    margin-top: 38px;
+    margin-bottom: 22px;
+}
+
+
+.question h3 {
+    margin-bottom: 4px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+
+.question p {
+    font-size: 13px;
+
+    color: var(--text-light);
+}
+
+
+/* =================================
+   ACCOUNT CARDS
+================================= */
+
+.card-section {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+.account-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 330px;
+    min-height: 220px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.account-card:hover {
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(49, 85, 245, 0.08);
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.account-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    background-color: #EEF2FF;
+
+    border-radius: 12px;
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+
+/* =================================
+   CARD CONTENT
+================================= */
+
+.card-content h2 {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+
+.card-content p {
+    max-width: 240px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+}
+
+
+/* =================================
+   ARROW
+================================= */
+
+.card-arrow {
+    position: absolute;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    background-color: #F4F6FF;
+
+    border-radius: 50%;
+
+    transition: all 0.2s ease;
+}
+
+
+.account-card:hover .card-arrow {
+    background-color: var(--primary);
+
+    color: #FFFFFF;
+
+    transform: translateX(3px);
+}
+
+
+/* =================================
+   LOGIN TEXT
+================================= */
+
+.login-text {
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+
+.login-text p {
+    font-size: 13px;
+
+    color: var(--text-light);
+}
+
+
+.login-text a {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+.login-text a:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .signup-page {
+        padding: 25px 15px;
+    }
+
+
+    .sign-up-container {
+        padding: 35px 20px 30px;
+
+        border-radius: 22px;
+    }
+
+
+    .sign-up-header h1 {
+        font-size: 25px;
+    }
+
+
+    .card-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .account-card {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 400px) {
+
+    .sign-up-container {
+        padding: 30px 16px;
+    }
+
+
+    .sign-up-header h1 {
+        font-size: 22px;
+    }
+
+
+    .question h3 {
+        font-size: 16px;
+    }
+
+
+    .account-card {
+        min-height: 200px;
+
+        padding: 22px;
+    }
+
+}
