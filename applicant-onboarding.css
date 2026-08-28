@@ -1,0 +1,500 @@
+/* =================================
+   PLACEWICK — GLOBAL STYLES
+================================= */
+
+:root {
+
+    --primary: #3155F5;
+
+    --primary-dark: #243FC2;
+
+    --text: #101A43;
+
+    --text-light: #667085;
+
+    --background: #FFFFFF;
+
+    --card-background: #F8F9FC;
+
+    --border: #E5E7EB;
+
+    --radius-md: 12px;
+
+    --radius-lg: 20px;
+
+}
+
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+
+}
+
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+
+/* =================================
+   ONBOARDING PAGE
+================================= */
+
+.applicant-onboarding {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+}
+
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.applicant-onboarding-container {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    padding: 45px 55px 40px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.10);
+
+    border-radius: 30px;
+
+}
+
+
+
+/* =================================
+   LOGO
+================================= */
+
+.applicant-onboarding-top {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+
+/* =================================
+   ONBOARDING PROGRESS
+================================= */
+
+.onboarding-flow {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.circle {
+
+    width: 12px;
+
+    height: 12px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(20, 30, 80, 0.15);
+
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+
+}
+
+
+
+.circle.active {
+
+    background-color: var(--primary);
+
+    border-color: var(--primary);
+
+}
+
+
+
+.line {
+
+    width: 35px;
+
+    height: 1px;
+
+    flex-shrink: 1;
+
+    background-color: rgba(20, 30, 80, 0.12);
+
+}
+
+
+
+/* =================================
+   HEADER
+================================= */
+
+.applicant-onboarding-header {
+
+    text-align: center;
+
+}
+
+
+
+.applicant-onboarding-header h1 {
+
+    margin-bottom: 8px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.8px;
+
+}
+
+
+
+.applicant-onboarding-header p {
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+}
+
+
+
+/* =================================
+   ACCOUNT CARDS
+================================= */
+
+.applicant-card-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+}
+
+
+
+.account-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 330px;
+
+    min-height: 220px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+
+.account-card:hover {
+
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(49, 85, 245, 0.08);
+
+}
+
+
+
+/* =================================
+   ICON
+================================= */
+
+.account-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    background-color: #EEF2FF;
+
+    border-radius: 12px;
+
+    color: var(--primary);
+
+    font-size: 21px;
+
+}
+
+
+
+/* =================================
+   CARD CONTENT
+================================= */
+
+.card-content h2 {
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+}
+
+
+
+.card-content p {
+
+    max-width: 240px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+
+}
+
+
+
+/* =================================
+   ARROW
+================================= */
+
+.card-arrow {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    background-color: #F4F6FF;
+
+    border-radius: 50%;
+
+    transition: all 0.2s ease;
+
+}
+
+
+
+.account-card:hover .card-arrow {
+
+    background-color: var(--primary);
+
+    color: #FFFFFF;
+
+    transform: translateX(3px);
+
+}
+
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .applicant-onboarding {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .applicant-onboarding-container {
+
+        padding: 35px 20px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .applicant-card-section {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .account-card {
+
+        max-width: 100%;
+
+    }
+
+
+    .applicant-onboarding-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .onboarding-flow {
+
+        gap: 10px;
+
+    }
+
+
+    .line {
+
+        width: 25px;
+
+    }
+
+}
