@@ -498,3 +498,426 @@ select {
     }
 
 }
+
+
+
+
+
+
+/* =================================
+   UNDERGRADUATE EDUCATION
+================================= */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #101A43;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    color: #101A43;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #3155F5;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.1);
+}
+
+.entry-graduation{
+    display: flex;
+    gap: 30px;
+}
+
+.onboarding-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    color: #667085;
+    background-color: transparent;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.back-button:hover {
+    color: #101A43;
+    border-color: #CBD0D9;
+    background-color: #FFFFFF;
+}
+
+.continue-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    color: #FFFFFF;
+    background-color: #6C4CF6;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.continue-button:hover {
+    background-color: #5B3EE0;
+}
+
+
+
+
+/* =================================
+   UNDERGRADUATE OPPORTUNITIES
+================================= */
+
+.undergrad-cards {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+
+/* =================================
+   OPPORTUNITY CARD
+================================= */
+
+.oppurtunity-card {
+    position: relative;
+
+    width: 150px;
+    min-height: 140px;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    font-family: "Manrope", sans-serif;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+/* =================================
+   HOVER
+================================= */
+
+.oppurtunity-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(49, 85, 245, 0.30);
+
+    box-shadow:
+        0 12px 28px rgba(16, 26, 67, 0.08);
+
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.oppurtunity-card .icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 21px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.oppurtunity-card:hover .icon {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =================================
+   TEXT
+================================= */
+
+.oppurtunity-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    text-align: center;
+
+}
+
+
+/* =================================
+   CHECK MARK
+================================= */
+
+.oppurtunity-card .check {
+
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+
+    color: #FFFFFF;
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* =================================
+   BRAND-ALIGNED SELECTED STATE
+================================= */
+
+.oppurtunity-card.selected {
+
+    border: 2px solid var(--primary);
+
+    background-color: #F5F7FF;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(49, 85, 245, 0.12);
+
+}
+
+
+.oppurtunity-card.selected .check {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+.oppurtunity-card.selected .icon {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =================================
+   ICON COLOURS
+   Warm accents
+================================= */
+
+
+/* Internships — Orange */
+
+.oppurtunity-card:nth-child(1) .icon {
+
+    background-color: #FFF0E6;
+
+    color: #E87532;
+
+}
+
+
+/* SIWES — Green */
+
+.oppurtunity-card:nth-child(2) .icon {
+
+    background-color: #EAF7F0;
+
+    color: #2E9B68;
+
+}
+
+
+/* Part-time — Golden */
+
+.oppurtunity-card:nth-child(3) .icon {
+
+    background-color: #FFF6D9;
+
+    color: #D99A00;
+
+}
+
+
+/* Volunteer — Coral */
+
+.oppurtunity-card:nth-child(4) .icon {
+
+    background-color: #FFE9EC;
+
+    color: #E85D75;
+
+}
+
+
+/* Early Career — Purple */
+
+.oppurtunity-card:nth-child(5) .icon {
+
+    background-color: #EEE9FF;
+
+    color: #7657D9;
+
+}
+
+
+/* Other — Soft Blue */
+
+.oppurtunity-card:nth-child(6) .icon {
+
+    background-color: #E8F4FF;
+
+    color: #3986C9;
+
+}
+
+
+/* =================================
+   FOCUS
+================================= */
+
+.oppurtunity-card:focus-visible {
+
+    outline: 3px solid rgba(49, 85, 245, 0.20);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .undergrad-cards {
+
+        gap: 14px;
+
+    }
+
+
+    .oppurtunity-card {
+
+        width: calc(50% - 7px);
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .oppurtunity-card {
+
+        width: 100%;
+
+    }
+
+}

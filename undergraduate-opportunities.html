@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Applicant Onboarding | Placewick</title>
+
+    <meta
+        name="description"
+        content="Tell Placewick where you are in your academic and career journey."
+    >
+
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="applicant-onboarding.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="applicant-onboarding">
+
+    <div class="applicant-onboarding-container">
+
+
+        <!-- ================================
+             LOGO
+        ================================= -->
+
+        <section class="applicant-onboarding-top">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
+
+            </a>
+
+        </section>
+
+
+
+        <!-- ================================
+             ONBOARDING PROGRESS
+        ================================= -->
+
+        <section class="onboarding-flow">
+
+            <div class="circle active"></div>
+
+            <div class="line"></div>
+
+            <div class="circle active"></div>
+
+            <div class="line"></div>
+
+            <div class="circle active"></div>
+
+            <div class="line"></div>
+
+            <div class="circle"></div>
+
+            <div class="line"></div>
+
+            <div class="circle"></div>
+
+        </section>
+
+
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <section class="applicant-onboarding-header">
+
+            <h1>
+                What are you looking for?
+            </h1>
+
+            <p>
+                Pick everything that fits you.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================================
+             OPPORTUNITY CARDS
+        ================================= -->
+
+        <section class="undergrad-cards">
+
+
+            <!-- Internships -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="internships"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+                <p>Internships</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- SIWES -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="siwes"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                </div>
+
+                <p>SIWES</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- Part-time -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="part-time"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <p>Part-time</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- Volunteer -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="volunteer"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                </div>
+
+                <p>Volunteer</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- Early Career -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="early-career"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <p>Early Career</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- Other -->
+
+            <button
+                type="button"
+                class="oppurtunity-card"
+                data-option="other"
+                aria-pressed="false"
+            >
+
+                <div class="icon">
+
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+
+                <p>Other</p>
+
+                <span class="check">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+            </button>
+
+            
+
+
+        </section>
+
+<div class="onboarding-buttons">
+
+    <a href="undergraduate-education.html" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back
+    </a>
+
+    <a href="undergraduate-skills.html" class="continue-button">
+    Continue
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+</div>
+    </div>
+
+</main>
+
+
+
+
+
+<!-- JavaScript -->
+
+<script>
+
+    const opportunityCards =
+        document.querySelectorAll(".oppurtunity-card");
+
+
+    opportunityCards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            card.classList.toggle("selected");
+
+
+            const isSelected =
+                card.classList.contains("selected");
+
+
+            card.setAttribute(
+                "aria-pressed",
+                isSelected
+            );
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
