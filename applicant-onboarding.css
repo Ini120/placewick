@@ -1801,3 +1801,69 @@ select {
     }
 
 }
+
+/* =================================
+   PROGRESS FLOW — TABLET
+================================= */
+
+@media (max-width: 700px) {
+
+    .onboarding-flow {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .circle {
+        width: 11px;
+        height: 11px;
+    }
+
+    .line {
+        width: 28px;
+    }
+
+}
+
+
+/* =================================
+   PROGRESS FLOW — MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+    .onboarding-flow {
+        gap: 8px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+    }
+
+    .line {
+        width: 22px;
+    }
+
+}
+
+
+/* =================================
+   PROGRESS FLOW — SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+    .onboarding-flow {
+        gap: 6px;
+    }
+
+    .circle {
+        width: 9px;
+        height: 9px;
+    }
+
+    .line {
+        width: 16px;
+    }
+
+}
