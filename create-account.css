@@ -1,0 +1,620 @@
+/* =================================
+   PLACEWICK — CREATE ACCOUNT APPLICANT
+================================= */
+
+:root {
+
+    --primary: #3155F5;
+
+    --primary-dark: #243FC2;
+
+    --purple: #6C4CF6;
+
+    --purple-dark: #5B3EE0;
+
+    --text: #101A43;
+
+    --text-light: #667085;
+
+    --background: #F8F9FC;
+
+    --card-background: #FFFFFF;
+
+    --border: #E5E7EB;
+
+}
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+input {
+
+    font: inherit;
+
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.signup-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.signup-container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 45px 55px 40px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.08);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 50px rgba(20, 30, 80, 0.06);
+
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.signup-top {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.signup-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.signup-header h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    color: var(--text);
+
+}
+
+
+.signup-header p {
+
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+
+    color: var(--text-light);
+
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.signup-form {
+
+    width: 100%;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+
+/* =================================
+   INPUT WRAPPER
+================================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.input-wrapper > i {
+
+    position: absolute;
+
+    left: 15px;
+
+    color: #98A2B3;
+
+    font-size: 15px;
+
+    pointer-events: none;
+
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    padding: 13px 45px 13px 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #98A2B3;
+
+}
+
+
+.input-wrapper input:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.10);
+
+}
+
+
+/* =================================
+   PASSWORD TOGGLE
+================================= */
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #98A2B3;
+
+    cursor: pointer;
+
+}
+
+
+.password-toggle:hover {
+
+    color: var(--text);
+
+}
+
+
+/* =================================
+   TERMS
+================================= */
+
+.terms {
+
+    margin-top: 5px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.terms label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    font-size: 12px;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+}
+
+
+.terms input {
+
+    width: 16px;
+
+    height: 16px;
+
+    margin-top: 2px;
+
+    accent-color: var(--purple);
+
+    flex-shrink: 0;
+
+}
+
+
+.terms a {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+.terms a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =================================
+   CREATE BUTTON
+================================= */
+
+.create-button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background-color: var(--purple);
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.create-button:hover {
+
+    background-color: var(--purple-dark);
+
+}
+
+
+.create-button i {
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   DIVIDER
+================================= */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+
+.divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: var(--border);
+
+}
+
+
+.divider p {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #98A2B3;
+
+}
+
+
+/* =================================
+   GOOGLE BUTTON
+================================= */
+
+.google-button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #D0D5DD;
+
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.google-button:hover {
+
+    background-color: #F9FAFB;
+
+    border-color: #B8BEC8;
+
+}
+
+
+.google-icon {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #4285F4;
+
+}
+
+
+/* =================================
+   LOGIN
+================================= */
+
+.login-text {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+
+}
+
+
+.login-text a {
+
+    margin-left: 4px;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+}
+
+
+.login-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .signup-page {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .signup-container {
+
+        padding: 35px 22px 30px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .signup-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .signup-header p {
+
+        font-size: 13px;
+
+    }
+
+}

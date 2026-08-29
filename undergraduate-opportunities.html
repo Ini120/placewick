@@ -10,11 +10,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Applicant Onboarding | Placewick</title>
+    <title>Opportunities | Placewick</title>
 
     <meta
         name="description"
-        content="Tell Placewick where you are in your academic and career journey."
+        content="Tell Placewick what kind of opportunities you are looking for."
     >
 
 
@@ -57,10 +57,11 @@
 
 <main class="applicant-onboarding">
 
+
     <div class="applicant-onboarding-container">
 
 
-        <!-- ================================
+        <!-- =================================
              LOGO
         ================================= -->
 
@@ -82,27 +83,55 @@
 
 
 
-        <!-- ================================
+        <!-- =================================
              ONBOARDING PROGRESS
         ================================= -->
 
         <section class="onboarding-flow">
 
-            <div class="circle active"></div>
-
-            <div class="line"></div>
+            <!-- Stage 1 -->
 
             <div class="circle active"></div>
 
             <div class="line"></div>
 
+
+            <!-- Stage 2 -->
+
             <div class="circle active"></div>
 
             <div class="line"></div>
+
+
+            <!-- Stage 3 -->
+
+            <div class="circle active"></div>
+
+            <div class="line"></div>
+
+
+            <!-- Stage 4 — Current -->
+
+            <div class="circle active"></div>
+
+            <div class="line"></div>
+
+
+            <!-- Stage 5 -->
 
             <div class="circle"></div>
 
             <div class="line"></div>
+
+
+            <!-- Stage 6 -->
+
+            <div class="circle"></div>
+
+            <div class="line"></div>
+
+
+            <!-- Stage 7 -->
 
             <div class="circle"></div>
 
@@ -110,26 +139,27 @@
 
 
 
-        <!-- ================================
+        <!-- =================================
              HEADER
         ================================= -->
 
         <section class="applicant-onboarding-header">
 
             <h1>
-                What are you looking for?
+                What opportunities are you looking for?
             </h1>
 
             <p>
-                Pick everything that fits you.
+                Select all the opportunities you'd like
+                Placewick to help you discover.
             </p>
 
         </section>
 
 
 
-        <!-- ================================
-             OPPORTUNITY CARDS
+        <!-- =================================
+             OPPORTUNITIES
         ================================= -->
 
         <section class="undergrad-cards">
@@ -137,10 +167,10 @@
 
             <!-- Internships -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="internships"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
@@ -150,7 +180,9 @@
 
                 </div>
 
-                <p>Internships</p>
+                <p>
+                    Internships
+                </p>
 
                 <span class="check">
 
@@ -158,26 +190,28 @@
 
                 </span>
 
-            </button>
+            </div>
 
 
 
             <!-- SIWES -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="siwes"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
                 <div class="icon">
 
-                    <i class="fa-solid fa-user-gear"></i>
+                    <i class="fa-solid fa-building-columns"></i>
 
                 </div>
 
-                <p>SIWES</p>
+                <p>
+                    SIWES
+                </p>
 
                 <span class="check">
 
@@ -185,26 +219,28 @@
 
                 </span>
 
-            </button>
+            </div>
 
 
 
             <!-- Part-time -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="part-time"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
                 <div class="icon">
 
-                    <i class="fa-solid fa-clock"></i>
+                    <i class="fa-regular fa-clock"></i>
 
                 </div>
 
-                <p>Part-time</p>
+                <p>
+                    Part-time
+                </p>
 
                 <span class="check">
 
@@ -212,26 +248,28 @@
 
                 </span>
 
-            </button>
+            </div>
 
 
 
             <!-- Volunteer -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="volunteer"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
                 <div class="icon">
 
-                    <i class="fa-solid fa-handshake"></i>
+                    <i class="fa-solid fa-hand-holding-heart"></i>
 
                 </div>
 
-                <p>Volunteer</p>
+                <p>
+                    Volunteer
+                </p>
 
                 <span class="check">
 
@@ -239,16 +277,16 @@
 
                 </span>
 
-            </button>
+            </div>
 
 
 
             <!-- Early Career -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="early-career"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
@@ -258,7 +296,9 @@
 
                 </div>
 
-                <p>Early Career</p>
+                <p>
+                    Early Career
+                </p>
 
                 <span class="check">
 
@@ -266,16 +306,16 @@
 
                 </span>
 
-            </button>
+            </div>
 
 
 
             <!-- Other -->
 
-            <button
-                type="button"
-                class="oppurtunity-card"
-                data-option="other"
+            <div
+                class="opportunity-card"
+                tabindex="0"
+                role="button"
                 aria-pressed="false"
             >
 
@@ -285,7 +325,9 @@
 
                 </div>
 
-                <p>Other</p>
+                <p>
+                    Other
+                </p>
 
                 <span class="check">
 
@@ -293,57 +335,108 @@
 
                 </span>
 
-            </button>
-
-            
+            </div>
 
 
         </section>
 
-<div class="onboarding-buttons">
 
-    <a href="undergraduate-education.html" class="back-button">
-        <i class="fa-solid fa-arrow-left"></i>
-        Back
-    </a>
 
-    <a href="undergraduate-skills.html" class="continue-button">
-    Continue
-    <i class="fa-solid fa-arrow-right"></i>
-</a>
+        <!-- =================================
+             NAVIGATION
+        ================================= -->
 
-</div>
+        <div class="onboarding-buttons">
+
+
+            <a
+                href="undergraduate-education.html"
+                class="back-button"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back
+
+            </a>
+
+
+
+            <a
+                href="undergraduate-skills.html"
+                class="continue-button"
+            >
+
+                Continue
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+
     </div>
 
 </main>
 
 
 
-
-
-<!-- JavaScript -->
+<!-- =================================
+     JAVASCRIPT
+================================= -->
 
 <script>
 
     const opportunityCards =
-        document.querySelectorAll(".oppurtunity-card");
+        document.querySelectorAll(".opportunity-card");
 
 
     opportunityCards.forEach(card => {
+
 
         card.addEventListener("click", () => {
 
             card.classList.toggle("selected");
 
 
-            const isSelected =
+            const selected =
                 card.classList.contains("selected");
 
 
             card.setAttribute(
                 "aria-pressed",
-                isSelected
+                selected
             );
+
+        });
+
+
+
+        card.addEventListener("keydown", (event) => {
+
+
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
+
+                event.preventDefault();
+
+                card.classList.toggle("selected");
+
+
+                const selected =
+                    card.classList.contains("selected");
+
+
+                card.setAttribute(
+                    "aria-pressed",
+                    selected
+                );
+
+            }
 
         });
 

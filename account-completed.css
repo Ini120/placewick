@@ -1,0 +1,380 @@
+/* =================================
+   PLACEWICK — ACCOUNT CREATED
+================================= */
+
+:root {
+
+    --primary: #3155F5;
+
+    --primary-dark: #243FC2;
+
+    --purple: #6C4CF6;
+
+    --purple-dark: #5B3EE0;
+
+    --text: #101A43;
+
+    --text-light: #667085;
+
+    --background: #F8F9FC;
+
+    --card-background: #FFFFFF;
+
+    --border: #E5E7EB;
+
+    --success: #12B76A;
+
+}
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.account-created-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.account-created-container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 50px 55px 45px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.08);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 50px rgba(20, 30, 80, 0.06);
+
+    text-align: center;
+
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.account-created-top {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+/* =================================
+   SUCCESS ICON
+================================= */
+
+.success-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #ECFDF3;
+
+    color: var(--success);
+
+    font-size: 30px;
+
+    box-shadow:
+        0 0 0 8px #F4FBF7;
+
+}
+
+
+.success-icon i {
+
+    font-size: 30px;
+
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.account-created-content h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    color: var(--text);
+
+}
+
+
+.main-text {
+
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =================================
+   ONBOARDING MESSAGE
+================================= */
+
+.onboarding-message {
+
+    margin-top: 30px;
+
+    padding: 22px;
+
+    background-color: #F8F9FC;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+.onboarding-message h2 {
+
+    margin-bottom: 7px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+}
+
+
+.onboarding-message p {
+
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =================================
+   CONTINUE BUTTON
+================================= */
+
+.continue-button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: var(--purple);
+
+    color: #FFFFFF;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.continue-button:hover {
+
+    background-color: var(--purple-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+.continue-button i {
+
+    font-size: 13px;
+
+}
+
+
+/* =================================
+   SMALL MESSAGE
+================================= */
+
+.time-message {
+
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    color: #98A2B3;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .account-created-page {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .account-created-container {
+
+        padding: 40px 22px 35px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .account-created-top {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .account-created-content h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .success-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+}
