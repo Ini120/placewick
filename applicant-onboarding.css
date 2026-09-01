@@ -1274,17 +1274,18 @@ select {
 ================================= */
 
 .onboarding-flow {
-
+    
     display: flex;
-
+    
     justify-content: center;
-
+    
     align-items: center;
 
     gap: 20px;
+    width: 100%;
 
+    
     margin-bottom: 30px;
-
 }
 
 
@@ -1294,7 +1295,7 @@ select {
 
     height: 12px;
 
-    flex-shrink: 0;
+    flex: 0 0 12px;
 
     border: 1px solid rgba(20, 30, 80, 0.15);
 
@@ -1302,9 +1303,7 @@ select {
 
     background-color: #FFFFFF;
 
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease;
+
 
 }
 
@@ -1318,17 +1317,20 @@ select {
 }
 
 
+
 .line {
 
     width: 35px;
 
     height: 1px;
 
-    flex-shrink: 0;
+    flex: 0 1 35px;
+
 
     background-color: rgba(20, 30, 80, 0.12);
 
 }
+
 
 
 /* =================================
@@ -1809,17 +1811,22 @@ select {
 @media (max-width: 700px) {
 
     .onboarding-flow {
+    
         gap: 12px;
-        width: 100%;
+    
     }
 
+
+
     .circle {
-        width: 11px;
-        height: 11px;
+        width: 10px;
+        height: 10px;
+        flex-basis: 10px;
     }
 
     .line {
-        width: 28px;
+        width: 25px;
+        flex-basis: 25px;
     }
 
 }
@@ -1832,16 +1839,18 @@ select {
 @media (max-width: 500px) {
 
     .onboarding-flow {
-        gap: 8px;
+        gap: 7px;
     }
 
     .circle {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
+        flex-basis: 8px;
     }
 
     .line {
-        width: 22px;
+        width: 18px;
+        flex-basis: 18px;
     }
 
 }
@@ -1854,16 +1863,18 @@ select {
 @media (max-width: 380px) {
 
     .onboarding-flow {
-        gap: 6px;
+        gap: 5px;
     }
 
     .circle {
-        width: 9px;
-        height: 9px;
+        width: 7px;
+        height: 7px;
+        flex-basis: 7px;
     }
 
     .line {
-        width: 16px;
+        width: 13px;
+        flex-basis: 13px;
     }
 
 }
