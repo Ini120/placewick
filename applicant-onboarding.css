@@ -1723,14 +1723,34 @@ select {
 
     .onboarding-flow {
 
-        gap: 10px;
+        gap: 8px;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+
+    .progress-step {
+
+        min-width: 0;
+        flex: 1 1 0;
+        gap: 6px;
+
+    }
+
+
+    .progress-step span {
+
+        font-size: 8px;
+        line-height: 1.1;
 
     }
 
 
     .line {
 
-        width: 25px;
+        width: 18px;
+        flex-shrink: 1;
 
     }
 
@@ -1790,6 +1810,27 @@ select {
 
 @media (max-width: 380px) {
 
+    .onboarding-flow {
+
+        gap: 5px;
+
+    }
+
+
+    .progress-step span {
+
+        font-size: 7px;
+
+    }
+
+
+    .line {
+
+        width: 12px;
+
+    }
+
+
     .opportunity-card {
 
         width: 100%;
@@ -1798,87 +1839,7 @@ select {
 
 }
 
-/* =================================
-   PROGRESS FLOW — TABLET
-================================= */
 
-@media (max-width: 700px) {
-
-    .onboarding-flow {
-    
-        gap: 12px;
-    
-    }
-
-
-
-    .circle {
-        width: 10px;
-        height: 10px;
-        flex-basis: 10px;
-    }
-
-    .line {
-        width: 25px;
-        flex-basis: 25px;
-    }
-
-}
-
-
-/* =================================
-   PROGRESS FLOW — MOBILE
-================================= */
-
-@media (max-width: 600px) {
-
-    .onboarding-flow {
-        gap: 4px;
-    }
-
-    .progress-step {
-        min-width: 38px;
-    }
-
-    .progress-step span {
-        font-size: 7px;
-    }
-
-    .circle {
-        width: 9px;
-        height: 9px;
-    }
-
-    .line {
-        width: 14px;
-        margin-top: 4px;
-    }
-
-}
-
-
-/* =================================
-   PROGRESS FLOW — SMALL MOBILE
-================================= */
-
-@media (max-width: 380px) {
-
-    .onboarding-flow {
-        gap: 5px;
-    }
-
-    .circle {
-        width: 7px;
-        height: 7px;
-        flex-basis: 7px;
-    }
-
-    .line {
-        width: 13px;
-        flex-basis: 13px;
-    }
-
-}
 
 
 
