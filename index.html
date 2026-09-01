@@ -49,10 +49,10 @@
         </a>
 
         <!-- Navigation -->
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Main navigation">
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     For Students
                     <span class="arrow">⌄</span>
                 </button>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     For Companies
                     <span class="arrow">⌄</span>
                 </button>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     Resources
                     <span class="arrow">⌄</span>
                 </button>
@@ -100,8 +100,63 @@
             <a href="sign-up.html" class="signup-button">Sign up</a>
         </div>
 
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </div>
 </header>
+
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
   
 <section class="hero-section">
 

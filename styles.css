@@ -78,6 +78,7 @@ button {
 }
 
 .header-container {
+    position: relative;
     width: 100%;
     max-width: 1400px;
     height: 100%;
@@ -117,6 +118,28 @@ button {
 
     margin-left: auto;
     margin-right: 70px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 8px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--text);
 }
 
 .nav-item {
@@ -2148,15 +2171,72 @@ button {
         width: 115px;
     }
 
-
-    /*
-       Hide desktop navigation on mobile.
-       You can replace this later with a
-       hamburger menu.
-    */
+    .mobile-menu-toggle {
+        display: flex;
+        margin-left: 8px;
+    }
 
     .nav-links {
+        position: absolute;
+        top: 64px;
+        left: 20px;
+        right: 20px;
         display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 0;
+        padding: 16px;
+        background: #fff;
+        border: 1px solid #eeeeee;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(16, 26, 67, 0.08);
+        z-index: 30;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-item,
+    .nav-link {
+        width: 100%;
+    }
+
+    .nav-link {
+        justify-content: space-between;
+        padding: 10px 2px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        transform: translateY(-8px);
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        transition: max-height 0.25s ease, opacity 0.2s ease, transform 0.2s ease, margin-top 0.2s ease, visibility 0.2s ease;
+    }
+
+    .dropdown.open .dropdown-menu,
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 220px;
+        transform: translateY(0);
+        margin-top: 8px;
+    }
+
+    .dropdown.open .arrow {
+        transform: rotate(180deg);
     }
 
     .header-actions {

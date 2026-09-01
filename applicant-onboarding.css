@@ -225,6 +225,25 @@ button {
 }
 
 
+.onboarding-stage {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    margin-bottom: 12px;
+
+    color:#5B3EE0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+}
+
+
 /* =================================
    LOGO
 ================================= */
