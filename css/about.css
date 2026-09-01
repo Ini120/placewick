@@ -1,0 +1,794 @@
+/* =================================
+   PLACEWICK — ABOUT PAGE
+================================= */
+
+
+/* =================================
+   HERO
+================================= */
+
+.about-hero {
+    padding: 90px 0 110px;
+    background: linear-gradient(
+        135deg,
+        #F8F9FC 0%,
+        #FFFFFF 55%,
+        #F3F1FF 100%
+    );
+    overflow: hidden;
+}
+
+.about-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-hero-text {
+    max-width: 650px;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.about-hero h1 {
+    margin: 0 0 24px;
+    color: var(--text);
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+}
+
+.about-hero h1 span,
+.about-hero h2 span,
+.section-heading h2 span,
+.why-content h2 span,
+.founder-content h2 span,
+.about-cta h2 span {
+    color: var(--primary);
+}
+
+.about-hero-text > p {
+    max-width: 590px;
+    margin-bottom: 32px;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons,
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* =================================
+   HERO VISUAL
+================================= */
+
+.about-hero-visual {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 390px;
+    padding: 25px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 25px 70px rgba(49, 85, 245, 0.12);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #EEF1FF;
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.hero-card span {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.hero-card h3 {
+    margin: 5px 0;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.hero-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.verified {
+    margin-left: auto;
+    color: #3155F5 !important;
+    font-size: 20px !important;
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 15px 45px rgba(16, 26, 67, 0.1);
+}
+
+.floating-card strong,
+.floating-card span {
+    display: block;
+}
+
+.floating-card strong {
+    margin-bottom: 3px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.floating-card span {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.small-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #F1EFFF;
+    color: var(--purple);
+}
+
+.student-card {
+    top: 55px;
+    right: 0;
+}
+
+.company-card {
+    bottom: 55px;
+    left: 0;
+}
+
+
+/* =================================
+   PROBLEM
+================================= */
+
+.problem-section {
+    padding: 110px 0;
+    background: var(--background);
+}
+
+.section-heading {
+    max-width: 700px;
+}
+
+.section-heading.centered {
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 0 0 18px;
+    color: var(--text);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.section-heading p {
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.problem-card {
+    padding: 32px;
+    background: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+.problem-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    background: #EEF1FF;
+    color: var(--primary);
+    font-size: 19px;
+}
+
+.problem-card h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.problem-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =================================
+   WHY PLACEWICK
+================================= */
+
+.why-section {
+    padding: 110px 0;
+    background: #F8F9FC;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.why-content {
+    max-width: 580px;
+}
+
+.why-content h2 {
+    margin: 0 0 22px;
+    color: var(--text);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.why-content p {
+    margin: 0 0 18px;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    gap: 14px;
+}
+
+
+/* =================================
+   VISUAL BOX
+================================= */
+
+.visual-box {
+    padding: 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(16, 26, 67, 0.08);
+}
+
+.visual-top {
+    display: flex;
+    gap: 6px;
+    padding-bottom: 18px;
+}
+
+.visual-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D1D5DB;
+}
+
+.visual-content {
+    padding: 10px;
+}
+
+.visual-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 16px;
+    background: #F8F9FC;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.visual-opportunity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.visual-opportunity-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #EEF1FF;
+    color: var(--primary);
+}
+
+.visual-opportunity strong,
+.visual-opportunity span {
+    display: block;
+}
+
+.visual-opportunity strong {
+    margin-bottom: 4px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.visual-opportunity span {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.visual-opportunity > i {
+    margin-left: auto;
+    color: var(--text-light);
+}
+
+
+/* =================================
+   MISSION & VISION
+================================= */
+
+.mission-section {
+    padding: 110px 0;
+    background: var(--background);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.mission-card {
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--background);
+}
+
+.mission-card-primary {
+    background: #F3F1FF;
+    border-color: #E5E0FF;
+}
+
+.mission-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    background: var(--background);
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.mission-card > span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.mission-card h3 {
+    margin: 14px 0;
+    color: var(--text);
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+.mission-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   HOW PLACEWICK HELPS
+================================= */
+
+.helps-section {
+    padding: 110px 0;
+    background: #F8F9FC;
+}
+
+.helps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.help-card {
+    padding: 38px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.help-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.help-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #EEF1FF;
+    color: var(--primary);
+}
+
+.help-card-header > span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.help-card h3 {
+    margin: 22px 0;
+    color: var(--text);
+    font-size: 25px;
+}
+
+.help-card ul {
+    display: grid;
+    gap: 15px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.help-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.help-card li i {
+    margin-top: 3px;
+    color: var(--primary);
+}
+
+
+/* =================================
+   FOUNDER
+================================= */
+
+.founder-section {
+    padding: 110px 0;
+    background: var(--background);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.founder-placeholder {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background: linear-gradient(
+        145deg,
+        #EEF1FF,
+        #F3F1FF
+    );
+    color: var(--primary);
+    font-size: 70px;
+}
+
+.founder-content h2 {
+    margin: 0 0 22px;
+    color: var(--text);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.founder-content p {
+    margin: 0 0 17px;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.founder-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 28px;
+}
+
+.founder-name strong {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.founder-name span {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+
+/* =================================
+   CTA
+================================= */
+
+.about-cta {
+    padding: 90px 0;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--purple)
+    );
+}
+
+.cta-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-cta .section-label {
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.about-cta h2 {
+    margin: 0 0 18px;
+    color: #FFFFFF;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.about-cta h2 span {
+    color: #FFFFFF;
+}
+
+.about-cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    justify-content: center;
+}
+
+.btn-white {
+    background: #FFFFFF;
+    color: var(--primary);
+}
+
+.btn-white:hover {
+    background: #F8F9FC;
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .about-hero-content,
+    .why-grid,
+    .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .about-hero-text {
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .about-hero-text > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-hero-visual {
+        min-height: 380px;
+    }
+
+    .problem-grid,
+    .mission-grid,
+    .helps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-content {
+        max-width: 100%;
+    }
+
+    .founder-content {
+        text-align: center;
+    }
+
+    .founder-name {
+        align-items: center;
+    }
+
+    .founder-placeholder {
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero,
+    .problem-section,
+    .why-section,
+    .mission-section,
+    .helps-section,
+    .founder-section {
+        padding: 75px 0;
+    }
+
+    .about-hero h1 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .about-hero-visual {
+        min-height: 330px;
+    }
+
+    .hero-card {
+        width: 90%;
+        padding: 18px;
+    }
+
+    .student-card {
+        top: 15px;
+        right: -5px;
+    }
+
+    .company-card {
+        bottom: 15px;
+        left: -5px;
+    }
+
+    .floating-card {
+        padding: 12px 14px;
+    }
+
+    .floating-card span {
+        max-width: 120px;
+    }
+
+    .problem-card,
+    .mission-card,
+    .help-card {
+        padding: 25px;
+    }
+
+    .founder-placeholder {
+        max-width: 300px;
+    }
+
+    .about-cta {
+        padding: 75px 0;
+    }
+
+    .about-cta h2 {
+        font-size: 38px;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn,
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
