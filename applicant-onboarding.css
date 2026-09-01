@@ -1274,63 +1274,57 @@ select {
 ================================= */
 
 .onboarding-flow {
-    
     display: flex;
-    
     justify-content: center;
-    
-    align-items: center;
-
-    gap: 20px;
+    align-items: flex-start;
+    gap: 10px;
     width: 100%;
-
-    
-    margin-bottom: 30px;
 }
 
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 55px;
+}
+
+.progress-step span {
+    font-size: 10px;
+    color: var(--text-light);
+    white-space: nowrap;
+    text-align: center;
+}
+
+.progress-step.active span {
+    color: var(--text);
+    font-weight: 600;
+}
 
 .circle {
-
     width: 12px;
-
     height: 12px;
-
-    flex: 0 0 12px;
-
-    border: 1px solid rgba(20, 30, 80, 0.15);
-
+    border: 1px solid rgba(20, 30, 80, 0.2);
     border-radius: 50%;
-
-    background-color: #FFFFFF;
-
-
-
+    background: #fff;
 }
-
 
 .circle.active {
-
-    background-color: var(--primary);
-
+    background: var(--primary);
     border-color: var(--primary);
-
 }
 
-
+.progress-step.active .circle {
+    background: var(--primary);
+    border-color: var(--primary);
+}
 
 .line {
-
-    width: 35px;
-
+    width: 30px;
     height: 1px;
-
-    flex: 0 1 35px;
-
-
-    background-color: rgba(20, 30, 80, 0.12);
-
+    background: rgba(20, 30, 80, 0.15);
+    margin-top: 6px;
 }
-
 
 
 /* =================================
@@ -1836,21 +1830,28 @@ select {
    PROGRESS FLOW — MOBILE
 ================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .onboarding-flow {
-        gap: 7px;
+        gap: 4px;
+    }
+
+    .progress-step {
+        min-width: 38px;
+    }
+
+    .progress-step span {
+        font-size: 7px;
     }
 
     .circle {
-        width: 8px;
-        height: 8px;
-        flex-basis: 8px;
+        width: 9px;
+        height: 9px;
     }
 
     .line {
-        width: 18px;
-        flex-basis: 18px;
+        width: 14px;
+        margin-top: 4px;
     }
 
 }
@@ -1875,6 +1876,1084 @@ select {
     .line {
         width: 13px;
         flex-basis: 13px;
+    }
+
+}
+
+
+
+
+
+/* =================================
+   PLACEWICK — SKILLS PAGE
+================================= */
+
+
+/* =================================
+   PROGRESS LABELS
+================================= */
+
+.stage-labels {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-top: -15px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    color: var(--text-light);
+
+}
+
+.stage-labels .active-label {
+
+    color: var(--text);
+
+    font-weight: 600;
+
+}
+
+
+/* =================================
+   SKILLS CONTENT
+================================= */
+
+.skills-content {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+}
+
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.section-heading {
+
+    margin-bottom: 12px;
+
+}
+
+.section-heading h2 {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 3px;
+
+}
+
+.section-heading p {
+
+    font-size: 11px;
+
+    color: var(--text-light);
+
+}
+
+
+/* =================================
+   SKILL INPUT
+================================= */
+
+.skill-input-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: 0.2s ease;
+
+}
+
+.skill-input-wrapper:focus-within {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.10);
+
+}
+
+.skill-input-wrapper input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 11px 12px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+}
+
+.skill-input-wrapper input::placeholder {
+
+    color: #98A2B3;
+
+}
+
+.skill-input-wrapper button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+/* =================================
+   SKILL TAGS
+================================= */
+
+.skill-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 10px;
+
+}
+
+.skill-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 8px;
+
+    background-color: #EEF2FF;
+
+    color: #3155F5;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+.skill-tag button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #3155F5;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+}
+
+
+/* =================================
+   INTEREST GRID
+================================= */
+
+.interest-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+}
+
+
+/* =================================
+   INTEREST CARD
+================================= */
+
+.interest-card {
+
+    position: relative;
+
+    min-height: 42px;
+
+    padding: 8px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background-color: #FFFFFF;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    transition:
+
+        border-color 0.2s ease,
+
+        background-color 0.2s ease,
+
+        box-shadow 0.2s ease;
+
+}
+
+.interest-card:hover {
+
+    border-color: rgba(49, 85, 245, 0.35);
+
+}
+
+
+/* =================================
+   INTEREST ICON
+================================= */
+
+.interest-icon {
+
+    width: 26px;
+
+    height: 26px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background-color: #F4F6FF;
+
+    color: var(--primary);
+
+    font-size: 11px;
+
+}
+
+
+/* =================================
+   SELECTED INTEREST
+================================= */
+
+.interest-card.selected {
+
+    border-color: var(--primary);
+
+    background-color: #F7F8FF;
+
+    box-shadow:
+        0 3px 10px rgba(49, 85, 245, 0.07);
+
+}
+
+.interest-card.selected .interest-icon {
+
+    background-color: var(--primary);
+
+    color: #FFFFFF;
+
+}
+
+
+/* =================================
+   SELECTED CHECK
+================================= */
+
+.selected-check {
+
+    position: absolute;
+
+    top: 5px;
+
+    right: 5px;
+
+    font-size: 7px;
+
+    color: var(--primary);
+
+    opacity: 0;
+
+}
+
+.interest-card.selected .selected-check {
+
+    opacity: 1;
+
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.onboarding-buttons {
+
+    margin-top: 35px;
+
+}
+
+
+/* =================================
+   PROGRESS LINES
+================================= */
+
+.line.active {
+
+    background-color: var(--primary);
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .skills-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+    .stage-labels {
+
+        grid-template-columns: repeat(7, 1fr);
+
+        font-size: 7px;
+
+        margin-top: -10px;
+
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+    .skills-content {
+
+        gap: 22px;
+
+    }
+
+    .stage-labels {
+
+        font-size: 6px;
+
+    }
+
+    .interest-card {
+
+        min-height: 45px;
+
+        font-size: 9px;
+
+        padding: 7px;
+
+    }
+
+    .interest-icon {
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size: 10px;
+
+    }
+
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+    .stage-labels {
+
+        display: none;
+
+    }
+
+    .skills-content {
+
+        gap: 20px;
+
+    }
+
+    .interest-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =================================
+   UNDERGRADUATE PREFERENCES
+================================= */
+
+
+/* =================================
+   FORM
+================================= */
+
+.preferences-form {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.preferences-form .form-group {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+
+}
+
+
+.preferences-form .form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+
+.preferences-form .form-group select {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    color: var(--text);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.preferences-form .form-group select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.10);
+
+}
+
+
+/* =================================
+   PREFERRED STATE
+================================= */
+
+.state-group select {
+
+    min-height: 48px;
+
+}
+
+
+/* =================================
+   WORK ARRANGEMENT
+================================= */
+
+.work-type-group select {
+
+    min-height: 48px;
+
+}
+
+
+/* =================================
+   RELOCATION
+================================= */
+
+.relocation-group select {
+
+    min-height: 48px;
+
+}
+
+
+/* =================================
+   NAVIGATION BUTTONS
+================================= */
+
+.onboarding-buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+}
+
+
+.back-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    color: var(--text-light);
+
+    background-color: transparent;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.back-button:hover {
+
+    color: var(--text);
+
+    border-color: #CBD0D9;
+
+    background-color: #FFFFFF;
+
+}
+
+
+.continue-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    color: #FFFFFF;
+
+    background-color: var(--purple);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.continue-button:hover {
+
+    background-color: var(--purple-dark);
+
+    transform: translateX(2px);
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 700px) {
+
+    .preferences-form {
+
+        max-width: 100%;
+
+    }
+
+
+    .onboarding-buttons {
+
+        margin-top: 30px;
+
+    }
+
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+    .preferences-form .form-group {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .preferences-form .form-group label {
+
+        font-size: 12px;
+
+    }
+
+
+    .preferences-form .form-group select {
+
+        padding: 12px 13px;
+
+        font-size: 13px;
+
+    }
+
+
+    .onboarding-buttons {
+
+        gap: 10px;
+
+        margin-top: 28px;
+
+    }
+
+
+    .back-button,
+    .continue-button {
+
+        flex: 1;
+
+        justify-content: center;
+
+        padding: 11px 14px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+    .preferences-form .form-group select {
+
+        padding: 11px 12px;
+
+        font-size: 12px;
+
+    }
+
+
+    .onboarding-buttons {
+
+        gap: 8px;
+
+    }
+
+
+    .back-button,
+    .continue-button {
+
+        padding: 10px 12px;
+
+        font-size: 12px;
+
+    }
+
+}
+
+
+/* =================================
+   ONBOARDING COMPLETE
+================================= */
+
+.completion-content {
+
+    max-width: 520px;
+
+    margin: 5px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* =================================
+   CHECK ICON
+================================= */
+
+.completion-icon {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background-color: #EEF2FF;
+
+    border: 1px solid rgba(49, 85, 245, 0.12);
+
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    font-size: 28px;
+
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.completion-content h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.8px;
+
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.completion-content p {
+
+    max-width: 470px;
+
+    margin-bottom: 28px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =================================
+   ACTIONS
+================================= */
+
+.completion-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+/* =================================
+   FIND OPPORTUNITIES
+================================= */
+
+.completion-actions .continue-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 22px;
+
+    color: #FFFFFF;
+
+    background-color: var(--purple);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.completion-actions .continue-button:hover {
+
+    background-color: var(--purple-dark);
+
+    transform: translateX(2px);
+
+}
+
+
+/* =================================
+   DASHBOARD LINK
+================================= */
+
+.dashboard-link {
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.dashboard-link:hover {
+
+    color: var(--primary-dark);
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .completion-icon {
+
+        width: 64px;
+
+        height: 64px;
+
+        font-size: 24px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .completion-content h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .completion-content p {
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .completion-actions {
+
+        width: 100%;
+
+    }
+
+
+    .completion-actions .continue-button {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+    .completion-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 21px;
+
+    }
+
+
+    .completion-content h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .completion-content p {
+
+        font-size: 12px;
+
     }
 
 }

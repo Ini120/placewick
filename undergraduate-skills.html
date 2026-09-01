@@ -10,16 +10,14 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Applicant Onboarding | Placewick</title>
+    <title>Skills | Placewick</title>
 
     <meta
         name="description"
-        content="Tell Placewick where you are in your academic and career journey."
+        content="Tell Placewick about your skills and areas of interest."
     >
 
-
-    <!-- Google Font: Manrope -->
-
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -31,19 +29,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
-    >
+   
+        >
 
-
-    <!-- Font Awesome -->
-
+   
+        <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+   
+        >
 
-
-    <!-- CSS -->
-
+   
+        <!-- CSS -->
     <link
         rel="stylesheet"
         href="applicant-onboarding.css"
@@ -60,9 +58,9 @@
     <div class="applicant-onboarding-container">
 
 
-        <!-- ================================
+        <!-- =================================
              LOGO
-        ================================= -->
+        ================================== -->
 
         <section class="applicant-onboarding-top">
 
@@ -81,61 +79,472 @@
         </section>
 
 
-
-        <!-- ================================
+        <!-- =================================
              ONBOARDING PROGRESS
-        ================================= -->
+        ================================== -->
 
         <section class="onboarding-flow">
 
-            <div class="circle active"></div>
+    <div class="progress-step active">
+        <div class="circle"></div>
+        <span>Journey</span>
+    </div>
 
-            <div class="line"></div>
+    <div class="line"></div>
 
-            <div class="circle active"></div>
+    <div class="progress-step active">
+        <div class="circle"></div>
+        <span>About You</span>
+    </div>
 
-            <div class="line"></div>
+    <div class="line"></div>
 
-            <div class="circle active"></div>
+    <div class="progress-step active">
+        <div class="circle"></div>
+        <span>Education</span>
+    </div>
 
-            <div class="line"></div>
+    <div class="line"></div>
 
-            <div class="circle active"></div>
+    <div class="progress-step active">
+        <div class="circle"></div>
+        <span>Opportunities</span>
+    </div>
 
-            <div class="line"></div>
+    <div class="line"></div>
 
-            <div class="circle active"></div>
+    <div class="progress-step active">
+        <div class="circle"></div>
+        <span>Skills</span>
+    </div>
 
-            <div class="line"></div>
+    <div class="line"></div>
+
+    <div class="progress-step">
+        <div class="circle"></div>
+        <span>Preferences</span>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="progress-step">
+        <div class="circle"></div>
+        <span>All Set</span>
+    </div>
+
+</section>
 
 
-            <!-- Stage 5 -->
-
-            <div class="circle"></div>
-
-            <div class="line"></div>
+       
 
 
-            <!-- Stage 6 -->
-
-            <div class="circle"></div>
-
-        </section>
-
-
-
-        <!-- ================================
+        <!-- =================================
              HEADER
-        ================================= -->
+        ================================== -->
 
         <section class="applicant-onboarding-header">
 
             <h1>
-                What are you looking for?
+                What can you bring to the table?
             </h1>
 
             <p>
-                Pick everything that fits you.
+                Tell us about your skills and areas you're interested in.
             </p>
 
         </section>
+
+
+        <!-- =================================
+             SKILLS CONTENT
+        ================================== -->
+
+        <section class="skills-content">
+
+
+            <!-- =================================
+                 YOUR SKILLS
+            ================================== -->
+
+            <div class="skills-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Your skills
+                    </h2>
+
+                    <p>
+                        Add the skills you have.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-input-wrapper">
+
+                    <input
+                        type="text"
+                        id="skillInput"
+                        placeholder="Type a skill and press Enter"
+                    >
+
+                    <button
+                        type="button"
+                        id="addSkill"
+                        aria-label="Add skill"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- Skill tags -->
+
+                <div
+                    class="skill-tags"
+                    id="skillTags"
+                >
+
+                    <span class="skill-tag">
+
+                        HTML
+
+                        <button type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </span>
+
+
+                    <span class="skill-tag">
+
+                        CSS
+
+                        <button type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </span>
+
+
+                    <span class="skill-tag">
+
+                        JavaScript
+
+                        <button type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </span>
+
+
+                    <span class="skill-tag">
+
+                        Python
+
+                        <button type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+                    </span>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 AREAS OF INTEREST
+            ================================== -->
+
+            <div class="interest-section">
+
+                <div class="section-heading">
+
+                    <h2>
+                        Areas you're interested in
+                    </h2>
+
+                    <p>
+                        Select all that apply.
+                    </p>
+
+                </div>
+
+
+                <div class="interest-grid">
+
+
+                    <button
+                        type="button"
+                        class="interest-card selected"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </span>
+
+                        <span>
+                            Software Development
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </span>
+
+                        <span>
+                            Data
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card selected"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </span>
+
+                        <span>
+                            Cybersecurity
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </span>
+
+                        <span>
+                            Design
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-briefcase"></i>
+
+                        </span>
+
+                        <span>
+                            Business
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-bullhorn"></i>
+
+                        </span>
+
+                        <span>
+                            Marketing
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="interest-card"
+                    >
+
+                        <span class="interest-icon">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </span>
+
+                        <span>
+                            Other
+                        </span>
+
+                        <i class="fa-solid fa-check selected-check"></i>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             NAVIGATION
+        ================================== -->
+
+        <div class="onboarding-buttons">
+
+            <a
+                href="undergraduate-opportunities.html"
+                class="back-button"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back
+
+            </a>
+
+
+            <a
+                href="undergraduate-preferences.html"
+                class="continue-button"
+            >
+
+                Continue
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script>
+
+const skillInput = document.getElementById("skillInput");
+const addSkill = document.getElementById("addSkill");
+const skillTags = document.getElementById("skillTags");
+
+function createSkill() {
+
+    const skill = skillInput.value.trim();
+
+    if (skill === "") {
+        return;
+    }
+
+    const tag = document.createElement("span");
+
+    tag.className = "skill-tag";
+
+    tag.innerHTML = `
+        ${skill}
+        <button type="button">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    `;
+
+    tag.querySelector("button").addEventListener("click", function () {
+        tag.remove();
+    });
+
+    skillTags.appendChild(tag);
+
+    skillInput.value = "";
+
+}
+
+
+addSkill.addEventListener("click", createSkill);
+
+
+skillInput.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+
+        event.preventDefault();
+
+        createSkill();
+
+    }
+
+});
+
+
+document.querySelectorAll(".skill-tag button").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        button.parentElement.remove();
+
+    });
+
+});
+
+
+document.querySelectorAll(".interest-card").forEach(card => {
+
+    card.addEventListener("click", function () {
+
+        card.classList.toggle("selected");
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>
