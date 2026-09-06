@@ -246,6 +246,28 @@ p {
     gap: 18px;
 }
 
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--text);
+}
+
 .login-link {
     color: var(--text);
     font-size: 14px;
@@ -458,18 +480,55 @@ textarea::placeholder {
 
     .navbar {
         min-height: 68px;
+        position: relative;
     }
 
     .main-nav {
         display: none;
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 5px;
+        right: 5px;
+        z-index: 30;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        width: auto;
+        margin: 0;
+        padding: 16px;
+        background: #fff;
+        border: 1px solid #eeeeee;
+        border-radius: 16px;
+        box-shadow: 0 12px 30px rgba(16, 26, 67, 0.08);
+    }
+
+    .main-nav.menu-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+        padding: 10px 2px;
+        font-size: 12px;
     }
 
     .nav-actions {
         gap: 10px;
+        margin-left: auto;
     }
 
     .login-link {
-        display: none;
+        display: inline;
+        white-space: nowrap;
+    }
+
+    .nav-actions .btn {
+        padding: 10px 12px;
+        white-space: nowrap;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
     }
 
     .logo img {
