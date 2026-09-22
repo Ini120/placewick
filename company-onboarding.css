@@ -1,0 +1,864 @@
+/* =================================
+   PLACEWICK — COMPANY ONBOARDING
+================================= */
+
+:root {
+
+    --primary: #3155F5;
+
+    --primary-dark: #243FC2;
+
+    --purple: #6C4CF6;
+
+    --purple-dark: #5B3EE0;
+
+    --text: #101A43;
+
+    --text-light: #667085;
+
+    --background: #FFFFFF;
+
+    --card-background: #F8F9FC;
+
+    --border: #E5E7EB;
+
+    --success: #12B76A;
+
+}
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.company-onboarding {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.company-onboarding-container {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    padding: 45px 55px 40px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.10);
+
+    border-radius: 30px;
+
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.company-onboarding-top {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.company-onboarding-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.company-onboarding-header h1 {
+
+    margin-bottom: 8px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.8px;
+
+}
+
+
+.company-onboarding-header p {
+
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.onboarding-form {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.form-section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 30px 0 18px;
+
+}
+
+.form-section-heading:first-of-type {
+
+    margin-top: 0;
+
+}
+
+.form-section-heading .step-badge {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 24px;
+
+    height: 24px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+
+    color: #FFFFFF;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+.form-section-heading h2 {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+}
+
+.form-section-heading span.optional-tag {
+
+    padding: 3px 9px;
+
+    border-radius: 999px;
+
+    background-color: #EEF2FF;
+
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.form-group {
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-row {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.form-row .form-group {
+
+    flex: 1;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+
+.form-group .hint {
+
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    color: var(--text-light);
+
+}
+
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.form-group input::placeholder {
+
+    color: #98A2B3;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.10);
+
+}
+
+
+/* =================================
+   VERIFICATION NOTE
+================================= */
+
+.verification-note {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 22px;
+
+    background-color: #F0F4FF;
+
+    border: 1px solid rgba(49, 85, 245, 0.16);
+
+    border-radius: 10px;
+
+}
+
+
+.verification-note i {
+
+    margin-top: 2px;
+
+    color: var(--primary);
+
+    font-size: 14px;
+
+}
+
+
+.verification-note p {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+
+}
+
+
+.verification-note strong {
+
+    color: var(--text);
+
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.onboarding-buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+}
+
+
+.back-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    color: var(--text-light);
+
+    background-color: transparent;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.back-button:hover {
+
+    color: var(--text);
+
+    border-color: #CBD0D9;
+
+    background-color: #FFFFFF;
+
+}
+
+
+.continue-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    color: #FFFFFF;
+
+    background-color: var(--purple);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.continue-button:hover {
+
+    background-color: var(--purple-dark);
+
+    transform: translateX(2px);
+
+}
+
+
+.skip-link {
+
+    display: block;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.skip-link:hover {
+
+    color: var(--text);
+
+    text-decoration: underline;
+
+}
+
+
+/* =================================
+   COMPLETION CONTENT
+   (shared with company-onboarding-complete.html)
+================================= */
+
+.completion-content {
+
+    max-width: 520px;
+
+    margin: 5px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.completion-icon {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background-color: #EEF2FF;
+
+    border: 1px solid rgba(49, 85, 245, 0.12);
+
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    font-size: 28px;
+
+}
+
+
+.completion-content h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.8px;
+
+}
+
+
+.completion-content p {
+
+    max-width: 470px;
+
+    margin-bottom: 28px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.completion-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    margin-bottom: 28px;
+
+    background-color: #FFF8EE;
+
+    border: 1px solid rgba(242, 140, 40, 0.2);
+
+    border-radius: 999px;
+
+    color: #B4690E;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.completion-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.completion-actions .continue-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 22px;
+
+    color: #FFFFFF;
+
+    background-color: var(--purple);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.completion-actions .continue-button:hover {
+
+    background-color: var(--purple-dark);
+
+    transform: translateX(2px);
+
+}
+
+
+.dashboard-link {
+
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+
+}
+
+
+.dashboard-link:hover {
+
+    color: var(--primary-dark);
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 700px) {
+
+    .company-onboarding-container {
+
+        padding: 40px 30px 35px;
+
+    }
+
+
+    .form-row {
+
+        flex-direction: column;
+
+        gap: 0;
+
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .company-onboarding {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .company-onboarding-container {
+
+        padding: 32px 20px 28px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .company-onboarding-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .company-onboarding-header p {
+
+        font-size: 13px;
+
+    }
+
+
+    .onboarding-buttons {
+
+        gap: 10px;
+
+    }
+
+
+    .back-button,
+    .continue-button {
+
+        flex: 1;
+
+        justify-content: center;
+
+    }
+
+
+    .completion-icon {
+
+        width: 64px;
+
+        height: 64px;
+
+        font-size: 24px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .completion-content h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .completion-content p {
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .completion-actions {
+
+        width: 100%;
+
+    }
+
+
+    .completion-actions .continue-button {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+}

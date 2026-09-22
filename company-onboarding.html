@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Company Profile | Placewick</title>
+
+    <meta
+        name="description"
+        content="Tell Placewick about your company and start the verification process."
+    >
+
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="company-onboarding.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="company-onboarding">
+
+
+    <div class="company-onboarding-container">
+
+
+        <!-- Logo -->
+
+        <section class="company-onboarding-top">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
+
+            </a>
+
+        </section>
+
+
+        <!-- Header -->
+
+        <section class="company-onboarding-header">
+
+            <h1>Set up your company profile</h1>
+
+            <p>
+                This is what students will see when they come
+                across your opportunities. You can complete
+                verification now or finish it later from settings.
+            </p>
+
+        </section>
+
+
+        <!-- Form -->
+
+        <form class="onboarding-form">
+
+
+            <!-- Section 1: Company Details -->
+
+            <div class="form-section-heading">
+                <span class="step-badge">1</span>
+                <h2>Company details</h2>
+            </div>
+
+
+            <!-- Company Name -->
+
+            <div class="form-group">
+
+                <label for="company-name">
+                    Company name
+                </label>
+
+                <input
+                    type="text"
+                    id="company-name"
+                    name="company-name"
+                    placeholder="Enter your company's registered name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Industry -->
+
+            <div class="form-group">
+
+                <label for="industry">
+                    Industry
+                </label>
+
+                <select
+                    id="industry"
+                    name="industry"
+                    required
+                >
+
+                    <option value="" disabled selected>
+                        Select your industry
+                    </option>
+
+                    <option value="technology">Technology &amp; Software</option>
+                    <option value="finance">Finance &amp; Banking</option>
+                    <option value="oil-gas">Oil &amp; Gas</option>
+                    <option value="telecoms">Telecommunications</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <option value="media">Media &amp; Communications</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="retail">Retail &amp; E-commerce</option>
+                    <option value="ngo">NGO / Non-profit</option>
+                    <option value="government">Government / Public Sector</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Website -->
+
+            <div class="form-group">
+
+                <label for="website">
+                    Company website
+                </label>
+
+                <input
+                    type="url"
+                    id="website"
+                    name="website"
+                    placeholder="https://yourcompany.com"
+                >
+
+                <span class="hint">
+                    Optional, but it helps students trust your listings.
+                </span>
+
+            </div>
+
+
+            <!-- Section 2: Verification (optional) -->
+
+            <div class="form-section-heading">
+                <span class="step-badge">2</span>
+                <h2>Verification</h2>
+                <span class="optional-tag">Optional</span>
+            </div>
+
+            <div class="verification-note">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+                    <strong>Verified companies get a trust badge</strong>
+                    and appear more prominently in search. You can
+                    add your CAC/RC details now to start the review,
+                    or do this later from your company settings.
+                </p>
+
+            </div>
+
+
+            <!-- RC Number -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="rc-number">
+                        CAC / RC number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rc-number"
+                        name="rc-number"
+                        placeholder="e.g. RC1234567"
+                    >
+
+                </div>
+
+
+                <!-- Official Company Email -->
+
+                <div class="form-group">
+
+                    <label for="official-email">
+                        Official company email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="official-email"
+                        name="official-email"
+                        placeholder="verify@yourcompany.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <div class="onboarding-buttons">
+
+                <a
+                    href="company-account-completed.html"
+                    class="back-button"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back
+
+                </a>
+
+
+                <a
+                    href="company-onboarding-complete.html"
+                    class="continue-button"
+                >
+
+                    Continue
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+            <a href="company-onboarding-complete.html" class="skip-link">
+                Skip verification for now
+            </a>
+
+
+        </form>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>

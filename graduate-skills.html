@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Skills | Placewick</title>
+
+    <meta
+        name="description"
+        content="Tell Placewick about your skills and areas of interest."
+    >
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="applicant-onboarding.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="applicant-onboarding">
+
+    <div class="applicant-onboarding-container">
+
+
+        <!-- Stage -->
+
+        <div class="onboarding-stage">
+            Stage 5 of 7
+        </div>
+
+
+        <!-- Logo -->
+
+        <section class="applicant-onboarding-top">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
+
+            </a>
+
+        </section>
+
+
+        <!-- Progress -->
+
+       <section class="onboarding-flow">
+
+    <div class="progress-step active">
+        <div class="circle active"></div>
+        <span>Journey</span>
+    </div>
+
+    <div class="line active"></div>
+
+    <div class="progress-step active">
+        <div class="circle active"></div>
+        <span>About You</span>
+    </div>
+
+    <div class="line active"></div>
+
+    <div class="progress-step active">
+        <div class="circle active"></div>
+        <span>Education</span>
+    </div>
+
+    <div class="line active"></div>
+
+    <div class="progress-step active">
+        <div class="circle active"></div>
+        <span>Opportunities</span>
+    </div>
+
+    <div class="line active"></div>
+
+    <div class="progress-step active">
+        <div class="circle active"></div>
+        <span>Skills</span>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="progress-step">
+        <div class="circle"></div>
+        <span>Preferences</span>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="progress-step">
+        <div class="circle"></div>
+        <span>All Set</span>
+    </div>
+
+</section>
+
+        <!-- Header -->
+
+        <section class="applicant-onboarding-header">
+
+            <h1>Your skills and interests</h1>
+
+            <p>
+                This helps us match you to roles that fit
+                what you can already do and where you want to grow.
+            </p>
+
+        </section>
+
+
+        <!-- Skills Content -->
+
+        <div class="skills-content">
+
+
+            <!-- Skills -->
+
+            <div class="skills-column">
+
+                <div class="section-heading">
+                    <h2>Skills</h2>
+                    <p>Add skills you already have.</p>
+                </div>
+
+                <div class="skill-input-wrapper">
+
+                    <input
+                        type="text"
+                        id="skill-input"
+                        placeholder="e.g. Excel, Python, Public Speaking"
+                    >
+
+                    <button type="button" id="add-skill-button" aria-label="Add skill">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                </div>
+
+                <div class="skill-tags" id="skill-tags">
+
+                    <span class="skill-tag">
+                        Microsoft Excel
+                        <button type="button" aria-label="Remove skill">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </span>
+
+                    <span class="skill-tag">
+                        Communication
+                        <button type="button" aria-label="Remove skill">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Interests -->
+
+            <div class="interests-column">
+
+                <div class="section-heading">
+                    <h2>Areas of interest</h2>
+                    <p>Pick the fields you'd like to work in.</p>
+                </div>
+
+                <div class="interest-grid" id="interest-grid">
+
+                    <button type="button" class="interest-card" data-value="software">
+                        <span class="interest-icon"><i class="fa-solid fa-code"></i></span>
+                        Software Development
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="data">
+                        <span class="interest-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        Data &amp; Analytics
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="product-design">
+                        <span class="interest-icon"><i class="fa-solid fa-pen-ruler"></i></span>
+                        Product &amp; Design
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="marketing">
+                        <span class="interest-icon"><i class="fa-solid fa-bullhorn"></i></span>
+                        Marketing &amp; Growth
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="finance">
+                        <span class="interest-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+                        Finance &amp; Accounting
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="operations">
+                        <span class="interest-icon"><i class="fa-solid fa-gears"></i></span>
+                        Operations
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="sales">
+                        <span class="interest-icon"><i class="fa-solid fa-handshake"></i></span>
+                        Sales &amp; Business Dev
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                    <button type="button" class="interest-card" data-value="hr">
+                        <span class="interest-icon"><i class="fa-solid fa-people-group"></i></span>
+                        Human Resources
+                        <span class="selected-check"><i class="fa-solid fa-check"></i></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <div class="onboarding-buttons">
+
+            <a
+                href="graduate-opportunities.html"
+                class="back-button"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back
+
+            </a>
+
+
+            <a
+                href="graduate-preferences.html"
+                class="continue-button"
+            >
+
+                Continue
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<script src="graduate-onboarding.js"></script>
+
+</body>
+
+</html>
