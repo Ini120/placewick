@@ -183,7 +183,7 @@ select {
 
     color: var(--text-light);
 
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: 1.6;
 }
@@ -215,7 +215,7 @@ select {
 
     margin-bottom: 8px;
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 600;
 
@@ -267,7 +267,7 @@ select {
 
     color: #98A2B3;
 
-    font-size: 13px;
+    font-size: 15px;
 
 }
 
@@ -286,7 +286,7 @@ select {
 
     color: var(--text);
 
-    font-size: 14px;
+    font-size: 16px;
 
 }
 
@@ -310,7 +310,7 @@ select {
 
     cursor: pointer;
 
-    font-size: 13px;
+    font-size: 15px;
 
     transition: color 0.2s ease;
 
@@ -367,7 +367,7 @@ select {
 
 .terms span {
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.6;
 
@@ -420,7 +420,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 700;
 
@@ -467,7 +467,7 @@ select {
 
 .divider p {
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 600;
 
@@ -504,7 +504,7 @@ select {
 
     color: var(--text);
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -548,7 +548,7 @@ select {
 
     color: #FFFFFF;
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 800;
 
@@ -565,7 +565,7 @@ select {
 
     text-align: center;
 
-    font-size: 13px;
+    font-size: 15px;
 
     color: var(--text-light);
 
@@ -619,7 +619,7 @@ select {
 
     .signup-header p {
 
-        font-size: 13px;
+        font-size: 15px;
 
     }
 

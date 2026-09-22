@@ -134,7 +134,7 @@ ul {
 .sidebar-section-label {
     margin: 18px 12px 8px;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 0.08em;
@@ -155,7 +155,7 @@ ul {
 
     color: var(--text-light);
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
 
     transition: 0.2s ease;
@@ -165,7 +165,7 @@ ul {
 .sidebar-link i {
     width: 16px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     text-align: center;
 }
@@ -203,7 +203,7 @@ ul {
 
     color: #FFFFFF;
 
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -248,7 +248,7 @@ ul {
 
     color: var(--primary);
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
 }
 
@@ -262,7 +262,7 @@ ul {
 
 
 .sidebar-user-info span {
-    font-size: 11px;
+    font-size: 13px;
 
     color: var(--text-light);
 }
@@ -338,7 +338,7 @@ ul {
 .dashboard-header-left p {
     margin-top: 2px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     color: var(--text-light);
 }
@@ -371,7 +371,7 @@ ul {
 .header-search i {
     color: #98A2B3;
 
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -417,7 +417,7 @@ ul {
 
     color: var(--text-light);
 
-    font-size: 14px;
+    font-size: 16px;
 
     transition: 0.2s ease;
 }
@@ -463,7 +463,7 @@ ul {
 
     color: var(--primary);
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
 }
 
@@ -514,7 +514,7 @@ ul {
 
     margin-top: 6px;
 
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
 
     color: rgba(255, 255, 255, 0.85);
@@ -535,7 +535,7 @@ ul {
 
     color: var(--primary);
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 
     transition: 0.2s ease;
@@ -628,7 +628,7 @@ ul {
 .stat-label {
     margin-top: 2px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     color: var(--text-light);
 }
@@ -641,7 +641,7 @@ ul {
 
     margin-top: 6px;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
 
     color: var(--success);
@@ -696,7 +696,7 @@ ul {
 
 
 .panel-link {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 
     color: var(--primary);
@@ -751,7 +751,7 @@ ul {
 
     color: var(--primary);
 
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 800;
 }
 
@@ -764,7 +764,7 @@ ul {
 
 
 .application-details h4 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 
     color: var(--text);
@@ -801,7 +801,7 @@ ul {
 
     border-radius: 999px;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
 }
 
@@ -944,7 +944,7 @@ ul {
     align-items: center;
     gap: 10px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     color: var(--text-light);
 }
@@ -953,7 +953,7 @@ ul {
 .profile-completion-item i {
     width: 14px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     color: var(--success);
 }
@@ -972,7 +972,7 @@ ul {
 .profile-completion-item a {
     margin-left: auto;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
 
     color: var(--primary);
@@ -1017,7 +1017,7 @@ ul {
     align-items: center;
     justify-content: center;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
 }
 
@@ -1046,7 +1046,7 @@ ul {
 
     margin-top: 1px;
 
-    font-size: 11px;
+    font-size: 13px;
 
     color: var(--text-light);
 }
@@ -1057,7 +1057,7 @@ ul {
 
     color: var(--primary);
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 
@@ -1082,7 +1082,7 @@ ul {
 
 
 .panel-empty p {
-    font-size: 12px;
+    font-size: 14px;
 
     color: var(--text-light);
 }

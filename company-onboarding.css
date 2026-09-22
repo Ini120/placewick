@@ -190,7 +190,7 @@ select {
 
     color: var(--text-light);
 
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: 1.6;
 
@@ -254,7 +254,7 @@ select {
 
     color: #FFFFFF;
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 800;
 
@@ -262,7 +262,7 @@ select {
 
 .form-section-heading h2 {
 
-    font-size: 15px;
+    font-size: 16px;
 
     font-weight: 800;
 
@@ -280,7 +280,7 @@ select {
 
     color: var(--primary);
 
-    font-size: 10px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -324,7 +324,7 @@ select {
 
     margin-bottom: 8px;
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 600;
 
@@ -339,7 +339,7 @@ select {
 
     margin-top: 6px;
 
-    font-size: 11px;
+    font-size: 13px;
 
     color: var(--text-light);
 
@@ -361,7 +361,7 @@ select {
 
     color: var(--text);
 
-    font-size: 14px;
+    font-size: 16px;
 
     outline: none;
 
@@ -421,14 +421,14 @@ select {
 
     color: var(--primary);
 
-    font-size: 14px;
+    font-size: 16px;
 
 }
 
 
 .verification-note p {
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.6;
 
@@ -479,7 +479,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -519,7 +519,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -549,7 +549,7 @@ select {
 
     color: var(--text-light);
 
-    font-size: 12px;
+    font-size: 14px;
 
     font-weight: 600;
 
@@ -637,7 +637,7 @@ select {
 
     color: var(--text-light);
 
-    font-size: 14px;
+    font-size: 16px;
 
     line-height: 1.7;
 
@@ -664,7 +664,7 @@ select {
 
     color: #B4690E;
 
-    font-size: 12px;
+    font-size: 14px;
 
     font-weight: 700;
 
@@ -702,7 +702,7 @@ select {
 
     border-radius: 8px;
 
-    font-size: 14px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -724,7 +724,7 @@ select {
 
     color: var(--primary);
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 600;
 
@@ -795,7 +795,7 @@ select {
 
     .company-onboarding-header p {
 
-        font-size: 13px;
+        font-size: 15px;
 
     }
 
@@ -839,7 +839,7 @@ select {
 
     .completion-content p {
 
-        font-size: 13px;
+        font-size: 15px;
 
         margin-bottom: 25px;
 

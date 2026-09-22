@@ -182,7 +182,7 @@ button {
     color: #111936;
 
     font-family: "Manrope", sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
 
     cursor: pointer;
@@ -200,7 +200,7 @@ button {
 ================================= */
 
 .arrow {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
     position: relative;
     top: -1px;
@@ -260,7 +260,7 @@ button {
 
     color: #111936;
 
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 
     border-radius: 7px;
@@ -288,7 +288,7 @@ button {
     color: #111936;
 
     font-family: "Manrope", sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
 
     transition: color 0.2s ease;
@@ -317,7 +317,7 @@ button {
     border-radius: 6px;
 
     font-family: "Manrope", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 
     transition:
@@ -409,7 +409,7 @@ button {
     border-radius: 8px;
 
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 
     cursor: pointer;
@@ -517,7 +517,7 @@ button {
 .feature h3 {
     margin: 0 0 4px;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 800;
     color: #101a43;
 }
@@ -525,7 +525,7 @@ button {
 .feature p {
     margin: 0;
 
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.5;
     color: #667085;
 }
@@ -596,13 +596,13 @@ button {
 .trust-item strong {
     display: block;
     margin-bottom: 2px;
-    font-size: 14px;
+    font-size: 16px;
     color: #101a43;
 }
 
 .trust-item span {
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     color: #667085;
     line-height: 1.5;
 }
@@ -631,7 +631,7 @@ button {
 
     margin-bottom: 12px;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -660,7 +660,7 @@ button {
 .how-header p {
     margin-top: 14px;
 
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
 
     color: #667085;
@@ -796,7 +796,7 @@ button {
 
     color: #ffffff;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 800;
 }
 
@@ -827,7 +827,7 @@ button {
 .step-card p {
     margin: 0;
 
-    font-size: 13px;
+    font-size: 15px;
 
     line-height: 1.7;
 
@@ -896,7 +896,7 @@ button {
     }
 
     .how-header p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -963,7 +963,7 @@ button {
 
     margin-bottom: 12px;
 
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -995,7 +995,7 @@ button {
 
     margin: 15px auto 0;
 
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 1.7;
 
@@ -1081,7 +1081,7 @@ button {
 .why-feature h3 {
     margin: 0 0 10px;
 
-    font-size: 15px;
+    font-size: 16px;
 
     color: #101a43;
 
@@ -1092,7 +1092,7 @@ button {
 .why-feature p {
     margin: 0;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.7;
 
@@ -1144,7 +1144,7 @@ button {
     }
 
     .why-header p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .why-features {
@@ -1199,7 +1199,7 @@ button {
 
     color: #3155F5;
 
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 
     text-decoration: none;
@@ -1207,7 +1207,7 @@ button {
 
 
 .view-all i {
-    font-size: 11px;
+    font-size: 13px;
 }
 
 
@@ -1398,7 +1398,7 @@ button {
 
     margin: 18px auto 30px;
 
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 1.7;
 
@@ -1423,7 +1423,7 @@ button {
 
     border-radius: 8px;
 
-    font-size: 13px;
+    font-size: 15px;
 
     font-weight: 700;
 
@@ -1478,7 +1478,7 @@ button {
     }
 
     .cta-content p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .cta-buttons {
@@ -1546,7 +1546,7 @@ button {
 
     margin: 0;
 
-    font-size: 13px;
+    font-size: 15px;
 
     line-height: 1.7;
 
@@ -1580,7 +1580,7 @@ button {
 
     color: #b9c1d8;
 
-    font-size: 13px;
+    font-size: 15px;
 
     text-decoration: none;
 
@@ -1609,7 +1609,7 @@ button {
 .footer-column h3 {
     margin: 0 0 7px;
 
-    font-size: 13px;
+    font-size: 15px;
 
     color: #ffffff;
 }
@@ -1618,7 +1618,7 @@ button {
 .footer-column a {
     width: fit-content;
 
-    font-size: 12px;
+    font-size: 14px;
 
     color: #929ab3;
 
@@ -1655,7 +1655,7 @@ button {
 .footer-bottom p {
     margin: 0;
 
-    font-size: 11px;
+    font-size: 13px;
 
     color: #737b94;
 }
@@ -1669,7 +1669,7 @@ button {
 
 
 .footer-legal a {
-    font-size: 11px;
+    font-size: 13px;
 
     color: #737b94;
 
@@ -1771,7 +1771,7 @@ button {
     }
 
     .hero-section p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
 
@@ -1786,11 +1786,11 @@ button {
     }
 
     .feature h3 {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .feature p {
-        font-size: 8px;
+        font-size: 10px;
     }
 
 }
@@ -1819,13 +1819,13 @@ button {
 
     .nav-link,
     .login-link {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .signup-button {
         width: 85px;
         height: 38px;
-        font-size: 11px;
+        font-size: 13px;
     }
 
 
@@ -1841,7 +1841,7 @@ button {
     }
 
     .hero-section p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -1915,7 +1915,7 @@ button {
     .nav-link {
         justify-content: space-between;
         padding: 10px 2px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .dropdown-menu {
@@ -1954,14 +1954,14 @@ button {
     }
 
     .login-link {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .signup-button {
         width: 78px;
         height: 36px;
 
-        font-size: 10px;
+        font-size: 12px;
 
         border-radius: 6px;
     }
@@ -2003,7 +2003,7 @@ button {
     .hero-section p {
         max-width: 100%;
 
-        font-size: 14px;
+        font-size: 16px;
 
         line-height: 1.65;
     }
@@ -2020,7 +2020,7 @@ button {
     .left-hero button {
         padding: 12px 18px;
 
-        font-size: 12px;
+        font-size: 14px;
     }
 
 
@@ -2076,13 +2076,13 @@ button {
     }
 
     .feature h3 {
-        font-size: 12px;
+        font-size: 14px;
 
         margin-bottom: 3px;
     }
 
     .feature p {
-        font-size: 10px;
+        font-size: 12px;
 
         line-height: 1.5;
     }
@@ -2116,14 +2116,14 @@ button {
     }
 
     .login-link {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .signup-button {
         width: 72px;
         height: 34px;
 
-        font-size: 9px;
+        font-size: 11px;
     }
 
 
@@ -2142,7 +2142,7 @@ button {
     }
 
     .hero-section p {
-        font-size: 13px;
+        font-size: 15px;
     }
 
 
@@ -2151,7 +2151,7 @@ button {
     .left-hero button {
         padding: 11px 15px;
 
-        font-size: 11px;
+        font-size: 13px;
     }
 
 
@@ -2179,11 +2179,11 @@ button {
     }
 
     .feature h3 {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .feature p {
-        font-size: 9px;
+        font-size: 11px;
     }
 
 }
