@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Applicant Dashboard | Placewick</title>
+
+    <meta
+        name="description"
+        content="Your Placewick applicant dashboard — track applications, saved opportunities and messages."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="applicant-dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link active">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">AO</div>
+
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <div class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+                <h1>Dashboard</h1>
+                <p>Welcome back, here's what's happening with your applications.</p>
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search opportunities">
+                </div>
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+
+        <main class="dashboard-content">
+
+
+            <!-- Welcome Banner -->
+
+            <section class="welcome-banner">
+
+                <div>
+                    <h2>Let's find your next opportunity, Ada</h2>
+                    <p>
+                        You have 3 active applications and 2 unread
+                        messages from companies. Keep your profile
+                        updated to get better matches.
+                    </p>
+                </div>
+
+                <a href="browse-opportunities.html" class="browse-button">
+                    Browse Opportunities
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </section>
+
+
+            <!-- Stats -->
+
+            <section class="stats-row">
+
+                <div class="stat-card">
+                    <div class="stat-icon info">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Applications Sent</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Interviews Scheduled</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon warning">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Saved Opportunities</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon success">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div>
+                        <div class="stat-value">46</div>
+                        <div class="stat-label">Profile Views</div>
+                        <div class="stat-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            12% this week
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- Content Grid -->
+
+            <section class="content-grid">
+
+
+                <!-- Recent Applications -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Recent Applications</h3>
+                        <a href="applications.html" class="panel-link">View all</a>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="application-row">
+                            <div class="application-logo">PB</div>
+                            <div class="application-details">
+                                <h4>Frontend Developer Intern</h4>
+                                <span>Paystack &middot; Lagos, Remote</span>
+                            </div>
+                            <span class="status-badge interview">
+                                <span class="dot"></span>
+                                Interview
+                            </span>
+                        </div>
+
+                        <div class="application-row">
+                            <div class="application-logo">FW</div>
+                            <div class="application-details">
+                                <h4>SIWES: Business Analyst</h4>
+                                <span>Flutterwave &middot; Lagos</span>
+                            </div>
+                            <span class="status-badge reviewing">
+                                <span class="dot"></span>
+                                Reviewing
+                            </span>
+                        </div>
+
+                        <div class="application-row">
+                            <div class="application-logo">MI</div>
+                            <div class="application-details">
+                                <h4>Marketing Intern</h4>
+                                <span>MTN Nigeria &middot; Abuja</span>
+                            </div>
+                            <span class="status-badge applied">
+                                <span class="dot"></span>
+                                Applied
+                            </span>
+                        </div>
+
+                        <div class="application-row">
+                            <div class="application-logo">AC</div>
+                            <div class="application-details">
+                                <h4>Data Analyst Intern</h4>
+                                <span>Andela &middot; Remote</span>
+                            </div>
+                            <span class="status-badge accepted">
+                                <span class="dot"></span>
+                                Accepted
+                            </span>
+                        </div>
+
+                        <div class="application-row">
+                            <div class="application-logo">UB</div>
+                            <div class="application-details">
+                                <h4>Operations Intern</h4>
+                                <span>UBA Group &middot; Lagos</span>
+                            </div>
+                            <span class="status-badge rejected">
+                                <span class="dot"></span>
+                                Not Selected
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Side Panels -->
+
+                <div class="side-panels">
+
+
+                    <!-- Profile Completion -->
+
+                    <div class="panel profile-completion">
+
+                        <div class="profile-completion-head">
+                            <h3>Profile Strength</h3>
+                            <span class="profile-completion-percent">75%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+
+                        <div class="profile-completion-list">
+
+                            <div class="profile-completion-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Basic information
+                            </div>
+
+                            <div class="profile-completion-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Education details
+                            </div>
+
+                            <div class="profile-completion-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Skills &amp; interests
+                            </div>
+
+                            <div class="profile-completion-item pending">
+                                <i class="fa-regular fa-circle"></i>
+                                Upload your CV
+                                <a href="profile.html">Add</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Saved Opportunities -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+                            <h3>Saved Opportunities</h3>
+                            <a href="saved.html" class="panel-link">View all</a>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="saved-item">
+                                <div class="saved-logo">IT</div>
+                                <div class="saved-details">
+                                    <h4>Product Design Intern</h4>
+                                    <span>Interswitch &middot; Lagos</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            </div>
+
+                            <div class="saved-item">
+                                <div class="saved-logo">KD</div>
+                                <div class="saved-details">
+                                    <h4>Graduate Trainee, Finance</h4>
+                                    <span>Kuda Bank &middot; Remote</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            </div>
+
+                            <div class="saved-item">
+                                <div class="saved-logo">JB</div>
+                                <div class="saved-details">
+                                    <h4>SIWES: Software Engineering</h4>
+                                    <span>Jumia &middot; Lagos</span>
+                                </div>
+                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
+</content>
