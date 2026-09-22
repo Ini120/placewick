@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Company Account | Placewick</title>
+
+    <meta
+        name="description"
+        content="Create your Placewick company account and start finding talented students."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="company-account.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="signup-page">
+
+
+    <div class="signup-container">
+
+
+        <!-- Logo -->
+
+        <section class="signup-top">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
+
+            </a>
+
+        </section>
+
+
+
+        <!-- Header -->
+
+        <section class="signup-header">
+
+            <h1>
+                Create your company account
+            </h1>
+
+            <p>
+                Post opportunities and find talented students
+                ready to contribute from day one.
+            </p>
+
+        </section>
+
+
+
+        <!-- Form -->
+
+        <form class="signup-form">
+
+
+            <!-- Company Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Work email address
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your work email address"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-label="Show password"
+                    >
+
+                        <i class="fa-regular fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Confirm Password -->
+
+            <div class="form-group">
+
+                <label for="confirm-password">
+                    Confirm password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-label="Show password"
+                    >
+
+                        <i class="fa-regular fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Terms -->
+
+            <div class="terms">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I agree to the
+                        <a href="terms.html">Terms of Service</a>
+                        and
+                        <a href="privacy.html">Privacy Policy</a>,
+                        and I confirm I am authorised to act on
+                        behalf of this company.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- Create Account -->
+
+            <a
+                href="company-account-completed.html"
+                class="create-button"
+            >
+
+                Create company account
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            <!-- Divider -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>OR</p>
+
+                <span></span>
+
+            </div>
+
+
+
+            <!-- Google -->
+
+            <button
+                type="button"
+                class="google-button"
+            >
+
+                <span class="google-icon">G</span>
+
+                Continue with Google
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- Login -->
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="login.html">
+                Log in
+            </a>
+
+        </p>
+
+
+    </div>
+
+</main>
+
+
+<script>
+    document.querySelectorAll('.password-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const input = toggle.previousElementSibling;
+            const icon = toggle.querySelector('i');
+
+            if (!input) return;
+
+            const isHidden = input.type === 'password';
+
+            input.type = isHidden ? 'text' : 'password';
+
+            toggle.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+
+            if (icon) {
+                icon.classList.toggle('fa-eye', !isHidden);
+                icon.classList.toggle('fa-eye-slash', isHidden);
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
