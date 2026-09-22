@@ -1,5 +1,5 @@
 /* =================================
-   PLACEWICK — APPLICANT DASHBOARD
+   PLACEWICK — COMPANY DASHBOARD
 ================================= */
 
 :root {
@@ -119,8 +119,6 @@ ul {
 
     padding: 0 8px;
 }
-
-
 
 
 .sidebar-logo img {
@@ -619,6 +617,30 @@ ul {
 
 
 /* =================================
+   VERIFICATION PILL
+================================= */
+
+.verification-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 12px;
+
+    padding: 6px 14px;
+
+    background-color: rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #FFFFFF;
+}
+
+
+/* =================================
    STATS ROW
 ================================= */
 
@@ -785,7 +807,7 @@ ul {
 
 
 /* =================================
-   APPLICATION ROW
+   APPLICANT ROW
 ================================= */
 
 .application-row {
@@ -947,7 +969,7 @@ ul {
 
 
 /* =================================
-   PROFILE COMPLETION
+   VERIFICATION / PROFILE STRENGTH
 ================================= */
 
 .profile-completion {
@@ -1051,7 +1073,7 @@ ul {
 
 
 /* =================================
-   SAVED OPPORTUNITIES
+   ACTIVE POSTINGS
 ================================= */
 
 .saved-item {

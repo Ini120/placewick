@@ -10,11 +10,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Applicant Dashboard | Placewick</title>
+    <title>Company Dashboard | Placewick</title>
 
     <meta
         name="description"
-        content="Your Placewick applicant dashboard — track applications, saved opportunities and messages."
+        content="Your Placewick company dashboard — manage postings, applicants and verification."
     >
 
     <!-- Google Font: Manrope -->
@@ -43,7 +43,7 @@
 
     <link
         rel="stylesheet"
-        href="applicant-dashboard.css"
+        href="company-dashboard.css"
     >
 
 </head>
@@ -74,41 +74,42 @@
 
         <nav class="sidebar-nav">
 
-            <a href="applicant-dashboard.html" class="sidebar-link active">
+            <a href="company-dashboard.html" class="sidebar-link active">
                 <i class="fa-solid fa-grid-2"></i>
                 Dashboard
             </a>
 
-            <a href="browse-opportunities.html" class="sidebar-link">
-                <i class="fa-solid fa-compass"></i>
-                Browse Opportunities
+            <a href="post-opportunity.html" class="sidebar-link">
+                <i class="fa-solid fa-circle-plus"></i>
+                Post an Opportunity
             </a>
 
-            <a href="applications.html" class="sidebar-link">
-                <i class="fa-solid fa-file-lines"></i>
-                My Applications
-                <span class="badge">3</span>
+            <a href="company-postings.html" class="sidebar-link">
+                <i class="fa-solid fa-briefcase"></i>
+                My Postings
+                <span class="badge">5</span>
             </a>
 
-            <a href="saved.html" class="sidebar-link">
-                <i class="fa-solid fa-bookmark"></i>
-                Saved
+            <a href="company-applicants.html" class="sidebar-link">
+                <i class="fa-solid fa-users"></i>
+                Applicants
+                <span class="badge">14</span>
             </a>
 
-            <a href="messages.html" class="sidebar-link">
+            <a href="company-messages.html" class="sidebar-link">
                 <i class="fa-regular fa-comments"></i>
                 Messages
-                <span class="badge">2</span>
+                <span class="badge">4</span>
             </a>
 
             <span class="sidebar-section-label">Account</span>
 
-            <a href="profile.html" class="sidebar-link">
-                <i class="fa-regular fa-user"></i>
-                Profile
+            <a href="company-profile.html" class="sidebar-link">
+                <i class="fa-regular fa-building"></i>
+                Company Profile
             </a>
 
-            <a href="settings.html" class="sidebar-link">
+            <a href="company-settings.html" class="sidebar-link">
                 <i class="fa-solid fa-gear"></i>
                 Settings
             </a>
@@ -120,11 +121,11 @@
 
             <div class="sidebar-user">
 
-                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-avatar">FW</div>
 
                 <div class="sidebar-user-info">
-                    <h4>Ada Okafor</h4>
-                    <span>University of Lagos</span>
+                    <h4>Flutterwave</h4>
+                    <span>Fintech &middot; Lagos</span>
                 </div>
 
             </div>
@@ -156,7 +157,7 @@
 
                 <div>
                     <h1>Dashboard</h1>
-                    <p>Welcome back, here's what's happening with your applications.</p>
+                    <p>Welcome back, here's an overview of your hiring activity.</p>
                 </div>
 
             </div>
@@ -165,7 +166,7 @@
 
                 <div class="header-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search opportunities">
+                    <input type="text" placeholder="Search applicants">
                 </div>
 
                 <button type="button" class="icon-button" aria-label="Notifications">
@@ -173,7 +174,7 @@
                     <span class="dot"></span>
                 </button>
 
-                <a href="profile.html" class="header-avatar">AO</a>
+                <a href="company-profile.html" class="header-avatar">FW</a>
 
             </div>
 
@@ -190,16 +191,19 @@
             <section class="welcome-banner">
 
                 <div>
-                    <h2>Let's find your next opportunity, Ada</h2>
+                    <h2>Let's find your next hire, Flutterwave</h2>
                     <p>
-                        You have 3 active applications and 2 unread
-                        messages from companies. Keep your profile
-                        updated to get better matches.
+                        You have 5 active postings and 14 new
+                        applicants waiting for review.
                     </p>
+                    <span class="verification-pill">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                        Verification in review
+                    </span>
                 </div>
 
-                <a href="browse-opportunities.html" class="browse-button">
-                    Browse Opportunities
+                <a href="post-opportunity.html" class="browse-button">
+                    Post an Opportunity
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -212,31 +216,31 @@
 
                 <div class="stat-card">
                     <div class="stat-icon info">
-                        <i class="fa-solid fa-paper-plane"></i>
+                        <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <div>
-                        <div class="stat-value">12</div>
-                        <div class="stat-label">Applications Sent</div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Active Postings</div>
                     </div>
                 </div>
 
                 <div class="stat-card">
                     <div class="stat-icon purple">
-                        <i class="fa-solid fa-calendar-check"></i>
+                        <i class="fa-solid fa-users"></i>
                     </div>
                     <div>
-                        <div class="stat-value">2</div>
-                        <div class="stat-label">Interviews Scheduled</div>
+                        <div class="stat-value">128</div>
+                        <div class="stat-label">Total Applicants</div>
                     </div>
                 </div>
 
                 <div class="stat-card">
                     <div class="stat-icon warning">
-                        <i class="fa-solid fa-bookmark"></i>
+                        <i class="fa-solid fa-hourglass-half"></i>
                     </div>
                     <div>
-                        <div class="stat-value">8</div>
-                        <div class="stat-label">Saved Opportunities</div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-label">Pending Reviews</div>
                     </div>
                 </div>
 
@@ -245,11 +249,11 @@
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     <div>
-                        <div class="stat-value">46</div>
+                        <div class="stat-value">89</div>
                         <div class="stat-label">Profile Views</div>
                         <div class="stat-trend">
                             <i class="fa-solid fa-arrow-trend-up"></i>
-                            12% this week
+                            8% this week
                         </div>
                     </div>
                 </div>
@@ -262,22 +266,22 @@
             <section class="content-grid">
 
 
-                <!-- Recent Applications -->
+                <!-- Recent Applicants -->
 
                 <div class="panel">
 
                     <div class="panel-header">
-                        <h3>Recent Applications</h3>
-                        <a href="applications.html" class="panel-link">View all</a>
+                        <h3>Recent Applicants</h3>
+                        <a href="company-applicants.html" class="panel-link">View all</a>
                     </div>
 
                     <div class="panel-body">
 
                         <div class="application-row">
-                            <div class="application-logo">PB</div>
+                            <div class="application-logo">CN</div>
                             <div class="application-details">
-                                <h4>Frontend Developer Intern</h4>
-                                <span>Paystack &middot; Lagos, Remote</span>
+                                <h4>Chidinma Nwosu</h4>
+                                <span>Frontend Developer Intern &middot; UNILAG</span>
                             </div>
                             <span class="status-badge interview">
                                 <span class="dot"></span>
@@ -286,10 +290,10 @@
                         </div>
 
                         <div class="application-row">
-                            <div class="application-logo">FW</div>
+                            <div class="application-logo">TA</div>
                             <div class="application-details">
-                                <h4>SIWES: Business Analyst</h4>
-                                <span>Flutterwave &middot; Lagos</span>
+                                <h4>Tunde Adebayo</h4>
+                                <span>SIWES: Business Analyst &middot; OAU</span>
                             </div>
                             <span class="status-badge reviewing">
                                 <span class="dot"></span>
@@ -298,10 +302,10 @@
                         </div>
 
                         <div class="application-row">
-                            <div class="application-logo">MI</div>
+                            <div class="application-logo">BE</div>
                             <div class="application-details">
-                                <h4>Marketing Intern</h4>
-                                <span>MTN Nigeria &middot; Abuja</span>
+                                <h4>Blessing Etim</h4>
+                                <span>Marketing Intern &middot; UNIBEN</span>
                             </div>
                             <span class="status-badge applied">
                                 <span class="dot"></span>
@@ -310,22 +314,22 @@
                         </div>
 
                         <div class="application-row">
-                            <div class="application-logo">AC</div>
+                            <div class="application-logo">DO</div>
                             <div class="application-details">
-                                <h4>Data Analyst Intern</h4>
-                                <span>Andela &middot; Remote</span>
+                                <h4>David Okonkwo</h4>
+                                <span>Data Analyst Intern &middot; Covenant University</span>
                             </div>
                             <span class="status-badge accepted">
                                 <span class="dot"></span>
-                                Accepted
+                                Hired
                             </span>
                         </div>
 
                         <div class="application-row">
-                            <div class="application-logo">UB</div>
+                            <div class="application-logo">AM</div>
                             <div class="application-details">
-                                <h4>Operations Intern</h4>
-                                <span>UBA Group &middot; Lagos</span>
+                                <h4>Amaka Musa</h4>
+                                <span>Operations Intern &middot; ABU Zaria</span>
                             </div>
                             <span class="status-badge rejected">
                                 <span class="dot"></span>
@@ -343,40 +347,40 @@
                 <div class="side-panels">
 
 
-                    <!-- Profile Completion -->
+                    <!-- Verification Status -->
 
                     <div class="panel profile-completion">
 
                         <div class="profile-completion-head">
-                            <h3>Profile Strength</h3>
-                            <span class="profile-completion-percent">75%</span>
+                            <h3>Verification Status</h3>
+                            <span class="profile-completion-percent">60%</span>
                         </div>
 
                         <div class="progress-track">
-                            <div class="progress-fill" style="width: 75%;"></div>
+                            <div class="progress-fill" style="width: 60%;"></div>
                         </div>
 
                         <div class="profile-completion-list">
 
                             <div class="profile-completion-item">
                                 <i class="fa-solid fa-circle-check"></i>
-                                Basic information
+                                Company profile
                             </div>
 
                             <div class="profile-completion-item">
                                 <i class="fa-solid fa-circle-check"></i>
-                                Education details
-                            </div>
-
-                            <div class="profile-completion-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                Skills &amp; interests
+                                Official email confirmed
                             </div>
 
                             <div class="profile-completion-item pending">
                                 <i class="fa-regular fa-circle"></i>
-                                Upload your CV
-                                <a href="profile.html">Add</a>
+                                CAC / RC number
+                                <a href="company-profile.html">Add</a>
+                            </div>
+
+                            <div class="profile-completion-item pending">
+                                <i class="fa-regular fa-circle"></i>
+                                Admin review
                             </div>
 
                         </div>
@@ -384,42 +388,39 @@
                     </div>
 
 
-                    <!-- Saved Opportunities -->
+                    <!-- Active Postings -->
 
                     <div class="panel">
 
                         <div class="panel-header">
-                            <h3>Saved Opportunities</h3>
-                            <a href="saved.html" class="panel-link">View all</a>
+                            <h3>Active Postings</h3>
+                            <a href="company-postings.html" class="panel-link">View all</a>
                         </div>
 
                         <div class="panel-body">
 
                             <div class="saved-item">
-                                <div class="saved-logo">IT</div>
+                                <div class="saved-logo">FD</div>
                                 <div class="saved-details">
-                                    <h4>Product Design Intern</h4>
-                                    <span>Interswitch &middot; Lagos</span>
+                                    <h4>Frontend Developer Intern</h4>
+                                    <span>32 applicants</span>
                                 </div>
-                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
                             </div>
 
                             <div class="saved-item">
-                                <div class="saved-logo">KD</div>
+                                <div class="saved-logo">BA</div>
                                 <div class="saved-details">
-                                    <h4>Graduate Trainee, Finance</h4>
-                                    <span>Kuda Bank &middot; Remote</span>
+                                    <h4>SIWES: Business Analyst</h4>
+                                    <span>21 applicants</span>
                                 </div>
-                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
                             </div>
 
                             <div class="saved-item">
-                                <div class="saved-logo">JB</div>
+                                <div class="saved-logo">MK</div>
                                 <div class="saved-details">
-                                    <h4>SIWES: Software Engineering</h4>
-                                    <span>Jumia &middot; Lagos</span>
+                                    <h4>Marketing Intern</h4>
+                                    <span>18 applicants</span>
                                 </div>
-                                <i class="fa-solid fa-bookmark bookmark-icon"></i>
                             </div>
 
                         </div>
