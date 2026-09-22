@@ -1,0 +1,627 @@
+/* =================================
+   PLACEWICK — COMPANY ACCOUNT
+================================= */
+
+:root {
+
+    --primary: #3155F5;
+
+    --primary-dark: #243FC2;
+
+    --text: #101A43;
+
+    --text-light: #667085;
+
+    --background: #FFFFFF;
+
+    --card-background: #F8F9FC;
+
+    --border: #E5E7EB;
+
+    --radius-md: 12px;
+
+    --radius-lg: 20px;
+
+}
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Manrope", sans-serif;
+
+    color: var(--text);
+
+    background-color: var(--background);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.signup-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.signup-container {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    padding: 45px 45px 35px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid rgba(20, 30, 80, 0.10);
+
+    border-radius: 30px;
+
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.signup-top {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.logo img {
+
+    width: 150px;
+
+    height: auto;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.signup-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.signup-header h1 {
+
+    margin-bottom: 8px;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.6px;
+}
+
+
+.signup-header p {
+
+    max-width: 380px;
+
+    margin: 0 auto;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.signup-form {
+
+    width: 100%;
+
+}
+
+
+.form-group {
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+
+/* =================================
+   INPUT WRAPPER
+================================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.input-wrapper:focus-within {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 85, 245, 0.10);
+
+}
+
+
+.input-wrapper i {
+
+    padding-left: 14px;
+
+    color: #98A2B3;
+
+    font-size: 13px;
+
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #98A2B3;
+
+}
+
+
+.password-toggle {
+
+    padding: 0 14px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #98A2B3;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.password-toggle:hover {
+
+    color: var(--text-light);
+
+}
+
+
+/* =================================
+   TERMS
+================================= */
+
+.terms {
+
+    margin-bottom: 22px;
+
+}
+
+
+.terms label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+}
+
+
+.terms input[type="checkbox"] {
+
+    margin-top: 3px;
+
+    width: 15px;
+
+    height: 15px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+
+}
+
+
+.terms span {
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+
+}
+
+
+.terms a {
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+
+.terms a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =================================
+   CREATE BUTTON
+================================= */
+
+.create-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 22px;
+
+    color: #FFFFFF;
+
+    background-color: var(--primary);
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+
+.create-button:hover {
+
+    background-color: var(--primary-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =================================
+   DIVIDER
+================================= */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: var(--border);
+
+}
+
+
+.divider p {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #98A2B3;
+
+    letter-spacing: 0.06em;
+
+}
+
+
+/* =================================
+   GOOGLE BUTTON
+================================= */
+
+.google-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.google-button:hover {
+
+    border-color: #CBD0D9;
+
+    background-color: #FAFBFF;
+
+}
+
+
+.google-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        from -45deg,
+        #EA4335 0deg 90deg,
+        #4285F4 90deg 180deg,
+        #34A853 180deg 270deg,
+        #FBBC05 270deg 360deg
+    );
+
+    color: #FFFFFF;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+/* =================================
+   LOGIN TEXT
+================================= */
+
+.login-text {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+
+}
+
+
+.login-text a {
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+}
+
+
+.login-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 560px) {
+
+    .signup-page {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .signup-container {
+
+        padding: 35px 24px 28px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .signup-header h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .signup-header p {
+
+        font-size: 13px;
+
+    }
+
+}
+</content>
