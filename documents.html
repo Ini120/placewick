@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Document Vault | Placewick</title>
+
+    <meta
+        name="description"
+        content="Store your CV, cover letters and certificates on Placewick and reuse them any time you apply."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="applicant-dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="documents.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+
+    <!-- Mobile overlay -->
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link active">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">AO</div>
+
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <div class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Document Vault</h1>
+                    <p>Store your documents once, reuse them for every application.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search documents" id="doc-search">
+                </div>
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+
+        <main class="dashboard-content">
+
+
+            <!-- Info banner -->
+
+            <div class="vault-info reveal">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>
+                    When you apply to an opportunity, you'll be able to attach
+                    documents straight from your vault instead of uploading them
+                    again — or upload a new one from your device just for that
+                    application.
+                </p>
+            </div>
+
+
+            <!-- Upload zone -->
+
+            <div class="upload-zone" id="upload-zone">
+
+                <input type="file" id="file-input" class="visually-hidden" multiple accept=".pdf,.doc,.docx">
+
+                <div class="upload-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+
+                <h3>Drag and drop files here</h3>
+
+                <p>or</p>
+
+                <button type="button" class="upload-browse-button" id="upload-browse-button">
+                    Browse from your device
+                </button>
+
+                <span class="upload-hint">PDF, DOC or DOCX &middot; up to 5MB per file</span>
+
+            </div>
+
+
+            <!-- Document list -->
+
+            <div class="panel vault-panel">
+
+                <div class="panel-header vault-panel-header">
+
+                    <h3>Your Documents <span class="doc-count" id="doc-count">4</span></h3>
+
+                    <div class="vault-filters" id="vault-filters">
+                        <button type="button" class="vault-filter is-active" data-category="all">All</button>
+                        <button type="button" class="vault-filter" data-category="cv">CV / Resume</button>
+                        <button type="button" class="vault-filter" data-category="cover-letter">Cover Letters</button>
+                        <button type="button" class="vault-filter" data-category="certificate">Certificates</button>
+                        <button type="button" class="vault-filter" data-category="other">Other</button>
+                    </div>
+
+                </div>
+
+                <div class="panel-body vault-list" id="vault-list">
+
+                    <!-- CV (default) -->
+                    <div class="doc-row" data-category="cv">
+
+                        <div class="doc-icon pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <div class="doc-details">
+                            <h4>Ada_Okafor_CV.pdf</h4>
+                            <span>245 KB &middot; Uploaded 3 days ago</span>
+                        </div>
+
+                        <span class="doc-category-badge cv">CV / Resume</span>
+
+                        <button type="button" class="doc-default-star is-default" aria-label="Default CV" title="Default CV">
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+
+                        <div class="doc-actions">
+                            <button type="button" class="doc-action-button" aria-label="Download">
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                            </button>
+                            <button type="button" class="doc-action-button danger" aria-label="Delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Cover Letter -->
+                    <div class="doc-row" data-category="cover-letter">
+
+                        <div class="doc-icon doc">
+                            <i class="fa-solid fa-file-word"></i>
+                        </div>
+
+                        <div class="doc-details">
+                            <h4>Cover_Letter_Paystack.docx</h4>
+                            <span>88 KB &middot; Uploaded 3 days ago</span>
+                        </div>
+
+                        <span class="doc-category-badge cover-letter">Cover Letter</span>
+
+                        <button type="button" class="doc-default-star" aria-label="Set as default" title="Only CVs can be set as default">
+                            <i class="fa-regular fa-star"></i>
+                        </button>
+
+                        <div class="doc-actions">
+                            <button type="button" class="doc-action-button" aria-label="Download">
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                            </button>
+                            <button type="button" class="doc-action-button danger" aria-label="Delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Certificate -->
+                    <div class="doc-row" data-category="certificate">
+
+                        <div class="doc-icon pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <div class="doc-details">
+                            <h4>WAEC_Certificate.pdf</h4>
+                            <span>1.2 MB &middot; Uploaded 2 weeks ago</span>
+                        </div>
+
+                        <span class="doc-category-badge certificate">Certificate</span>
+
+                        <button type="button" class="doc-default-star" aria-label="Set as default" title="Only CVs can be set as default">
+                            <i class="fa-regular fa-star"></i>
+                        </button>
+
+                        <div class="doc-actions">
+                            <button type="button" class="doc-action-button" aria-label="Download">
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                            </button>
+                            <button type="button" class="doc-action-button danger" aria-label="Delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Other -->
+                    <div class="doc-row" data-category="other">
+
+                        <div class="doc-icon pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+
+                        <div class="doc-details">
+                            <h4>Design_Portfolio.pdf</h4>
+                            <span>512 KB &middot; Uploaded 1 month ago</span>
+                        </div>
+
+                        <span class="doc-category-badge other">Other</span>
+
+                        <button type="button" class="doc-default-star" aria-label="Set as default" title="Only CVs can be set as default">
+                            <i class="fa-regular fa-star"></i>
+                        </button>
+
+                        <div class="doc-actions">
+                            <button type="button" class="doc-action-button" aria-label="Download">
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                            </button>
+                            <button type="button" class="doc-action-button danger" aria-label="Delete">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="panel-empty vault-empty" id="vault-empty" hidden>
+                    <i class="fa-regular fa-folder-open"></i>
+                    <p>No documents in this category yet.</p>
+                </div>
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="documents.js"></script>
+
+</body>
+
+</html>
