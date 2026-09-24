@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings | Placewick</title>
+
+    <meta
+        name="description"
+        content="Manage your account, notifications and privacy settings on Placewick."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="settings.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link active">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your account, notifications and privacy.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <div class="settings-layout">
+
+                <nav class="settings-nav" id="settings-nav">
+                    <button type="button" class="settings-nav-item is-active" data-section="account">Account</button>
+                    <button type="button" class="settings-nav-item" data-section="notifications">Notifications</button>
+                    <button type="button" class="settings-nav-item" data-section="privacy">Privacy</button>
+                    <button type="button" class="settings-nav-item" data-section="danger">Danger zone</button>
+                </nav>
+
+                <div class="settings-content">
+
+                    <section class="panel profile-panel settings-section" id="section-account">
+
+                        <h3 class="profile-panel-title">Account</h3>
+
+                        <div class="profile-field-grid">
+
+                            <label class="profile-field">
+                                <span>Email address</span>
+                                <input type="email" value="ada.okafor@unilag.edu.ng">
+                            </label>
+
+                            <label class="profile-field">
+                                <span>Phone number</span>
+                                <input type="tel" value="+234 802 345 6789">
+                            </label>
+
+                        </div>
+
+                        <h4 class="settings-subheading">Change password</h4>
+
+                        <div class="profile-field-grid">
+
+                            <label class="profile-field">
+                                <span>Current password</span>
+                                <input type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+                            </label>
+
+                            <label class="profile-field"></label>
+
+                            <label class="profile-field">
+                                <span>New password</span>
+                                <input type="password" placeholder="At least 8 characters">
+                            </label>
+
+                            <label class="profile-field">
+                                <span>Confirm new password</span>
+                                <input type="password" placeholder="Repeat new password">
+                            </label>
+
+                        </div>
+
+                        <div class="settings-actions">
+                            <span class="profile-save-status" data-status-for="account"></span>
+                            <button type="button" class="profile-btn profile-btn-filled settings-save" data-section="account">Save changes</button>
+                        </div>
+
+                    </section>
+
+                    <section class="panel profile-panel settings-section" id="section-notifications" hidden>
+
+                        <h3 class="profile-panel-title">Notifications</h3>
+
+                        <div class="settings-toggle-list">
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>Application status updates</h4>
+                                    <p>Get notified when a company moves your application forward.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>New messages</h4>
+                                    <p>Get notified when a company sends you a message.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>Recommended opportunities</h4>
+                                    <p>A weekly digest of roles that match your profile.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>Product news</h4>
+                                    <p>Occasional updates about new Placewick features.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox">
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                        </div>
+
+                        <div class="settings-actions">
+                            <span class="profile-save-status" data-status-for="notifications"></span>
+                            <button type="button" class="profile-btn profile-btn-filled settings-save" data-section="notifications">Save changes</button>
+                        </div>
+
+                    </section>
+
+                    <section class="panel profile-panel settings-section" id="section-privacy" hidden>
+
+                        <h3 class="profile-panel-title">Privacy</h3>
+
+                        <div class="settings-toggle-list">
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>Show my profile to verified companies</h4>
+                                    <p>Let companies discover your profile in search, even before you apply.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                            <label class="settings-toggle-row">
+                                <div>
+                                    <h4>Share my match score with companies</h4>
+                                    <p>Companies can see your compatibility score when you apply.</p>
+                                </div>
+                                <span class="settings-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="settings-switch-track"></span>
+                                </span>
+                            </label>
+
+                        </div>
+
+                        <div class="settings-actions">
+                            <span class="profile-save-status" data-status-for="privacy"></span>
+                            <button type="button" class="profile-btn profile-btn-filled settings-save" data-section="privacy">Save changes</button>
+                        </div>
+
+                    </section>
+
+                    <section class="panel profile-panel settings-section settings-danger" id="section-danger" hidden>
+
+                        <h3 class="profile-panel-title">Danger zone</h3>
+
+                        <div class="settings-danger-row">
+                            <div>
+                                <h4>Deactivate account</h4>
+                                <p>Temporarily hide your profile and applications. You can reactivate anytime by logging back in.</p>
+                            </div>
+                            <button type="button" class="profile-btn profile-btn-outline" id="deactivate-button">Deactivate</button>
+                        </div>
+
+                        <div class="settings-danger-row">
+                            <div>
+                                <h4>Delete account</h4>
+                                <p>Permanently delete your account and all your data. This cannot be undone.</p>
+                            </div>
+                            <button type="button" class="profile-btn profile-btn-danger" id="delete-button">Delete account</button>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="settings.js"></script>
+
+</body>
+
+</html>

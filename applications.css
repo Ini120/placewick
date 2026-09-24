@@ -1,0 +1,116 @@
+/* =================================
+   PLACEWICK — MY APPLICATIONS
+   (extends applicant-dashboard.css)
+================================= */
+
+.status-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+.status-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 16px;
+
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--text-light);
+
+    font-size: 13.5px;
+    font-weight: 700;
+    font-family: inherit;
+
+    transition: 0.2s ease;
+}
+
+
+.status-tab:hover {
+    border-color: #CBD0D9;
+    color: var(--text);
+}
+
+
+.status-tab span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+
+    background-color: var(--background);
+
+    border-radius: 999px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.status-tab.is-active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #FFFFFF;
+}
+
+
+.status-tab.is-active span {
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+}
+
+
+.app-row-action {
+    padding: 8px 14px;
+
+    background-color: var(--background);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+
+.app-row-action:hover {
+    background-color: var(--info-bg);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+@media (max-width: 700px) {
+
+    .status-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .status-tab {
+        flex: 0 0 auto;
+    }
+
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Saved Opportunities | Placewick</title>
+
+    <meta
+        name="description"
+        content="Opportunities you've bookmarked on Placewick to come back to later."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="browse-opportunities.css">
+    <link rel="stylesheet" href="saved.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link active">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Saved Opportunities</h1>
+                    <p>Roles you've bookmarked to come back to.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="saved-search-input" placeholder="Search saved">
+                </div>
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <p class="browse-result-count" id="saved-result-count">3 saved opportunities</p>
+
+            <div class="browse-grid" id="saved-grid">
+
+                <article
+                    class="opp-card"
+                    data-name="Product Design Intern Interswitch"
+                    data-added="2026-09-10"
+                >
+                    <div class="opp-card-top">
+                        <div class="opp-logo">IS</div>
+                        <button type="button" class="opp-save is-saved" aria-label="Remove from saved">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+                    <span class="opp-match">79% match</span>
+                    <h3>Product Design Intern</h3>
+                    <p class="opp-company">Interswitch <i class="fa-solid fa-circle-check verified-badge"></i></p>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos, On-site</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Work alongside the product team designing flows for Interswitch's merchant tools, from wireframes through to hand-off.</p>
+                    <a href="browse-opportunities.html" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <article
+                    class="opp-card"
+                    data-name="Data Analyst Intern Andela"
+                    data-added="2026-09-05"
+                >
+                    <div class="opp-card-top">
+                        <div class="opp-logo">AN</div>
+                        <button type="button" class="opp-save is-saved" aria-label="Remove from saved">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+                    <span class="opp-match">88% match</span>
+                    <h3>Data Analyst Intern</h3>
+                    <p class="opp-company">Andela <i class="fa-solid fa-circle-check verified-badge"></i></p>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Support Andela's client engagements with data cleaning, dashboards and reporting across live projects.</p>
+                    <a href="browse-opportunities.html" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <article
+                    class="opp-card"
+                    data-name="Graduate Trainee Finance Kuda Bank"
+                    data-added="2026-08-28"
+                >
+                    <div class="opp-card-top">
+                        <div class="opp-logo">KB</div>
+                        <button type="button" class="opp-save is-saved" aria-label="Remove from saved">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+                    <span class="opp-match">81% match</span>
+                    <h3>Graduate Trainee, Finance</h3>
+                    <p class="opp-company">Kuda Bank <i class="fa-solid fa-circle-check verified-badge"></i></p>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">A 12-month graduate programme rotating across financial planning, treasury and risk at Kuda.</p>
+                    <a href="browse-opportunities.html" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+            </div>
+
+            <div class="browse-empty" id="saved-empty">
+                <i class="fa-regular fa-bookmark"></i>
+                <p>Nothing saved yet. Bookmark opportunities from Browse Opportunities to see them here.</p>
+                <a href="browse-opportunities.html" class="opp-apply" style="display: inline-flex; margin-top: 14px; width: auto; padding-left: 22px; padding-right: 22px;">Browse Opportunities</a>
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="saved.js"></script>
+
+</body>
+
+</html>

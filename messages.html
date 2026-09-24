@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Messages | Placewick</title>
+
+    <meta
+        name="description"
+        content="Messages between you and companies you've applied to on Placewick."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="messages.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link active">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Messages</h1>
+                    <p>Conversations with companies you've applied to.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content dashboard-content-messages">
+
+            <div class="messages-shell">
+
+                <aside class="conversation-list" id="conversation-list">
+
+                    <div class="conversation-list-header">
+                        <div class="header-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="conversation-search" placeholder="Search messages">
+                        </div>
+                    </div>
+
+                    <div class="conversation-items">
+
+                        <button
+                            type="button"
+                            class="conversation-item is-active"
+                            data-conversation="paystack"
+                            data-name="Paystack"
+                        >
+                            <div class="application-logo">PB</div>
+                            <div class="conversation-item-text">
+                                <h4>Paystack</h4>
+                                <p>We'd love to schedule your interview for&hellip;</p>
+                            </div>
+                            <div class="conversation-item-meta">
+                                <span class="conversation-time">10:24 AM</span>
+                                <span class="conversation-unread">2</span>
+                            </div>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="conversation-item"
+                            data-conversation="flutterwave"
+                            data-name="Flutterwave"
+                        >
+                            <div class="application-logo">FW</div>
+                            <div class="conversation-item-text">
+                                <h4>Flutterwave</h4>
+                                <p>Thanks for applying — we're reviewing&hellip;</p>
+                            </div>
+                            <div class="conversation-item-meta">
+                                <span class="conversation-time">Yesterday</span>
+                            </div>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="conversation-item"
+                            data-conversation="andela"
+                            data-name="Andela"
+                        >
+                            <div class="application-logo">AN</div>
+                            <div class="conversation-item-text">
+                                <h4>Andela</h4>
+                                <p>Congratulations! We're happy to offer you&hellip;</p>
+                            </div>
+                            <div class="conversation-item-meta">
+                                <span class="conversation-time">Mon</span>
+                            </div>
+                        </button>
+
+                        <button
+                            type="button"
+                            class="conversation-item"
+                            data-conversation="uba"
+                            data-name="UBA Group"
+                        >
+                            <div class="application-logo">UB</div>
+                            <div class="conversation-item-text">
+                                <h4>UBA Group</h4>
+                                <p>Thank you for your interest in the role&hellip;</p>
+                            </div>
+                            <div class="conversation-item-meta">
+                                <span class="conversation-time">Last week</span>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="conversation-empty" id="conversation-empty" hidden>
+                        <p>No conversations match your search.</p>
+                    </div>
+
+                </aside>
+
+                <section class="conversation-thread">
+
+                    <div class="thread-header">
+                        <button type="button" class="thread-back" id="thread-back" aria-label="Back to conversations">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="application-logo" id="thread-avatar">PB</div>
+                        <div>
+                            <h3 id="thread-name">Paystack</h3>
+                            <span class="thread-role">Re: Frontend Developer Intern</span>
+                        </div>
+                    </div>
+
+                    <div class="thread-body" id="thread-body">
+
+                        <div class="thread-conversation" data-conversation="paystack">
+                            <div class="thread-msg received">
+                                <p>Hi Ada, thanks for applying to the Frontend Developer Intern role — your portfolio stood out to the team.</p>
+                                <span class="thread-msg-time">Mon, 9:02 AM</span>
+                            </div>
+                            <div class="thread-msg received">
+                                <p>We'd love to schedule your interview for this Thursday at 2pm. Does that work for you?</p>
+                                <span class="thread-msg-time">Today, 10:24 AM</span>
+                            </div>
+                        </div>
+
+                        <div class="thread-conversation" data-conversation="flutterwave" hidden>
+                            <div class="thread-msg received">
+                                <p>Thanks for applying to SIWES: Business Analyst — we're reviewing applications and will be in touch within two weeks.</p>
+                                <span class="thread-msg-time">Yesterday, 4:12 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="thread-conversation" data-conversation="andela" hidden>
+                            <div class="thread-msg received">
+                                <p>Congratulations! We're happy to offer you the Data Analyst Intern position. Details to follow by email.</p>
+                                <span class="thread-msg-time">Mon, 11:47 AM</span>
+                            </div>
+                            <div class="thread-msg sent">
+                                <p>Thank you so much — I'm really excited to join the team!</p>
+                                <span class="thread-msg-time">Mon, 12:03 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="thread-conversation" data-conversation="uba" hidden>
+                            <div class="thread-msg received">
+                                <p>Thank you for your interest in the Operations Intern role. Unfortunately we've moved forward with other candidates this cycle.</p>
+                                <span class="thread-msg-time">Last week</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <form class="thread-composer" id="thread-composer">
+                        <input type="text" id="thread-input" placeholder="Write a message&hellip;" autocomplete="off">
+                        <button type="submit" aria-label="Send message">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="messages.js"></script>
+
+</body>
+
+</html>

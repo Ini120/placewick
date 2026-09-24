@@ -1,0 +1,340 @@
+/* =================================
+   PLACEWICK — PROFILE
+   (extends applicant-dashboard.css)
+================================= */
+
+.profile-banner-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+
+.profile-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.profile-avatar-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+
+    background-color: var(--primary);
+
+    border-radius: 50%;
+
+    color: #FFFFFF;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+.profile-banner-left h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+
+.profile-banner-left p {
+    margin-top: 3px;
+
+    font-size: 13.5px;
+    color: var(--text-light);
+}
+
+
+.profile-completeness {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.profile-completeness-bar {
+    width: 140px;
+    height: 6px;
+
+    background-color: var(--background);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+
+.profile-completeness-fill {
+    height: 100%;
+
+    background-color: var(--primary);
+
+    border-radius: 999px;
+}
+
+
+.profile-completeness span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+
+.profile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: auto;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    font-size: 13.5px;
+    font-weight: 700;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.profile-btn-outline {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+
+.profile-btn-outline:hover {
+    border-color: #CBD0D9;
+    background-color: var(--background);
+}
+
+
+.profile-btn-filled {
+    background-color: var(--primary);
+    color: #FFFFFF;
+}
+
+
+.profile-btn-filled:hover {
+    background-color: var(--primary-dark);
+}
+
+
+/* PANELS / FORM */
+
+.profile-panel {
+    padding: 22px;
+    margin-bottom: 16px;
+}
+
+
+.profile-panel-title {
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+
+.profile-field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.profile-field-full {
+    grid-column: 1 / -1;
+}
+
+
+.profile-field span {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+
+.profile-field input,
+.profile-field select,
+.profile-field textarea {
+    padding: 11px 14px;
+
+    background-color: var(--background);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    color: var(--text);
+
+    font-size: 13.5px;
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.profile-field textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+.profile-field input:focus,
+.profile-field select:focus,
+.profile-field textarea:focus {
+    border-color: var(--primary);
+    background-color: var(--surface);
+}
+
+
+/* SKILLS */
+
+.profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 14px;
+}
+
+
+.profile-skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 8px 7px 14px;
+
+    background-color: var(--info-bg);
+
+    border-radius: 999px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.profile-skill-tag button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    background: rgba(49, 85, 245, 0.15);
+    border: none;
+    border-radius: 50%;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    line-height: 1;
+}
+
+
+.profile-skill-add input {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 10px 14px;
+
+    background-color: var(--background);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    color: var(--text);
+
+    font-size: 13.5px;
+    font-family: inherit;
+
+    outline: none;
+}
+
+
+.profile-skill-add input:focus {
+    border-color: var(--primary);
+}
+
+
+/* ACTIONS */
+
+.profile-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+
+    margin-top: 6px;
+}
+
+
+.profile-save-status {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--success);
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.profile-save-status.is-visible {
+    opacity: 1;
+}
+
+
+@media (max-width: 650px) {
+
+    .profile-field-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-banner-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Browse Opportunities | Placewick</title>
+
+    <meta
+        name="description"
+        content="Browse verified internships, SIWES placements and early-career opportunities on Placewick."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="browse-opportunities.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link active">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Browse Opportunities</h1>
+                    <p>Internships, SIWES placements and early-career roles matched to your profile.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+
+            <!-- Filters -->
+
+            <div class="browse-filters reveal">
+
+                <div class="browse-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="browse-search-input" placeholder="Search role, company or skill">
+                </div>
+
+                <select id="filter-category" class="browse-select">
+                    <option value="all">All categories</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="design">Design</option>
+                    <option value="finance">Finance</option>
+                    <option value="operations">Operations</option>
+                </select>
+
+                <select id="filter-sort" class="browse-select">
+                    <option value="match">Best match</option>
+                    <option value="newest">Newest</option>
+                    <option value="az">Company A&ndash;Z</option>
+                </select>
+
+                <div class="browse-chip-group" id="filter-worktype">
+                    <button type="button" class="browse-chip is-active" data-worktype="all">All</button>
+                    <button type="button" class="browse-chip" data-worktype="remote">Remote</button>
+                    <button type="button" class="browse-chip" data-worktype="onsite">On-site</button>
+                    <button type="button" class="browse-chip" data-worktype="hybrid">Hybrid</button>
+                </div>
+
+                <label class="browse-checkbox">
+                    <input type="checkbox" id="filter-paid">
+                    Paid only
+                </label>
+
+            </div>
+
+            <p class="browse-result-count" id="browse-result-count">8 opportunities</p>
+
+
+            <!-- Opportunity grid -->
+
+            <div class="browse-grid" id="browse-grid">
+
+                <!-- 1 -->
+                <article class="opp-card" data-category="engineering" data-worktype="remote" data-paid="true" data-match="92" data-name="Frontend Developer Intern Paystack" data-added="2026-09-20">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">PB</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">92% Match</span>
+                    <h3>Frontend Developer Intern</h3>
+                    <div class="opp-company">
+                        Paystack
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos, Remote</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Build and ship customer-facing UI alongside our product engineering team.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 2 -->
+                <article class="opp-card" data-category="business" data-worktype="onsite" data-paid="true" data-match="85" data-name="SIWES Business Analyst Flutterwave" data-added="2026-09-18">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">FW</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">85% Match</span>
+                    <h3>SIWES: Business Analyst</h3>
+                    <div class="opp-company">
+                        Flutterwave
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Support product and ops teams with data analysis during your SIWES placement.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 3 -->
+                <article class="opp-card" data-category="marketing" data-worktype="onsite" data-paid="false" data-match="74" data-name="Marketing Intern MTN Nigeria" data-added="2026-09-15">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">MI</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">74% Match</span>
+                    <h3>Marketing Intern</h3>
+                    <div class="opp-company">
+                        MTN Nigeria
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Abuja</span>
+                        <span class="opp-tag"><i class="fa-solid fa-sack-dollar"></i> Unpaid</span>
+                    </div>
+                    <p class="opp-desc">Assist the brand team on campaigns, social content and market research.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 4 -->
+                <article class="opp-card" data-category="engineering" data-worktype="remote" data-paid="true" data-match="88" data-name="Data Analyst Intern Andela" data-added="2026-09-21">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">AC</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">88% Match</span>
+                    <h3>Data Analyst Intern</h3>
+                    <div class="opp-company">
+                        Andela
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Work with real client datasets, dashboards and reporting pipelines.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 5 -->
+                <article class="opp-card" data-category="design" data-worktype="onsite" data-paid="true" data-match="79" data-name="Product Design Intern Interswitch" data-added="2026-09-12">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">IT</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">79% Match</span>
+                    <h3>Product Design Intern</h3>
+                    <div class="opp-company">
+                        Interswitch
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Design flows and interfaces for payment products used across Africa.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 6 -->
+                <article class="opp-card" data-category="finance" data-worktype="remote" data-paid="true" data-match="81" data-name="Graduate Trainee Finance Kuda Bank" data-added="2026-09-10">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">KD</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">81% Match</span>
+                    <h3>Graduate Trainee, Finance</h3>
+                    <div class="opp-company">
+                        Kuda Bank
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">A 6-month rotational programme across financial planning and treasury.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 7 -->
+                <article class="opp-card" data-category="engineering" data-worktype="onsite" data-paid="true" data-match="90" data-name="SIWES Software Engineering Jumia" data-added="2026-09-19">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">JB</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">90% Match</span>
+                    <h3>SIWES: Software Engineering</h3>
+                    <div class="opp-company">
+                        Jumia
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos</span>
+                        <span class="opp-tag paid"><i class="fa-solid fa-sack-dollar"></i> Paid</span>
+                    </div>
+                    <p class="opp-desc">Ship features on Jumia's e-commerce platform alongside senior engineers.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+                <!-- 8 -->
+                <article class="opp-card" data-category="operations" data-worktype="hybrid" data-paid="false" data-match="68" data-name="Operations Intern UBA Group" data-added="2026-09-08">
+                    <div class="opp-card-top">
+                        <div class="opp-logo">UB</div>
+                        <button type="button" class="opp-save" aria-label="Save opportunity"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <span class="opp-match">68% Match</span>
+                    <h3>Operations Intern</h3>
+                    <div class="opp-company">
+                        UBA Group
+                        <i class="fa-solid fa-circle-check verified-badge" title="Verified company"></i>
+                    </div>
+                    <div class="opp-tags">
+                        <span class="opp-tag"><i class="fa-solid fa-location-dot"></i> Lagos, Hybrid</span>
+                        <span class="opp-tag"><i class="fa-solid fa-sack-dollar"></i> Unpaid</span>
+                    </div>
+                    <p class="opp-desc">Support branch operations and process improvement projects.</p>
+                    <a href="#" class="opp-apply">View &amp; Apply</a>
+                </article>
+
+            </div>
+
+            <div class="panel-empty browse-empty" id="browse-empty" hidden>
+                <i class="fa-regular fa-compass"></i>
+                <p>No opportunities match your filters. Try widening your search.</p>
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="browse-opportunities.js"></script>
+
+</body>
+
+</html>

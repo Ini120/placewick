@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Profile | Placewick</title>
+
+    <meta
+        name="description"
+        content="Manage the profile companies see when you apply on Placewick."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link active">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>My Profile</h1>
+                    <p>This is what companies see when you apply.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <div class="profile-banner-card">
+
+                <div class="profile-banner-left">
+                    <div class="profile-avatar-large">AO</div>
+                    <div>
+                        <h2>Ada Okafor</h2>
+                        <p>Computer Science &middot; University of Lagos &middot; Class of 2027</p>
+                        <div class="profile-completeness">
+                            <div class="profile-completeness-bar">
+                                <div class="profile-completeness-fill" style="width: 80%;"></div>
+                            </div>
+                            <span>Profile 80% complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="profile-btn profile-btn-outline profile-preview-button">
+                    <i class="fa-regular fa-eye"></i>
+                    Preview as company
+                </button>
+
+            </div>
+
+            <form id="profile-form">
+
+                <div class="panel profile-panel">
+
+                    <h3 class="profile-panel-title">Basic information</h3>
+
+                    <div class="profile-field-grid">
+
+                        <label class="profile-field">
+                            <span>Full name</span>
+                            <input type="text" name="fullName" value="Ada Okafor">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Email</span>
+                            <input type="email" name="email" value="ada.okafor@unilag.edu.ng">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Phone number</span>
+                            <input type="tel" name="phone" value="+234 802 345 6789">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Location</span>
+                            <input type="text" name="location" value="Lagos, Nigeria">
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="panel profile-panel">
+
+                    <h3 class="profile-panel-title">Education</h3>
+
+                    <div class="profile-field-grid">
+
+                        <label class="profile-field">
+                            <span>School</span>
+                            <input type="text" name="school" value="University of Lagos">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Field of study</span>
+                            <input type="text" name="field" value="Computer Science">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Level / year</span>
+                            <select name="level">
+                                <option>100 Level</option>
+                                <option>200 Level</option>
+                                <option>300 Level</option>
+                                <option selected>400 Level</option>
+                                <option>Graduate</option>
+                            </select>
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Expected graduation</span>
+                            <input type="text" name="graduation" value="July 2027">
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="panel profile-panel">
+
+                    <h3 class="profile-panel-title">About</h3>
+
+                    <label class="profile-field profile-field-full">
+                        <span>Short bio</span>
+                        <textarea name="bio" rows="4">Final-year Computer Science student passionate about frontend engineering and product design. I've built two personal projects with React and love working in fast-moving teams.</textarea>
+                    </label>
+
+                </div>
+
+                <div class="panel profile-panel">
+
+                    <h3 class="profile-panel-title">Skills</h3>
+
+                    <div class="profile-skills" id="profile-skills">
+                        <span class="profile-skill-tag">JavaScript <button type="button" aria-label="Remove skill">&times;</button></span>
+                        <span class="profile-skill-tag">React <button type="button" aria-label="Remove skill">&times;</button></span>
+                        <span class="profile-skill-tag">UI/UX Design <button type="button" aria-label="Remove skill">&times;</button></span>
+                        <span class="profile-skill-tag">Python <button type="button" aria-label="Remove skill">&times;</button></span>
+                        <span class="profile-skill-tag">SQL <button type="button" aria-label="Remove skill">&times;</button></span>
+                    </div>
+
+                    <div class="profile-skill-add">
+                        <input type="text" id="profile-skill-input" placeholder="Add a skill and press Enter">
+                    </div>
+
+                </div>
+
+                <div class="panel profile-panel">
+
+                    <h3 class="profile-panel-title">Links</h3>
+
+                    <div class="profile-field-grid">
+
+                        <label class="profile-field">
+                            <span>LinkedIn</span>
+                            <input type="url" name="linkedin" value="https://linkedin.com/in/ada-okafor">
+                        </label>
+
+                        <label class="profile-field">
+                            <span>Portfolio / GitHub</span>
+                            <input type="url" name="portfolio" value="https://github.com/adaokafor">
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-form-actions">
+                    <span class="profile-save-status" id="profile-save-status"></span>
+                    <button type="submit" class="profile-btn profile-btn-filled">Save changes</button>
+                </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="profile.js"></script>
+
+</body>
+
+</html>

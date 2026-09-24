@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Applications | Placewick</title>
+
+    <meta
+        name="description"
+        content="Track the status of every opportunity you've applied to on Placewick."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="applicant-dashboard.css">
+    <link rel="stylesheet" href="applications.css">
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="applicant-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="browse-opportunities.html" class="sidebar-link">
+                <i class="fa-solid fa-compass"></i>
+                Browse Opportunities
+            </a>
+
+            <a href="applications.html" class="sidebar-link active">
+                <i class="fa-solid fa-file-lines"></i>
+                My Applications
+                <span class="badge">3</span>
+            </a>
+
+            <a href="documents.html" class="sidebar-link">
+                <i class="fa-solid fa-folder-open"></i>
+                Document Vault
+            </a>
+
+            <a href="saved.html" class="sidebar-link">
+                <i class="fa-solid fa-bookmark"></i>
+                Saved
+            </a>
+
+            <a href="messages.html" class="sidebar-link">
+                <i class="fa-regular fa-comments"></i>
+                Messages
+                <span class="badge">2</span>
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="profile.html" class="sidebar-link">
+                <i class="fa-regular fa-user"></i>
+                Profile
+            </a>
+
+            <a href="settings.html" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-user-info">
+                    <h4>Ada Okafor</h4>
+                    <span>University of Lagos</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>My Applications</h1>
+                    <p>Track the status of everything you've applied to.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="app-search" placeholder="Search applications">
+                </div>
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="profile.html" class="header-avatar">AO</a>
+
+            </div>
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <div class="status-tabs reveal" id="status-tabs">
+                <button type="button" class="status-tab is-active" data-status="all">All <span>5</span></button>
+                <button type="button" class="status-tab" data-status="applied">Applied <span>1</span></button>
+                <button type="button" class="status-tab" data-status="reviewing">Reviewing <span>1</span></button>
+                <button type="button" class="status-tab" data-status="interview">Interview <span>1</span></button>
+                <button type="button" class="status-tab" data-status="accepted">Accepted <span>1</span></button>
+                <button type="button" class="status-tab" data-status="rejected">Not Selected <span>1</span></button>
+            </div>
+
+            <div class="panel applications-panel">
+
+                <div class="panel-body" id="applications-list">
+
+                    <div class="application-row" data-status="interview" data-name="Frontend Developer Intern Paystack">
+                        <div class="application-logo">PB</div>
+                        <div class="application-details">
+                            <h4>Frontend Developer Intern</h4>
+                            <span>Paystack &middot; Lagos, Remote &middot; Applied 6 days ago</span>
+                        </div>
+                        <span class="status-badge interview"><span class="dot"></span>Interview</span>
+                        <a href="messages.html" class="app-row-action">Message</a>
+                    </div>
+
+                    <div class="application-row" data-status="reviewing" data-name="SIWES Business Analyst Flutterwave">
+                        <div class="application-logo">FW</div>
+                        <div class="application-details">
+                            <h4>SIWES: Business Analyst</h4>
+                            <span>Flutterwave &middot; Lagos &middot; Applied 4 days ago</span>
+                        </div>
+                        <span class="status-badge reviewing"><span class="dot"></span>Reviewing</span>
+                        <a href="messages.html" class="app-row-action">Message</a>
+                    </div>
+
+                    <div class="application-row" data-status="applied" data-name="Marketing Intern MTN Nigeria">
+                        <div class="application-logo">MI</div>
+                        <div class="application-details">
+                            <h4>Marketing Intern</h4>
+                            <span>MTN Nigeria &middot; Abuja &middot; Applied 2 days ago</span>
+                        </div>
+                        <span class="status-badge applied"><span class="dot"></span>Applied</span>
+                        <a href="messages.html" class="app-row-action">Message</a>
+                    </div>
+
+                    <div class="application-row" data-status="accepted" data-name="Data Analyst Intern Andela">
+                        <div class="application-logo">AC</div>
+                        <div class="application-details">
+                            <h4>Data Analyst Intern</h4>
+                            <span>Andela &middot; Remote &middot; Applied 3 weeks ago</span>
+                        </div>
+                        <span class="status-badge accepted"><span class="dot"></span>Accepted</span>
+                        <a href="messages.html" class="app-row-action">Message</a>
+                    </div>
+
+                    <div class="application-row" data-status="rejected" data-name="Operations Intern UBA Group">
+                        <div class="application-logo">UB</div>
+                        <div class="application-details">
+                            <h4>Operations Intern</h4>
+                            <span>UBA Group &middot; Lagos &middot; Applied 1 month ago</span>
+                        </div>
+                        <span class="status-badge rejected"><span class="dot"></span>Not Selected</span>
+                        <a href="messages.html" class="app-row-action">Message</a>
+                    </div>
+
+                </div>
+
+                <div class="panel-empty" id="applications-empty" hidden>
+                    <i class="fa-regular fa-file-lines"></i>
+                    <p>No applications in this category yet.</p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="applicant-dashboard.js"></script>
+<script src="applications.js"></script>
+
+</body>
+
+</html>
