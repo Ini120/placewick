@@ -1349,6 +1349,344 @@ button {
 
 
 /* =========================
+   PRICING (FOR COMPANIES)
+========================= */
+
+.pricing-section {
+    padding: 90px 6%;
+
+    background: var(--background-soft);
+}
+
+
+.pricing-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+
+.pricing-header p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+
+/* BILLING TOGGLE */
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+.billing-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: var(--text-light);
+
+    transition: 0.2s ease;
+}
+
+
+.billing-option.is-active {
+    color: var(--text);
+}
+
+
+.billing-save {
+    padding: 3px 9px;
+
+    background: #eafaf3;
+
+    border-radius: 999px;
+
+    color: var(--success);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.billing-switch {
+    position: relative;
+
+    width: 46px;
+    height: 26px;
+
+    flex-shrink: 0;
+
+    background: #cbd0d9;
+
+    border: none;
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.billing-toggle.is-annual .billing-switch {
+    background: var(--primary);
+}
+
+
+.billing-switch-knob {
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 20px;
+    height: 20px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 3px rgba(16, 26, 67, 0.25);
+
+    transition: 0.2s ease;
+}
+
+
+.billing-toggle.is-annual .billing-switch-knob {
+    transform: translateX(20px);
+}
+
+
+/* PRICING GRID */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    align-items: stretch;
+}
+
+
+.pricing-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 36px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+
+.pricing-card.featured {
+    border: 2px solid var(--primary);
+
+    box-shadow: 0 20px 40px rgba(49, 85, 245, 0.12);
+}
+
+
+.plan-badge {
+    position: absolute;
+
+    top: -14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 6px 16px;
+
+    background: var(--primary);
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
+}
+
+
+.plan-name {
+    font-size: 20px;
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+
+.plan-description {
+    margin-top: 6px;
+
+    min-height: 42px;
+
+    font-size: 14px;
+
+    color: var(--text-light);
+}
+
+
+.plan-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+
+    margin-top: 18px;
+}
+
+
+.price-amount {
+    font-size: 36px;
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.5px;
+}
+
+
+.price-period {
+    padding-bottom: 6px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--text-light);
+}
+
+
+.price-note {
+    margin-top: 4px;
+
+    min-height: 20px;
+
+    font-size: 13px;
+
+    color: var(--text-light);
+}
+
+
+.plan-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+
+    padding: 13px 20px;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+
+.plan-cta-filled {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+
+.plan-cta-filled:hover {
+    background: var(--primary-dark);
+}
+
+
+.plan-cta-outline {
+    background: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--text);
+}
+
+
+.plan-cta-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+.plan-features {
+    margin-top: 26px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--text);
+}
+
+
+.plan-features li i {
+    margin-top: 3px;
+
+    flex-shrink: 0;
+
+    font-size: 12px;
+
+    color: var(--success);
+}
+
+
+@media (max-width: 900px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+    }
+
+    .pricing-card.featured {
+        order: -1;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .pricing-section {
+        padding: 65px 20px;
+    }
+
+    .billing-toggle {
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================
    FINAL CTA
 ========================= */
 

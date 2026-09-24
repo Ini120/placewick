@@ -571,6 +571,122 @@
 </section>
 
 <!-- =========================
+     PRICING (FOR COMPANIES)
+========================= -->
+
+<section class="pricing-section">
+
+    <div class="pricing-header reveal">
+
+        <span class="section-label">FOR COMPANIES</span>
+
+        <h2>Simple pricing, built to grow with you</h2>
+
+        <p>
+            Students are always free on Placewick. Companies choose
+            the plan that fits how often they're hiring.
+        </p>
+
+        <div class="billing-toggle" id="billing-toggle">
+            <span class="billing-option is-active" data-billing="monthly">Monthly</span>
+            <button type="button" class="billing-switch" id="billing-switch" aria-label="Toggle annual billing" aria-pressed="false">
+                <span class="billing-switch-knob"></span>
+            </button>
+            <span class="billing-option" data-billing="annual">
+                Annual
+                <span class="billing-save">Save 2 months</span>
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="pricing-grid reveal">
+
+        <!-- FREE -->
+        <div class="pricing-card">
+
+            <div class="plan-name">Free</div>
+
+            <p class="plan-description">For companies just getting started.</p>
+
+            <div class="plan-price">
+                <span class="price-amount">₦0</span>
+                <span class="price-period">/forever</span>
+            </div>
+
+            <a href="company-account.html" class="plan-cta plan-cta-outline">Get Started Free</a>
+
+            <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> 1 active posting</li>
+                <li><i class="fa-solid fa-check"></i> View applicants as they apply</li>
+                <li><i class="fa-solid fa-check"></i> Standard verification placement</li>
+                <li><i class="fa-solid fa-check"></i> Community support</li>
+            </ul>
+
+        </div>
+
+
+        <!-- STARTER -->
+        <div class="pricing-card featured">
+
+            <span class="plan-badge">Most Popular</span>
+
+            <div class="plan-name">Starter</div>
+
+            <p class="plan-description">For teams hiring regularly.</p>
+
+            <div class="plan-price">
+                <span class="price-amount" data-monthly="₦15,000" data-annual="₦12,500">₦15,000</span>
+                <span class="price-period">/month</span>
+            </div>
+
+            <p class="price-note" data-monthly-note="Billed monthly" data-annual-note="₦150,000 billed yearly">Billed monthly</p>
+
+            <a href="company-account.html" class="plan-cta plan-cta-filled">Choose Starter</a>
+
+            <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Up to 5 active postings</li>
+                <li><i class="fa-solid fa-check"></i> Search, filter &amp; sort applicants</li>
+                <li><i class="fa-solid fa-check"></i> Standard verification placement</li>
+                <li><i class="fa-solid fa-check"></i> Email support</li>
+            </ul>
+
+        </div>
+
+
+        <!-- GROWTH -->
+        <div class="pricing-card">
+
+            <div class="plan-name">Growth</div>
+
+            <p class="plan-description">For teams hiring at scale.</p>
+
+            <div class="plan-price">
+                <span class="price-amount" data-monthly="₦45,000" data-annual="₦37,500">₦45,000</span>
+                <span class="price-period">/month</span>
+            </div>
+
+            <p class="price-note" data-monthly-note="Billed monthly" data-annual-note="₦450,000 billed yearly">Billed monthly</p>
+
+            <a href="company-account.html" class="plan-cta plan-cta-outline">Choose Growth</a>
+
+            <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Unlimited active postings</li>
+                <li><i class="fa-solid fa-check"></i> Saved applicant filters</li>
+                <li><i class="fa-solid fa-check"></i> Priority verification placement</li>
+                <li><i class="fa-solid fa-check"></i> 2 featured listing credits / month</li>
+                <li><i class="fa-solid fa-check"></i> Analytics with trends &amp; source breakdown</li>
+                <li><i class="fa-solid fa-check"></i> Priority support</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
      FINAL CTA
 ========================= -->
 
@@ -709,6 +825,34 @@
     </div>
 
 </footer>
+
+<script>
+    const billingSwitch = document.getElementById('billing-switch');
+    const billingToggle = document.getElementById('billing-toggle');
+
+    if (billingSwitch && billingToggle) {
+        const options = billingToggle.querySelectorAll('.billing-option');
+        const prices = document.querySelectorAll('.price-amount[data-monthly]');
+        const notes = document.querySelectorAll('.price-note[data-monthly-note]');
+
+        billingSwitch.addEventListener('click', () => {
+            const isAnnual = billingToggle.classList.toggle('is-annual');
+            billingSwitch.setAttribute('aria-pressed', String(isAnnual));
+
+            options.forEach((option) => {
+                option.classList.toggle('is-active', option.dataset.billing === (isAnnual ? 'annual' : 'monthly'));
+            });
+
+            prices.forEach((price) => {
+                price.textContent = isAnnual ? price.dataset.annual : price.dataset.monthly;
+            });
+
+            notes.forEach((note) => {
+                note.textContent = isAnnual ? note.dataset.annualNote : note.dataset.monthlyNote;
+            });
+        });
+    }
+</script>
 
 </body>
 
