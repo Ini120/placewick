@@ -491,11 +491,36 @@
     }
 
     .doc-row {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 42px 1fr auto;
+        grid-template-areas:
+            "icon details star"
+            "actions actions actions";
+        column-gap: 12px;
+        row-gap: 10px;
+        align-items: center;
+    }
+
+    .doc-icon {
+        grid-area: icon;
     }
 
     .doc-details {
-        min-width: 140px;
+        grid-area: details;
+        min-width: 0;
+    }
+
+    .doc-details h4 {
+        white-space: normal;
+    }
+
+    .doc-default-star {
+        grid-area: star;
+    }
+
+    .doc-actions {
+        grid-area: actions;
+        justify-self: end;
     }
 
     .vault-panel-header {

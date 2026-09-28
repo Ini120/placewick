@@ -113,4 +113,37 @@
         flex: 0 0 auto;
     }
 
+    #applications-list .application-row {
+        display: grid;
+        grid-template-columns: 42px 1fr auto;
+        grid-template-areas:
+            "logo details badge"
+            "action action action";
+        column-gap: 14px;
+        row-gap: 10px;
+        align-items: center;
+    }
+
+    #applications-list .application-logo {
+        grid-area: logo;
+    }
+
+    #applications-list .application-details {
+        grid-area: details;
+        min-width: 0;
+    }
+
+    #applications-list .application-details h4 {
+        white-space: normal;
+    }
+
+    #applications-list .status-badge {
+        grid-area: badge;
+    }
+
+    #applications-list .app-row-action {
+        grid-area: action;
+        justify-self: end;
+    }
+
 }
