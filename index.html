@@ -1,859 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fledgely — Join the waitlist</title>
+<meta name="description" content="Fledgely helps Nigerian students find real internships and companies find real early-career talent. Join the waitlist." />
+<meta property="og:title" content="Fledgely — Join the waitlist" />
+<meta property="og:description" content="Smart internship matching for students & companies. Be first in line." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231f232b'/%3E%3Cg fill='none' stroke='%23fbfbfd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' transform='translate(3 3) scale(0.75)'%3E%3Cpath d='M16 7h.01'/%3E%3Cpath d='M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20'/%3E%3Cpath d='m20 7 2 .5-2 .5'/%3E%3Cpath d='M10 18v3'/%3E%3Cpath d='M14 17.75V21'/%3E%3Cpath d='M7 18a6 6 0 0 0 3.84-10.61'/%3E%3C/g%3E%3C/svg%3E" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
 
-    <!-- Responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  :root {
+    --bg: #fbfbfd;
+    --fg: #15182a;
+    --muted: #6b7088;
+    --card: #ffffff;
+    --primary: #1f232b;
+    --primary-fg: #fbfbfd;
+    --success: #15a06b;
+    --border: #e4e6ef;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
-    <!-- Page title -->
-    <title>Placewick — Find Your Next Opportunity</title>
+  /* Header */
+  header { padding: 22px 0; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-family: 'Plus Jakarta Sans'; font-weight: 800; font-size: 20px; text-decoration: none; color: var(--fg); }
+  .logo .mark { width: 34px; height: 34px; border-radius: 9px; background: var(--primary); display: grid; place-items: center; }
+  .logo .mark svg { width: 18px; height: 18px; stroke: var(--primary-fg); }
 
-    <!-- SEO -->
-    <meta
-        name="description"
-        content="Placewick connects students with internships, SIWES placements, and early-career opportunities."
-    >
+  /* Hero */
+  .hero { padding: 56px 0 28px; text-align: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); }
+  .hero h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; line-height: 1.08; margin-top: 22px; }
+  .hero h1 .u { border-bottom: 3px solid var(--success); padding-bottom: 2px; }
+  .hero p { max-width: 560px; margin: 22px auto 0; font-size: 18px; color: var(--muted); }
 
-    <!-- Google Font: Manrope -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+  /* Layout */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 36px; padding: 36px 0 72px; }
+  @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; } }
 
-    <!-- Your CSS -->
-    <link rel="stylesheet" href="styles.css">
+  .points { list-style: none; display: flex; flex-direction: column; gap: 22px; }
+  .points li { display: flex; gap: 12px; }
+  .check { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(21,160,107,0.12); display: grid; place-items: center; margin-top: 2px; }
+  .check svg { width: 12px; height: 12px; stroke: var(--success); }
+  .points b { font-size: 15px; font-weight: 600; }
+  .points span { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .seg-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 18px; }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/placewick-icon.png">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
->
+  /* Form card */
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 28px; box-shadow: 0 8px 30px -12px rgba(21,24,42,0.12); }
+  .card h2 { font-size: 22px; }
+  .card .sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
+  .field { margin-top: 16px; }
+  label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  input, select { width: 100%; padding: 11px 13px; font-size: 15px; font-family: inherit; border: 1px solid var(--border); border-radius: 10px; background: #fff; color: var(--fg); outline: none; transition: border-color .15s; }
+  input:focus, select:focus { border-color: var(--success); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .row { grid-template-columns: 1fr; } }
+  button { margin-top: 22px; width: 100%; padding: 13px; font-size: 15px; font-weight: 600; font-family: inherit; color: var(--primary-fg); background: var(--primary); border: 0; border-radius: 10px; cursor: pointer; transition: opacity .15s; }
+  button:hover { opacity: 0.9; }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .tiny { font-size: 12px; color: var(--muted); text-align: center; margin-top: 14px; }
+
+  /* Success state */
+  .success { display: none; text-align: center; padding: 20px 0; }
+  .success.show { display: block; }
+  .success .ring { width: 56px; height: 56px; border-radius: 50%; background: rgba(21,160,107,0.12); display: grid; place-items: center; margin: 0 auto 16px; }
+  .success .ring svg { width: 26px; height: 26px; stroke: var(--success); }
+  .success h2 { font-size: 22px; }
+  .success p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .form-wrap.hide { display: none; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; font-size: 13px; color: var(--muted); }
+
+  /* Mobile polish */
+  @media (max-width: 600px) {
+    .hero { padding: 36px 0 18px; }
+    .hero p { font-size: 16px; }
+    .grid { padding: 24px 0 48px; gap: 28px; }
+    .card { padding: 22px; }
+    header { padding: 18px 0; }
+  }
+  @media (max-width: 360px) {
+    .row { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
-
-
-
 <body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#">
+        <span class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"/><path d="m20 7 2 .5-2 .5"/><path d="M10 18v3"/><path d="M14 17.75V21"/><path d="M7 18a6 6 0 0 0 3.84-10.61"/></svg>
+        </span>
+        Fledgely
+      </a>
+    </div>
+  </header>
 
-    <!-- Your website starts here -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow"><span class="dot"></span> Launching soon</p>
+      <h1>Where students find <span class="u">real internships</span> &amp; companies find real talent.</h1>
+      <p>Fledgely is built for early careers in Nigeria — match scores, AI cover letters, SIWES &amp; IT placement documents in one place. Join the waitlist to get early access.</p>
+    </div>
+  </section>
 
-<header class="header">
-    <div class="header-container">
+  <div class="wrap">
+    <div class="grid">
+      <!-- Left: value props -->
+      <div>
+        <p class="seg-label">Why join</p>
+        <ul class="points">
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>Internships that fit you</b><span>See a match score on every role before you apply.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>One document vault</b><span>Upload your CV, SIWES letter &amp; transcript once — attach in a click.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>AI cover letters</b><span>Drafted from your profile for each role. You review, then send.</span></div>
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div><b>Talk directly to companies</b><span>No recruiter middlemen — message hiring teams in-app.</span></div>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Logo -->
-        <a href="index.html" class="logo">
-            <img src="images/placewick-LOGO.png" alt="Placewick">
-        </a>
+      <!-- Right: form -->
+      <div class="card">
+        <div class="form-wrap" id="formWrap">
+          <h2>Join the waitlist</h2>
+          <p class="sub">Be first in line when Fledgely opens. No spam — just one email when we launch.</p>
 
-        <!-- Navigation -->
-        <nav class="nav-links" aria-label="Main navigation">
-
-            <div class="nav-item dropdown">
-                <button class="nav-link" type="button">
-                    For Students
-                    <span class="arrow">⌄</span>
-                </button>
-
-                <div class="dropdown-menu">
-                    <a href="#">Find Opportunities</a>
-                    <a href="#">Application Tracker</a>
-                    <a href="#">Career Resources</a>
-                </div>
+          <!-- IMPORTANT: replace YOUR_FORM_ID below with your Formspree form ID -->
+          <form id="waitlistForm" action="https://formspree.io/f/xvznjvjl" method="POST">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required placeholder="Jane Doe" />
             </div>
-
-            <div class="nav-item dropdown">
-                <button class="nav-link" type="button">
-                    For Companies
-                    <span class="arrow">⌄</span>
-                </button>
-
-                <div class="dropdown-menu">
-                    <a href="#">Post an Opportunity</a>
-                    <a href="#">Find Talent</a>
-                    <a href="#">Why Placewick</a>
-                </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
             </div>
-
-            <div class="nav-item dropdown">
-                <button class="nav-link" type="button">
-                    Resources
-                    <span class="arrow">⌄</span>
-                </button>
-
-                <div class="dropdown-menu">
-                    <a href="#">Career Guide</a>
-                    <a href="#">Interview Tips</a>
-                    <a href="#">CV Resources</a>
-                </div>
+            <div class="row">
+              <div class="field">
+                <label for="department">Department</label>
+                <input id="department" name="department" type="text" required placeholder="Computer Science" />
+              </div>
+              <div class="field">
+                <label for="school">School</label>
+                <select id="school" name="school" required>
+                  <option value="" disabled selected>Select…</option>
+                </select>
+              </div>
             </div>
-
-            <a href="about.html" class="nav-link">About Us</a>
-
-        </nav>
-
-        <!-- Right side -->
-        <div class="header-actions">
-            <a href="login.html" class="login-link">Log in</a>
-            <a href="sign-up.html" class="signup-button">Sign up</a>
+            <div class="field" id="otherSchoolField" style="display:none;">
+              <label for="otherSchool">Your school name</label>
+              <input id="otherSchool" name="other_school" type="text" placeholder="Type your school's full name" />
+            </div>
+            <button type="submit" id="submitBtn">Join the waitlist</button>
+            <p class="tiny">We'll only email you about Fledgely's launch.</p>
+          </form>
         </div>
 
-        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
+        <div class="success" id="success">
+          <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h2>You're on the list! 🐦</h2>
+          <p>Thanks for joining Fledgely. We'll email you the moment early access opens.</p>
+        </div>
+      </div>
     </div>
-</header>
+  </div>
+
+  <footer>
+    <div class="wrap">© <span id="yr"></span> Fledgely. Built for early careers.</div>
+  </footer>
 
 <script>
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const dropdowns = document.querySelectorAll('.dropdown');
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('open');
-            menuToggle.setAttribute('aria-expanded', String(isOpen));
-        });
+  // Nigerian institutions. Abuja-area schools first (our starting market),
+  // then others. "Other" reveals a manual text box.
+  var SCHOOLS = [
+    // — Abuja (FCT) —
+    "University of Abuja (UNIABUJA)",
+    "Nile University of Nigeria",
+    "Baze University",
+    "African University of Science & Technology (AUST)",
+    "Veritas University, Abuja",
+    "Bingham University",
+    "National Open University of Nigeria (NOUN)",
+    "Federal College of Education, Zuba",
+    "Federal Polytechnic, Abuja",
+    // — Other universities nationwide —
+    "University of Lagos (UNILAG)","University of Ibadan (UI)","Ahmadu Bello University (ABU)",
+    "University of Nigeria, Nsukka (UNN)","Obafemi Awolowo University (OAU)","University of Benin (UNIBEN)",
+    "University of Ilorin (UNILORIN)","University of Port Harcourt (UNIPORT)","Bayero University Kano (BUK)",
+    "Federal University of Technology, Akure (FUTA)","Federal University of Technology, Minna (FUTMINNA)",
+    "Federal University of Technology, Owerri (FUTO)","Nnamdi Azikiwe University (UNIZIK)","University of Jos (UNIJOS)",
+    "University of Calabar (UNICAL)","Lagos State University (LASU)","Rivers State University (RSU)",
+    "Ekiti State University (EKSU)","Covenant University","Babcock University","Afe Babalola University (ABUAD)",
+    "Bells University of Technology","American University of Nigeria (AUN)",
+    // — Polytechnics & colleges —
+    "Yaba College of Technology (YABATECH)","Federal Polytechnic, Nekede","Kaduna Polytechnic (KADPOLY)",
+    "Federal Polytechnic, Ilaro","Lagos State Polytechnic (LASPOTECH)","Auchi Polytechnic",
+    "Moshood Abiola Polytechnic (MAPOLY)","Adeyemi College of Education",
+    "Federal College of Education (Technical), Akoka",
+    // — Manual entry —
+    "Other (my school isn't listed)"
+  ];
+  var sel = document.getElementById('school');
+  var otherField = document.getElementById('otherSchoolField');
+  var otherInput = document.getElementById('otherSchool');
 
-        dropdowns.forEach((dropdown) => {
-            const trigger = dropdown.querySelector('.nav-link');
-
-            if (trigger) {
-                trigger.addEventListener('click', (event) => {
-                    if (window.innerWidth > 700) return;
-
-                    event.stopPropagation();
-
-                    const isOpen = dropdown.classList.contains('open');
-
-                    dropdowns.forEach((item) => item.classList.remove('open'));
-
-                    if (!isOpen) {
-                        dropdown.classList.add('open');
-                    }
-                });
-            }
-        });
-
-        navLinks.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                dropdowns.forEach((item) => item.classList.remove('open'));
-            });
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('.header-container')) {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                dropdowns.forEach((item) => item.classList.remove('open'));
-            }
-        });
+  // Build grouped dropdown: Abuja first, then nationwide, then poly/colleges.
+  var GROUPS = [
+    { label: "Abuja (FCT)", count: 9 },
+    { label: "Universities (nationwide)", count: 22 },
+    { label: "Polytechnics & Colleges", count: 10 },
+  ];
+  var idx = 0;
+  GROUPS.forEach(function (g) {
+    var og = document.createElement('optgroup');
+    og.label = g.label;
+    for (var n = 0; n < g.count && idx < SCHOOLS.length - 1; n++) {
+      var o = document.createElement('option');
+      o.value = SCHOOLS[idx]; o.textContent = SCHOOLS[idx];
+      og.appendChild(o); idx++;
     }
-</script>
-  
-<section class="hero-section">
-
-    <div class="left-hero">
-
-        <h1>
-            Find your next
-            <span>placement.</span>
-        </h1>
-
-        <p>
-            Placewick connects Nigerian students with verified
-            companies for internships, SIWES and early-career
-            opportunities.
-        </p>
-
-        <div class="btn">
-            <button class="coloured-button">I'm a Student →</button>
-            <button class="uncoloured-button">I'm a Company</button>
-        </div>
-
-        <div class="hero-features">
-
-    <div class="feature">
-        <div class="feature-icon">
-            <i data-lucide="shield-check"></i>
-        </div>
-
-        <div>
-            <h3>Verified Opportunities</h3>
-            <p>All companies are verified for your safety.</p>
-        </div>
-    </div>
-
-
-    <div class="feature">
-        <div class="feature-icon">
-            <i data-lucide="users"></i>
-        </div>
-
-        <div>
-            <h3>Smart Matching</h3>
-            <p>Get matched with roles that fit your profile.</p>
-        </div>
-    </div>
-
-
-    <div class="feature">
-        <div class="feature-icon">
-            <i data-lucide="message-square"></i>
-        </div>
-
-        <div>
-            <h3>Direct Communication</h3>
-            <p>Chat and connect directly with companies.</p>
-        </div>
-    </div>
-
-</div>
-
-    </div>
-
-    <div class="right-hero">
-    <div class="hero-image-wrapper">
-        <img
-            src="images/hero-students.png"
-            alt="Students working together on a laptop"
-        >
-    </div>
-</div>
-
-</section>
-
-
-<div class="line"></div>
-
-<section class="trust-section">
-    <div class="trust-strip reveal">
-        <div class="trust-item">
-            <div class="trust-icon"><i class="fa-solid fa-shield-heart"></i></div>
-            <div>
-                <strong>Employer verification</strong>
-                <span>Designed to help you apply with confidence</span>
-            </div>
-        </div>
-
-        <div class="trust-item">
-            <div class="trust-icon success"><i class="fa-solid fa-user-check"></i></div>
-            <div>
-                <strong>Student-first experience</strong>
-                <span>Tools built around your goals and interests</span>
-            </div>
-        </div>
-
-        <div class="trust-item">
-            <div class="trust-icon warn"><i class="fa-solid fa-lock"></i></div>
-            <div>
-                <strong>Privacy-conscious</strong>
-                <span>Your information should always be handled with care</span>
-            </div>
-        </div>
-
-        <div class="trust-item">
-            <div class="trust-icon accent"><i class="fa-solid fa-chart-line"></i></div>
-            <div>
-                <strong>Clear communication</strong>
-                <span>Connect directly and understand each opportunity</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-it-works">
-
-    <div class="how-header reveal">
-        <span class="section-label">HOW IT WORKS</span>
-
-        <h2>Your next placement in <span>3 simple steps</span></h2>
-
-        <p>
-            From profile to placement, we make the journey easy.
-        </p>
-    </div>
-
-
-    <div class="steps">
-
-        <!-- STEP 1 -->
-        <div class="step-card reveal">
-
-            <div class="step-icon">
-                <i class="fa-regular fa-user"></i>
-            </div>
-
-            <div class="step-number">1</div>
-
-            <h3>Create your profile</h3>
-
-            <p>
-                Sign up, verify your account and build a profile
-                that showcases your skills and interests.
-            </p>
-
-        </div>
-
-
-        <!-- STEP 2 -->
-        <div class="step-card reveal">
-
-            <div class="step-icon step-two">
-                <i class="fa-solid fa-briefcase"></i>
-            </div>
-
-            <div class="step-number">2</div>
-
-            <h3>Discover opportunities</h3>
-
-            <p>
-                Browse verified internships, SIWES placements
-                and early-career roles that match you.
-            </p>
-
-        </div>
-
-
-        <!-- STEP 3 -->
-        <div class="step-card reveal">
-
-            <div class="step-icon step-three">
-                <i class="fa-regular fa-paper-plane"></i>
-            </div>
-
-            <div class="step-number">3</div>
-
-            <h3>Apply and connect</h3>
-
-            <p>
-                Send applications, chat with companies and
-                take the next step in your career.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<script src="script.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"> </script>
-    <script>lucide.createIcons();</script>
-
-
-    <!-- =========================
-     WHY PLACEWICK
-========================= -->
-
-<section class="why-placewick">
-
-    <div class="why-header reveal">
-
-        <span class="section-label">
-            WHY PLACEWICK?
-        </span>
-
-        <h2>
-            Built for students,
-            <span>focused on your success.</span>
-        </h2>
-
-        <p>
-            Everything you need to discover opportunities,
-            connect with companies and take the next step
-            in your career.
-        </p>
-
-    </div>
-
-
-    <div class="why-features reveal">
-
-        <!-- 01 -->
-        <div class="why-feature">
-
-            <div class="why-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-            </div>
-
-            <h3>Safe & Verified</h3>
-
-            <p>
-                We verify companies so you can explore
-                opportunities with confidence.
-            </p>
-
-        </div>
-
-
-        <!-- 02 -->
-        <div class="why-feature">
-
-            <div class="why-icon green">
-                <i class="fa-solid fa-star"></i>
-            </div>
-
-            <h3>Opportunities That Fit</h3>
-
-            <p>
-                Find roles that match your skills,
-                interests and academic journey.
-            </p>
-
-        </div>
-
-
-        <!-- 03 -->
-        <div class="why-feature">
-
-            <div class="why-icon orange">
-                <i class="fa-regular fa-comments"></i>
-            </div>
-
-            <h3>Direct Access</h3>
-
-            <p>
-                Communicate directly with companies
-                and get real responses.
-            </p>
-
-        </div>
-
-
-        <!-- 04 -->
-        <div class="why-feature">
-
-            <div class="why-icon purple">
-                <i class="fa-solid fa-chart-line"></i>
-            </div>
-
-            <h3>Grow Your Career</h3>
-
-            <p>
-                Gain real-world experience and take
-                the next step toward your future.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     FEATURED OPPORTUNITIES
-========================= -->
-
-<section class="opportunities">
-
-    <div class="opportunities-header reveal">
-
-        <div>
-            <span class="section-label">OPPORTUNITIES</span>
-
-            <h2>Featured opportunities</h2>
-        </div>
-
-        <a href="oppurtunities.html" class="view-all">
-            View all opportunities
-            <i class="fa-solid fa-arrow-right"></i>
-        </a>
-
-    </div>
-
-
-    <div class="opportunity-grid reveal">
-
-        <!-- PLACEHOLDER 1 -->
-        <div class="opportunity-card">
-
-            <div class="opportunity-logo placeholder"></div>
-
-            <div class="opportunity-content">
-
-                <div class="placeholder-line title"></div>
-
-                <div class="placeholder-line company"></div>
-
-                <div class="opportunity-details">
-                    <div class="placeholder-line small"></div>
-                    <div class="placeholder-line small"></div>
-                </div>
-
-                <div class="placeholder-line bottom"></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PLACEHOLDER 2 -->
-        <div class="opportunity-card">
-
-            <div class="opportunity-logo placeholder"></div>
-
-            <div class="opportunity-content">
-
-                <div class="placeholder-line title"></div>
-
-                <div class="placeholder-line company"></div>
-
-                <div class="opportunity-details">
-                    <div class="placeholder-line small"></div>
-                    <div class="placeholder-line small"></div>
-                </div>
-
-                <div class="placeholder-line bottom"></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PLACEHOLDER 3 -->
-        <div class="opportunity-card">
-
-            <div class="opportunity-logo placeholder"></div>
-
-            <div class="opportunity-content">
-
-                <div class="placeholder-line title"></div>
-
-                <div class="placeholder-line company"></div>
-
-                <div class="opportunity-details">
-                    <div class="placeholder-line small"></div>
-                    <div class="placeholder-line small"></div>
-                </div>
-
-                <div class="placeholder-line bottom"></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PLACEHOLDER 4 -->
-        <div class="opportunity-card">
-
-            <div class="opportunity-logo placeholder"></div>
-
-            <div class="opportunity-content">
-
-                <div class="placeholder-line title"></div>
-
-                <div class="placeholder-line company"></div>
-
-                <div class="opportunity-details">
-                    <div class="placeholder-line small"></div>
-                    <div class="placeholder-line small"></div>
-                </div>
-
-                <div class="placeholder-line bottom"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     PRICING (FOR COMPANIES)
-========================= -->
-
-<section class="pricing-section">
-
-    <div class="pricing-header reveal">
-
-        <span class="section-label">FOR COMPANIES</span>
-
-        <h2>Simple pricing, built to grow with you</h2>
-
-        <p>
-            Students are always free on Placewick. Companies choose
-            the plan that fits how often they're hiring.
-        </p>
-
-        <div class="billing-toggle" id="billing-toggle">
-            <span class="billing-option is-active" data-billing="monthly">Monthly</span>
-            <button type="button" class="billing-switch" id="billing-switch" aria-label="Toggle annual billing" aria-pressed="false">
-                <span class="billing-switch-knob"></span>
-            </button>
-            <span class="billing-option" data-billing="annual">
-                Annual
-                <span class="billing-save">Save 2 months</span>
-            </span>
-        </div>
-
-    </div>
-
-
-    <div class="pricing-grid reveal">
-
-        <!-- FREE -->
-        <div class="pricing-card">
-
-            <div class="plan-name">Free</div>
-
-            <p class="plan-description">For companies just getting started.</p>
-
-            <div class="plan-price">
-                <span class="price-amount">₦0</span>
-                <span class="price-period">/forever</span>
-            </div>
-
-            <a href="company-account.html" class="plan-cta plan-cta-outline">Get Started Free</a>
-
-            <ul class="plan-features">
-                <li><i class="fa-solid fa-check"></i> 1 active posting</li>
-                <li><i class="fa-solid fa-check"></i> View applicants as they apply</li>
-                <li><i class="fa-solid fa-check"></i> Standard verification placement</li>
-                <li><i class="fa-solid fa-check"></i> Community support</li>
-            </ul>
-
-        </div>
-
-
-        <!-- STARTER -->
-        <div class="pricing-card featured">
-
-            <span class="plan-badge">Most Popular</span>
-
-            <div class="plan-name">Starter</div>
-
-            <p class="plan-description">For teams hiring regularly.</p>
-
-            <div class="plan-price">
-                <span class="price-amount" data-monthly="₦15,000" data-annual="₦12,500">₦15,000</span>
-                <span class="price-period">/month</span>
-            </div>
-
-            <p class="price-note" data-monthly-note="Billed monthly" data-annual-note="₦150,000 billed yearly">Billed monthly</p>
-
-            <a href="company-account.html" class="plan-cta plan-cta-filled">Choose Starter</a>
-
-            <ul class="plan-features">
-                <li><i class="fa-solid fa-check"></i> Up to 5 active postings</li>
-                <li><i class="fa-solid fa-check"></i> Search, filter &amp; sort applicants</li>
-                <li><i class="fa-solid fa-check"></i> Standard verification placement</li>
-                <li><i class="fa-solid fa-check"></i> Email support</li>
-            </ul>
-
-        </div>
-
-
-        <!-- GROWTH -->
-        <div class="pricing-card">
-
-            <div class="plan-name">Growth</div>
-
-            <p class="plan-description">For teams hiring at scale.</p>
-
-            <div class="plan-price">
-                <span class="price-amount" data-monthly="₦45,000" data-annual="₦37,500">₦45,000</span>
-                <span class="price-period">/month</span>
-            </div>
-
-            <p class="price-note" data-monthly-note="Billed monthly" data-annual-note="₦450,000 billed yearly">Billed monthly</p>
-
-            <a href="company-account.html" class="plan-cta plan-cta-outline">Choose Growth</a>
-
-            <ul class="plan-features">
-                <li><i class="fa-solid fa-check"></i> Unlimited active postings</li>
-                <li><i class="fa-solid fa-check"></i> Saved applicant filters</li>
-                <li><i class="fa-solid fa-check"></i> Priority verification placement</li>
-                <li><i class="fa-solid fa-check"></i> 2 featured listing credits / month</li>
-                <li><i class="fa-solid fa-check"></i> Analytics with trends &amp; source breakdown</li>
-                <li><i class="fa-solid fa-check"></i> Priority support</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="final-cta">
-
-    <div class="cta-content reveal">
-
-        <span class="section-label">
-            GET STARTED
-        </span>
-
-        <h2>
-            Ready to find your
-            <span>next opportunity?</span>
-        </h2>
-
-        <p>
-            Whether you're looking for your first internship,
-            a SIWES placement or your next career opportunity,
-            Placewick is here to help you take the next step.
-        </p>
-
-        <div class="cta-buttons">
-
-            <a href="browse-opportunities.html" class="cta-primary">
-                Find an Opportunity
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-            <a href="#" class="cta-secondary">
-                I'm a Company
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="footer">
-
-    <div class="footer-main">
-
-        <!-- BRAND -->
-        <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                Place<span>wick</span>
-            </a>
-
-            <p>
-                Connecting Nigerian students with opportunities
-                that help them build their future.
-            </p>
-
-            <div class="footer-socials">
-
-                <a href="#" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a href="#" aria-label="X">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- STUDENTS -->
-        <div class="footer-column">
-
-            <h3>Students</h3>
-
-            <a href="browse-opportunities.html">Browse Opportunities</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="resources.html">Resources</a>
-            <a href="sign-up.html">Sign Up</a>
-
-        </div>
-
-
-        <!-- COMPANIES -->
-        <div class="footer-column">
-
-            <h3>Companies</h3>
-
-            <a href="post-opportunity.html">Post an Opportunity</a>
-            <a href="why-placewick.html">Why Placewick</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="get-started.html">Get Started</a>
-
-        </div>
-
-
-        <!-- COMPANY -->
-        <div class="footer-column">
-
-            <h3>Placewick</h3>
-
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="careers.html">Careers</a>
-            <a href="help.html">Help Centre</a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOTTOM -->
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Placewick. All rights reserved.
-        </p>
-
-        <div class="footer-legal">
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms of Service</a>
-
-        </div>
-
-    </div>
-
-</footer>
-
-<script>
-    const billingSwitch = document.getElementById('billing-switch');
-    const billingToggle = document.getElementById('billing-toggle');
-
-    if (billingSwitch && billingToggle) {
-        const options = billingToggle.querySelectorAll('.billing-option');
-        const prices = document.querySelectorAll('.price-amount[data-monthly]');
-        const notes = document.querySelectorAll('.price-note[data-monthly-note]');
-
-        billingSwitch.addEventListener('click', () => {
-            const isAnnual = billingToggle.classList.toggle('is-annual');
-            billingSwitch.setAttribute('aria-pressed', String(isAnnual));
-
-            options.forEach((option) => {
-                option.classList.toggle('is-active', option.dataset.billing === (isAnnual ? 'annual' : 'monthly'));
-            });
-
-            prices.forEach((price) => {
-                price.textContent = isAnnual ? price.dataset.annual : price.dataset.monthly;
-            });
-
-            notes.forEach((note) => {
-                note.textContent = isAnnual ? note.dataset.annualNote : note.dataset.monthlyNote;
-            });
-        });
+    sel.appendChild(og);
+  });
+  // Final "Other" option, on its own
+  var oOther = document.createElement('option');
+  oOther.value = "__other__"; oOther.textContent = "Other (my school isn't listed)";
+  sel.appendChild(oOther);
+
+  // Show the manual box only when "Other" is chosen
+  sel.addEventListener('change', function () {
+    if (sel.value === "__other__") {
+      otherField.style.display = "";
+      otherInput.required = true;
+      otherInput.focus();
+    } else {
+      otherField.style.display = "none";
+      otherInput.required = false;
     }
-</script>
+  });
 
+  // Submit via fetch so we can show an inline success state (no page jump).
+  var form = document.getElementById('waitlistForm');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true; btn.textContent = 'Joining…';
+
+    // When "Other" is picked, use the typed school name as the school value.
+    var fd = new FormData(form);
+    if (sel.value === "__other__") {
+      fd.set('school', (otherInput.value || '').trim() || 'Other (unspecified)');
+    }
+
+    try {
+      var res = await fetch(form.action, {
+        method: 'POST',
+        body: fd,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('formWrap').classList.add('hide');
+        document.getElementById('success').classList.add('show');
+      } else {
+        throw new Error('submit failed');
+      }
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Join the waitlist';
+      alert('Something went wrong — please try again.');
+    }
+  });
+</script>
 </body>
-
 </html>
