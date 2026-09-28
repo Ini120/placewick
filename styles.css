@@ -85,7 +85,7 @@ button {
     width: 100%;
     height: 74px;
 
-    background: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -95,7 +95,7 @@ button {
 }
 
 .header.is-scrolled {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 1);
     border-bottom-color: #eeeeee;
     box-shadow: 0 10px 30px rgba(16, 26, 67, 0.08);
 }
@@ -182,7 +182,7 @@ button {
     color: #111936;
 
     font-family: "Manrope", sans-serif;
-    font-size: 15px;
+    font-size: 12.5px;
     font-weight: 500;
 
     cursor: pointer;
@@ -200,7 +200,7 @@ button {
 ================================= */
 
 .arrow {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     position: relative;
     top: -1px;
@@ -260,7 +260,7 @@ button {
 
     color: #111936;
 
-    font-size: 14px;
+    font-size: 12.5px;
     font-weight: 500;
 
     border-radius: 7px;
@@ -288,7 +288,7 @@ button {
     color: #111936;
 
     font-family: "Manrope", sans-serif;
-    font-size: 15px;
+    font-size: 12.5px;
     font-weight: 600;
 
     transition: color 0.2s ease;
@@ -317,7 +317,7 @@ button {
     border-radius: 6px;
 
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
+    font-size: 12.5px;
     font-weight: 700;
 
     transition:
@@ -368,7 +368,7 @@ button {
 
     color: #101a43;
 
-    font-size: 38px;
+    font-size: 45px;
     line-height: 1.18;
     font-weight: 800;
 
@@ -480,16 +480,20 @@ button {
 
 .hero-features {
     display: flex;
-    gap: 35px;
+    flex-direction: column;
+    gap: 16px;
     margin-top: 15px;
+
+    width: 100%;
 }
 
 .feature {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
 
-    max-width: 190px;
+    width: 100%;
+    max-width: 420px;
 }
 
 .feature-icon {
@@ -515,18 +519,20 @@ button {
 }
 
 .feature h3 {
-    margin: 0 0 4px;
+    margin: 0 0 2px;
 
     font-size: 13px;
     font-weight: 800;
     color: #101a43;
+
+    white-space: nowrap;
 }
 
 .feature p {
     margin: 0;
 
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 11.5px;
+    line-height: 1.4;
     color: #667085;
 }
 
