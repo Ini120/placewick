@@ -1,0 +1,27 @@
+/* Legal pages (privacy.html, terms.html) */
+.legal-hero { padding-bottom: 56px; }
+.legal-hero h1 { font-size: clamp(34px, 5vw, 48px); }
+.legal-meta { font-size: 14px !important; font-weight: 600; color: var(--text-light) !important; margin-top: 18px !important; }
+.legal-body { padding: 56px 0 90px; }
+.legal-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
+.legal-toc { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 2px; padding: 20px; background: var(--background-soft); border: 1px solid var(--border); border-radius: 16px; max-height: calc(100vh - 120px); overflow-y: auto; }
+.legal-toc h3 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-light); margin: 0 0 8px; }
+.legal-toc a { font-size: 14px; font-weight: 600; color: var(--text); padding: 7px 10px; border-radius: 8px; text-decoration: none; transition: background .2s, color .2s; }
+.legal-toc a:hover { background: #fff; color: var(--primary); }
+.legal-toc .legal-other { margin-top: 10px; background: var(--primary); color: #fff; text-align: center; }
+.legal-toc .legal-other:hover { background: var(--secondary); color: #fff; }
+.legal-content section { padding-bottom: 34px; margin-bottom: 34px; border-bottom: 1px solid var(--border); scroll-margin-top: 96px; }
+.legal-content section:last-child { border-bottom: 0; margin-bottom: 0; }
+.legal-content h2 { font-size: 24px; color: var(--text); margin: 0 0 14px; }
+.legal-content h3 { font-size: 17px; color: var(--text); margin: 20px 0 8px; }
+.legal-content p, .legal-content li { font-size: 16px; line-height: 1.75; color: var(--text-light); }
+.legal-content p { margin: 0 0 14px; }
+.legal-content ul { margin: 0 0 14px; padding-left: 22px; }
+.legal-content li { margin-bottom: 8px; }
+.legal-content strong { color: var(--text); }
+.legal-content a { color: var(--primary); font-weight: 600; }
+@media (max-width: 900px) {
+  .legal-layout { grid-template-columns: 1fr; gap: 28px; }
+  .legal-toc { position: static; max-height: none; }
+}
+@media print { .legal-toc, .to-top, .scroll-progress, .header, .footer { display: none !important; } .legal-layout { display: block; } }
