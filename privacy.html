@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Placewick</title>
+
+    <meta name="description" content="How Placewick collects, uses, shares and protects personal data, and your rights under the Nigeria Data Protection Act 2023.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+
+<header class="header">
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav-links" aria-label="Main navigation">
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Students
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="opportunities.html">Find Opportunities</a>
+                    <a href="#">Application Tracker</a>
+                    <a href="#">Career Resources</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Companies
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Post an Opportunity</a>
+                    <a href="#">Find Talent</a>
+                    <a href="#">Why Placewick</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    Resources
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Career Guide</a>
+                    <a href="#">Interview Tips</a>
+                    <a href="#">CV Resources</a>
+                </div>
+            </div>
+
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
+
+            <a href="about.html" class="nav-link">About Us</a>
+
+        </nav>
+
+        <!-- Right side -->
+        <div class="header-actions">
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
+        </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about legal">
+    <section class="about-hero legal-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
+        <div class="about-container">
+            <span class="about-eyebrow">Legal</span>
+            <h1>Privacy Policy</h1>
+            <p>This policy explains what personal data Placewick collects, why we collect it, who can see it and what choices you have.</p>
+            <p class="legal-meta">Effective date: 12 November 2026 &nbsp;·&nbsp; Last updated: 12 November 2026</p>
+        </div>
+    </section>
+    <section class="about-section legal-body">
+        <div class="about-container legal-layout">
+            <nav class="legal-toc" aria-label="On this page"><h3>On this page</h3><a href="#who-we-are">1. Who we are</a><a href="#scope">2. What this policy covers</a><a href="#data-we-collect">3. Personal data we collect</a><a href="#how-we-use">4. How and why we use your data</a><a href="#who-sees">5. Who can see your data</a><a href="#transfers">6. Transfers outside Nigeria</a><a href="#retention">7. How long we keep your data</a><a href="#security">8. How we protect your data</a><a href="#your-rights">9. Your rights</a><a href="#children">10. Age requirement</a><a href="#cookies">11. Cookies and browser storage</a><a href="#third-party">12. Links to other websites</a><a href="#changes">13. Changes to this policy</a><a href="#contact">14. Contact us</a><a href="terms.html" class="legal-other">Read our Terms of Service <i class="fa-solid fa-arrow-right"></i></a></nav>
+            <article class="legal-content"><section id="who-we-are"><h2>1. Who we are</h2><p>Placewick is operated by Placewick Technologies Limited ("Placewick", "we", "us" or "our"). Placewick is a web platform that helps students in Nigerian tertiary institutions find SIWES and internship placements, helps companies offer and manage them, and helps institutions track placements, logbooks, supervision and accreditation reporting.</p>
+<p>For the purposes of the Nigeria Data Protection Act 2023 ("NDPA"), Placewick is the data controller of the personal data described in this policy. Questions and requests about your data can be sent to <a href="mailto:support@placewick.com">support@placewick.com</a>.</p></section><section id="scope"><h2>2. What this policy covers</h2><p>This policy applies to the Placewick website at placewick.com, the student, company and institution dashboards, and any related service we provide. It explains what personal data we collect, why we collect it, who sees it, how long we keep it and what rights you have. By using Placewick you confirm that you have read this policy.</p></section><section id="data-we-collect"><h2>3. Personal data we collect</h2><p>What we collect depends on how you use Placewick.</p>
+<h3>Students and graduates</h3>
+<ul><li>Account details: full name, email address, phone number and password (stored in protected form).</li>
+<li>Academic details: institution, faculty or department, course of study, level, matriculation number and expected dates of industrial training.</li>
+<li>Profile details: skills, interests, preferred location and industry, CV and any other information you choose to add.</li>
+<li>Activity records: applications, placement status, logbook entries, supervisor comments and evaluations.</li>
+</ul>
+<h3>Companies</h3>
+<ul><li>Company name, registration details, address, industry and size.</li>
+<li>Contact person's name, job title, email address and phone number.</li>
+<li>Opportunities you post, applications you review and evaluations you submit.</li>
+</ul>
+<h3>Institutions</h3>
+<ul><li>Institution name, type, state, and the name, role and official email address of the person who registers.</li>
+<li>Placement, logbook, supervision, visitation and reporting records for your students.</li>
+</ul>
+<h3>Technical data</h3>
+<ul><li>Device and browser type, IP address, pages visited and the date and time of access.</li>
+<li>Small amounts of data stored in your browser to remember settings, such as a checklist you have ticked.</li>
+</ul>
+<p>We do not intentionally collect sensitive personal data such as health information, religious or political beliefs, or biometric data. Please do not put such information in your profile or logbook.</p></section><section id="how-we-use"><h2>4. How and why we use your data</h2><p>We use personal data only for purposes that the NDPA allows, namely to perform our agreement with you, to comply with the law, for our legitimate interests that do not override your rights, or with your consent where consent is needed.</p>
+<ul><li>To create and manage your account and confirm who you are.</li>
+<li>To match students with opportunities and let you apply, review applications and accept or decline.</li>
+<li>To record and manage placements, logbooks, supervisor visits, evaluations and reports.</li>
+<li>To verify companies and institutions before they appear on the platform.</li>
+<li>To send service messages such as application updates, verification results and security notices.</li>
+<li>To keep Placewick safe, prevent fraud and misuse, and fix technical problems.</li>
+<li>To understand how the platform is used so that we can improve it, using aggregated information wherever possible.</li>
+<li>To meet legal and regulatory obligations.</li></ul>
+<p>We will only send you marketing messages if you have agreed to receive them, and you can stop them at any time.</p></section><section id="who-sees"><h2>5. Who can see your data</h2><p>Placewick is built around three groups of users, and each group sees only what it needs.</p>
+<ul><li><strong>Companies</strong> see the profile and application details of students who apply to their opportunities, and the logbook and evaluation records of students placed with them.</li>
+<li><strong>Institutions</strong> see the profile, placement, logbook and evaluation records of students who have linked their account to that institution.</li>
+<li><strong>Students</strong> see their own records and the public details of verified companies and opportunities.</li>
+<li><strong>Placewick staff</strong> may access data where necessary to verify accounts, give support or keep the platform secure.</li></ul>
+<p>We also share data with service providers who help us run Placewick, such as providers of hosting, database, email and security services. They may process data only on our instructions and under written terms that protect it. We may disclose data where the law requires it, for example in response to a lawful order from a court or regulator, or where needed to protect the rights, safety or property of Placewick or others.</p>
+<p><strong>We do not sell your personal data.</strong></p></section><section id="transfers"><h2>6. Transfers outside Nigeria</h2><p>Some of our service providers store or process data on servers outside Nigeria. Where this happens we take steps required by the NDPA to make sure the data stays protected, such as choosing providers with appropriate safeguards and binding them by contract.</p></section><section id="retention"><h2>7. How long we keep your data</h2><p>We keep personal data only for as long as it is needed for the purposes in this policy. In general, account data is kept while your account is active. Placement, logbook and evaluation records may be kept for longer where an institution needs them for accreditation, audit or verification of a completed training period. When data is no longer needed we delete it or make it anonymous. If you close your account we will delete or anonymise your personal data within a reasonable time, except where we must keep it by law or to settle a dispute.</p></section><section id="security"><h2>8. How we protect your data</h2><p>We use technical and organisational measures to protect personal data, including encrypted connections, access controls based on user role, protected password storage and limiting staff access. No system is completely secure, so please use a strong, unique password and keep it private.</p>
+<p>If a breach of personal data occurs that is likely to put your rights at risk, we will notify the Nigeria Data Protection Commission within the time the NDPA requires and will tell affected users where the law requires us to do so.</p></section><section id="your-rights"><h2>9. Your rights</h2><p>Under the NDPA you have the right to:</p>
+<ul><li>be told how your data is used and ask for a copy of the data we hold about you;</li>
+<li>ask us to correct data that is wrong or incomplete;</li>
+<li>ask us to delete your data, or restrict how we use it, where the law allows;</li>
+<li>object to processing based on our legitimate interests or used for direct marketing;</li>
+<li>withdraw your consent at any time, where we rely on consent, without affecting earlier use;</li>
+<li>receive your data in a commonly used format and ask for it to be moved to another provider;</li>
+<li>not be subject to a decision based only on automated processing that significantly affects you.</li></ul><p>To use any of these rights, write to <a href="mailto:support@placewick.com">support@placewick.com</a>. We may ask you to confirm your identity first, and we will reply within the time the law sets. You also have the right to complain to the Nigeria Data Protection Commission (NDPC) if you believe your data has been mishandled, though we ask that you contact us first so we can try to put it right.</p></section><section id="children"><h2>10. Age requirement</h2><p>Placewick is meant for people who are 18 years or older. If you are under 18 you may use the platform only with the consent and supervision of a parent or guardian. If we learn that we hold data of a child without proper consent, we will delete it.</p></section><section id="cookies"><h2>11. Cookies and browser storage</h2><p>Placewick uses only the cookies and browser storage that are needed to keep you signed in, remember simple settings and keep the platform secure. We do not use advertising cookies. You can clear this data in your browser settings, but parts of the platform may not work properly if you do.</p></section><section id="third-party"><h2>12. Links to other websites</h2><p>Placewick may link to websites run by others, such as company career pages or regulators. We do not control them and are not responsible for their privacy practices. Please read their policies before giving them your data.</p></section><section id="changes"><h2>13. Changes to this policy</h2><p>We may update this policy from time to time. When we make a significant change we will update the date at the top of this page and, where appropriate, tell you by email or a notice on the platform. Continued use of Placewick after a change means you accept the updated policy.</p></section><section id="contact"><h2>14. Contact us</h2><p>For questions about this policy or about your personal data, contact Placewick Technologies Limited at <a href="mailto:support@placewick.com">support@placewick.com</a>. For general enquiries, write to <a href="mailto:hello@placewick.com">hello@placewick.com</a>.</p></section></article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Placewick. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="privacy.html">Privacy Policy</a>
+
+            <a href="terms.html">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js" defer></script>
+<script src="pages.js" defer></script>
+
+</body>
+</html>

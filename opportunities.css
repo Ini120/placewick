@@ -1,0 +1,42 @@
+/* Public opportunities page */
+.opps-hero { padding-bottom: 64px; }
+.opps-search { position: relative; max-width: 620px; margin: 30px auto 0; }
+.opps-search i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--text-light); }
+.opps-search input { width: 100%; box-sizing: border-box; padding: 17px 20px 17px 50px; font: inherit; font-size: 16px; border: 1px solid var(--border); border-radius: 999px; background: #fff; box-shadow: 0 12px 32px rgba(49,85,245,.12); outline: none; }
+.opps-search input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(49,85,245,.15); }
+.opps-list { padding: 48px 0 80px; }
+.opps-filters { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+.opps-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.opps-chip { font: inherit; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border); background: #fff; color: var(--text-light); cursor: pointer; transition: all .2s; }
+.opps-chip:hover { border-color: var(--primary); color: var(--primary); }
+.opps-chip.is-active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.opps-selects { display: flex; gap: 10px; flex-wrap: wrap; }
+.opps-selects select { font: inherit; font-size: 14px; font-weight: 600; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: #fff; color: var(--text); cursor: pointer; }
+.opps-count { margin: 22px 0 18px; font-size: 14px; font-weight: 600; color: var(--text-light); }
+.opps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.opp-card { display: flex; flex-direction: column; padding: 24px; background: #fff; border: 1px solid var(--border); border-radius: 18px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+.opp-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(16,26,67,.10); border-color: #c9d3fb; }
+.opp-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.opp-logo { width: 46px; height: 46px; border-radius: 12px; background: #eef1ff; color: var(--primary); display: grid; place-items: center; font-weight: 800; }
+.opp-type { font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 999px; background: #eef1ff; color: var(--primary); }
+.opp-type.internship { background: #f1ecff; color: var(--secondary); }
+.opp-card h3 { font-size: 19px; line-height: 1.3; margin: 0 0 6px; color: var(--text); }
+.opp-company { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: var(--text-light); }
+.opp-company i { color: var(--success, #12b76a); margin-right: 4px; }
+.opp-meta { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 7px; font-size: 14px; color: var(--text-light); }
+.opp-meta i { width: 18px; color: var(--primary); }
+.opp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.opp-tags span { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 6px; background: var(--background-soft); color: var(--text-light); }
+.opp-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.opp-deadline { font-size: 13px; font-weight: 600; color: var(--text-light); }
+.opp-apply { font-size: 14px; font-weight: 800; color: var(--primary); text-decoration: none; }
+.opp-apply i { transition: transform .2s; }
+.opp-apply:hover i { transform: translateX(4px); }
+.opps-empty { text-align: center; padding: 60px 20px; color: var(--text-light); }
+.opps-empty i { font-size: 36px; color: var(--primary); }
+.opps-empty h3 { color: var(--text); margin: 12px 0 6px; }
+.opps-note { margin-top: 28px; text-align: center; font-size: 13px; color: var(--text-light); }
+.opps-two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.opps-two .mv-card .about-button { display: inline-block; margin-top: 14px; }
+@media (max-width: 980px) { .opps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .opps-grid, .opps-two { grid-template-columns: 1fr; } .opps-selects select { flex: 1; } }

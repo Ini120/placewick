@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms of Service | Placewick</title>
+
+    <meta name="description" content="The terms that apply when you use Placewick as a student, company or institution.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+
+<header class="header">
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav-links" aria-label="Main navigation">
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Students
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="opportunities.html">Find Opportunities</a>
+                    <a href="#">Application Tracker</a>
+                    <a href="#">Career Resources</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Companies
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Post an Opportunity</a>
+                    <a href="#">Find Talent</a>
+                    <a href="#">Why Placewick</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    Resources
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Career Guide</a>
+                    <a href="#">Interview Tips</a>
+                    <a href="#">CV Resources</a>
+                </div>
+            </div>
+
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
+
+            <a href="about.html" class="nav-link">About Us</a>
+
+        </nav>
+
+        <!-- Right side -->
+        <div class="header-actions">
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
+        </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about legal">
+    <section class="about-hero legal-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
+        <div class="about-container">
+            <span class="about-eyebrow">Legal</span>
+            <h1>Terms of Service</h1>
+            <p>These terms set out the rules for using Placewick. Please read them before you create an account.</p>
+            <p class="legal-meta">Effective date: 12 November 2026 &nbsp;·&nbsp; Last updated: 12 November 2026</p>
+        </div>
+    </section>
+    <section class="about-section legal-body">
+        <div class="about-container legal-layout">
+            <nav class="legal-toc" aria-label="On this page"><h3>On this page</h3><a href="#about">1. About these terms</a><a href="#what-placewick-is">2. What Placewick is and is not</a><a href="#eligibility">3. Eligibility and accounts</a><a href="#students">4. Terms for students</a><a href="#companies">5. Terms for companies</a><a href="#institutions">6. Terms for institutions</a><a href="#acceptable-use">7. Acceptable use</a><a href="#your-content">8. Your content</a><a href="#our-rights">9. Our intellectual property</a><a href="#fees">10. Fees</a><a href="#suspension">11. Suspension and termination</a><a href="#availability">12. Availability and changes to the Platform</a><a href="#disclaimer">13. Disclaimers</a><a href="#liability">14. Limit of liability</a><a href="#indemnity">15. Your responsibility for misuse</a><a href="#privacy">16. Privacy</a><a href="#changes">17. Changes to these Terms</a><a href="#law">18. Governing law and disputes</a><a href="#contact">19. Contact us</a><a href="privacy.html" class="legal-other">Read our Privacy Policy <i class="fa-solid fa-arrow-right"></i></a></nav>
+            <article class="legal-content"><section id="about"><h2>1. About these terms</h2><p>These Terms of Service ("Terms") are an agreement between you and Placewick Technologies Limited ("Placewick", "we", "us" or "our"). They govern your use of the Placewick website at placewick.com and the student, company and institution services we provide (together, the "Platform"). Please read them with our <a href="privacy.html">Privacy Policy</a>. By creating an account or using the Platform you agree to these Terms. If you use Placewick on behalf of a company or institution, you confirm that you have authority to bind it, and "you" includes that organisation.</p></section><section id="what-placewick-is"><h2>2. What Placewick is and is not</h2><p>Placewick is a platform that connects students with SIWES and internship opportunities and helps institutions and companies manage them. Placewick is not an employer, a training provider or an agent of any student, company or institution. Any placement is an arrangement between the student, the host company and the institution. We do not guarantee that any student will receive a placement, that any company will receive suitable applicants, or that any placement will be approved by your institution or by the Industrial Training Fund (ITF) or any other regulator.</p></section><section id="eligibility"><h2>3. Eligibility and accounts</h2><ul><li>You must be at least 18 years old, or have the consent of a parent or guardian, to use the Platform.</li>
+<li>You must give accurate and complete information when you register and keep it up to date.</li>
+<li>You are responsible for keeping your password confidential and for everything done through your account. Tell us at once if you suspect unauthorised use.</li>
+<li>Each person may hold only one personal account. Accounts may not be shared or transferred.</li>
+<li>Company and institution accounts may be reviewed and verified by Placewick before they are approved. We may refuse or withdraw verification at our discretion, for example if documents are missing, false or cannot be confirmed.</li></ul></section><section id="students"><h2>4. Terms for students</h2><ul><li>Your profile, CV and applications must be true. Do not claim qualifications, experience or an institution you do not have.</li>
+<li>Your logbook entries must be honest and written by you. Do not copy another student's work or submit entries for work you did not do.</li>
+<li>You must never be asked to pay a company or any person to be considered for or given a placement through Placewick. If anyone asks for money in connection with a placement found through the Platform, please report it to <a href="mailto:support@placewick.com">support@placewick.com</a>.</li>
+<li>Following the rules of your institution and of your host company during training remains your responsibility.</li></ul></section><section id="companies"><h2>5. Terms for companies</h2><ul><li>You must post only genuine opportunities that you are entitled to offer, with accurate descriptions of the role, location, duration and any allowance.</li>
+<li>You must not charge students any fee to apply for, accept or take up a placement.</li>
+<li>You must treat students fairly, give them a safe working environment, provide real supervised work that matches the training, and complete evaluations and logbook approvals honestly and on time.</li>
+<li>You must not discriminate unlawfully, harass students or use their data for any purpose other than assessing applications and managing the placement.</li></ul></section><section id="institutions"><h2>6. Terms for institutions</h2><ul><li>The person who registers an institution must be authorised to act for it.</li>
+<li>You are responsible for the accuracy of student, supervisor and placement information you enter, and for your own approval and accreditation decisions.</li>
+<li>You must use student data only for managing industrial training and meeting your lawful reporting duties.</li></ul></section><section id="acceptable-use"><h2>7. Acceptable use</h2><p>You agree not to:</p>
+<ul><li>break the law or encourage others to do so;</li>
+<li>post false, misleading, defamatory, abusive, discriminatory or obscene content;</li>
+<li>impersonate any person or organisation, or falsely claim to be verified;</li>
+<li>collect or scrape data from the Platform, or contact users for purposes unrelated to placements, such as spam or unrelated sales;</li>
+<li>upload viruses or try to interfere with, overload or gain unauthorised access to the Platform or other accounts;</li>
+<li>use the Platform to advertise jobs that require payment from applicants, or any scheme that is unlawful or exploitative.</li></ul></section><section id="your-content"><h2>8. Your content</h2><p>You keep ownership of the content you put on the Platform, such as your profile, CV, logbook entries and opportunity descriptions. You give Placewick a non-exclusive, worldwide, royalty-free licence to store, display and process that content as needed to run and improve the Platform and to provide it to the other users described in the Privacy Policy. This licence ends when you delete the content or close your account, except for copies that other users have lawfully received or that we must keep by law. You confirm that you have the right to post your content and that it does not infringe anyone else's rights.</p></section><section id="our-rights"><h2>9. Our intellectual property</h2><p>The Platform, including its name, logo, design, software and text, belongs to Placewick or its licensors and is protected by law. You may use it only as these Terms allow. You may not copy, modify, resell or reverse engineer any part of it without our written permission.</p></section><section id="fees"><h2>10. Fees</h2><p>Placewick is currently free to use for students. If we introduce fees for any service, for example for companies or institutions, we will tell you before they apply and you will not be charged for a paid service without agreeing to it first.</p></section><section id="suspension"><h2>11. Suspension and termination</h2><p>You may close your account at any time by writing to <a href="mailto:support@placewick.com">support@placewick.com</a>. We may suspend or end your access, with or without notice, if you break these Terms, if we reasonably suspect fraud or misuse, if the law requires it, or to protect other users or the Platform. Sections that by their nature should continue after termination, including those on content, liability and governing law, will continue to apply.</p></section><section id="availability"><h2>12. Availability and changes to the Platform</h2><p>We work to keep the Platform available but we do not promise that it will be uninterrupted or free of errors. We may change, add or remove features, or carry out maintenance, at any time.</p></section><section id="disclaimer"><h2>13. Disclaimers</h2><p>The Platform is provided "as is" and "as available". To the fullest extent the law allows, we do not give any warranty about it, including that opportunities listed by companies are accurate, safe or suitable, that users are who they say they are, or that any report generated on the Platform will be accepted by a regulator or accreditation body. You should use your own judgement when dealing with other users, and report anything that concerns you.</p></section><section id="liability"><h2>14. Limit of liability</h2><p>Nothing in these Terms excludes liability that cannot lawfully be excluded. Subject to that, Placewick will not be liable for any indirect or consequential loss, loss of opportunity, or loss of profit arising from your use of the Platform, or for anything done or not done by any student, company or institution. Our total liability to you for any claim connected with the Platform will not exceed the greater of the amount you paid us in the twelve months before the claim, and ₦50,000.</p></section><section id="indemnity"><h2>15. Your responsibility for misuse</h2><p>You agree to compensate Placewick for losses, claims and reasonable costs that arise from your breach of these Terms, your unlawful use of the Platform or your content infringing another person's rights.</p></section><section id="privacy"><h2>16. Privacy</h2><p>Our <a href="privacy.html">Privacy Policy</a> explains how we handle personal data and forms part of these Terms.</p></section><section id="changes"><h2>17. Changes to these Terms</h2><p>We may update these Terms from time to time. We will change the date at the top of this page and, for significant changes, give reasonable notice by email or on the Platform. If you keep using Placewick after the change takes effect, you accept the updated Terms. If you do not agree, you should stop using the Platform and close your account.</p></section><section id="law"><h2>18. Governing law and disputes</h2><p>These Terms are governed by the laws of the Federal Republic of Nigeria. If a dispute arises, we ask that you first write to us so that we can try to settle it in good faith. If it cannot be settled within 30 days, either side may take it to the courts of competent jurisdiction in Nigeria.</p></section><section id="contact"><h2>19. Contact us</h2><p>Questions about these Terms can be sent to <a href="mailto:support@placewick.com">support@placewick.com</a>. General enquiries can go to <a href="mailto:hello@placewick.com">hello@placewick.com</a>.</p></section></article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Placewick. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="privacy.html">Privacy Policy</a>
+
+            <a href="terms.html">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js" defer></script>
+<script src="pages.js" defer></script>
+
+</body>
+</html>
