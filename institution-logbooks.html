@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logbooks &amp; Forms | Placewick Institution</title>
+
+    <meta name="description" content="Placewick institution dashboard: track SIWES placements, logbooks, supervisors and accreditation reports.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="institution-dashboard.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+
+<body>
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="institution-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="institution-placements.html" class="sidebar-link">
+                <i class="fa-solid fa-user-check"></i>
+                Placements
+            </a>
+
+            <a href="institution-logbooks.html" class="sidebar-link active">
+                <i class="fa-solid fa-book-open"></i>
+                Logbooks &amp; Forms
+                <span class="badge">23</span>
+            </a>
+
+            <a href="institution-supervisors.html" class="sidebar-link">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+                Supervisors
+            </a>
+
+            <a href="institution-reports.html" class="sidebar-link">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="institution-dashboard.html#profile" class="sidebar-link">
+                <i class="fa-solid fa-building-columns"></i>
+                Institution Profile
+            </a>
+
+            <a href="institution-dashboard.html#settings" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">WU</div>
+                <div class="sidebar-user-info">
+                    <h4>Westbrook University</h4>
+                    <span>SIWES Unit &middot; Demo</span>
+                </div>
+            </div>
+
+            <a href="index.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Logbooks &amp; Forms</h1>
+                    <p>Review weekly logs, Form 8s and evaluations submitted digitally.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="institution-dashboard.html" class="header-avatar">WU</a>
+
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="stats-row">
+
+                <div class="stat-card">
+                    <div class="stat-icon info"><i class="fa-solid fa-book-open"></i></div>
+                    <div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-label">Logbooks to Review</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon warning"><i class="fa-solid fa-file-signature"></i></div>
+                    <div>
+                        <div class="stat-value">9</div>
+                        <div class="stat-label">Form 8s Pending</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon success"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div>
+                        <div class="stat-value">41</div>
+                        <div class="stat-label">Evaluations In</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-circle-exclamation"></i></div>
+                    <div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Overdue Logs</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="tabs" id="log-tabs" role="tablist">
+                <button type="button" class="tab is-active" data-tab="logbooks" role="tab">Weekly logbooks <span class="count">5</span></button>
+                <button type="button" class="tab" data-tab="forms" role="tab">Form 8 <span class="count">4</span></button>
+                <button type="button" class="tab" data-tab="evals" role="tab">Evaluations <span class="count">3</span></button>
+            </div>
+
+            <div class="panel tab-panel" id="tab-logbooks">
+                <div class="panel-body">
+                    <div class="review-row">
+                        <div class="avatar-sm">TA</div>
+                        <div class="review-details"><h4>Tunde Adebayo</h4><span>Week 14 logbook &middot; Dangote Refinery</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening logbook (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">FA</div>
+                        <div class="review-details"><h4>Folake Adeyemi</h4><span>Week 14 logbook &middot; Flutterwave</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening logbook (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">AB</div>
+                        <div class="review-details"><h4>Amina Bello</h4><span>Week 13 logbook &middot; Julius Berger</span></div>
+                        <span class="sign-chip waiting"><i class="fa-solid fa-hourglass-half"></i> Awaiting supervisor</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening logbook (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">BU</div>
+                        <div class="review-details"><h4>Blessing Udo</h4><span>Week 12 logbook &middot; NBS Lagos</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening logbook (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">IM</div>
+                        <div class="review-details"><h4>Ibrahim Musa</h4><span>Week 11 logbook &middot; Setraco</span></div>
+                        <span class="sign-chip waiting"><i class="fa-solid fa-hourglass-half"></i> Awaiting supervisor</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening logbook (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+</div>
+                <div class="panel-note">Students submit weekly entries digitally. Workplace supervisors sign them online, so no booklet needs to travel.</div>
+            </div>
+
+            <div class="panel tab-panel" id="tab-forms" hidden>
+                <div class="panel-body">
+                    <div class="review-row">
+                        <div class="avatar-sm">BU</div>
+                        <div class="review-details"><h4>Blessing Udo</h4><span>Form 8 acceptance letter &middot; NBS Lagos</span></div>
+                        <span class="sign-chip waiting"><i class="fa-solid fa-hourglass-half"></i> Awaiting supervisor</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening Form 8 (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">SO</div>
+                        <div class="review-details"><h4>Segun Ogunleye</h4><span>Form 8 acceptance letter &middot; Gilead Architects</span></div>
+                        <span class="sign-chip waiting"><i class="fa-solid fa-hourglass-half"></i> Awaiting supervisor</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening Form 8 (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">CN</div>
+                        <div class="review-details"><h4>Chidinma Nwosu</h4><span>Form 8 acceptance letter &middot; Paystack</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening Form 8 (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">KB</div>
+                        <div class="review-details"><h4>Kemi Balogun</h4><span>Form 8 acceptance letter &middot; Nestle Nigeria</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening Form 8 (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+</div>
+                <div class="panel-note">Form 8 is generated when a company confirms a placement and is signed by the workplace supervisor.</div>
+            </div>
+
+            <div class="panel tab-panel" id="tab-evals" hidden>
+                <div class="panel-body">
+                    <div class="review-row">
+                        <div class="avatar-sm">TA</div>
+                        <div class="review-details"><h4>Tunde Adebayo</h4><span>Mid-placement evaluation &middot; Dangote Refinery</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening evaluation (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">AB</div>
+                        <div class="review-details"><h4>Amina Bello</h4><span>Mid-placement evaluation &middot; Julius Berger</span></div>
+                        <span class="sign-chip signed"><i class="fa-solid fa-signature"></i> Supervisor signed</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening evaluation (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+
+                    <div class="review-row">
+                        <div class="avatar-sm">FA</div>
+                        <div class="review-details"><h4>Folake Adeyemi</h4><span>Final evaluation &middot; Flutterwave</span></div>
+                        <span class="sign-chip waiting"><i class="fa-solid fa-hourglass-half"></i> Awaiting supervisor</span>
+                        <div class="review-actions">
+                            <button type="button" class="btn btn-outline btn-sm" data-toast="Opening evaluation (demo)"><i class="fa-regular fa-eye"></i> View</button>
+                            <button type="button" class="btn btn-success-soft btn-sm" data-resolve="approved"><i class="fa-solid fa-check"></i> Approve</button>
+                            <button type="button" class="btn btn-danger-soft btn-sm" data-resolve="returned"><i class="fa-solid fa-rotate-left"></i> Return</button>
+                            <span class="status-badge neutral resolved-tag" hidden></span>
+                        </div>
+                    </div>
+</div>
+                <div class="panel-note">Workplace supervisors submit evaluations online. Academic supervisors add their visit assessment separately.</div>
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="applicant-dashboard.js"></script>
+<script src="institution-dashboard.js"></script>
+
+</body>
+
+</html>

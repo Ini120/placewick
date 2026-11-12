@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | Placewick Institution</title>
+
+    <meta name="description" content="Placewick institution dashboard: track SIWES placements, logbooks, supervisors and accreditation reports.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="institution-dashboard.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+
+<body>
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="institution-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="institution-placements.html" class="sidebar-link">
+                <i class="fa-solid fa-user-check"></i>
+                Placements
+            </a>
+
+            <a href="institution-logbooks.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                Logbooks &amp; Forms
+                <span class="badge">23</span>
+            </a>
+
+            <a href="institution-supervisors.html" class="sidebar-link">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+                Supervisors
+            </a>
+
+            <a href="institution-reports.html" class="sidebar-link active">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="institution-dashboard.html#profile" class="sidebar-link">
+                <i class="fa-solid fa-building-columns"></i>
+                Institution Profile
+            </a>
+
+            <a href="institution-dashboard.html#settings" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">WU</div>
+                <div class="sidebar-user-info">
+                    <h4>Westbrook University</h4>
+                    <span>SIWES Unit &middot; Demo</span>
+                </div>
+            </div>
+
+            <a href="index.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Reports</h1>
+                    <p>Accreditation-ready data for NUC and NBTE audits.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="institution-dashboard.html" class="header-avatar">WU</a>
+
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <div class="page-toolbar">
+                <select class="select-field" aria-label="Session"><option>2025/2026 session</option><option>2024/2025 session</option></select>
+                <select class="select-field" aria-label="Regulator"><option>NUC format</option><option>NBTE format</option></select>
+                <button type="button" class="btn btn-outline spacer" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
+                <button type="button" class="btn btn-primary" data-toast="Accreditation pack generated (demo)"><i class="fa-solid fa-file-arrow-down"></i> Generate accreditation pack</button>
+            </div>
+
+            <section class="stats-row">
+
+                <div class="stat-card">
+                    <div class="stat-icon success"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <div class="stat-value">61%</div>
+                        <div class="stat-label">Placement Rate</div>
+                        <div class="stat-trend"><i class="fa-solid fa-arrow-trend-up"></i> up 9 pts on last session</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon info"><i class="fa-solid fa-handshake"></i></div>
+                    <div>
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Industry Partners</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div>
+                        <div class="stat-value">92%</div>
+                        <div class="stat-label">Evaluations Completed</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon warning"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div>
+                        <div class="stat-value">87%</div>
+                        <div class="stat-label">Supervisor Visits Done</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="report-grid">
+                <div class="report-card">
+                    <div class="report-card-head"><div class="stat-icon info"><i class="fa-solid fa-user-graduate"></i></div><h3>Student Placement Report</h3></div>
+                    <p>Every student, their company, location, placement dates and Form 8 status for the selected session.</p>
+                    <button type="button" class="btn btn-outline btn-sm" data-toast="Placement report downloaded (demo)"><i class="fa-solid fa-download"></i> Download</button>
+                </div>
+                <div class="report-card">
+                    <div class="report-card-head"><div class="stat-icon success"><i class="fa-solid fa-handshake"></i></div><h3>Industry Partnership Report</h3></div>
+                    <p>Companies that hosted students, number of students per company and sectors covered.</p>
+                    <button type="button" class="btn btn-outline btn-sm" data-toast="Partnership report downloaded (demo)"><i class="fa-solid fa-download"></i> Download</button>
+                </div>
+                <div class="report-card">
+                    <div class="report-card-head"><div class="stat-icon purple"><i class="fa-solid fa-chart-line"></i></div><h3>Employability Outcomes</h3></div>
+                    <p>Placement and evaluation results by department, to evidence industry exposure during accreditation.</p>
+                    <button type="button" class="btn btn-outline btn-sm" data-toast="Outcomes report downloaded (demo)"><i class="fa-solid fa-download"></i> Download</button>
+                </div>
+                <div class="report-card">
+                    <div class="report-card-head"><div class="stat-icon warning"><i class="fa-solid fa-person-walking-luggage"></i></div><h3>Supervision &amp; Visitation Log</h3></div>
+                    <p>Academic supervisor assignments and dated visit reports, ready for review panels.</p>
+                    <button type="button" class="btn btn-outline btn-sm" data-toast="Supervision log downloaded (demo)"><i class="fa-solid fa-download"></i> Download</button>
+                </div>
+            </div>
+
+            <section class="reports-layout">
+
+                <div class="panel">
+                    <div class="panel-header"><h3>Placement by Department</h3></div>
+                    <div class="table-wrap">
+                        <table class="data-table" style="min-width:560px">
+                            <thead><tr><th>Department</th><th>Students</th><th>Placed</th><th>Rate</th></tr></thead>
+                            <tbody>
+                            <tr><td><strong>Computer Science</strong></td><td>42</td><td>36</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:86%"></div></div><strong>86%</strong></div></td></tr>
+
+                            <tr><td><strong>Electrical Engineering</strong></td><td>38</td><td>27</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:71%"></div></div><strong>71%</strong></div></td></tr>
+
+                            <tr><td><strong>Mechanical Engineering</strong></td><td>31</td><td>19</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:61%"></div></div><strong>61%</strong></div></td></tr>
+
+                            <tr><td><strong>Civil Engineering</strong></td><td>29</td><td>17</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:59%"></div></div><strong>59%</strong></div></td></tr>
+
+                            <tr><td><strong>Accounting</strong></td><td>34</td><td>21</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:62%"></div></div><strong>62%</strong></div></td></tr>
+
+                            <tr><td><strong>Biochemistry</strong></td><td>22</td><td>11</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:50%"></div></div><strong>50%</strong></div></td></tr>
+
+                            <tr><td><strong>Architecture</strong></td><td>18</td><td>10</td><td><div class="rate-cell"><div class="mini-track"><div class="mini-fill" style="width:56%"></div></div><strong>56%</strong></div></td></tr>
+</tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header"><h3>Top Industry Partners</h3><span class="cell-muted">Students hosted</span></div>
+                    <div class="panel-body">
+                        <div class="partner-row"><div class="application-logo">DR</div><div class="attention-text"><h4>Dangote Refinery</h4><span>Lagos</span></div><span class="partner-count">14</span></div>
+
+                        <div class="partner-row"><div class="application-logo">JB</div><div class="attention-text"><h4>Julius Berger</h4><span>Abuja</span></div><span class="partner-count">11</span></div>
+
+                        <div class="partner-row"><div class="application-logo">FF</div><div class="attention-text"><h4>Flutterwave</h4><span>Lagos</span></div><span class="partner-count">9</span></div>
+
+                        <div class="partner-row"><div class="application-logo">AB</div><div class="attention-text"><h4>Access Bank</h4><span>Lagos</span></div><span class="partner-count">8</span></div>
+
+                        <div class="partner-row"><div class="application-logo">PP</div><div class="attention-text"><h4>Paystack</h4><span>Lagos</span></div><span class="partner-count">7</span></div>
+</div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="applicant-dashboard.js"></script>
+<script src="institution-dashboard.js"></script>
+
+</body>
+
+</html>

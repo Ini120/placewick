@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placements | Placewick Institution</title>
+
+    <meta name="description" content="Placewick institution dashboard: track SIWES placements, logbooks, supervisors and accreditation reports.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="institution-dashboard.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+
+<body>
+
+<div class="dashboard-shell">
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+
+            <a href="institution-dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </a>
+
+            <a href="institution-placements.html" class="sidebar-link active">
+                <i class="fa-solid fa-user-check"></i>
+                Placements
+            </a>
+
+            <a href="institution-logbooks.html" class="sidebar-link">
+                <i class="fa-solid fa-book-open"></i>
+                Logbooks &amp; Forms
+                <span class="badge">23</span>
+            </a>
+
+            <a href="institution-supervisors.html" class="sidebar-link">
+                <i class="fa-solid fa-person-walking-luggage"></i>
+                Supervisors
+            </a>
+
+            <a href="institution-reports.html" class="sidebar-link">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </a>
+
+            <span class="sidebar-section-label">Account</span>
+
+            <a href="institution-dashboard.html#profile" class="sidebar-link">
+                <i class="fa-solid fa-building-columns"></i>
+                Institution Profile
+            </a>
+
+            <a href="institution-dashboard.html#settings" class="sidebar-link">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar">WU</div>
+                <div class="sidebar-user-info">
+                    <h4>Westbrook University</h4>
+                    <span>SIWES Unit &middot; Demo</span>
+                </div>
+            </div>
+
+            <a href="index.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Placements</h1>
+                    <p>See who has applied, interviewed or been placed.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <button type="button" class="icon-button" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+
+                <a href="institution-dashboard.html" class="header-avatar">WU</a>
+
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="stats-row">
+
+                <div class="stat-card">
+                    <div class="stat-icon success"><i class="fa-solid fa-circle-check"></i></div>
+                    <div>
+                        <div class="stat-value">131</div>
+                        <div class="stat-label">Placed</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-comments"></i></div>
+                    <div>
+                        <div class="stat-value">22</div>
+                        <div class="stat-label">Interviewing</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon info"><i class="fa-solid fa-paper-plane"></i></div>
+                    <div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Applied</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon warning"><i class="fa-solid fa-user-clock"></i></div>
+                    <div>
+                        <div class="stat-value">37</div>
+                        <div class="stat-label">Not Started</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="page-toolbar">
+                <div class="search-field">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="placement-search" placeholder="Search name, matric no. or company">
+                </div>
+                <div class="chip-group" id="placement-filters">
+                    <button type="button" class="chip is-active" data-filter="all">All</button>
+                    <button type="button" class="chip" data-filter="placed">Placed</button>
+                    <button type="button" class="chip" data-filter="interview">Interviewing</button>
+                    <button type="button" class="chip" data-filter="applied">Applied</button>
+                    <button type="button" class="chip" data-filter="neutral">Not started</button>
+                </div>
+                <button type="button" class="btn btn-outline spacer" data-toast="Placement list exported (demo)"><i class="fa-solid fa-download"></i> Export CSV</button>
+            </div>
+
+            <div class="panel">
+                <div class="table-wrap">
+                    <table class="data-table" id="placement-table">
+                        <thead>
+                            <tr><th>Student</th><th>Department</th><th>Status</th><th>Company</th><th>Location</th><th>Latest</th></tr>
+                        </thead>
+                        <tbody>
+
+                            <tr data-status="interview" data-search="chidinma nwosu csc/2021/0142 computer science paystack">
+                                <td><div class="person-cell"><div class="avatar-sm">CN</div><div><h4>Chidinma Nwosu</h4><span>CSC/2021/0142</span></div></div></td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge interview"><span class="dot"></span>Interview</span></td>
+                                <td>Paystack</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">Applied 3 days ago</td>
+                            </tr>
+
+                            <tr data-status="placed" data-search="tunde adebayo eee/2021/0377 electrical engineering dangote refinery">
+                                <td><div class="person-cell"><div class="avatar-sm">TA</div><div><h4>Tunde Adebayo</h4><span>EEE/2021/0377</span></div></div></td>
+                                <td>Electrical Engineering</td>
+                                <td><span class="status-badge placed"><span class="dot"></span>Placed</span></td>
+                                <td>Dangote Refinery</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">Form 8 signed</td>
+                            </tr>
+
+                            <tr data-status="placed" data-search="amina bello mee/2021/0215 mechanical engineering julius berger">
+                                <td><div class="person-cell"><div class="avatar-sm">AB</div><div><h4>Amina Bello</h4><span>MEE/2021/0215</span></div></div></td>
+                                <td>Mechanical Engineering</td>
+                                <td><span class="status-badge placed"><span class="dot"></span>Placed</span></td>
+                                <td>Julius Berger</td>
+                                <td class="cell-muted">Abuja</td>
+                                <td class="cell-muted">Form 8 signed</td>
+                            </tr>
+
+                            <tr data-status="applied" data-search="emeka okafor acc/2021/0098 accounting access bank">
+                                <td><div class="person-cell"><div class="avatar-sm">EO</div><div><h4>Emeka Okafor</h4><span>ACC/2021/0098</span></div></div></td>
+                                <td>Accounting</td>
+                                <td><span class="status-badge applied"><span class="dot"></span>Applied</span></td>
+                                <td>Access Bank</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">3 applications</td>
+                            </tr>
+
+                            <tr data-status="placed" data-search="folake adeyemi csc/2021/0166 computer science flutterwave">
+                                <td><div class="person-cell"><div class="avatar-sm">FA</div><div><h4>Folake Adeyemi</h4><span>CSC/2021/0166</span></div></div></td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge placed"><span class="dot"></span>Placed</span></td>
+                                <td>Flutterwave</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">Form 8 signed</td>
+                            </tr>
+
+                            <tr data-status="reviewing" data-search="ibrahim musa cve/2021/0310 civil engineering setraco">
+                                <td><div class="person-cell"><div class="avatar-sm">IM</div><div><h4>Ibrahim Musa</h4><span>CVE/2021/0310</span></div></div></td>
+                                <td>Civil Engineering</td>
+                                <td><span class="status-badge reviewing"><span class="dot"></span>Reviewing</span></td>
+                                <td>Setraco</td>
+                                <td class="cell-muted">Abuja</td>
+                                <td class="cell-muted">2 applications</td>
+                            </tr>
+
+                            <tr data-status="neutral" data-search="ngozi eze bch/2021/0054 biochemistry —">
+                                <td><div class="person-cell"><div class="avatar-sm">NE</div><div><h4>Ngozi Eze</h4><span>BCH/2021/0054</span></div></div></td>
+                                <td>Biochemistry</td>
+                                <td><span class="status-badge neutral"><span class="dot"></span>Not started</span></td>
+                                <td>—</td>
+                                <td class="cell-muted">—</td>
+                                <td class="cell-muted">No applications yet</td>
+                            </tr>
+
+                            <tr data-status="interview" data-search="segun ogunleye arc/2021/0121 architecture gilead architects">
+                                <td><div class="person-cell"><div class="avatar-sm">SO</div><div><h4>Segun Ogunleye</h4><span>ARC/2021/0121</span></div></div></td>
+                                <td>Architecture</td>
+                                <td><span class="status-badge interview"><span class="dot"></span>Interview</span></td>
+                                <td>Gilead Architects</td>
+                                <td class="cell-muted">Ibadan</td>
+                                <td class="cell-muted">Interview Thursday</td>
+                            </tr>
+
+                            <tr data-status="placed" data-search="blessing udo sta/2021/0187 statistics nbs lagos">
+                                <td><div class="person-cell"><div class="avatar-sm">BU</div><div><h4>Blessing Udo</h4><span>STA/2021/0187</span></div></div></td>
+                                <td>Statistics</td>
+                                <td><span class="status-badge placed"><span class="dot"></span>Placed</span></td>
+                                <td>NBS Lagos</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">Form 8 pending</td>
+                            </tr>
+
+                            <tr data-status="neutral" data-search="yusuf danjuma che/2021/0263 chemical engineering —">
+                                <td><div class="person-cell"><div class="avatar-sm">YD</div><div><h4>Yusuf Danjuma</h4><span>CHE/2021/0263</span></div></div></td>
+                                <td>Chemical Engineering</td>
+                                <td><span class="status-badge neutral"><span class="dot"></span>Not started</span></td>
+                                <td>—</td>
+                                <td class="cell-muted">—</td>
+                                <td class="cell-muted">No applications yet</td>
+                            </tr>
+
+                            <tr data-status="applied" data-search="kemi balogun mcb/2021/0072 microbiology nestle nigeria">
+                                <td><div class="person-cell"><div class="avatar-sm">KB</div><div><h4>Kemi Balogun</h4><span>MCB/2021/0072</span></div></div></td>
+                                <td>Microbiology</td>
+                                <td><span class="status-badge applied"><span class="dot"></span>Applied</span></td>
+                                <td>Nestle Nigeria</td>
+                                <td class="cell-muted">Ogun</td>
+                                <td class="cell-muted">1 application</td>
+                            </tr>
+
+                            <tr data-status="rejected" data-search="obinna chukwu csc/2021/0199 computer science interswitch">
+                                <td><div class="person-cell"><div class="avatar-sm">OC</div><div><h4>Obinna Chukwu</h4><span>CSC/2021/0199</span></div></div></td>
+                                <td>Computer Science</td>
+                                <td><span class="status-badge rejected"><span class="dot"></span>Rejected</span></td>
+                                <td>Interswitch</td>
+                                <td class="cell-muted">Lagos</td>
+                                <td class="cell-muted">Reapplying</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-empty" id="placement-empty">No students match your search.</div>
+                <div class="table-footer"><span id="placement-count">Showing 12 students</span><span>Updates as students apply, interview and get placed</span></div>
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="applicant-dashboard.js"></script>
+<script src="institution-dashboard.js"></script>
+
+</body>
+
+</html>
