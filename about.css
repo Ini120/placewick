@@ -272,3 +272,108 @@
     }
 
 }
+
+
+/* ---------- Extra components (How it works, Resources, Careers) ---------- */
+
+.about-cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background-color: #E9EEFF;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.about-narrow .about-steps {
+    margin-top: 28px;
+}
+
+.about-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.about-faq details {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 0 20px;
+}
+
+.about-faq summary {
+    padding: 18px 0;
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.about-faq summary::after {
+    content: "+";
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.about-faq details[open] summary::after {
+    content: "\2212";
+}
+
+.about-faq details p {
+    padding-bottom: 18px;
+    margin-bottom: 0;
+}
+
+.about-notice {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding: 18px 20px;
+    background-color: var(--background-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+}
+
+.about-notice i {
+    margin-top: 4px;
+    color: var(--primary);
+}
+
+.about-notice p {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.about .about-note {
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+    .about-cards-2 {
+        grid-template-columns: 1fr;
+    }
+
+}

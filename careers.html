@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Careers | Placewick</title>
+
+    <meta name="description" content="Careers at Placewick Technologies Limited. Learn about the areas we expect to grow and get in touch.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+<body>
+
+
+<header class="header">
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav-links" aria-label="Main navigation">
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Students
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Find Opportunities</a>
+                    <a href="#">Application Tracker</a>
+                    <a href="#">Career Resources</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Companies
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Post an Opportunity</a>
+                    <a href="#">Find Talent</a>
+                    <a href="#">Why Placewick</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    Resources
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Career Guide</a>
+                    <a href="#">Interview Tips</a>
+                    <a href="#">CV Resources</a>
+                </div>
+            </div>
+
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
+
+            <a href="about.html" class="nav-link">About Us</a>
+
+        </nav>
+
+        <!-- Right side -->
+        <div class="header-actions">
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
+        </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about">
+
+    <section class="about-hero">
+        <div class="about-container">
+            <span class="about-eyebrow">Careers</span>
+            <h1>Help us make placements work for Nigeria</h1>
+            <p>Placewick Technologies Limited is building technology for the way Nigerian students, companies and institutions connect. We are an early-stage team and we are interested in meeting talented people.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container about-narrow">
+            <h2>Open roles</h2>
+            <div class="about-notice">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>We do not have any open roles at the moment. We will list them here when we do.</p>
+            </div>
+            <p>
+                If you would like to work with us, send your CV and a short note about what you would like to do to
+                <a href="mailto:hello@placewick.com?subject=Careers%20at%20Placewick">hello@placewick.com</a>.
+                We read every message and will keep your details for when a suitable role opens.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-section about-soft">
+        <div class="about-container">
+            <h2 class="about-center">Areas we expect to grow</h2>
+            <div class="about-values">
+                <div><h3>Engineering</h3><p>Building and maintaining the web platform, from the student experience to institution tools.</p></div>
+                <div><h3>Product and design</h3><p>Shaping simple, clear experiences for people who use Placewick every day.</p></div>
+                <div><h3>Partnerships</h3><p>Working with institutions and companies to bring them onto the platform.</p></div>
+                <div><h3>Community and support</h3><p>Helping students, companies and coordinators get the most from Placewick.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container about-narrow">
+            <h2>How we like to work</h2>
+            <div class="about-faq">
+                <details open><summary>We solve real problems</summary><p>Every feature starts from something students, companies or coordinators struggle with today.</p></details>
+                <details open><summary>We keep things clear</summary><p>Plain language, simple screens and honest communication, inside the team and with users.</p></details>
+                <details open><summary>We build trust first</summary><p>Verification and privacy are part of the product, not an afterthought.</p></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="about-container">
+            <h2>Interested in joining us?</h2>
+            <p>Write to us and tell us what you would like to work on.</p>
+            <a href="mailto:hello@placewick.com?subject=Careers%20at%20Placewick" class="about-button">Get in touch</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="browse-opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Placewick. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

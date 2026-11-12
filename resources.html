@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resources | Placewick</title>
+
+    <meta name="description" content="Guides for students, companies and institutions on SIWES: choosing a placement, writing a CV, keeping a logbook and more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+<body>
+
+
+<header class="header">
+    <div class="header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav-links" aria-label="Main navigation">
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Students
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Find Opportunities</a>
+                    <a href="#">Application Tracker</a>
+                    <a href="#">Career Resources</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Companies
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Post an Opportunity</a>
+                    <a href="#">Find Talent</a>
+                    <a href="#">Why Placewick</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    Resources
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Career Guide</a>
+                    <a href="#">Interview Tips</a>
+                    <a href="#">CV Resources</a>
+                </div>
+            </div>
+
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
+
+            <a href="about.html" class="nav-link">About Us</a>
+
+        </nav>
+
+        <!-- Right side -->
+        <div class="header-actions">
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
+        </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about">
+
+    <section class="about-hero">
+        <div class="about-container">
+            <span class="about-eyebrow">Resources</span>
+            <h1>Guides to help you through your placement</h1>
+            <p>Practical, plain-language guidance for students on finding a placement, preparing for it and getting the most from it.</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container about-narrow">
+            <h2>For students</h2>
+            <div class="about-faq">
+            <details><summary>What is SIWES?</summary><p>SIWES, the Students Industrial Work Experience Scheme, is a programme that gives students in tertiary institutions practical experience in their field before they graduate. It is coordinated by the Industrial Training Fund (ITF) together with institutions and regulators such as the NUC, NBTE and NCCE. How long your training lasts, and when you take it, depends on your programme and your institution, so confirm the details with your SIWES coordinator.</p></details><details><summary>How to choose a good placement</summary><p>Look for a company whose work matches your course, so that what you do counts as relevant experience. Ask who will supervise you, what tasks you will handle, and whether the company can sign your logbook and evaluation. Be careful with any placement that asks you to pay a fee to be accepted. On Placewick, companies are verified before they can post.</p></details><details><summary>Writing a CV for a placement</summary><p>Keep it to one or two pages. Start with your name, contact details, institution, course and level. Add a short profile of two or three lines, then your skills, projects, volunteer work or any previous experience. Use clear headings and plain language, save it as a PDF, and name the file with your name, for example Ada-Obi-CV.pdf.</p></details><details><summary>Preparing for an interview</summary><p>Read about the company and the role beforehand. Prepare short answers to common questions such as why you want the placement, what you have learned in your course, and a project you are proud of. Arrive on time, dress neatly, and ask at least one question about the work you would do.</p></details><details><summary>Keeping a useful logbook</summary><p>Write in your logbook every week, not in bulk at the end. Record what you did, what you learned and any problems you solved, in your own words and with enough detail to be specific. Ask your supervisor to review and sign each entry promptly. A complete, signed logbook is part of how your placement is assessed.</p></details><details><summary>Making the most of your placement</summary><p>Be punctual, ask questions and take notes. Offer to help with tasks beyond the minimum, and keep a record of what you achieve. Near the end, ask your supervisor for feedback and, if appropriate, a reference. Stay in touch with the people you worked with.</p></details>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section about-soft">
+        <div class="about-container">
+            <h2 class="about-center">For companies and institutions</h2>
+            <div class="about-cards about-cards-2">
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Hosting students well</h3>
+                    <p>Give each student a named supervisor, a clear set of tasks and regular feedback. Sign logbooks every week and complete evaluations on time. Students learn more, and your team benefits from their work.</p>
+                    <a href="how-it-works.html">See how it works <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Running SIWES for your school</h3>
+                    <p>Keep a single record of where every student is placed, assign supervisors by location, and keep your logbook and form records in one place so reports for accreditation are ready when needed.</p>
+                    <a href="institution-account.html">Register your institution <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-container about-narrow">
+            <h2>Need something else?</h2>
+            <p>If there is a guide you would like us to write, tell us at <a href="mailto:hello@placewick.com">hello@placewick.com</a>. For questions about your account, write to <a href="mailto:support@placewick.com">support@placewick.com</a>.</p>
+            <p class="about-note">These guides are general advice. Your institution's SIWES office has the final say on the rules and requirements for your programme.</p>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="about-container">
+            <h2>Find your placement</h2>
+            <p>Create a free student account and start applying.</p>
+            <a href="sign-up.html" class="about-button">Create an account</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="browse-opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Placewick. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
