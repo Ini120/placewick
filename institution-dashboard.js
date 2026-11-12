@@ -48,7 +48,7 @@
                 if (ok) { n += 1; }
             });
             empty.classList.toggle("is-visible", n === 0);
-            count.textContent = "Showing " + n + " student" + (n === 1 ? "" : "s");
+            count.textContent = "Showing " + n + " " + (count.dataset.noun || "student") + (n === 1 ? "" : "s");
         }
 
         search.addEventListener("input", apply);
