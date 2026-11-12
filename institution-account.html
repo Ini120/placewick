@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create institution account | Placewick</title>
+
+    <meta
+        name="description"
+        content="Create your Placewick company account and start finding talented students."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="company-account.css"
+    >
+
+    <style>
+        .input-wrapper select{width:100%;padding:13px 14px;border:none;outline:none;background:transparent;color:var(--text);font-family:inherit;font-size:16px;appearance:none;-webkit-appearance:none;cursor:pointer}
+    </style>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+</head>
+
+
+<body>
+
+
+<main class="signup-page">
+
+
+    <div class="signup-container">
+
+
+        <!-- Logo -->
+
+        <section class="signup-top">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
+
+            </a>
+
+        </section>
+
+
+
+        <!-- Header -->
+
+        <section class="signup-header">
+
+            <h1>
+                Register your institution
+            </h1>
+
+            <p>
+                Manage SIWES placements, logbooks and supervisors
+                for your students in one place.
+            </p>
+
+        </section>
+
+
+
+        <!-- Form -->
+
+        <form class="signup-form">
+
+
+            
+            <!-- Institution name -->
+
+            <div class="form-group">
+                <label for="inst-name">Institution name</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <input type="text" id="inst-name" name="institution" placeholder="e.g. Federal University of Technology" required>
+                </div>
+            </div>
+
+            <!-- Type + regulator -->
+
+            <div class="form-group">
+                <label for="inst-type">Institution type</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-school"></i>
+                    <select id="inst-type" name="type" required>
+                        <option value="" disabled selected>Select type</option>
+                        <option>University (NUC)</option>
+                        <option>Polytechnic (NBTE)</option>
+                        <option>College of Education (NCCE)</option>
+                        <option>Monotechnic (NBTE)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inst-state">State</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="inst-state" name="state" placeholder="e.g. Ogun" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inst-role">Your role</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <select id="inst-role" name="role" required>
+                        <option value="" disabled selected>Select role</option>
+                        <option>SIWES Coordinator</option>
+                        <option>Industrial Training Unit staff</option>
+                        <option>Head of Department</option>
+                        <option>Other authorised staff</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Company Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Official institutional email
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@yourschool.edu.ng"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Password -->
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-label="Show password"
+                    >
+
+                        <i class="fa-regular fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Confirm Password -->
+
+            <div class="form-group">
+
+                <label for="confirm-password">
+                    Confirm password
+                </label>
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        aria-label="Show password"
+                    >
+
+                        <i class="fa-regular fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Terms -->
+
+            <div class="terms">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I agree to the
+                        <a href="terms.html">Terms of Service</a>
+                        and
+                        <a href="privacy.html">Privacy Policy</a>,
+                        and I confirm I am authorised to act on
+                        behalf of this institution. I understand my account will be verified before it is activated.
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- Create Account -->
+
+            <a
+                href="institution-account-completed.html"
+                class="create-button"
+            >
+
+                Submit for verification
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            </form>
+
+
+
+        <!-- Login -->
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="login.html">
+                Log in
+            </a>
+
+        </p>
+
+
+    </div>
+
+</main>
+
+
+<script>
+    document.querySelectorAll('.password-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const input = toggle.previousElementSibling;
+            const icon = toggle.querySelector('i');
+
+            if (!input) return;
+
+            const isHidden = input.type === 'password';
+
+            input.type = isHidden ? 'text' : 'password';
+
+            toggle.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+
+            if (icon) {
+                icon.classList.toggle('fa-eye', !isHidden);
+                icon.classList.toggle('fa-eye-slash', isHidden);
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

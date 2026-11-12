@@ -368,7 +368,7 @@ button {
 
     color: #101a43;
 
-    font-size: 45px;
+    font-size: 38px;
     line-height: 1.18;
     font-weight: 800;
 
@@ -1857,9 +1857,9 @@ button {
 
     display: grid;
 
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 
-    gap: 60px;
+    gap: 40px;
 }
 
 
@@ -2033,7 +2033,7 @@ button {
 @media (max-width: 900px) {
 
     .footer-main {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
 
         gap: 40px;
     }
