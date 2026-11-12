@@ -1,37 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <!-- SEO -->
-    <meta
-        name="description"
-        content="Placewick connects students with internships, SIWES placements, and early-career opportunities."
-    >
 
-    <!-- Google Font: Manrope -->
+    <title>Opportunities | Placewick</title>
+
+    <meta name="description" content="Browse SIWES and internship opportunities from verified companies across Nigeria. Filter by type, location and industry, then apply on Placewick.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Your CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="opportunities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/placewick-icon.png">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-> 
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
+
 <body>
 
-    <header class="header">
+<div class="scroll-progress" id="scroll-progress"></div>
+
+
+<header class="header">
     <div class="header-container">
 
         <!-- Logo -->
@@ -40,10 +38,10 @@
         </a>
 
         <!-- Navigation -->
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Main navigation">
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     For Students
                     <span class="arrow">⌄</span>
                 </button>
@@ -56,7 +54,7 @@
             </div>
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     For Companies
                     <span class="arrow">⌄</span>
                 </button>
@@ -69,7 +67,7 @@
             </div>
 
             <div class="nav-item dropdown">
-                <button class="nav-link">
+                <button class="nav-link" type="button">
                     Resources
                     <span class="arrow">⌄</span>
                 </button>
@@ -81,61 +79,357 @@
                 </div>
             </div>
 
-            <a href="#" class="nav-link">About Us</a>
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
+
+            <a href="about.html" class="nav-link">About Us</a>
 
         </nav>
 
         <!-- Right side -->
         <div class="header-actions">
-            <a href="#" class="login-link">Log in</a>
-            <a href="#" class="signup-button">Sign up</a>
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
         </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
     </div>
 </header>
-    <!-- =========================
-     BROWSE OPPORTUNITIES HERO
-========================= -->
 
-<section class="opportunities-hero">
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    <div class="opportunities-hero-left">
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
 
-        <div class="opportunities-eyebrow">
-            BROWSE OPPORTUNITIES
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
+
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about opps">
+
+    <section class="about-hero opps-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
+        <div class="about-container">
+            <span class="about-eyebrow reveal">Opportunities</span>
+            <h1 class="reveal" style="--delay:0.08s">Find your SIWES or internship placement</h1>
+            <p class="reveal" style="--delay:0.16s">Browse openings from verified companies across Nigeria. Create a free account to apply, track your applications and keep your logbook in one place.</p>
+            <div class="opps-search reveal" style="--delay:0.24s">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="opp-search" placeholder="Search by role, company, skill or location" aria-label="Search opportunities">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section opps-list">
+        <div class="about-container">
+            <div class="opps-filters">
+                <div class="opps-chips" id="opp-types" role="group" aria-label="Type">
+                    <button type="button" class="opps-chip is-active" data-type="all">All</button>
+                    <button type="button" class="opps-chip" data-type="siwes">SIWES</button>
+                    <button type="button" class="opps-chip" data-type="internship">Internship</button>
+                </div>
+                <div class="opps-selects">
+                    <select id="opp-loc" aria-label="Location"><option value="all">All locations</option><option value="abuja">Abuja</option><option value="kaduna">Kaduna</option><option value="lagos">Lagos</option><option value="ogun">Ogun</option><option value="port harcourt">Port Harcourt</option><option value="remote">Remote</option></select>
+                    <select id="opp-ind" aria-label="Industry"><option value="all">All industries</option><option value="agriculture">Agriculture</option><option value="engineering">Engineering</option><option value="finance">Finance</option><option value="manufacturing">Manufacturing</option><option value="marketing">Marketing</option><option value="technology">Technology</option><option value="telecoms">Telecoms</option></select>
+                </div>
+            </div>
+            <p class="opps-count" id="opp-count">Showing 12 opportunities</p>
+            <div class="opps-grid" id="opp-grid">
+            <article class="opp-card reveal" style="--delay:0.00s" data-type="internship" data-loc="lagos" data-ind="technology" data-search="paystack frontend developer intern internship lagos technology react javascript git">
+                <div class="opp-top"><div class="opp-logo">PA</div><span class="opp-type internship">Internship</span></div>
+                <h3>Frontend Developer Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Paystack</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Lagos · Hybrid</li><li><i class="fa-regular fa-clock"></i> 3 months</li><li><i class="fa-solid fa-wallet"></i> ₦80,000 / month</li></ul>
+                <div class="opp-tags"><span>React</span><span>JavaScript</span><span>Git</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 30 Nov 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.06s" data-type="siwes" data-loc="lagos" data-ind="engineering" data-search="dangote refinery siwes: electrical engineering siwes lagos engineering power systems safety autocad">
+                <div class="opp-top"><div class="opp-logo">DR</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Electrical Engineering</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Dangote Refinery</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Lagos · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> Stipend provided</li></ul>
+                <div class="opp-tags"><span>Power systems</span><span>Safety</span><span>AutoCAD</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 5 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.12s" data-type="siwes" data-loc="lagos" data-ind="finance" data-search="flutterwave siwes: business analyst siwes lagos finance excel sql reporting">
+                <div class="opp-top"><div class="opp-logo">FL</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Business Analyst</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Flutterwave</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Lagos · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> ₦60,000 / month</li></ul>
+                <div class="opp-tags"><span>Excel</span><span>SQL</span><span>Reporting</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 5 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.00s" data-type="internship" data-loc="abuja" data-ind="technology" data-search="interswitch data analyst intern internship abuja technology python sql power bi">
+                <div class="opp-top"><div class="opp-logo">IN</div><span class="opp-type internship">Internship</span></div>
+                <h3>Data Analyst Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Interswitch</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Abuja · On-site</li><li><i class="fa-regular fa-clock"></i> 3 months</li><li><i class="fa-solid fa-wallet"></i> ₦70,000 / month</li></ul>
+                <div class="opp-tags"><span>Python</span><span>SQL</span><span>Power BI</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 15 Jan 2027</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.06s" data-type="siwes" data-loc="abuja" data-ind="engineering" data-search="julius berger siwes: civil engineering siwes abuja engineering site work autocad surveying">
+                <div class="opp-top"><div class="opp-logo">JB</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Civil Engineering</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Julius Berger</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Abuja · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> Stipend provided</li></ul>
+                <div class="opp-tags"><span>Site work</span><span>AutoCAD</span><span>Surveying</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 20 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.12s" data-type="internship" data-loc="remote" data-ind="marketing" data-search="kuda marketing intern internship remote marketing content social media analytics">
+                <div class="opp-top"><div class="opp-logo">KU</div><span class="opp-type internship">Internship</span></div>
+                <h3>Marketing Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Kuda</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Remote · Remote</li><li><i class="fa-regular fa-clock"></i> 3 months</li><li><i class="fa-solid fa-wallet"></i> ₦50,000 / month</li></ul>
+                <div class="opp-tags"><span>Content</span><span>Social media</span><span>Analytics</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 12 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.00s" data-type="siwes" data-loc="port harcourt" data-ind="finance" data-search="access bank siwes: customer service siwes port harcourt finance communication crm">
+                <div class="opp-top"><div class="opp-logo">AB</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Customer Service</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Access Bank</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Port Harcourt · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> Allowance paid</li></ul>
+                <div class="opp-tags"><span>Communication</span><span>CRM</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 18 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.06s" data-type="internship" data-loc="remote" data-ind="technology" data-search="andela product design intern internship remote technology figma ux research">
+                <div class="opp-top"><div class="opp-logo">AN</div><span class="opp-type internship">Internship</span></div>
+                <h3>Product Design Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Andela</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Remote · Remote</li><li><i class="fa-regular fa-clock"></i> 3 months</li><li><i class="fa-solid fa-wallet"></i> ₦90,000 / month</li></ul>
+                <div class="opp-tags"><span>Figma</span><span>UX research</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 10 Jan 2027</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.12s" data-type="siwes" data-loc="ogun" data-ind="manufacturing" data-search="nestlé nigeria siwes: food science siwes ogun manufacturing quality control lab work">
+                <div class="opp-top"><div class="opp-logo">NN</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Food Science</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Nestlé Nigeria</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Ogun · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> Stipend provided</li></ul>
+                <div class="opp-tags"><span>Quality control</span><span>Lab work</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 30 Nov 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.00s" data-type="internship" data-loc="lagos" data-ind="telecoms" data-search="mtn nigeria network engineering intern internship lagos telecoms networking linux">
+                <div class="opp-top"><div class="opp-logo">MN</div><span class="opp-type internship">Internship</span></div>
+                <h3>Network Engineering Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> MTN Nigeria</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Lagos · On-site</li><li><i class="fa-regular fa-clock"></i> 4 months</li><li><i class="fa-solid fa-wallet"></i> ₦75,000 / month</li></ul>
+                <div class="opp-tags"><span>Networking</span><span>Linux</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 22 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.06s" data-type="siwes" data-loc="lagos" data-ind="finance" data-search="sterling bank siwes: accounting siwes lagos finance accounting excel">
+                <div class="opp-top"><div class="opp-logo">SB</div><span class="opp-type siwes">SIWES</span></div>
+                <h3>SIWES: Accounting</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Sterling Bank</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Lagos · On-site</li><li><i class="fa-regular fa-clock"></i> 6 months</li><li><i class="fa-solid fa-wallet"></i> Allowance paid</li></ul>
+                <div class="opp-tags"><span>Accounting</span><span>Excel</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 8 Jan 2027</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            <article class="opp-card reveal" style="--delay:0.12s" data-type="internship" data-loc="kaduna" data-ind="agriculture" data-search="farmcrowdy agribusiness intern internship kaduna agriculture field research reporting">
+                <div class="opp-top"><div class="opp-logo">FA</div><span class="opp-type internship">Internship</span></div>
+                <h3>Agribusiness Intern</h3>
+                <p class="opp-company"><i class="fa-solid fa-circle-check"></i> Farmcrowdy</p>
+                <ul class="opp-meta"><li><i class="fa-solid fa-location-dot"></i> Kaduna · Hybrid</li><li><i class="fa-regular fa-clock"></i> 3 months</li><li><i class="fa-solid fa-wallet"></i> ₦40,000 / month</li></ul>
+                <div class="opp-tags"><span>Field research</span><span>Reporting</span></div>
+                <div class="opp-bottom"><span class="opp-deadline">Closes 28 Dec 2026</span><a href="sign-up.html" class="opp-apply">Apply <i class="fa-solid fa-arrow-right"></i></a></div>
+            </article>
+            </div>
+            <div class="opps-empty" id="opp-empty" hidden><i class="fa-regular fa-face-frown"></i><h3>No opportunities match your search</h3><p>Try a different keyword or clear a filter.</p></div>
+            <p class="opps-note">Listings shown are samples for preview. Real openings will appear here as verified companies post them.</p>
+        </div>
+    </section>
+
+    <section class="about-section about-soft">
+        <div class="about-container opps-two">
+            <article class="mv-card reveal"><h3>Are you a company?</h3><p>Post a SIWES or internship opening, review applicants and manage your interns in one place.</p><a href="company-account.html" class="about-button">Register your company</a></article>
+            <article class="mv-card reveal" style="--delay:0.08s"><h3>Are you an institution?</h3><p>Track where your students are placed, review logbooks and prepare accreditation reports.</p><a href="institution-account.html" class="about-button">Register your school</a></article>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="about-container reveal">
+            <h2>Ready to apply?</h2>
+            <p>Create your free student account to apply to these opportunities.</p>
+            <div class="about-cta-buttons"><a href="sign-up.html" class="about-button">Create an account</a><a href="how-it-works.html" class="about-button about-button-ghost">See how it works</a></div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
         </div>
 
-        <h1>
-            Find opportunities<br>
-            that <span>fit you.</span>
-        </h1>
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="browse-opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
 
         <p>
-            Explore internships, SIWES placements and early-career
-            opportunities from companies looking for student talent.
+            © 2026 Placewick. All rights reserved.
         </p>
 
-    </div>
+        <div class="footer-legal">
 
+            <a href="privacy.html">Privacy Policy</a>
 
-    <div class="opportunities-hero-right">
-
-        <div class="hero-image-wrapper">
-
-            <img 
-                src="images/opportunities-student.png"
-                alt="Student exploring opportunities on a laptop"
-            >
+            <a href="terms.html">Terms of Service</a>
 
         </div>
 
     </div>
 
-</section>
+</footer>
+
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js" defer></script>
+<script src="pages.js" defer></script>
+
+<script>
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.opp-card'));
+  var q=document.getElementById('opp-search'),loc=document.getElementById('opp-loc'),ind=document.getElementById('opp-ind'),
+      chips=document.getElementById('opp-types'),count=document.getElementById('opp-count'),empty=document.getElementById('opp-empty'),type='all';
+  function apply(){
+    var t=q.value.trim().toLowerCase(),n=0;
+    cards.forEach(function(c){
+      var ok=(type==='all'||c.dataset.type===type)&&(loc.value==='all'||c.dataset.loc===loc.value)&&(ind.value==='all'||c.dataset.ind===ind.value)&&(!t||c.dataset.search.indexOf(t)!==-1);
+      c.style.display=ok?'':'none'; if(ok){n++;c.classList.add('is-visible');}
+    });
+    count.textContent='Showing '+n+' opportunit'+(n===1?'y':'ies'); empty.hidden=n!==0;
+  }
+  q.addEventListener('input',apply);loc.addEventListener('change',apply);ind.addEventListener('change',apply);
+  chips.addEventListener('click',function(e){var b=e.target.closest('.opps-chip');if(!b)return;type=b.dataset.type;
+    [].forEach.call(chips.querySelectorAll('.opps-chip'),function(c){c.classList.toggle('is-active',c===b);});apply();});
+})();
+</script>
+
 </body>
 </html>
-
-
-
-
-
