@@ -20,9 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 
 <body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
 
 
 <header class="header">
@@ -148,56 +151,75 @@
 <main class="about">
 
     <section class="about-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
         <div class="about-container">
-            <span class="about-eyebrow">Careers</span>
-            <h1>Help us make placements work for Nigeria</h1>
-            <p>Placewick Technologies Limited is building technology for the way Nigerian students, companies and institutions connect. We are an early-stage team and we are interested in meeting talented people.</p>
+            <span class="about-eyebrow reveal">Careers</span>
+            <h1 class="reveal" style="--delay:0.08s">Help us make placements work for Nigeria</h1>
+            <p class="reveal" style="--delay:0.16s">Placewick Technologies Limited is building technology for the way Nigerian students, companies and institutions connect. We are an early-stage team and we are interested in meeting talented people.</p>
+            <div class="hero-chips reveal" style="--delay:.24s"><a href="#interest" class="about-button">Express interest</a><a href="#roles" class="about-button about-button-ghost">See open roles</a></div>
         </div>
     </section>
 
     <section class="about-section">
+        <div class="about-container">
+            <h2 class="about-center reveal" style="--delay:0.00s">Why work with us</h2>
+            <div class="about-cards about-cards-4">
+                <article class="about-card reveal" style="--delay:0.00s"><div class="about-icon"><i class="fa-solid fa-bullseye"></i></div><h3>A real problem</h3><p>Thousands of students and schools deal with SIWES placement every year. What you build gets used.</p></article>
+                <article class="about-card reveal" style="--delay:0.08s"><div class="about-icon"><i class="fa-solid fa-seedling"></i></div><h3>Early-stage ownership</h3><p>A small team means you shape the product and the company from the start.</p></article>
+                <article class="about-card reveal" style="--delay:0.16s"><div class="about-icon"><i class="fa-solid fa-flag"></i></div><h3>Built for Nigeria</h3><p>We design around how Nigerian institutions and companies actually work.</p></article>
+                <article class="about-card reveal" style="--delay:0.24s"><div class="about-icon"><i class="fa-solid fa-graduation-cap"></i></div><h3>Learn quickly</h3><p>You will work across the product and learn from the people around you.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section about-soft" id="roles">
         <div class="about-container about-narrow">
-            <h2>Open roles</h2>
-            <div class="about-notice">
+            <h2 class="reveal" style="--delay:0.00s">Open roles</h2>
+            <div class="about-notice reveal" style="--delay:0.08s">
                 <i class="fa-solid fa-circle-info"></i>
-                <p>We do not have any open roles at the moment. We will list them here when we do.</p>
+                <p>We do not have any open roles at the moment. We will list them here when we do. You can still tell us about yourself below.</p>
             </div>
-            <p>
-                If you would like to work with us, send your CV and a short note about what you would like to do to
-                <a href="mailto:hello@placewick.com?subject=Careers%20at%20Placewick">hello@placewick.com</a>.
-                We read every message and will keep your details for when a suitable role opens.
-            </p>
-        </div>
-    </section>
-
-    <section class="about-section about-soft">
-        <div class="about-container">
-            <h2 class="about-center">Areas we expect to grow</h2>
-            <div class="about-values">
-                <div><h3>Engineering</h3><p>Building and maintaining the web platform, from the student experience to institution tools.</p></div>
-                <div><h3>Product and design</h3><p>Shaping simple, clear experiences for people who use Placewick every day.</p></div>
-                <div><h3>Partnerships</h3><p>Working with institutions and companies to bring them onto the platform.</p></div>
-                <div><h3>Community and support</h3><p>Helping students, companies and coordinators get the most from Placewick.</p></div>
+            <h3 class="reveal" style="--delay:0.16s">Areas we expect to grow</h3>
+            <div class="area-list">
+                <div class="reveal" style="--delay:0.00s"><i class="fa-solid fa-code"></i><div><h4>Engineering</h4><p>Building and maintaining the web platform, from the student experience to institution tools.</p></div></div>
+                <div class="reveal" style="--delay:0.08s"><i class="fa-solid fa-pen-ruler"></i><div><h4>Product and design</h4><p>Shaping simple, clear experiences for people who use Placewick every day.</p></div></div>
+                <div class="reveal" style="--delay:0.16s"><i class="fa-solid fa-handshake"></i><div><h4>Partnerships</h4><p>Working with institutions and companies to bring them onto the platform.</p></div></div>
+                <div class="reveal" style="--delay:0.24s"><i class="fa-solid fa-headset"></i><div><h4>Community and support</h4><p>Helping students, companies and coordinators get the most from Placewick.</p></div></div>
             </div>
         </div>
     </section>
 
     <section class="about-section">
         <div class="about-container about-narrow">
-            <h2>How we like to work</h2>
-            <div class="about-faq">
-                <details open><summary>We solve real problems</summary><p>Every feature starts from something students, companies or coordinators struggle with today.</p></details>
-                <details open><summary>We keep things clear</summary><p>Plain language, simple screens and honest communication, inside the team and with users.</p></details>
-                <details open><summary>We build trust first</summary><p>Verification and privacy are part of the product, not an afterthought.</p></details>
-            </div>
+            <h2 class="about-center reveal" style="--delay:0.00s">How we hire</h2>
+            <ol class="timeline"><li class="reveal" style="--delay:0.00s"><span class="tl-dot">1</span><div class="tl-body"><h3>Tell us about yourself</h3><p>Send a short note and your CV or portfolio using the form below.</p></div></li><li class="reveal" style="--delay:0.08s"><span class="tl-dot">2</span><div class="tl-body"><h3>A conversation</h3><p>If there is a fit, we will have an informal chat about you and what we are building.</p></div></li><li class="reveal" style="--delay:0.16s"><span class="tl-dot">3</span><div class="tl-body"><h3>A practical exercise</h3><p>For some roles, a short task related to the work, so we can see how you think.</p></div></li><li class="reveal" style="--delay:0.24s"><span class="tl-dot">4</span><div class="tl-body"><h3>An offer</h3><p>We aim to give a clear decision and be honest about the stage we are at.</p></div></li></ol>
+        </div>
+    </section>
+
+    <section class="about-section about-soft" id="interest">
+        <div class="about-container about-narrow">
+            <h2 class="about-center reveal" style="--delay:0.00s">Express interest</h2>
+            <p class="about-lead about-center reveal" style="--delay:0.08s">This opens an email to our team. Attach your CV before you send it.</p>
+            <form class="interest-form reveal" style="--delay:0.16s" id="interest-form">
+                <label>Your name<input type="text" id="int-name" required placeholder="Full name"></label>
+                <label>Area you are interested in
+                    <select id="int-area" required>
+                        <option value="" disabled selected>Choose an area</option>
+                        <option>Engineering</option><option>Product and design</option><option>Partnerships</option><option>Community and support</option><option>Something else</option>
+                    </select>
+                </label>
+                <label>A few lines about you<textarea id="int-msg" rows="4" required placeholder="What you do, and what you would like to work on"></textarea></label>
+                <button type="submit" class="about-button about-button-solid">Open email</button>
+            </form>
         </div>
     </section>
 
     <section class="about-cta">
-        <div class="about-container">
-            <h2>Interested in joining us?</h2>
-            <p>Write to us and tell us what you would like to work on.</p>
-            <a href="mailto:hello@placewick.com?subject=Careers%20at%20Placewick" class="about-button">Get in touch</a>
+        <div class="about-container reveal">
+            <h2>Not ready yet?</h2>
+            <p>Follow our progress and come back anytime.</p>
+            <div class="about-cta-buttons"><a href="about.html" class="about-button">About Placewick</a><a href="mailto:hello@placewick.com" class="about-button about-button-ghost">Say hello</a></div>
         </div>
     </section>
 
@@ -311,7 +333,10 @@
 
 </footer>
 
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 <script src="script.js" defer></script>
+<script src="pages.js" defer></script>
 
 </body>
 </html>

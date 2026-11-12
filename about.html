@@ -20,9 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 
 <body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
 
 
 <header class="header">
@@ -147,127 +150,113 @@
 
 <main class="about">
 
-    <!-- HERO -->
     <section class="about-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
         <div class="about-container">
-            <span class="about-eyebrow">About Placewick</span>
-            <h1>Making SIWES placement simple, visible and verified</h1>
-            <p>
-                Every year, thousands of Nigerian students struggle to find a place
-                for their industrial training, and their institutions struggle to
-                keep track of where everyone ended up. Placewick brings students,
-                companies and institutions onto one platform so that placements are
-                easier to find, easier to manage and easier to prove.
-            </p>
+            <span class="about-eyebrow reveal">About Placewick</span>
+            <h1 class="reveal" style="--delay:0.08s">Making SIWES placement simple, visible and verified</h1>
+            <p class="reveal" style="--delay:0.16s">Every year, thousands of Nigerian students struggle to find a place for their industrial training, and their institutions struggle to keep track of where everyone ended up. Placewick brings students, companies and institutions onto one platform so that placements are easier to find, easier to manage and easier to prove.</p>
+            <div class="hero-chips reveal" style="--delay:.24s"><span><i class="fa-solid fa-shield-halved"></i> Verified companies</span><span><i class="fa-solid fa-book-open"></i> Digital logbooks</span><span><i class="fa-solid fa-chart-column"></i> Accreditation-ready reports</span></div>
         </div>
     </section>
 
-    <!-- PROBLEM -->
     <section class="about-section">
-        <div class="about-container about-split">
-            <div>
-                <h2>The problem we are solving</h2>
-                <p>
-                    Finding a SIWES placement often depends on who you know. Students
-                    move between offices with printed letters, logbooks travel across
-                    states in physical booklets, and coordinators chase updates by phone.
-                    Companies that are willing to host students have no simple way to
-                    reach them, and schools have little data to show for accreditation.
-                </p>
-            </div>
-            <div class="about-callout">
-                <h3>What changes with Placewick</h3>
-                <ul>
-                    <li><i class="fa-solid fa-circle-check"></i> Students find and apply for placements in one place</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Companies review applicants and confirm placements</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Logbooks and forms are completed and signed digitally</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Schools see placements and reports in real time</li>
-                </ul>
-            </div>
+        <div class="about-container about-mv">
+            <article class="mv-card reveal" style="--delay:0.00s">
+                <span class="mv-label">Our mission</span>
+                <h2>Make good placements available to every student</h2>
+                <p>A student's access to practical experience should not depend on who they know. We build tools that open the door, and keep it open from application to final report.</p>
+            </article>
+            <article class="mv-card mv-alt reveal" style="--delay:0.08s">
+                <span class="mv-label">Our vision</span>
+                <h2>A trusted record of every placement in Nigeria</h2>
+                <p>Students, companies and institutions all working from one clear, verified record, so that nothing is lost between a placement letter and a signed logbook.</p>
+            </article>
         </div>
     </section>
 
-    <!-- WHO WE SERVE -->
     <section class="about-section about-soft">
         <div class="about-container">
-            <h2 class="about-center">Built for three groups</h2>
-            <div class="about-cards">
-
-                <article class="about-card">
-                    <div class="about-icon"><i class="fa-solid fa-user-graduate"></i></div>
-                    <h3>Students</h3>
-                    <p>Build one profile, keep your documents ready, discover verified opportunities, apply, and track every application until you are placed.</p>
-                    <a href="sign-up.html">Create a student account <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-
-                <article class="about-card">
-                    <div class="about-icon"><i class="fa-solid fa-building"></i></div>
-                    <h3>Companies</h3>
-                    <p>Post internship and SIWES roles, review ranked applicants, schedule interviews and sign student logbooks, all from one dashboard.</p>
-                    <a href="company-account.html">Register your company <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-
-                <article class="about-card">
-                    <div class="about-icon"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3>Institutions</h3>
-                    <p>Track student placements, review digital logbooks and Form 8, assign academic supervisors, and generate reports for NUC and NBTE audits.</p>
-                    <a href="institution-account.html">Register your institution <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-
+            <h2 class="about-center reveal" style="--delay:0.00s">The problem we are solving</h2>
+            <p class="about-lead about-center reveal" style="--delay:0.08s">Finding and managing a SIWES placement is still mostly manual. Here is what that looks like today, and what changes.</p>
+            <div class="compare reveal" style="--delay:0.16s">
+                <div class="compare-col compare-before">
+                    <h3><i class="fa-solid fa-xmark"></i> Today</h3>
+                    <ul>
+                        <li>Placements depend on personal contacts</li>
+                        <li>Printed letters and trips between offices</li>
+                        <li>Physical logbooks carried across states</li>
+                        <li>Coordinators chasing updates by phone</li>
+                        <li>Little data to show for accreditation</li>
+                    </ul>
+                </div>
+                <div class="compare-col compare-after">
+                    <h3><i class="fa-solid fa-check"></i> With Placewick</h3>
+                    <ul>
+                        <li>Students browse and apply to verified roles</li>
+                        <li>Acceptance and Form 8 handled digitally</li>
+                        <li>Weekly logbooks signed online</li>
+                        <li>Placements visible to the school in real time</li>
+                        <li>Reports ready for NUC and NBTE audits</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
     <section class="about-section">
         <div class="about-container">
-            <h2 class="about-center">How it works</h2>
-            <ol class="about-steps">
-                <li><span>1</span><div><h3>Register</h3><p>Students, companies and institutions create accounts. Companies and institutions are verified before they are activated.</p></div></li>
-                <li><span>2</span><div><h3>Match and apply</h3><p>Students browse verified opportunities and apply with a reusable profile and documents.</p></div></li>
-                <li><span>3</span><div><h3>Get placed</h3><p>Companies review applicants, interview and confirm placements. The student's institution sees the update.</p></div></li>
-                <li><span>4</span><div><h3>Complete and report</h3><p>Weekly logbooks, Form 8 and evaluations are signed digitally, supervisors are assigned, and reports are ready for accreditation.</p></div></li>
+            <h2 class="about-center reveal" style="--delay:0.00s">Built for three groups</h2>
+            <div class="about-cards">
+                <article class="about-card reveal" style="--delay:0.00s"><div class="about-icon"><i class="fa-solid fa-user-graduate"></i></div><h3>Students</h3><p>Build one profile, keep your documents ready, discover verified opportunities, apply, and track every application until you are placed.</p><a href="sign-up.html">Create a student account <i class="fa-solid fa-arrow-right"></i></a></article>
+                <article class="about-card reveal" style="--delay:0.08s"><div class="about-icon"><i class="fa-solid fa-building"></i></div><h3>Companies</h3><p>Post internship and SIWES roles, review ranked applicants, schedule interviews and sign student logbooks, all from one dashboard.</p><a href="company-account.html">Register your company <i class="fa-solid fa-arrow-right"></i></a></article>
+                <article class="about-card reveal" style="--delay:0.16s"><div class="about-icon"><i class="fa-solid fa-building-columns"></i></div><h3>Institutions</h3><p>Track student placements, review digital logbooks and Form 8, assign academic supervisors, and generate reports for NUC and NBTE audits.</p><a href="institution-account.html">Register your institution <i class="fa-solid fa-arrow-right"></i></a></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section about-soft">
+        <div class="about-container about-narrow">
+            <h2 class="about-center reveal" style="--delay:0.00s">Where we are going</h2>
+            <p class="about-lead about-center reveal" style="--delay:0.08s">We are building in the open and in stages. This is our direction, and it may change as we learn from students, companies and schools.</p>
+            <ol class="roadmap">
+                <li class="reveal" style="--delay:0.00s"><span class="rm-tag rm-now">Now</span><div><h3>SIWES-first platform</h3><p>Student, company and institution tools, with verification and digital logbooks, working as prototypes.</p></div></li>
+                <li class="reveal" style="--delay:0.08s"><span class="rm-tag rm-next">Next</span><div><h3>Going live</h3><p>Real accounts, secure data storage and messaging, then onboarding our first partner institutions and companies.</p></div></li>
+                <li class="reveal" style="--delay:0.16s"><span class="rm-tag rm-later">Later</span><div><h3>Beyond SIWES</h3><p>Graduate placement and more digital services from Placewick Technologies Limited.</p></div></li>
             </ol>
         </div>
     </section>
 
-    <!-- VALUES -->
-    <section class="about-section about-soft">
+    <section class="about-section">
         <div class="about-container">
-            <h2 class="about-center">What we stand for</h2>
-            <div class="about-values">
-                <div><h3>Trust</h3><p>We verify companies and institutions so students are placed with real organisations.</p></div>
-                <div><h3>Access</h3><p>A good placement should not depend on who you know.</p></div>
-                <div><h3>Clarity</h3><p>Everyone in the process can see where a placement stands.</p></div>
-                <div><h3>Privacy</h3><p>Student information is shared only with the people who need it.</p></div>
+            <h2 class="about-center reveal" style="--delay:0.00s">What we stand for</h2>
+            <div class="about-values about-values-cards">
+                <div class="reveal" style="--delay:0.00s"><i class="fa-solid fa-shield-halved"></i><h3>Trust</h3><p>We verify companies and institutions so students are placed with real organisations.</p></div>
+                <div class="reveal" style="--delay:0.08s"><i class="fa-solid fa-door-open"></i><h3>Access</h3><p>A good placement should not depend on who you know.</p></div>
+                <div class="reveal" style="--delay:0.16s"><i class="fa-solid fa-eye"></i><h3>Clarity</h3><p>Everyone in the process can see where a placement stands.</p></div>
+                <div class="reveal" style="--delay:0.24s"><i class="fa-solid fa-lock"></i><h3>Privacy</h3><p>Student information is shared only with the people who need it.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- COMPANY -->
-    <section class="about-section">
-        <div class="about-container about-narrow">
+    <section class="about-section about-soft">
+        <div class="about-container about-narrow reveal" style="--delay:0.00s">
             <h2>The company behind Placewick</h2>
-            <p>
-                Placewick is the first product of Placewick Technologies Limited, a
-                Nigerian technology company that designs and builds internet-based
-                platforms and digital services.
-            </p>
-            <p>
-                Questions, partnerships or feedback? Write to us at
-                <a href="mailto:hello@placewick.com">hello@placewick.com</a>. Institutions and companies
-                interested in working with us can reach
-                <a href="mailto:partnerships@placewick.com">partnerships@placewick.com</a>.
-            </p>
+            <p>Placewick is the first product of Placewick Technologies Limited, a Nigerian technology company that designs and builds internet-based platforms and digital services.</p>
+            <div class="contact-row">
+                <a href="mailto:hello@placewick.com" class="contact-chip"><i class="fa-regular fa-envelope"></i> hello@placewick.com</a>
+                <a href="mailto:partnerships@placewick.com" class="contact-chip"><i class="fa-solid fa-handshake"></i> partnerships@placewick.com</a>
+                <a href="careers.html" class="contact-chip"><i class="fa-solid fa-briefcase"></i> Careers</a>
+            </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="about-cta">
-        <div class="about-container">
+        <div class="about-container reveal">
             <h2>Ready to get started?</h2>
             <p>Join Placewick as a student, a company or an institution.</p>
-            <a href="sign-up.html" class="about-button">Create an account</a>
+            <div class="about-cta-buttons"><a href="sign-up.html" class="about-button">Create an account</a><a href="how-it-works.html" class="about-button about-button-ghost">See how it works</a></div>
         </div>
     </section>
 
@@ -381,7 +370,10 @@
 
 </footer>
 
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 <script src="script.js" defer></script>
+<script src="pages.js" defer></script>
 
 </body>
 </html>

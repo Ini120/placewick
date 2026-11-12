@@ -20,9 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 
 <body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
 
 
 <header class="header">
@@ -148,55 +151,82 @@
 <main class="about">
 
     <section class="about-hero">
+        <span class="hero-blob hero-blob-1"></span>
+        <span class="hero-blob hero-blob-2"></span>
         <div class="about-container">
-            <span class="about-eyebrow">Resources</span>
-            <h1>Guides to help you through your placement</h1>
-            <p>Practical, plain-language guidance for students on finding a placement, preparing for it and getting the most from it.</p>
+            <span class="about-eyebrow reveal">Resources</span>
+            <h1 class="reveal" style="--delay:0.08s">Guides to help you through your placement</h1>
+            <p class="reveal" style="--delay:0.16s">Practical, plain-language guidance for students, companies and institutions.</p>
+            <div class="res-search reveal" style="--delay:.24s"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="res-search" placeholder="Search guides, for example CV or logbook" aria-label="Search guides"></div>
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="about-container about-narrow">
-            <h2>For students</h2>
-            <div class="about-faq">
-            <details><summary>What is SIWES?</summary><p>SIWES, the Students Industrial Work Experience Scheme, is a programme that gives students in tertiary institutions practical experience in their field before they graduate. It is coordinated by the Industrial Training Fund (ITF) together with institutions and regulators such as the NUC, NBTE and NCCE. How long your training lasts, and when you take it, depends on your programme and your institution, so confirm the details with your SIWES coordinator.</p></details><details><summary>How to choose a good placement</summary><p>Look for a company whose work matches your course, so that what you do counts as relevant experience. Ask who will supervise you, what tasks you will handle, and whether the company can sign your logbook and evaluation. Be careful with any placement that asks you to pay a fee to be accepted. On Placewick, companies are verified before they can post.</p></details><details><summary>Writing a CV for a placement</summary><p>Keep it to one or two pages. Start with your name, contact details, institution, course and level. Add a short profile of two or three lines, then your skills, projects, volunteer work or any previous experience. Use clear headings and plain language, save it as a PDF, and name the file with your name, for example Ada-Obi-CV.pdf.</p></details><details><summary>Preparing for an interview</summary><p>Read about the company and the role beforehand. Prepare short answers to common questions such as why you want the placement, what you have learned in your course, and a project you are proud of. Arrive on time, dress neatly, and ask at least one question about the work you would do.</p></details><details><summary>Keeping a useful logbook</summary><p>Write in your logbook every week, not in bulk at the end. Record what you did, what you learned and any problems you solved, in your own words and with enough detail to be specific. Ask your supervisor to review and sign each entry promptly. A complete, signed logbook is part of how your placement is assessed.</p></details><details><summary>Making the most of your placement</summary><p>Be punctual, ask questions and take notes. Offer to help with tasks beyond the minimum, and keep a record of what you achieve. Near the end, ask your supervisor for feedback and, if appropriate, a reference. Stay in touch with the people you worked with.</p></details>
-            </div>
+    <section class="about-section" id="guides">
+        <div class="about-container">
+            <div class="chip-row reveal" style="--delay:0.00s" id="res-chips"><button type="button" class="chip is-active" data-cat="all">All</button><button type="button" class="chip" data-cat="getting-started">Getting started</button><button type="button" class="chip" data-cat="applications">Applications</button><button type="button" class="chip" data-cat="during">During placement</button><button type="button" class="chip" data-cat="companies">For companies</button><button type="button" class="chip" data-cat="institutions">For institutions</button></div>
+            <div class="res-grid" id="res-grid"><article class="res-card" data-cat="getting-started" data-text="what is siwes? siwes, the students industrial work experience scheme, is a programme that gives students in tertiary institutions practical experience in their field before they graduate. it is coordinated by the industrial training fund (itf) together with institutions and regulators such as the nuc, nbte and ncce. how long your training lasts, and when you take it, depends on your programme and your institution, so confirm the details with your siwes coordinator." tabindex="0" role="button" aria-label="Read: What is SIWES?">
+<span class="res-cat">Getting started</span><h3>What is SIWES?</h3><p>SIWES, the Students Industrial Work Experience Scheme, is a programme that gives students in tertiary institutions pract…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 4 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>What is SIWES?</h3><p>SIWES, the Students Industrial Work Experience Scheme, is a programme that gives students in tertiary institutions practical experience in their field before they graduate. It is coordinated by the Industrial Training Fund (ITF) together with institutions and regulators such as the NUC, NBTE and NCCE. How long your training lasts, and when you take it, depends on your programme and your institution, so confirm the details with your SIWES coordinator.</p></div></article><article class="res-card" data-cat="getting-started" data-text="getting ready before you apply start early. confirm your siwes dates with your coordinator, update your cv, and gather the documents you will need, such as your admission letter, student id and any introduction letter from your school. decide the kind of work and location you want, and make a list of companies that match. having everything ready lets you apply as soon as a good opportunity appears." tabindex="0" role="button" aria-label="Read: Getting ready before you apply">
+<span class="res-cat">Getting started</span><h3>Getting ready before you apply</h3><p>Start early. Confirm your SIWES dates with your coordinator, update your CV, and gather the documents you will need, suc…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 4 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Getting ready before you apply</h3><p>Start early. Confirm your SIWES dates with your coordinator, update your CV, and gather the documents you will need, such as your admission letter, student ID and any introduction letter from your school. Decide the kind of work and location you want, and make a list of companies that match. Having everything ready lets you apply as soon as a good opportunity appears.</p></div></article><article class="res-card" data-cat="applications" data-text="how to choose a good placement look for a company whose work matches your course, so that what you do counts as relevant experience. ask who will supervise you, what tasks you will handle, and whether the company can sign your logbook and evaluation. be careful with any placement that asks you to pay a fee to be accepted. on placewick, companies are verified before they can post." tabindex="0" role="button" aria-label="Read: How to choose a good placement">
+<span class="res-cat">Applications</span><h3>How to choose a good placement</h3><p>Look for a company whose work matches your course, so that what you do counts as relevant experience. Ask who will super…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 5 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>How to choose a good placement</h3><p>Look for a company whose work matches your course, so that what you do counts as relevant experience. Ask who will supervise you, what tasks you will handle, and whether the company can sign your logbook and evaluation. Be careful with any placement that asks you to pay a fee to be accepted. On Placewick, companies are verified before they can post.</p></div></article><article class="res-card" data-cat="applications" data-text="writing a cv for a placement keep it to one or two pages. start with your name, contact details, institution, course and level. add a short profile of two or three lines, then your skills, projects, volunteer work or any previous experience. use clear headings and plain language, save it as a pdf, and name the file with your name, for example ada-obi-cv.pdf." tabindex="0" role="button" aria-label="Read: Writing a CV for a placement">
+<span class="res-cat">Applications</span><h3>Writing a CV for a placement</h3><p>Keep it to one or two pages. Start with your name, contact details, institution, course and level. Add a short profile o…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 5 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Writing a CV for a placement</h3><p>Keep it to one or two pages. Start with your name, contact details, institution, course and level. Add a short profile of two or three lines, then your skills, projects, volunteer work or any previous experience. Use clear headings and plain language, save it as a PDF, and name the file with your name, for example Ada-Obi-CV.pdf.</p></div></article><article class="res-card" data-cat="applications" data-text="writing a short application message say who you are, what you study and what placement you are looking for, in three or four sentences. mention one specific reason you chose the company. keep a polite, direct tone, check your spelling, and attach your cv. send each message to the right person rather than copying the same message to everyone." tabindex="0" role="button" aria-label="Read: Writing a short application message">
+<span class="res-cat">Applications</span><h3>Writing a short application message</h3><p>Say who you are, what you study and what placement you are looking for, in three or four sentences. Mention one specific…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 3 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Writing a short application message</h3><p>Say who you are, what you study and what placement you are looking for, in three or four sentences. Mention one specific reason you chose the company. Keep a polite, direct tone, check your spelling, and attach your CV. Send each message to the right person rather than copying the same message to everyone.</p></div></article><article class="res-card" data-cat="applications" data-text="preparing for an interview read about the company and the role beforehand. prepare short answers to common questions such as why you want the placement, what you have learned in your course, and a project you are proud of. arrive on time, dress neatly, and ask at least one question about the work you would do." tabindex="0" role="button" aria-label="Read: Preparing for an interview">
+<span class="res-cat">Applications</span><h3>Preparing for an interview</h3><p>Read about the company and the role beforehand. Prepare short answers to common questions such as why you want the place…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 5 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Preparing for an interview</h3><p>Read about the company and the role beforehand. Prepare short answers to common questions such as why you want the placement, what you have learned in your course, and a project you are proud of. Arrive on time, dress neatly, and ask at least one question about the work you would do.</p></div></article><article class="res-card" data-cat="during" data-text="keeping a useful logbook write in your logbook every week, not in bulk at the end. record what you did, what you learned and any problems you solved, in your own words and with enough detail to be specific. ask your supervisor to review and sign each entry promptly. a complete, signed logbook is part of how your placement is assessed." tabindex="0" role="button" aria-label="Read: Keeping a useful logbook">
+<span class="res-cat">During your placement</span><h3>Keeping a useful logbook</h3><p>Write in your logbook every week, not in bulk at the end. Record what you did, what you learned and any problems you sol…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 5 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Keeping a useful logbook</h3><p>Write in your logbook every week, not in bulk at the end. Record what you did, what you learned and any problems you solved, in your own words and with enough detail to be specific. Ask your supervisor to review and sign each entry promptly. A complete, signed logbook is part of how your placement is assessed.</p></div></article><article class="res-card" data-cat="during" data-text="making the most of your placement be punctual, ask questions and take notes. offer to help with tasks beyond the minimum, and keep a record of what you achieve. near the end, ask your supervisor for feedback and, if appropriate, a reference. stay in touch with the people you worked with." tabindex="0" role="button" aria-label="Read: Making the most of your placement">
+<span class="res-cat">During your placement</span><h3>Making the most of your placement</h3><p>Be punctual, ask questions and take notes. Offer to help with tasks beyond the minimum, and keep a record of what you ac…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 4 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Making the most of your placement</h3><p>Be punctual, ask questions and take notes. Offer to help with tasks beyond the minimum, and keep a record of what you achieve. Near the end, ask your supervisor for feedback and, if appropriate, a reference. Stay in touch with the people you worked with.</p></div></article><article class="res-card" data-cat="during" data-text="working with your supervisors you will usually have a workplace supervisor at the company and an academic supervisor from your school. agree early on how you will report your progress, and tell your academic supervisor where you are placed so a visit can be planned. raise problems early, politely and in writing where possible." tabindex="0" role="button" aria-label="Read: Working with your supervisors">
+<span class="res-cat">During your placement</span><h3>Working with your supervisors</h3><p>You will usually have a workplace supervisor at the company and an academic supervisor from your school. Agree early on …</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 4 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Working with your supervisors</h3><p>You will usually have a workplace supervisor at the company and an academic supervisor from your school. Agree early on how you will report your progress, and tell your academic supervisor where you are placed so a visit can be planned. Raise problems early, politely and in writing where possible.</p></div></article><article class="res-card" data-cat="companies" data-text="hosting students well give each student a named supervisor, a clear set of tasks and regular feedback. sign logbooks every week and complete evaluations on time. students learn more, and your team benefits from their work. tell the student early what is expected of them in dress, hours and conduct." tabindex="0" role="button" aria-label="Read: Hosting students well">
+<span class="res-cat">For companies</span><h3>Hosting students well</h3><p>Give each student a named supervisor, a clear set of tasks and regular feedback. Sign logbooks every week and complete e…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 4 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Hosting students well</h3><p>Give each student a named supervisor, a clear set of tasks and regular feedback. Sign logbooks every week and complete evaluations on time. Students learn more, and your team benefits from their work. Tell the student early what is expected of them in dress, hours and conduct.</p></div></article><article class="res-card" data-cat="companies" data-text="writing a clear opportunity post state the role, the skills you need, the location, the duration and whether the placement is paid. describe the main tasks in plain language and say how students should apply. clear posts attract better matched applicants and reduce back-and-forth." tabindex="0" role="button" aria-label="Read: Writing a clear opportunity post">
+<span class="res-cat">For companies</span><h3>Writing a clear opportunity post</h3><p>State the role, the skills you need, the location, the duration and whether the placement is paid. Describe the main tas…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 3 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Writing a clear opportunity post</h3><p>State the role, the skills you need, the location, the duration and whether the placement is paid. Describe the main tasks in plain language and say how students should apply. Clear posts attract better matched applicants and reduce back-and-forth.</p></div></article><article class="res-card" data-cat="institutions" data-text="running siwes for your school keep a single record of where every student is placed, assign supervisors by location, and keep your logbook and form records in one place so reports for accreditation are ready when needed. follow up early with students who have not started applying." tabindex="0" role="button" aria-label="Read: Running SIWES for your school">
+<span class="res-cat">For institutions</span><h3>Running SIWES for your school</h3><p>Keep a single record of where every student is placed, assign supervisors by location, and keep your logbook and form re…</p><span class="res-meta"><i class="fa-regular fa-clock"></i> 5 min read <i class="fa-solid fa-arrow-right res-arrow"></i></span>
+<div class="res-full" hidden><h3>Running SIWES for your school</h3><p>Keep a single record of where every student is placed, assign supervisors by location, and keep your logbook and form records in one place so reports for accreditation are ready when needed. Follow up early with students who have not started applying.</p></div></article></div>
+            <p class="res-empty" id="res-empty" hidden>No guides match your search. Try a different word.</p>
+            <p class="about-note about-center">These guides are general advice. Your institution's SIWES office has the final say on the rules and requirements for your programme.</p>
         </div>
     </section>
 
     <section class="about-section about-soft">
-        <div class="about-container">
-            <h2 class="about-center">For companies and institutions</h2>
-            <div class="about-cards about-cards-2">
-                <article class="about-card">
-                    <div class="about-icon"><i class="fa-solid fa-building"></i></div>
-                    <h3>Hosting students well</h3>
-                    <p>Give each student a named supervisor, a clear set of tasks and regular feedback. Sign logbooks every week and complete evaluations on time. Students learn more, and your team benefits from their work.</p>
-                    <a href="how-it-works.html">See how it works <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
-                <article class="about-card">
-                    <div class="about-icon"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3>Running SIWES for your school</h3>
-                    <p>Keep a single record of where every student is placed, assign supervisors by location, and keep your logbook and form records in one place so reports for accreditation are ready when needed.</p>
-                    <a href="institution-account.html">Register your institution <i class="fa-solid fa-arrow-right"></i></a>
-                </article>
+        <div class="about-container about-split">
+            <div class="reveal" style="--delay:0.00s">
+                <h2>Your placement checklist</h2>
+                <p>Tick items off as you go. Your progress is saved on this device.</p>
+                <div class="chk-progress"><div class="chk-bar"><span id="chk-fill"></span></div><b id="chk-count">0 of 8</b></div>
             </div>
+            <div class="chk-list reveal" style="--delay:0.08s" id="chk-list"><label class="chk-item"><input type="checkbox" data-i="0"><span>Confirm my SIWES dates and requirements with my coordinator</span></label><label class="chk-item"><input type="checkbox" data-i="1"><span>Update my CV and save it as a PDF</span></label><label class="chk-item"><input type="checkbox" data-i="2"><span>Gather my admission letter, student ID and introduction letter</span></label><label class="chk-item"><input type="checkbox" data-i="3"><span>Make a shortlist of companies that match my course</span></label><label class="chk-item"><input type="checkbox" data-i="4"><span>Apply to at least five opportunities</span></label><label class="chk-item"><input type="checkbox" data-i="5"><span>Prepare answers for common interview questions</span></label><label class="chk-item"><input type="checkbox" data-i="6"><span>Confirm my workplace supervisor and my academic supervisor</span></label><label class="chk-item"><input type="checkbox" data-i="7"><span>Start my weekly logbook in the first week</span></label></div>
         </div>
     </section>
 
     <section class="about-section">
         <div class="about-container about-narrow">
-            <h2>Need something else?</h2>
-            <p>If there is a guide you would like us to write, tell us at <a href="mailto:hello@placewick.com">hello@placewick.com</a>. For questions about your account, write to <a href="mailto:support@placewick.com">support@placewick.com</a>.</p>
-            <p class="about-note">These guides are general advice. Your institution's SIWES office has the final say on the rules and requirements for your programme.</p>
+            <h2 class="about-center reveal" style="--delay:0.00s">Glossary</h2>
+            <p class="about-lead about-center reveal" style="--delay:0.08s">Terms you will see on Placewick and in your SIWES paperwork.</p>
+            <div class="about-faq "><details class="reveal" style="--delay:0.00s"><summary>SIWES</summary><p>Students Industrial Work Experience Scheme: practical work experience that students complete as part of their programme.</p></details><details class="reveal" style="--delay:0.08s"><summary>ITF</summary><p>Industrial Training Fund, the Nigerian agency that coordinates SIWES.</p></details><details class="reveal" style="--delay:0.16s"><summary>NUC, NBTE and NCCE</summary><p>The National Universities Commission, the National Board for Technical Education, and the National Commission for Colleges of Education: the regulators of universities, polytechnics and monotechnics, and colleges of education.</p></details><details class="reveal" style="--delay:0.24s"><summary>SIWES coordinator</summary><p>The staff member at an institution who manages SIWES for students.</p></details><details class="reveal" style="--delay:0.00s"><summary>Workplace supervisor</summary><p>The person at the company who supervises the student and signs the logbook and evaluation.</p></details><details class="reveal" style="--delay:0.08s"><summary>Academic supervisor</summary><p>The staff member from the institution who visits or follows up on the student during the placement.</p></details><details class="reveal" style="--delay:0.16s"><summary>Logbook</summary><p>The weekly record of what a student did and learned during the placement.</p></details><details class="reveal" style="--delay:0.24s"><summary>Form 8</summary><p>The placement acceptance form for SIWES. Ask your institution for the exact form and requirements for your programme.</p></details></div>
         </div>
     </section>
 
+    <section class="about-section about-soft">
+        <div class="about-container about-narrow reveal" style="--delay:0.00s">
+            <h2>Need something else?</h2>
+            <p>If there is a guide you would like us to write, tell us at <a href="mailto:hello@placewick.com">hello@placewick.com</a>. For questions about your account, write to <a href="mailto:support@placewick.com">support@placewick.com</a>.</p>
+        </div>
+    </section>
+
+    <dialog class="res-dialog" id="res-dialog"><button type="button" class="res-close" id="res-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button><div id="res-dialog-body"></div></dialog>
+
     <section class="about-cta">
-        <div class="about-container">
+        <div class="about-container reveal">
             <h2>Find your placement</h2>
             <p>Create a free student account and start applying.</p>
-            <a href="sign-up.html" class="about-button">Create an account</a>
+            <div class="about-cta-buttons"><a href="sign-up.html" class="about-button">Create an account</a></div>
         </div>
     </section>
 
@@ -310,7 +340,10 @@
 
 </footer>
 
+<button type="button" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 <script src="script.js" defer></script>
+<script src="pages.js" defer></script>
 
 </body>
 </html>
