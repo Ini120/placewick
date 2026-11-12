@@ -1,0 +1,274 @@
+/* =================================
+   PLACEWICK — ABOUT PAGE
+   (uses tokens from styles.css)
+================================= */
+
+.about-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.about-narrow {
+    max-width: 760px;
+}
+
+.about-center {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.about h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.about a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.about-section {
+    padding: 80px 0;
+}
+
+.about-soft {
+    background-color: var(--background-soft);
+}
+
+/* Hero */
+
+.about-hero {
+    padding: 96px 0 72px;
+    background: linear-gradient(180deg, var(--background-soft), var(--background));
+    text-align: center;
+}
+
+.about-hero .about-container {
+    max-width: 820px;
+}
+
+.about-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background-color: #E9EEFF;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 22px;
+}
+
+.about-hero p {
+    font-size: 18px;
+}
+
+/* Problem split */
+
+.about-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.about-callout {
+    padding: 32px;
+    background-color: var(--background-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.about-callout ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-callout li {
+    display: flex;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.about-callout i {
+    margin-top: 3px;
+    color: var(--success);
+}
+
+/* Cards */
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.about-card {
+    padding: 32px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card p {
+    flex: 1;
+}
+
+.about-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #E9EEFF;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+/* Steps */
+
+.about-steps {
+    list-style: none;
+    max-width: 760px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.about-steps li {
+    display: flex;
+    gap: 20px;
+}
+
+.about-steps li > span {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+.about-steps p {
+    margin-bottom: 0;
+}
+
+/* Values */
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.about-values p {
+    margin-bottom: 0;
+}
+
+/* CTA */
+
+.about-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    text-align: center;
+}
+
+.about .about-cta h2,
+.about .about-cta p {
+    color: #FFFFFF;
+}
+
+.about .about-cta p {
+    opacity: 0.9;
+}
+
+.about .about-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 28px;
+    border-radius: var(--radius-sm);
+    background-color: #FFFFFF;
+    color: var(--primary);
+    font-weight: 800;
+    transition: 0.2s ease;
+}
+
+.about .about-button:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+
+    .about-split,
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section,
+    .about-cta {
+        padding: 56px 0;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+}

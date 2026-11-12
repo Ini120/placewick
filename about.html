@@ -6,676 +6,382 @@
 
     <title>About Us | Placewick</title>
 
-    <!-- Google Font -->
+    <meta name="description" content="Placewick helps Nigerian students find SIWES and internship placements, and helps institutions and companies manage them.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/global.css">
-
-    <!-- Page CSS -->
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-    <header class="site-header">
-        <div class="container navbar">
 
-            <a href="index.html" class="logo">
-                <img src="images/placewick-LOGO.png" alt="Placewick">
-            </a>
+<header class="header">
+    <div class="header-container">
 
-            <nav class="main-nav" id="main-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="browse-opportunities.html">Opportunities</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="resources.html">Resources</a>
-            </nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
 
-            <div class="nav-actions">
-                <a href="login.html" class="login-link">Log in</a>
-                <a href="sign-up.html" class="btn btn-primary">Get Started</a>
-                <button class="menu-toggle" id="menu-toggle" type="button"
-                        aria-label="Toggle navigation" aria-controls="main-nav"
-                        aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <!-- Navigation -->
+        <nav class="nav-links" aria-label="Main navigation">
+
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Students
+                    <span class="arrow">⌄</span>
                 </button>
+
+                <div class="dropdown-menu">
+                    <a href="#">Find Opportunities</a>
+                    <a href="#">Application Tracker</a>
+                    <a href="#">Career Resources</a>
+                </div>
             </div>
 
-        </div>
-    </header>
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    For Companies
+                    <span class="arrow">⌄</span>
+                </button>
 
-
-    <main>
-
-        <!-- =========================
-             HERO
-        ========================== -->
-        <section class="about-hero">
-            <div class="container about-hero-content">
-
-                <div class="about-hero-text">
-                    <span class="section-label">ABOUT PLACEWICK</span>
-
-                    <h1>
-                        Connecting Nigerian students
-                        with opportunities that
-                        <span>build their future.</span>
-                    </h1>
-
-                    <p>
-                        Placewick is a platform built to make it easier for
-                        Nigerian students to discover meaningful opportunities,
-                        connect with companies, and take the next step in their
-                        careers.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="browse-opportunities.html" class="btn btn-primary">
-                            Explore Opportunities
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                        <a href="how-it-works.html" class="btn btn-secondary">
-                            See How It Works
-                        </a>
-                    </div>
+                <div class="dropdown-menu">
+                    <a href="#">Post an Opportunity</a>
+                    <a href="#">Find Talent</a>
+                    <a href="#">Why Placewick</a>
                 </div>
-
-                <div class="about-hero-visual">
-
-                    <div class="hero-card main-card">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-
-                        <div>
-                            <span>Opportunity</span>
-                            <h3>Software Engineering Intern</h3>
-                            <p>Verified Company</p>
-                        </div>
-
-                        <span class="verified">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </span>
-                    </div>
-
-                    <div class="floating-card student-card">
-                        <div class="small-icon">
-                            <i class="fa-solid fa-user-graduate"></i>
-                        </div>
-
-                        <div>
-                            <strong>For Students</strong>
-                            <span>Discover your next opportunity</span>
-                        </div>
-                    </div>
-
-                    <div class="floating-card company-card">
-                        <div class="small-icon">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-
-                        <div>
-                            <strong>For Companies</strong>
-                            <span>Find emerging Nigerian talent</span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             PROBLEM
-        ========================== -->
-        <section class="problem-section">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <span class="section-label">THE PROBLEM</span>
-
-                    <h2>
-                        Finding opportunities shouldn't
-                        <span>feel impossible.</span>
-                    </h2>
-
-                    <p>
-                        For many Nigerian students, getting practical experience
-                        can be difficult. Opportunities can be scattered across
-                        different platforms, social media pages, personal
-                        connections, and word of mouth.
-                    </p>
-                </div>
-
-
-                <div class="problem-grid">
-
-                    <article class="problem-card">
-                        <div class="problem-icon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-
-                        <h3>Opportunities are scattered</h3>
-
-                        <p>
-                            Students often have to search through multiple
-                            platforms just to find internships, SIWES placements,
-                            volunteering opportunities, and entry-level roles.
-                        </p>
-                    </article>
-
-
-                    <article class="problem-card">
-                        <div class="problem-icon">
-                            <i class="fa-solid fa-circle-question"></i>
-                        </div>
-
-                        <h3>It's difficult to know what's genuine</h3>
-
-                        <p>
-                            Students need a more reliable way to discover
-                            opportunities and identify companies they can
-                            confidently apply to.
-                        </p>
-                    </article>
-
-
-                    <article class="problem-card">
-                        <div class="problem-icon">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-
-                        <h3>Students need better connections</h3>
-
-                        <p>
-                            Talent exists everywhere, but students don't always
-                            have direct access to companies looking for emerging
-                            talent.
-                        </p>
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             WHY PLACEWICK
-        ========================== -->
-        <section class="why-section">
-            <div class="container why-grid">
-
-                <div class="why-visual">
-                    <div class="visual-box">
-
-                        <div class="visual-top">
-                            <span class="visual-dot"></span>
-                            <span class="visual-dot"></span>
-                            <span class="visual-dot"></span>
-                        </div>
-
-                        <div class="visual-content">
-
-                            <div class="visual-search">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <span>Search opportunities...</span>
-                            </div>
-
-                            <div class="visual-opportunity">
-                                <div class="visual-opportunity-icon">
-                                    <i class="fa-solid fa-code"></i>
-                                </div>
-
-                                <div>
-                                    <strong>Frontend Developer Intern</strong>
-                                    <span>Technology • Abuja</span>
-                                </div>
-
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-
-                            <div class="visual-opportunity">
-                                <div class="visual-opportunity-icon">
-                                    <i class="fa-solid fa-chart-line"></i>
-                                </div>
-
-                                <div>
-                                    <strong>Business Analyst Intern</strong>
-                                    <span>Finance • Lagos</span>
-                                </div>
-
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="why-content">
-
-                    <span class="section-label">WHY PLACEWICK EXISTS</span>
-
-                    <h2>
-                        We're making the path
-                        <span>from student to career</span>
-                        easier.
-                    </h2>
-
-                    <p>
-                        Placewick was created around a simple idea: students
-                        shouldn't have to rely only on who they know to discover
-                        opportunities.
-                    </p>
-
-                    <p>
-                        We want to create a space where students can discover
-                        opportunities that match their interests and skills,
-                        while companies can find motivated young talent.
-                    </p>
-
-                    <a href="how-it-works.html" class="text-link">
-                        Learn how Placewick works
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             MISSION & VISION
-        ========================== -->
-        <section class="mission-section">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <span class="section-label">WHAT DRIVES US</span>
-
-                    <h2>
-                        Built with a
-                        <span>purpose.</span>
-                    </h2>
-                </div>
-
-
-                <div class="mission-grid">
-
-                    <article class="mission-card mission-card-primary">
-
-                        <div class="mission-icon">
-                            <i class="fa-solid fa-bullseye"></i>
-                        </div>
-
-                        <span>OUR MISSION</span>
-
-                        <h3>
-                            Make meaningful opportunities
-                            more accessible to Nigerian students.
-                        </h3>
-
-                        <p>
-                            We aim to simplify the process of discovering,
-                            applying for, and connecting with opportunities
-                            that help students gain experience and grow.
-                        </p>
-
-                    </article>
-
-
-                    <article class="mission-card">
-
-                        <div class="mission-icon">
-                            <i class="fa-solid fa-eye"></i>
-                        </div>
-
-                        <span>OUR VISION</span>
-
-                        <h3>
-                            A future where every student
-                            can find their opportunity.
-                        </h3>
-
-                        <p>
-                            We envision a connected ecosystem where students
-                            and companies can find each other based on skills,
-                            interests, and potential.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             HOW PLACEWICK HELPS
-        ========================== -->
-        <section class="helps-section">
-            <div class="container">
-
-                <div class="section-heading centered">
-                    <span class="section-label">HOW WE HELP</span>
-
-                    <h2>
-                        One platform.
-                        <span>Two sides.</span>
-                    </h2>
-
-                    <p>
-                        Placewick is designed to create value for both students
-                        looking for opportunities and companies looking for talent.
-                    </p>
-                </div>
-
-
-                <div class="helps-grid">
-
-                    <article class="help-card">
-
-                        <div class="help-card-header">
-                            <div class="help-icon">
-                                <i class="fa-solid fa-user-graduate"></i>
-                            </div>
-
-                            <span>FOR STUDENTS</span>
-                        </div>
-
-                        <h3>Discover opportunities that fit you.</h3>
-
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Find internships and SIWES opportunities
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Discover graduate and entry-level roles
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Explore volunteering opportunities
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Build connections with companies
-                            </li>
-                        </ul>
-
-                        <a href="signup.html" class="btn btn-primary">
-                            Join as a Student
-                        </a>
-
-                    </article>
-
-
-                    <article class="help-card">
-
-                        <div class="help-card-header">
-                            <div class="help-icon">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-
-                            <span>FOR COMPANIES</span>
-                        </div>
-
-                        <h3>Find motivated emerging talent.</h3>
-
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Post internship opportunities
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Reach Nigerian students
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Discover students by skills
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-check"></i>
-                                Manage and connect with applicants
-                            </li>
-                        </ul>
-
-                        <a href="get-started.html" class="btn btn-secondary">
-                            Get Started as a Company
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             FOUNDER
-        ========================== -->
-        <section class="founder-section">
-            <div class="container founder-grid">
-
-                <div class="founder-image">
-                    <div class="founder-placeholder">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                </div>
-
-                <div class="founder-content">
-
-                    <span class="section-label">MEET THE FOUNDER</span>
-
-                    <h2>
-                        Built from a desire to
-                        <span>make things better.</span>
-                    </h2>
-
-                    <p>
-                        Placewick started with a simple observation: finding
-                        opportunities shouldn't depend entirely on connections,
-                        luck, or knowing where to look.
-                    </p>
-
-                    <p>
-                        As a student, I understand how difficult it can be to
-                        navigate internships, SIWES, career opportunities, and
-                        the transition from school into the working world.
-                    </p>
-
-                    <p>
-                        Placewick is my attempt to build something that makes
-                        that journey easier for students while also helping
-                        companies discover the talent that already exists.
-                    </p>
-
-                    <div class="founder-name">
-                        <strong>Inioluwa Aiyenuyo</strong>
-                        <span>Founder, Placewick</span>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-        <section class="about-cta">
-            <div class="container">
-
-                <div class="cta-content">
-
-                    <span class="section-label">YOUR NEXT OPPORTUNITY</span>
-
-                    <h2>
-                        Your next opportunity
-                        could be <span>closer than you think.</span>
-                    </h2>
-
-                    <p>
-                        Discover opportunities, build experience, and take
-                        the next step in your career with Placewick.
-                    </p>
-
-                    <div class="cta-buttons">
-
-                        <a href="browse-opportunities.html" class="btn btn-white">
-                            Browse Opportunities
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                        <a href="signup.html" class="btn btn-outline-white">
-                            Create an Account
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-                    <img src="images/placewick-LOGO.png" alt="Placewick">
-                </a>
-
-                <p>
-                    Connecting Nigerian students with opportunities
-                    that build their future.
-                </p>
-
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-
-                    <a href="#" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" aria-label="Twitter">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </div>
-
             </div>
 
+            <div class="nav-item dropdown">
+                <button class="nav-link" type="button">
+                    Resources
+                    <span class="arrow">⌄</span>
+                </button>
 
-            <div class="footer-column">
-
-                <h4>Students</h4>
-
-                <a href="browse-opportunities.html">Browse Opportunities</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="resources.html">Resources</a>
-                <a href="signup.html">Sign Up</a>
-
+                <div class="dropdown-menu">
+                    <a href="#">Career Guide</a>
+                    <a href="#">Interview Tips</a>
+                    <a href="#">CV Resources</a>
+                </div>
             </div>
 
+            <a href="institution-account.html" class="nav-link">For Institutions</a>
 
-            <div class="footer-column">
+            <a href="about.html" class="nav-link">About Us</a>
 
-                <h4>Companies</h4>
+        </nav>
 
-                <a href="post-opportunity.html">Post an Opportunity</a>
-                <a href="why-placewick.html">Why Placewick</a>
-                <a href="company-how-it-works.html">How It Works</a>
-                <a href="get-started.html">Get Started</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Placewick</h4>
-
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="careers.html">Careers</a>
-                <a href="help.html">Help Centre</a>
-
-            </div>
-
+        <!-- Right side -->
+        <div class="header-actions">
+            <a href="login.html" class="login-link">Log in</a>
+            <a href="sign-up.html" class="signup-button">Sign up</a>
         </div>
 
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <div class="container footer-bottom">
+    </div>
+</header>
 
-            <p>
-                © 2026 Placewick. All rights reserved.
-            </p>
+<script>
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-            <div>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-
-        </div>
-
-    </footer>
-
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const mainNav = document.getElementById("main-nav");
-
-        menuToggle.addEventListener("click", () => {
-            const isOpen = mainNav.classList.toggle("menu-open");
-            menuToggle.setAttribute("aria-expanded", isOpen);
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
 
-        document.addEventListener("click", (event) => {
-            const clickedOutside = !mainNav.contains(event.target)
-                && !menuToggle.contains(event.target);
+        dropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-link');
 
-            if (clickedOutside && mainNav.classList.contains("menu-open")) {
-                mainNav.classList.remove("menu-open");
-                menuToggle.setAttribute("aria-expanded", "false");
+            if (trigger) {
+                trigger.addEventListener('click', (event) => {
+                    if (window.innerWidth > 700) return;
+
+                    event.stopPropagation();
+
+                    const isOpen = dropdown.classList.contains('open');
+
+                    dropdowns.forEach((item) => item.classList.remove('open'));
+
+                    if (!isOpen) {
+                        dropdown.classList.add('open');
+                    }
+                });
             }
         });
-    </script>
+
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-container')) {
+                navLinks.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                dropdowns.forEach((item) => item.classList.remove('open'));
+            }
+        });
+    }
+</script>
+
+<main class="about">
+
+    <!-- HERO -->
+    <section class="about-hero">
+        <div class="about-container">
+            <span class="about-eyebrow">About Placewick</span>
+            <h1>Making SIWES placement simple, visible and verified</h1>
+            <p>
+                Every year, thousands of Nigerian students struggle to find a place
+                for their industrial training, and their institutions struggle to
+                keep track of where everyone ended up. Placewick brings students,
+                companies and institutions onto one platform so that placements are
+                easier to find, easier to manage and easier to prove.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="about-section">
+        <div class="about-container about-split">
+            <div>
+                <h2>The problem we are solving</h2>
+                <p>
+                    Finding a SIWES placement often depends on who you know. Students
+                    move between offices with printed letters, logbooks travel across
+                    states in physical booklets, and coordinators chase updates by phone.
+                    Companies that are willing to host students have no simple way to
+                    reach them, and schools have little data to show for accreditation.
+                </p>
+            </div>
+            <div class="about-callout">
+                <h3>What changes with Placewick</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> Students find and apply for placements in one place</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Companies review applicants and confirm placements</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Logbooks and forms are completed and signed digitally</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Schools see placements and reports in real time</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE SERVE -->
+    <section class="about-section about-soft">
+        <div class="about-container">
+            <h2 class="about-center">Built for three groups</h2>
+            <div class="about-cards">
+
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h3>Students</h3>
+                    <p>Build one profile, keep your documents ready, discover verified opportunities, apply, and track every application until you are placed.</p>
+                    <a href="sign-up.html">Create a student account <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Companies</h3>
+                    <p>Post internship and SIWES roles, review ranked applicants, schedule interviews and sign student logbooks, all from one dashboard.</p>
+                    <a href="company-account.html">Register your company <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Institutions</h3>
+                    <p>Track student placements, review digital logbooks and Form 8, assign academic supervisors, and generate reports for NUC and NBTE audits.</p>
+                    <a href="institution-account.html">Register your institution <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2 class="about-center">How it works</h2>
+            <ol class="about-steps">
+                <li><span>1</span><div><h3>Register</h3><p>Students, companies and institutions create accounts. Companies and institutions are verified before they are activated.</p></div></li>
+                <li><span>2</span><div><h3>Match and apply</h3><p>Students browse verified opportunities and apply with a reusable profile and documents.</p></div></li>
+                <li><span>3</span><div><h3>Get placed</h3><p>Companies review applicants, interview and confirm placements. The student's institution sees the update.</p></div></li>
+                <li><span>4</span><div><h3>Complete and report</h3><p>Weekly logbooks, Form 8 and evaluations are signed digitally, supervisors are assigned, and reports are ready for accreditation.</p></div></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="about-section about-soft">
+        <div class="about-container">
+            <h2 class="about-center">What we stand for</h2>
+            <div class="about-values">
+                <div><h3>Trust</h3><p>We verify companies and institutions so students are placed with real organisations.</p></div>
+                <div><h3>Access</h3><p>A good placement should not depend on who you know.</p></div>
+                <div><h3>Clarity</h3><p>Everyone in the process can see where a placement stands.</p></div>
+                <div><h3>Privacy</h3><p>Student information is shared only with the people who need it.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY -->
+    <section class="about-section">
+        <div class="about-container about-narrow">
+            <h2>The company behind Placewick</h2>
+            <p>
+                Placewick is the first product of Placewick Technologies Limited, a
+                Nigerian technology company that designs and builds internet-based
+                platforms and digital services.
+            </p>
+            <p>
+                Questions, partnerships or feedback? Write to us at
+                <a href="mailto:hello@placewick.com">hello@placewick.com</a>. Institutions and companies
+                interested in working with us can reach
+                <a href="mailto:partnerships@placewick.com">partnerships@placewick.com</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta">
+        <div class="about-container">
+            <h2>Ready to get started?</h2>
+            <p>Join Placewick as a student, a company or an institution.</p>
+            <a href="sign-up.html" class="about-button">Create an account</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                Place<span>wick</span>
+            </a>
+
+            <p>
+                Connecting Nigerian students with opportunities
+                that help them build their future.
+            </p>
+
+            <div class="footer-socials">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENTS -->
+        <div class="footer-column">
+
+            <h3>Students</h3>
+
+            <a href="browse-opportunities.html">Browse Opportunities</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="resources.html">Resources</a>
+            <a href="sign-up.html">Sign Up</a>
+
+        </div>
+
+
+        <!-- COMPANIES -->
+        <div class="footer-column">
+
+            <h3>Companies</h3>
+
+            <a href="post-opportunity.html">Post an Opportunity</a>
+            <a href="why-placewick.html">Why Placewick</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="get-started.html">Get Started</a>
+
+        </div>
+
+
+        <!-- INSTITUTIONS -->
+        <div class="footer-column">
+
+            <h3>Institutions</h3>
+
+            <a href="institution-account.html">Register Your School</a>
+            <a href="institution-dashboard.html">Dashboard Preview</a>
+            <a href="mailto:partnerships@placewick.com">Partnerships</a>
+
+        </div>
+
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+
+            <h3>Placewick</h3>
+
+            <a href="about.html">About Us</a>
+            <a href="mailto:hello@placewick.com">Contact</a>
+            <a href="careers.html">Careers</a>
+            <a href="mailto:support@placewick.com">Help Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Placewick. All rights reserved.
+        </p>
+
+        <div class="footer-legal">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms of Service</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="script.js" defer></script>
 
 </body>
 </html>
