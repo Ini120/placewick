@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Post an Opportunity | Placewick</title>
+
+    <meta
+        name="description"
+        content="Your Placewick company dashboard — manage postings, applicants and verification."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="institution-dashboard.css"
+    >
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+
+    <!-- Mobile overlay -->
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+<a href="company-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="post-opportunity.html" class="sidebar-link active"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity </a>
+<a href="company-postings.html" class="sidebar-link"><i class="fa-solid fa-briefcase"></i> My Postings <span class="badge" data-badge="open" hidden></span></a>
+<a href="company-applicants.html" class="sidebar-link"><i class="fa-solid fa-users"></i> Applicants <span class="badge" data-badge="new" hidden></span></a>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-building"></i> Company Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar"></div>
+
+                <div class="sidebar-user-info">
+                    <h4>Your company</h4>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <div class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Post an Opportunity</h1>
+<p>Describe the role and students will be able to apply.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                
+
+                
+
+                <a href="company-profile.html" class="header-avatar"></a>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+
+        <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
+
+<div class="note-banner" id="verify-note" hidden>Your company is waiting to be verified by Placewick. Until then you can save opportunities as drafts, and you will be able to publish them once verification is complete.</div>
+<form class="form-card" id="opp-form" novalidate>
+  <div class="form-grid">
+    <div class="field full"><label for="title">Title</label><input type="text" id="title" placeholder="e.g. Frontend Developer Intern" maxlength="120" required></div>
+    <div class="field"><label for="type">Type</label><select id="type" required><option value="">Select type</option><option value="siwes">SIWES (industrial training)</option><option value="internship">Internship</option></select></div>
+    <div class="field"><label for="work_mode">Work mode</label><select id="work_mode"><option value="">Select</option><option value="on-site">On-site</option><option value="hybrid">Hybrid</option><option value="remote">Remote</option></select></div>
+    <div class="field"><label for="location">Location</label><input type="text" id="location" placeholder="e.g. Lagos" maxlength="80"></div>
+    <div class="field"><label for="duration">Duration</label><input type="text" id="duration" placeholder="e.g. 6 months" maxlength="40"></div>
+    <div class="field"><label for="allowance">Allowance or stipend</label><input type="text" id="allowance" placeholder="e.g. N50,000 per month, or Unpaid" maxlength="60"></div>
+    <div class="field"><label for="deadline">Application deadline</label><input type="date" id="deadline"></div>
+    <div class="field full"><label for="description">Description</label><textarea id="description" placeholder="What will the student do? What will they learn? Any requirements?" required></textarea></div>
+    <div class="field full"><label for="skills">Skills wanted</label><input type="text" id="skills" placeholder="e.g. Excel, SQL, Communication"><span class="hint">Separate skills with commas.</span></div>
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-outline" id="save-draft">Save as draft</button>
+    <button type="button" class="btn btn-primary" id="publish"><i class="fa-solid fa-paper-plane"></i> Publish</button>
+    <a href="company-postings.html" class="btn btn-outline">Cancel</a>
+  </div>
+</form>
+</main>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script src="applicant-dashboard.js"></script>
+<script src="dash.js"></script>
+<script>
+
+(function () {
+  var D = window.placewickDash, sb = D.sb;
+  var id = new URLSearchParams(location.search).get("id");
+  var form = document.getElementById("opp-form");
+  function v(x) { return document.getElementById(x).value.trim(); }
+  function setv(x, val) { document.getElementById(x).value = val == null ? "" : val; }
+  function save(status, btn) {
+    document.getElementById("page-error").hidden = true;
+    if (!v("title") || !v("type") || !v("description")) {
+      D.fail("Please fill in the title, type and description."); return;
+    }
+    var row = {
+      title: v("title"), type: v("type"), work_mode: v("work_mode") || null, location: v("location") || null,
+      duration: v("duration") || null, allowance: v("allowance") || null, description: v("description"),
+      skills: v("skills").split(",").map(function (s) { return s.trim(); }).filter(Boolean),
+      deadline: v("deadline") || null, status: status
+    };
+    btn.disabled = true;
+    var req;
+    if (id) { req = sb.from("opportunities").update(row).eq("id", id).eq("company_id", D.company.id); }
+    else { row.company_id = D.company.id; req = sb.from("opportunities").insert(row); }
+    req.then(function (r) {
+      btn.disabled = false;
+      if (r.error) { D.fail(status === "open" ? "Could not publish. Your company must be verified first." : "Could not save. Please try again."); return; }
+      D.toast(status === "open" ? "Opportunity published" : "Draft saved");
+      setTimeout(function () { location.href = "company-postings.html"; }, 700);
+    });
+  }
+  D.init().then(function (c) {
+    if (c.status !== "verified") {
+      document.getElementById("verify-note").hidden = false;
+      document.getElementById("publish").disabled = true;
+    }
+    if (!id) { return; }
+    return sb.from("opportunities").select("*").eq("id", id).eq("company_id", c.id).maybeSingle().then(function (r) {
+      if (!r.data) { D.fail("We could not find that opportunity."); return; }
+      var o = r.data;
+      ["title", "type", "work_mode", "location", "duration", "allowance", "description", "deadline"].forEach(function (k) { setv(k, o[k]); });
+      setv("skills", (o.skills || []).join(", "));
+    });
+  }).catch(function () { D.fail(); });
+  document.getElementById("save-draft").addEventListener("click", function () { save("draft", this); });
+  document.getElementById("publish").addEventListener("click", function () { save("open", this); });
+})();
+</script>
+
+</body>
+
+</html>

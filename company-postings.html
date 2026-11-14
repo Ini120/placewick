@@ -50,6 +50,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
 </head>
 
 
@@ -77,59 +78,26 @@
         </button>
 
         <nav class="sidebar-nav">
-
-            <a href="company-dashboard.html" class="sidebar-link">
-                <i class="fa-solid fa-grid-2"></i>
-                Dashboard
-            </a>
-
-            <a href="post-opportunity.html" class="sidebar-link">
-                <i class="fa-solid fa-circle-plus"></i>
-                Post an Opportunity
-            </a>
-
-            <a href="company-postings.html" class="sidebar-link active">
-                <i class="fa-solid fa-briefcase"></i>
-                My Postings
-                <span class="badge">5</span>
-            </a>
-
-            <a href="company-applicants.html" class="sidebar-link">
-                <i class="fa-solid fa-users"></i>
-                Applicants
-                <span class="badge">14</span>
-            </a>
-
-            <a href="company-messages.html" class="sidebar-link">
-                <i class="fa-regular fa-comments"></i>
-                Messages
-                <span class="badge">4</span>
-            </a>
-
-            <span class="sidebar-section-label">Account</span>
-
-            <a href="company-profile.html" class="sidebar-link">
-                <i class="fa-regular fa-building"></i>
-                Company Profile
-            </a>
-
-            <a href="company-settings.html" class="sidebar-link">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
+<a href="company-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="post-opportunity.html" class="sidebar-link"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity </a>
+<a href="company-postings.html" class="sidebar-link active"><i class="fa-solid fa-briefcase"></i> My Postings <span class="badge" data-badge="open" hidden></span></a>
+<a href="company-applicants.html" class="sidebar-link"><i class="fa-solid fa-users"></i> Applicants <span class="badge" data-badge="new" hidden></span></a>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-building"></i> Company Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
 
 
         <div class="sidebar-footer">
 
             <div class="sidebar-user">
 
-                <div class="sidebar-avatar">FW</div>
+                <div class="sidebar-avatar"></div>
 
                 <div class="sidebar-user-info">
-                    <h4>Flutterwave</h4>
-                    <span>Fintech &middot; Lagos</span>
+                    <h4>Your company</h4>
+                    <span></span>
                 </div>
 
             </div>
@@ -161,24 +129,18 @@
 
                 <div>
                     <h1>My Postings</h1>
-                    <p>Manage the opportunities you have posted.</p>
+<p>Manage the opportunities you have posted.</p>
                 </div>
 
             </div>
 
             <div class="dashboard-header-right">
 
-                <div class="header-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search applicants">
-                </div>
+                
 
-                <button type="button" class="icon-button" aria-label="Notifications">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="dot"></span>
-                </button>
+                
 
-                <a href="company-profile.html" class="header-avatar">FW</a>
+                <a href="company-profile.html" class="header-avatar"></a>
 
             </div>
 
@@ -188,115 +150,35 @@
         <!-- Content -->
 
         <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
 
-            <section class="stats-row">
-                <div class="stat-card"><div class="stat-icon success"><i class="fa-solid fa-briefcase"></i></div><div><div class="stat-value">5</div><div class="stat-label">Open postings</div></div></div>
-                <div class="stat-card"><div class="stat-icon info"><i class="fa-solid fa-users"></i></div><div><div class="stat-value">178</div><div class="stat-label">Total applicants</div></div></div>
-                <div class="stat-card"><div class="stat-icon warning"><i class="fa-solid fa-file-pen"></i></div><div><div class="stat-value">1</div><div class="stat-label">Drafts</div></div></div>
-                <div class="stat-card"><div class="stat-icon purple"><i class="fa-solid fa-box-archive"></i></div><div><div class="stat-value">2</div><div class="stat-label">Closed</div></div></div>
-            </section>
-
-            <div class="page-toolbar">
-                <div class="search-field">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="placement-search" placeholder="Search postings">
-                </div>
-                <div class="chip-group" id="placement-filters">
-                    <button type="button" class="chip is-active" data-filter="all">All</button>
-                    <button type="button" class="chip" data-filter="open">Open</button>
-                    <button type="button" class="chip" data-filter="draft">Drafts</button>
-                    <button type="button" class="chip" data-filter="closed">Closed</button>
-                </div>
-                <a href="post-opportunity.html" class="btn btn-primary spacer"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity</a>
-            </div>
-
-            <div class="panel">
-                <div class="table-wrap">
-                    <table class="data-table" id="placement-table">
-                        <thead>
-                            <tr><th>Opportunity</th><th>Location</th><th>Applicants</th><th>Status</th><th>Deadline</th><th></th></tr>
-                        </thead>
-                        <tbody>
-                            <tr data-status="open" data-search="frontend developer intern internship lagos (hybrid)">
-                                <td><div class="person-cell"><div class="avatar-sm">FD</div><div><h4>Frontend Developer Intern</h4><span>Internship &middot; 3 months</span></div></div></td>
-                                <td>Lagos (Hybrid)</td>
-                                <td><a href="company-applicants.html" class="panel-link">32 applicants</a></td>
-                                <td><span class="status-badge accepted"><span class="dot"></span>Open</span></td>
-                                <td class="cell-muted">Closes 30 Nov</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting closed (demo)">Close</button></div></td>
-                            </tr>
-
-                            <tr data-status="open" data-search="siwes: business analyst siwes lagos">
-                                <td><div class="person-cell"><div class="avatar-sm">BA</div><div><h4>SIWES: Business Analyst</h4><span>SIWES &middot; 6 months</span></div></div></td>
-                                <td>Lagos</td>
-                                <td><a href="company-applicants.html" class="panel-link">21 applicants</a></td>
-                                <td><span class="status-badge accepted"><span class="dot"></span>Open</span></td>
-                                <td class="cell-muted">Closes 5 Dec</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting closed (demo)">Close</button></div></td>
-                            </tr>
-
-                            <tr data-status="open" data-search="marketing intern internship remote">
-                                <td><div class="person-cell"><div class="avatar-sm">MK</div><div><h4>Marketing Intern</h4><span>Internship &middot; 3 months</span></div></div></td>
-                                <td>Remote</td>
-                                <td><a href="company-applicants.html" class="panel-link">18 applicants</a></td>
-                                <td><span class="status-badge accepted"><span class="dot"></span>Open</span></td>
-                                <td class="cell-muted">Closes 12 Dec</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting closed (demo)">Close</button></div></td>
-                            </tr>
-
-                            <tr data-status="open" data-search="siwes: software engineering siwes lagos">
-                                <td><div class="person-cell"><div class="avatar-sm">SE</div><div><h4>SIWES: Software Engineering</h4><span>SIWES &middot; 6 months</span></div></div></td>
-                                <td>Lagos</td>
-                                <td><a href="company-applicants.html" class="panel-link">27 applicants</a></td>
-                                <td><span class="status-badge accepted"><span class="dot"></span>Open</span></td>
-                                <td class="cell-muted">Closes 20 Dec</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting closed (demo)">Close</button></div></td>
-                            </tr>
-
-                            <tr data-status="open" data-search="data analyst intern internship abuja">
-                                <td><div class="person-cell"><div class="avatar-sm">DA</div><div><h4>Data Analyst Intern</h4><span>Internship &middot; 3 months</span></div></div></td>
-                                <td>Abuja</td>
-                                <td><a href="company-applicants.html" class="panel-link">14 applicants</a></td>
-                                <td><span class="status-badge accepted"><span class="dot"></span>Open</span></td>
-                                <td class="cell-muted">Closes 15 Jan</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting closed (demo)">Close</button></div></td>
-                            </tr>
-
-                            <tr data-status="draft" data-search="siwes: customer support siwes lagos">
-                                <td><div class="person-cell"><div class="avatar-sm">CS</div><div><h4>SIWES: Customer Support</h4><span>SIWES &middot; 6 months</span></div></div></td>
-                                <td>Lagos</td>
-                                <td><a href="company-applicants.html" class="panel-link">9 applicants</a></td>
-                                <td><span class="status-badge applied"><span class="dot"></span>Draft</span></td>
-                                <td class="cell-muted">Not published</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting published (demo)">Publish</button></div></td>
-                            </tr>
-
-                            <tr data-status="closed" data-search="product design intern internship remote">
-                                <td><div class="person-cell"><div class="avatar-sm">PD</div><div><h4>Product Design Intern</h4><span>Internship &middot; 3 months</span></div></div></td>
-                                <td>Remote</td>
-                                <td><a href="company-applicants.html" class="panel-link">41 applicants</a></td>
-                                <td><span class="status-badge rejected"><span class="dot"></span>Closed</span></td>
-                                <td class="cell-muted">Closed 30 Oct</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting reopened (demo)">Reopen</button></div></td>
-                            </tr>
-
-                            <tr data-status="closed" data-search="siwes: finance operations siwes lagos">
-                                <td><div class="person-cell"><div class="avatar-sm">FO</div><div><h4>SIWES: Finance Operations</h4><span>SIWES &middot; 6 months</span></div></div></td>
-                                <td>Lagos</td>
-                                <td><a href="company-applicants.html" class="panel-link">16 applicants</a></td>
-                                <td><span class="status-badge rejected"><span class="dot"></span>Closed</span></td>
-                                <td class="cell-muted">Closed 14 Oct</td>
-                                <td><div class="row-actions"><a href="post-opportunity.html" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-toast="Posting reopened (demo)">Reopen</button></div></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-empty" id="placement-empty">No postings match your search.</div>
-                <div class="table-footer"><span id="placement-count" data-noun="posting">Showing 8 postings</span><span>Sample data shown for preview</span></div>
-            </div>
-
-        </main>
+<section class="stats-row">
+  <div class="stat-card"><div class="stat-icon success"><i class="fa-solid fa-briefcase"></i></div><div><div class="stat-value" id="s-open">0</div><div class="stat-label">Open postings</div></div></div>
+  <div class="stat-card"><div class="stat-icon info"><i class="fa-solid fa-users"></i></div><div><div class="stat-value" id="s-apps">0</div><div class="stat-label">Total applicants</div></div></div>
+  <div class="stat-card"><div class="stat-icon warning"><i class="fa-solid fa-file-pen"></i></div><div><div class="stat-value" id="s-draft">0</div><div class="stat-label">Drafts</div></div></div>
+  <div class="stat-card"><div class="stat-icon purple"><i class="fa-solid fa-box-archive"></i></div><div><div class="stat-value" id="s-closed">0</div><div class="stat-label">Closed</div></div></div>
+</section>
+<div class="page-toolbar">
+  <div class="search-field"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="placement-search" placeholder="Search postings"></div>
+  <div class="chip-group" id="placement-filters">
+    <button type="button" class="chip is-active" data-filter="all">All</button>
+    <button type="button" class="chip" data-filter="open">Open</button>
+    <button type="button" class="chip" data-filter="draft">Drafts</button>
+    <button type="button" class="chip" data-filter="closed">Closed</button>
+  </div>
+  <a href="post-opportunity.html" class="btn btn-primary spacer"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity</a>
+</div>
+<div class="panel">
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Opportunity</th><th>Location</th><th>Applicants</th><th>Status</th><th>Deadline</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="table-empty" id="empty"></div>
+  <div class="table-footer"><span id="count"></span><span></span></div>
+</div>
+</main>
 
 
     </div>
@@ -307,8 +189,71 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
 <script src="applicant-dashboard.js"></script>
-<script src="institution-dashboard.js"></script>
+<script src="dash.js"></script>
+<script>
+
+(function () {
+  var D = window.placewickDash, esc = D.esc, sb = D.sb, data, status = "all", q = "";
+  function counts() {
+    var c = {};
+    data.apps.forEach(function (a) { c[a.opportunity_id] = (c[a.opportunity_id] || 0) + 1; });
+    return c;
+  }
+  function render() {
+    var c = counts();
+    var by = function (s) { return data.opps.filter(function (o) { return o.status === s; }).length; };
+    document.getElementById("s-open").textContent = by("open");
+    document.getElementById("s-draft").textContent = by("draft");
+    document.getElementById("s-closed").textContent = by("closed");
+    document.getElementById("s-apps").textContent = data.apps.length;
+    var list = data.opps.filter(function (o) {
+      var hay = (o.title + " " + (o.location || "") + " " + o.type).toLowerCase();
+      return (status === "all" || o.status === status) && (!q || hay.indexOf(q) !== -1);
+    });
+    document.getElementById("rows").innerHTML = list.map(function (o) {
+      var n = c[o.id] || 0;
+      var act = o.status === "open" ? ["closed", "Close"] : o.status === "closed" ? ["open", "Reopen"] : ["open", "Publish"];
+      var meta = [D.typeLabel(o.type), o.duration].filter(Boolean).join(" &middot; ");
+      var loc = [o.location, D.modeLabel(o.work_mode)].filter(Boolean).join(" &middot; ") || "&ndash;";
+      return '<tr><td><div class="person-cell"><div class="avatar-sm">' + esc(D.initials(o.title)) + '</div><div><h4>' + esc(o.title) + '</h4><span>' + meta + '</span></div></div></td>' +
+        '<td>' + loc + '</td><td><a href="company-applicants.html" class="panel-link">' + n + ' applicant' + (n === 1 ? "" : "s") + '</a></td>' +
+        '<td>' + D.oppBadge(o.status) + '</td><td class="cell-muted">' + (o.deadline ? D.date(o.deadline) : "No deadline") + '</td>' +
+        '<td><div class="row-actions"><a href="post-opportunity.html?id=' + o.id + '" class="btn btn-outline btn-sm">Edit</a><button type="button" class="btn btn-outline btn-sm" data-id="' + o.id + '" data-set="' + act[0] + '">' + act[1] + '</button></div></td></tr>';
+    }).join("");
+    var empty = document.getElementById("empty");
+    empty.textContent = data.opps.length ? "No postings match your search." : "You have not posted anything yet. Click \"Post an Opportunity\" to start.";
+    empty.classList.toggle("is-visible", !list.length);
+    document.getElementById("count").textContent = "Showing " + list.length + " posting" + (list.length === 1 ? "" : "s");
+  }
+  D.init().then(function () { return D.loadAll(); }).then(function (d) { data = d; render(); }).catch(function () { D.fail(); });
+  document.getElementById("placement-search").addEventListener("input", function (e) { q = e.target.value.trim().toLowerCase(); if (data) { render(); } });
+  document.getElementById("placement-filters").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) { return; }
+    status = b.dataset.filter;
+    document.querySelectorAll("#placement-filters .chip").forEach(function (x) { x.classList.toggle("is-active", x === b); });
+    if (data) { render(); }
+  });
+  document.getElementById("rows").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-set]"); if (!b) { return; }
+    var id = b.dataset.id, to = b.dataset.set;
+    b.disabled = true;
+    sb.from("opportunities").update({ status: to }).eq("id", id).then(function (r) {
+      b.disabled = false;
+      if (r.error) {
+        D.toast(to === "open" && D.company.status !== "verified" ? "Your company must be verified before you can publish." : "Could not update this posting.");
+        return;
+      }
+      data.opps.forEach(function (o) { if (o.id === id) { o.status = to; } });
+      D.loadAll().then(function (d) { data = d; render(); });
+      D.toast(to === "open" ? "Posting is now open" : "Posting closed");
+    });
+  });
+})();
+</script>
 
 </body>
 

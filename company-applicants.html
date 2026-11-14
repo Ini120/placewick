@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Applicants | Placewick</title>
+
+    <meta
+        name="description"
+        content="Your Placewick company dashboard — manage postings, applicants and verification."
+    >
+
+    <!-- Google Font: Manrope -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="institution-dashboard.css"
+    >
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+
+    <!-- Mobile overlay -->
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="index.html" class="sidebar-logo">
+            <img src="images/placewick-LOGO.png" alt="Placewick">
+        </a>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+<a href="company-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="post-opportunity.html" class="sidebar-link"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity </a>
+<a href="company-postings.html" class="sidebar-link"><i class="fa-solid fa-briefcase"></i> My Postings <span class="badge" data-badge="open" hidden></span></a>
+<a href="company-applicants.html" class="sidebar-link active"><i class="fa-solid fa-users"></i> Applicants <span class="badge" data-badge="new" hidden></span></a>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-building"></i> Company Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar"></div>
+
+                <div class="sidebar-user-info">
+                    <h4>Your company</h4>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <a href="login.html" class="sidebar-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <div class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Applicants</h1>
+<p>Review students who have applied to your opportunities.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                
+
+                
+
+                <a href="company-profile.html" class="header-avatar"></a>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+
+        <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
+
+<div class="page-toolbar">
+  <div class="search-field"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="search" placeholder="Search by name, school or role"></div>
+  <div class="chip-group" id="filters">
+    <button type="button" class="chip is-active" data-filter="all">All</button>
+    <button type="button" class="chip" data-filter="applied">New</button>
+    <button type="button" class="chip" data-filter="reviewing">Reviewing</button>
+    <button type="button" class="chip" data-filter="interview">Interview</button>
+    <button type="button" class="chip" data-filter="accepted">Accepted</button>
+    <button type="button" class="chip" data-filter="rejected">Not selected</button>
+  </div>
+</div>
+<div class="panel">
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Applicant</th><th>Opportunity</th><th>Applied</th><th>Status</th><th>Update</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="table-empty" id="empty"></div>
+  <div class="table-footer"><span id="count"></span><span>Accepting an applicant starts their placement</span></div>
+</div>
+</main>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script src="applicant-dashboard.js"></script>
+<script src="dash.js"></script>
+<script>
+
+(function () {
+  var D = window.placewickDash, esc = D.esc, sb = D.sb, data, status = "all", q = "";
+  var OPTIONS = [["applied", "New"], ["reviewing", "Reviewing"], ["interview", "Interview"], ["accepted", "Accepted"], ["rejected", "Not selected"]];
+  function render() {
+    var list = data.apps.filter(function (a) {
+      var hay = (D.studentName(data, a.student_id) + " " + D.studentSchool(data, a.student_id) + " " + D.oppTitle(data, a.opportunity_id)).toLowerCase();
+      return (status === "all" || a.status === status) && (!q || hay.indexOf(q) !== -1);
+    });
+    document.getElementById("rows").innerHTML = list.map(function (a) {
+      var n = D.studentName(data, a.student_id), s = data.students[a.student_id] || {};
+      var sub = [s.course, D.studentSchool(data, a.student_id)].filter(Boolean).join(" \u00b7 ");
+      var ctl = a.status === "withdrawn" ? '<span class="cell-muted">Withdrawn by student</span>' :
+        '<select class="status-select" data-id="' + a.id + '">' + OPTIONS.map(function (o) {
+          return '<option value="' + o[0] + '"' + (o[0] === a.status ? " selected" : "") + '>' + o[1] + '</option>';
+        }).join("") + '</select>';
+      return '<tr><td><div class="person-cell"><div class="avatar-sm">' + esc(D.initials(n)) + '</div><div><h4>' + esc(n) + '</h4><span>' + esc(sub) + '</span></div></div></td>' +
+        '<td>' + esc(D.oppTitle(data, a.opportunity_id)) + '</td><td class="cell-muted">' + D.ago(a.created_at) + '</td><td>' + D.badge(a.status) + '</td><td>' + ctl + '</td></tr>';
+    }).join("");
+    var empty = document.getElementById("empty");
+    empty.textContent = data.apps.length ? "No applicants match your search." : "No applicants yet. They will appear here when students apply to your opportunities.";
+    empty.classList.toggle("is-visible", !list.length);
+    document.getElementById("count").textContent = "Showing " + list.length + " applicant" + (list.length === 1 ? "" : "s");
+  }
+  function reload() { return D.loadAll().then(function (d) { data = d; render(); }); }
+  D.init().then(reload).catch(function () { D.fail(); });
+  document.getElementById("search").addEventListener("input", function (e) { q = e.target.value.trim().toLowerCase(); if (data) { render(); } });
+  document.getElementById("filters").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) { return; }
+    status = b.dataset.filter;
+    document.querySelectorAll("#filters .chip").forEach(function (x) { x.classList.toggle("is-active", x === b); });
+    if (data) { render(); }
+  });
+  function startPlacement(app) {
+    var s = data.students[app.student_id] || {};
+    return sb.from("placements").insert({
+      application_id: app.id, student_id: app.student_id, company_id: D.company.id, institution_id: s.institution_id || null
+    }).then(function (r) {
+      if (r.error && r.error.code !== "23505") { D.toast("Accepted, but the placement could not be created."); }
+    });
+  }
+  document.getElementById("rows").addEventListener("change", function (e) {
+    var sel = e.target.closest(".status-select"); if (!sel) { return; }
+    var app = data.apps.filter(function (a) { return a.id === sel.dataset.id; })[0];
+    var to = sel.value;
+    if (to === "accepted" && !window.confirm("Accept this applicant? This starts their placement with your company.")) { sel.value = app.status; return; }
+    sel.disabled = true;
+    sb.from("applications").update({ status: to }).eq("id", app.id).then(function (r) {
+      if (r.error) { sel.disabled = false; sel.value = app.status; D.toast("Could not update this applicant."); return; }
+      app.status = to;
+      var next = to === "accepted" ? startPlacement(app) : Promise.resolve();
+      next.then(function () { D.toast("Status updated"); return reload(); });
+    });
+  });
+})();
+</script>
+
+</body>
+
+</html>

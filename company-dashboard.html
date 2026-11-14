@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Company Dashboard | Placewick</title>
+    <title>Dashboard | Placewick</title>
 
     <meta
         name="description"
@@ -43,13 +43,14 @@
 
     <link
         rel="stylesheet"
-        href="company-dashboard.css"
+        href="institution-dashboard.css"
     >
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
 </head>
 
 
@@ -77,59 +78,26 @@
         </button>
 
         <nav class="sidebar-nav">
-
-            <a href="company-dashboard.html" class="sidebar-link active">
-                <i class="fa-solid fa-grid-2"></i>
-                Dashboard
-            </a>
-
-            <a href="post-opportunity.html" class="sidebar-link">
-                <i class="fa-solid fa-circle-plus"></i>
-                Post an Opportunity
-            </a>
-
-            <a href="company-postings.html" class="sidebar-link">
-                <i class="fa-solid fa-briefcase"></i>
-                My Postings
-                <span class="badge">5</span>
-            </a>
-
-            <a href="company-applicants.html" class="sidebar-link">
-                <i class="fa-solid fa-users"></i>
-                Applicants
-                <span class="badge">14</span>
-            </a>
-
-            <a href="company-messages.html" class="sidebar-link">
-                <i class="fa-regular fa-comments"></i>
-                Messages
-                <span class="badge">4</span>
-            </a>
-
-            <span class="sidebar-section-label">Account</span>
-
-            <a href="company-profile.html" class="sidebar-link">
-                <i class="fa-regular fa-building"></i>
-                Company Profile
-            </a>
-
-            <a href="company-settings.html" class="sidebar-link">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
+<a href="company-dashboard.html" class="sidebar-link active"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="post-opportunity.html" class="sidebar-link"><i class="fa-solid fa-circle-plus"></i> Post an Opportunity </a>
+<a href="company-postings.html" class="sidebar-link"><i class="fa-solid fa-briefcase"></i> My Postings <span class="badge" data-badge="open" hidden></span></a>
+<a href="company-applicants.html" class="sidebar-link"><i class="fa-solid fa-users"></i> Applicants <span class="badge" data-badge="new" hidden></span></a>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-building"></i> Company Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
 
 
         <div class="sidebar-footer">
 
             <div class="sidebar-user">
 
-                <div class="sidebar-avatar">FW</div>
+                <div class="sidebar-avatar"></div>
 
                 <div class="sidebar-user-info">
-                    <h4>Flutterwave</h4>
-                    <span>Fintech &middot; Lagos</span>
+                    <h4>Your company</h4>
+                    <span></span>
                 </div>
 
             </div>
@@ -161,24 +129,18 @@
 
                 <div>
                     <h1>Dashboard</h1>
-                    <p>Welcome back, here's an overview of your hiring activity.</p>
+<p>Welcome back, here's an overview of your hiring activity.</p>
                 </div>
 
             </div>
 
             <div class="dashboard-header-right">
 
-                <div class="header-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search applicants">
-                </div>
+                
 
-                <button type="button" class="icon-button" aria-label="Notifications">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="dot"></span>
-                </button>
+                
 
-                <a href="company-profile.html" class="header-avatar">FW</a>
+                <a href="company-profile.html" class="header-avatar"></a>
 
             </div>
 
@@ -188,257 +150,42 @@
         <!-- Content -->
 
         <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
 
+<section class="welcome-banner">
+  <div>
+    <h2 id="welcome-title">Welcome</h2>
+    <p id="welcome-text">Loading your hiring activity...</p>
+    <span class="verification-pill" id="verify-pill"><i class="fa-solid fa-hourglass-half"></i> <span>Checking status</span></span>
+  </div>
+  <a href="post-opportunity.html" class="browse-button">Post an Opportunity <i class="fa-solid fa-arrow-right"></i></a>
+</section>
 
-            <!-- Welcome Banner -->
+<section class="stats-row">
+  <div class="stat-card"><div class="stat-icon info"><i class="fa-solid fa-briefcase"></i></div><div><div class="stat-value" id="s-open">0</div><div class="stat-label">Open Postings</div></div></div>
+  <div class="stat-card"><div class="stat-icon purple"><i class="fa-solid fa-users"></i></div><div><div class="stat-value" id="s-total">0</div><div class="stat-label">Total Applicants</div></div></div>
+  <div class="stat-card"><div class="stat-icon warning"><i class="fa-solid fa-hourglass-half"></i></div><div><div class="stat-value" id="s-new">0</div><div class="stat-label">Awaiting Review</div></div></div>
+  <div class="stat-card"><div class="stat-icon success"><i class="fa-solid fa-circle-check"></i></div><div><div class="stat-value" id="s-accepted">0</div><div class="stat-label">Accepted</div></div></div>
+</section>
 
-            <section class="welcome-banner">
-
-                <div>
-                    <h2>Let's find your next hire, Flutterwave</h2>
-                    <p>
-                        You have 5 active postings and 14 new
-                        applicants waiting for review.
-                    </p>
-                    <span class="verification-pill">
-                        <i class="fa-solid fa-hourglass-half"></i>
-                        Verification in review
-                    </span>
-                </div>
-
-                <a href="post-opportunity.html" class="browse-button">
-                    Post an Opportunity
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </section>
-
-
-            <!-- Stats -->
-
-            <section class="stats-row">
-
-                <div class="stat-card">
-                    <div class="stat-icon info">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-                    <div>
-                        <div class="stat-value">5</div>
-                        <div class="stat-label">Active Postings</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon purple">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <div>
-                        <div class="stat-value">128</div>
-                        <div class="stat-label">Total Applicants</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon warning">
-                        <i class="fa-solid fa-hourglass-half"></i>
-                    </div>
-                    <div>
-                        <div class="stat-value">14</div>
-                        <div class="stat-label">Pending Reviews</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon success">
-                        <i class="fa-solid fa-eye"></i>
-                    </div>
-                    <div>
-                        <div class="stat-value">89</div>
-                        <div class="stat-label">Profile Views</div>
-                        <div class="stat-trend">
-                            <i class="fa-solid fa-arrow-trend-up"></i>
-                            8% this week
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!-- Content Grid -->
-
-            <section class="content-grid">
-
-
-                <!-- Recent Applicants -->
-
-                <div class="panel">
-
-                    <div class="panel-header">
-                        <h3>Recent Applicants</h3>
-                        <a href="company-applicants.html" class="panel-link">View all</a>
-                    </div>
-
-                    <div class="panel-body">
-
-                        <div class="application-row">
-                            <div class="application-logo">CN</div>
-                            <div class="application-details">
-                                <h4>Chidinma Nwosu</h4>
-                                <span>Frontend Developer Intern &middot; UNILAG</span>
-                            </div>
-                            <span class="status-badge interview">
-                                <span class="dot"></span>
-                                Interview
-                            </span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">TA</div>
-                            <div class="application-details">
-                                <h4>Tunde Adebayo</h4>
-                                <span>SIWES: Business Analyst &middot; OAU</span>
-                            </div>
-                            <span class="status-badge reviewing">
-                                <span class="dot"></span>
-                                Reviewing
-                            </span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">BE</div>
-                            <div class="application-details">
-                                <h4>Blessing Etim</h4>
-                                <span>Marketing Intern &middot; UNIBEN</span>
-                            </div>
-                            <span class="status-badge applied">
-                                <span class="dot"></span>
-                                Applied
-                            </span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">DO</div>
-                            <div class="application-details">
-                                <h4>David Okonkwo</h4>
-                                <span>Data Analyst Intern &middot; Covenant University</span>
-                            </div>
-                            <span class="status-badge accepted">
-                                <span class="dot"></span>
-                                Hired
-                            </span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">AM</div>
-                            <div class="application-details">
-                                <h4>Amaka Musa</h4>
-                                <span>Operations Intern &middot; ABU Zaria</span>
-                            </div>
-                            <span class="status-badge rejected">
-                                <span class="dot"></span>
-                                Not Selected
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Side Panels -->
-
-                <div class="side-panels">
-
-
-                    <!-- Verification Status -->
-
-                    <div class="panel profile-completion">
-
-                        <div class="profile-completion-head">
-                            <h3>Verification Status</h3>
-                            <span class="profile-completion-percent">60%</span>
-                        </div>
-
-                        <div class="progress-track">
-                            <div class="progress-fill" style="width: 60%;"></div>
-                        </div>
-
-                        <div class="profile-completion-list">
-
-                            <div class="profile-completion-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                Company profile
-                            </div>
-
-                            <div class="profile-completion-item">
-                                <i class="fa-solid fa-circle-check"></i>
-                                Official email confirmed
-                            </div>
-
-                            <div class="profile-completion-item pending">
-                                <i class="fa-regular fa-circle"></i>
-                                CAC / RC number
-                                <a href="company-profile.html">Add</a>
-                            </div>
-
-                            <div class="profile-completion-item pending">
-                                <i class="fa-regular fa-circle"></i>
-                                Admin review
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Active Postings -->
-
-                    <div class="panel">
-
-                        <div class="panel-header">
-                            <h3>Active Postings</h3>
-                            <a href="company-postings.html" class="panel-link">View all</a>
-                        </div>
-
-                        <div class="panel-body">
-
-                            <div class="saved-item">
-                                <div class="saved-logo">FD</div>
-                                <div class="saved-details">
-                                    <h4>Frontend Developer Intern</h4>
-                                    <span>32 applicants</span>
-                                </div>
-                            </div>
-
-                            <div class="saved-item">
-                                <div class="saved-logo">BA</div>
-                                <div class="saved-details">
-                                    <h4>SIWES: Business Analyst</h4>
-                                    <span>21 applicants</span>
-                                </div>
-                            </div>
-
-                            <div class="saved-item">
-                                <div class="saved-logo">MK</div>
-                                <div class="saved-details">
-                                    <h4>Marketing Intern</h4>
-                                    <span>18 applicants</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-            </section>
-
-
-        </main>
+<section class="content-grid">
+  <div class="panel">
+    <div class="panel-header"><h3>Recent Applicants</h3><a href="company-applicants.html" class="panel-link">View all</a></div>
+    <div class="panel-body" id="recent-applicants"></div>
+  </div>
+  <div class="side-panels">
+    <div class="panel profile-completion">
+      <div class="profile-completion-head"><h3>Verification Status</h3><span class="profile-completion-percent" id="v-percent">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="v-fill" style="width:0%"></div></div>
+      <div class="profile-completion-list" id="v-list"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-header"><h3>Open Postings</h3><a href="company-postings.html" class="panel-link">View all</a></div>
+      <div class="panel-body" id="open-postings"></div>
+    </div>
+  </div>
+</section>
+</main>
 
 
     </div>
@@ -447,7 +194,68 @@
 </div>
 
 
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
 <script src="applicant-dashboard.js"></script>
+<script src="dash.js"></script>
+<script>
+
+(function () {
+  var D = window.placewickDash, esc = D.esc;
+  function empty(icon, h, p, a) {
+    return '<div class="empty-state"><i class="fa-regular ' + icon + '"></i><h4>' + h + '</h4><p>' + p + '</p>' + (a || '') + '</div>';
+  }
+  D.init().then(function (c) {
+    return D.loadAll().then(function (d) {
+      var open = d.opps.filter(function (o) { return o.status === "open"; });
+      var fresh = d.apps.filter(function (a) { return a.status === "applied"; });
+      var acc = d.apps.filter(function (a) { return a.status === "accepted"; });
+      document.getElementById("welcome-title").textContent = "Let's find your next hire, " + c.name;
+      document.getElementById("welcome-text").textContent = open.length
+        ? "You have " + open.length + " open posting" + (open.length === 1 ? "" : "s") + " and " + fresh.length + " applicant" + (fresh.length === 1 ? "" : "s") + " waiting for review."
+        : "Post your first opportunity to start receiving applications from students.";
+      var pill = document.getElementById("verify-pill");
+      var map = { verified: ["fa-circle-check", "Verified"], pending: ["fa-hourglass-half", "Verification in review"], rejected: ["fa-circle-exclamation", "Verification declined"] };
+      var m = map[c.status] || map.pending;
+      pill.innerHTML = '<i class="fa-solid ' + m[0] + '"></i> ' + m[1];
+      document.getElementById("s-open").textContent = open.length;
+      document.getElementById("s-total").textContent = d.apps.length;
+      document.getElementById("s-new").textContent = fresh.length;
+      document.getElementById("s-accepted").textContent = acc.length;
+
+      var rec = d.apps.slice(0, 5);
+      document.getElementById("recent-applicants").innerHTML = rec.length ? rec.map(function (a) {
+        var n = D.studentName(d, a.student_id), sch = D.studentSchool(d, a.student_id);
+        return '<div class="application-row"><div class="application-logo">' + esc(D.initials(n)) + '</div><div class="application-details"><h4>' + esc(n) + '</h4><span>' + esc(D.oppTitle(d, a.opportunity_id)) + (sch ? " &middot; " + esc(sch) : "") + '</span></div>' + D.badge(a.status) + '</div>';
+      }).join("") : empty("fa-user", "No applicants yet", "Students who apply to your opportunities will appear here.");
+
+      var items = [
+        ["Company profile", true],
+        ["Official email added", !!c.official_email],
+        ["CAC / RC number added", !!c.rc_number],
+        ["Admin review", c.status === "verified"]
+      ];
+      var done = items.filter(function (x) { return x[1]; }).length;
+      var pct = Math.round(done / items.length * 100);
+      document.getElementById("v-percent").textContent = pct + "%";
+      document.getElementById("v-fill").style.width = pct + "%";
+      document.getElementById("v-list").innerHTML = items.map(function (x) {
+        return '<div class="profile-completion-item' + (x[1] ? "" : " pending") + '"><i class="' + (x[1] ? "fa-solid fa-circle-check" : "fa-regular fa-circle") + '"></i> ' + x[0] + '</div>';
+      }).join("");
+
+      var counts = {};
+      d.apps.forEach(function (a) { counts[a.opportunity_id] = (counts[a.opportunity_id] || 0) + 1; });
+      document.getElementById("open-postings").innerHTML = open.length ? open.slice(0, 3).map(function (o) {
+        var n = counts[o.id] || 0;
+        return '<div class="saved-item"><div class="saved-logo">' + esc(D.initials(o.title)) + '</div><div class="saved-details"><h4>' + esc(o.title) + '</h4><span>' + n + ' applicant' + (n === 1 ? "" : "s") + '</span></div></div>';
+      }).join("") : empty("fa-folder-open", "No open postings", "Post an opportunity to get started.", '<a href="post-opportunity.html" class="btn btn-primary btn-sm">Post an Opportunity</a>');
+    });
+  }).catch(function () { D.fail(); });
+})();
+</script>
 
 </body>
 
