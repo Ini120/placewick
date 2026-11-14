@@ -22,6 +22,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
+    <link rel="stylesheet" href="student-extra.css">
 </head>
 
 
@@ -42,54 +44,23 @@
         </button>
 
         <nav class="sidebar-nav">
-
-            <a href="institution-dashboard.html" class="sidebar-link active">
-                <i class="fa-solid fa-grid-2"></i>
-                Dashboard
-            </a>
-
-            <a href="institution-placements.html" class="sidebar-link">
-                <i class="fa-solid fa-user-check"></i>
-                Placements
-            </a>
-
-            <a href="institution-logbooks.html" class="sidebar-link">
-                <i class="fa-solid fa-book-open"></i>
-                Logbooks &amp; Forms
-                <span class="badge">23</span>
-            </a>
-
-            <a href="institution-supervisors.html" class="sidebar-link">
-                <i class="fa-solid fa-person-walking-luggage"></i>
-                Supervisors
-            </a>
-
-            <a href="institution-reports.html" class="sidebar-link">
-                <i class="fa-solid fa-chart-column"></i>
-                Reports
-            </a>
-
-            <span class="sidebar-section-label">Account</span>
-
-            <a href="institution-dashboard.html#profile" class="sidebar-link">
-                <i class="fa-solid fa-building-columns"></i>
-                Institution Profile
-            </a>
-
-            <a href="institution-dashboard.html#settings" class="sidebar-link">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
+<a href="institution-dashboard.html" class="sidebar-link active"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="institution-placements.html" class="sidebar-link"><i class="fa-solid fa-user-check"></i> Placements </a>
+<a href="institution-logbooks.html" class="sidebar-link"><i class="fa-solid fa-book-open"></i> Logbooks <span class="badge" data-badge="review" hidden></span></a>
+<a href="institution-supervisors.html" class="sidebar-link"><i class="fa-solid fa-person-walking-luggage"></i> Supervisors </a>
+<a href="institution-reports.html" class="sidebar-link"><i class="fa-solid fa-chart-column"></i> Reports </a>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-building-columns"></i> Institution Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
 
         <div class="sidebar-footer">
 
             <div class="sidebar-user">
-                <div class="sidebar-avatar">WU</div>
+                <div class="sidebar-avatar"></div>
                 <div class="sidebar-user-info">
-                    <h4>Westbrook University</h4>
-                    <span>SIWES Unit &middot; Demo</span>
+                    <h4>Your institution</h4>
+                    <span></span>
                 </div>
             </div>
 
@@ -114,199 +85,54 @@
 
                 <div>
                     <h1>Dashboard</h1>
-                    <p>Track SIWES placements, logbooks and supervision in one place.</p>
+<p>Track SIWES placements, logbooks and supervision in one place.</p>
                 </div>
 
             </div>
 
             <div class="dashboard-header-right">
 
-                <button type="button" class="icon-button" aria-label="Notifications">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="dot"></span>
-                </button>
+                
 
-                <a href="institution-dashboard.html" class="header-avatar">WU</a>
+                <a href="institution-dashboard.html" class="header-avatar"></a>
 
             </div>
 
         </header>
 
         <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
+<div class="verify-note" id="verify-note" hidden></div>
 
-            <section class="welcome-banner">
-                <div>
-                    <h2>SIWES overview, Westbrook University</h2>
-                    <p>2025/2026 session &middot; 214 students registered for SIWES. 23 logbook items and 9 Form 8s need your attention.</p>
-                </div>
-                <a href="institution-reports.html" class="browse-button">
-                    Generate report
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </section>
-
-            <section class="stats-row">
-
-                <div class="stat-card">
-                    <div class="stat-icon info"><i class="fa-solid fa-user-graduate"></i></div>
-                    <div>
-                        <div class="stat-value">214</div>
-                        <div class="stat-label">Registered Students</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon success"><i class="fa-solid fa-circle-check"></i></div>
-                    <div>
-                        <div class="stat-value">131</div>
-                        <div class="stat-label">Placed</div>
-                        <div class="stat-trend"><i class="fa-solid fa-arrow-trend-up"></i> 61% of cohort</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon warning"><i class="fa-solid fa-hourglass-half"></i></div>
-                    <div>
-                        <div class="stat-value">46</div>
-                        <div class="stat-label">Applied / Interviewing</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon purple"><i class="fa-solid fa-book-open"></i></div>
-                    <div>
-                        <div class="stat-value">23</div>
-                        <div class="stat-label">Logbooks to Review</div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="content-grid">
-
-                <div class="panel">
-                    <div class="panel-header">
-                        <h3>Placement Pipeline</h3>
-                        <a href="institution-placements.html" class="panel-link">View all</a>
-                    </div>
-                    <div class="pipeline">
-                        <div>
-                            <div class="pipeline-head"><strong>Placed</strong><span>131 students &middot; 61%</span></div>
-                            <div class="pipeline-track"><div class="pipeline-fill success" style="width:61%"></div></div>
-                        </div>
-                        <div>
-                            <div class="pipeline-head"><strong>Interviewing</strong><span>22 students &middot; 10%</span></div>
-                            <div class="pipeline-track"><div class="pipeline-fill purple" style="width:10%"></div></div>
-                        </div>
-                        <div>
-                            <div class="pipeline-head"><strong>Applied</strong><span>24 students &middot; 11%</span></div>
-                            <div class="pipeline-track"><div class="pipeline-fill" style="width:11%"></div></div>
-                        </div>
-                        <div>
-                            <div class="pipeline-head"><strong>Not started</strong><span>37 students &middot; 18%</span></div>
-                            <div class="pipeline-track"><div class="pipeline-fill muted" style="width:18%"></div></div>
-                        </div>
-                    </div>
-                    <div class="panel-header" style="border-top:1px solid var(--border)">
-                        <h3>Recent Student Activity</h3>
-                    </div>
-                    <div class="panel-body">
-
-                        <div class="application-row">
-                            <div class="application-logo">CN</div>
-                            <div class="application-details">
-                                <h4>Chidinma Nwosu</h4>
-                                <span>Computer Science &middot; Paystack</span>
-                            </div>
-                            <span class="status-badge interview"><span class="dot"></span>Interview</span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">TA</div>
-                            <div class="application-details">
-                                <h4>Tunde Adebayo</h4>
-                                <span>Electrical Engineering &middot; Dangote Refinery</span>
-                            </div>
-                            <span class="status-badge placed"><span class="dot"></span>Placed</span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">AB</div>
-                            <div class="application-details">
-                                <h4>Amina Bello</h4>
-                                <span>Mechanical Engineering &middot; Julius Berger</span>
-                            </div>
-                            <span class="status-badge placed"><span class="dot"></span>Placed</span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">EO</div>
-                            <div class="application-details">
-                                <h4>Emeka Okafor</h4>
-                                <span>Accounting &middot; Access Bank</span>
-                            </div>
-                            <span class="status-badge applied"><span class="dot"></span>Applied</span>
-                        </div>
-
-                        <div class="application-row">
-                            <div class="application-logo">FA</div>
-                            <div class="application-details">
-                                <h4>Folake Adeyemi</h4>
-                                <span>Computer Science &middot; Flutterwave</span>
-                            </div>
-                            <span class="status-badge placed"><span class="dot"></span>Placed</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div>
-
-                    <div class="panel" style="margin-bottom:20px">
-                        <div class="panel-header">
-                            <h3>Needs Attention</h3>
-                        </div>
-                        <div class="panel-body">
-                            <a href="institution-logbooks.html" class="attention-item">
-                                <div class="attention-icon info"><i class="fa-solid fa-book-open"></i></div>
-                                <div class="attention-text"><h4>23 weekly logbooks to review</h4><span>Submitted in the last 7 days</span></div>
-                                <i class="fa-solid fa-chevron-right arrow"></i>
-                            </a>
-                            <a href="institution-logbooks.html" class="attention-item">
-                                <div class="attention-icon warning"><i class="fa-solid fa-file-signature"></i></div>
-                                <div class="attention-text"><h4>9 Form 8s awaiting a supervisor</h4><span>Workplace signature missing</span></div>
-                                <i class="fa-solid fa-chevron-right arrow"></i>
-                            </a>
-                            <a href="institution-supervisors.html" class="attention-item">
-                                <div class="attention-icon danger"><i class="fa-solid fa-user-xmark"></i></div>
-                                <div class="attention-text"><h4>18 placed students unassigned</h4><span>No academic supervisor yet</span></div>
-                                <i class="fa-solid fa-chevron-right arrow"></i>
-                            </a>
-                            <a href="institution-placements.html" class="attention-item">
-                                <div class="attention-icon purple"><i class="fa-solid fa-user-clock"></i></div>
-                                <div class="attention-text"><h4>37 students haven't applied</h4><span>Registration closes in 2 weeks</span></div>
-                                <i class="fa-solid fa-chevron-right arrow"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="panel">
-                        <div class="panel-header">
-                            <h3>Upcoming Visits</h3>
-                            <a href="institution-supervisors.html" class="panel-link">View all</a>
-                        </div>
-                        <div class="panel-body">
-                            <div class="visit-row"><div class="visit-date"><strong>18</strong><span>Nov</span></div><div class="visit-details"><h4>Dangote Refinery, Lekki</h4><span>Dr. Okonkwo &middot; 4 students</span></div></div>
-                            <div class="visit-row"><div class="visit-date"><strong>20</strong><span>Nov</span></div><div class="visit-details"><h4>Julius Berger, Abuja</h4><span>Engr. Yakubu &middot; 3 students</span></div></div>
-                            <div class="visit-row"><div class="visit-date"><strong>25</strong><span>Nov</span></div><div class="visit-details"><h4>Flutterwave, Yaba</h4><span>Dr. Adeleke &middot; 6 students</span></div></div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </main>
+<section class="welcome-banner">
+  <div><h2 id="welcome-title">SIWES overview</h2><p id="welcome-text">Loading...</p></div>
+  <a href="institution-reports.html" class="browse-button">Generate report <i class="fa-solid fa-arrow-right"></i></a>
+</section>
+<section class="stats-row">
+  <div class="stat-card"><div class="stat-icon info"><i class="fa-solid fa-user-graduate"></i></div><div><div class="stat-value" id="s-students">0</div><div class="stat-label">Registered Students</div></div></div>
+  <div class="stat-card"><div class="stat-icon success"><i class="fa-solid fa-circle-check"></i></div><div><div class="stat-value" id="s-placed">0</div><div class="stat-label">Placed</div><div class="stat-trend" id="s-placed-pct"></div></div></div>
+  <div class="stat-card"><div class="stat-icon warning"><i class="fa-solid fa-hourglass-half"></i></div><div><div class="stat-value" id="s-applied">0</div><div class="stat-label">Applied / Interviewing</div></div></div>
+  <div class="stat-card"><div class="stat-icon purple"><i class="fa-solid fa-book-open"></i></div><div><div class="stat-value" id="s-review">0</div><div class="stat-label">Logbooks to Review</div></div></div>
+</section>
+<section class="content-grid">
+  <div class="panel">
+    <div class="panel-header"><h3>Placement Pipeline</h3><a href="institution-placements.html" class="panel-link">View all</a></div>
+    <div class="pipeline" id="pipeline"></div>
+    <div class="panel-header" style="border-top:1px solid var(--border)"><h3>Recent Student Activity</h3></div>
+    <div class="panel-body" id="recent"></div>
+  </div>
+  <div>
+    <div class="panel" style="margin-bottom:20px">
+      <div class="panel-header"><h3>Needs Attention</h3></div>
+      <div class="panel-body" id="attention"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-header"><h3>Recent Visits</h3><a href="institution-supervisors.html" class="panel-link">View all</a></div>
+      <div class="panel-body" id="visits"></div>
+    </div>
+  </div>
+</section>
+</main>
 
     </div>
 
@@ -314,8 +140,56 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
 <script src="applicant-dashboard.js"></script>
-<script src="institution-dashboard.js"></script>
+<script src="institution.js"></script>
+<script>
+(function () {
+  var I = window.placewickInst, esc = I.esc;
+  function g(id) { return document.getElementById(id); }
+  function set(id, v) { var e = g(id); if (e) { e.textContent = v; } }
+  function badges(d) {
+    document.querySelectorAll('[data-badge="review"]').forEach(function (e) { e.textContent = d.toReview.length; e.hidden = !d.toReview.length; });
+  }
+  function boot(render) {
+    I.init().then(function () { return I.load(); }).then(function (d) { badges(d); render(d); }).catch(function (e) { console.error(e); I.fail(); });
+  }
+
+  boot(function (d) {
+    var n = d.students.length, c = d.count;
+    set("welcome-title", "SIWES overview, " + I.inst.name);
+    set("welcome-text", n ? n + (n === 1 ? " student is" : " students are") + " registered with your institution. " + d.toReview.length + " logbook " + (d.toReview.length === 1 ? "entry needs" : "entries need") + " your review."
+        : "No students have linked to your institution yet. They choose their school in their Placewick profile.");
+    set("s-students", n); set("s-placed", c.placed); set("s-applied", c.applied + c.interview); set("s-review", d.toReview.length);
+    set("s-placed-pct", n ? I.pct(c.placed, n) + "% of students" : "");
+    var rows = [["Placed", c.placed, "success"], ["Interviewing", c.interview, "purple"], ["Applied", c.applied, ""], ["Not started", c.none, "muted"]];
+    g("pipeline").innerHTML = rows.map(function (r) {
+      var p = I.pct(r[1], n);
+      return '<div><div class="pipeline-head"><strong>' + r[0] + '</strong><span>' + r[1] + (r[1] === 1 ? ' student' : ' students') + ' &middot; ' + p + '%</span></div><div class="pipeline-track"><div class="pipeline-fill ' + r[2] + '" style="width:' + p + '%"></div></div></div>';
+    }).join("");
+    var recent = d.apps.slice(0, 6);
+    g("recent").innerHTML = !n ? I.noStudents() : !recent.length ? I.empty("fa-paper-plane", "No applications yet", "Applications from your students will show here.") :
+      recent.map(function (a) {
+        var o = d.opps[a.opportunity_id], co = o && d.companies[o.company_id];
+        return '<div class="application-row"><div class="application-logo">' + esc(I.initials(I.name(d, a.student_id))) + '</div><div class="application-details"><h4>' + esc(I.name(d, a.student_id)) + '</h4><span>' + esc([I.dept(d, a.student_id), co && co.name].filter(Boolean).join(" · ")) + '</span></div>' + I.appBadge(a.status) + '</div>';
+      }).join("");
+    var att = [];
+    if (d.toReview.length) { att.push(["institution-logbooks.html", "info", "fa-book-open", d.toReview.length + " logbook " + (d.toReview.length === 1 ? "entry" : "entries") + " to review", "Submitted by students"]); }
+    if (d.unassigned.length) { att.push(["institution-supervisors.html", "danger", "fa-user-xmark", d.unassigned.length + (d.unassigned.length === 1 ? " placement has" : " placements have") + " no supervisor", "Assign an academic supervisor"]); }
+    if (c.none) { att.push(["institution-placements.html", "purple", "fa-user-clock", c.none + (c.none === 1 ? " student hasn't" : " students haven't") + " applied", "Not started yet"]); }
+    g("attention").innerHTML = att.length ? att.map(function (a) {
+      return '<a href="' + a[0] + '" class="attention-item"><div class="attention-icon ' + a[1] + '"><i class="fa-solid ' + a[2] + '"></i></div><div class="attention-text"><h4>' + a[3] + '</h4><span>' + a[4] + '</span></div><i class="fa-solid fa-chevron-right arrow"></i></a>';
+    }).join("") : I.empty("fa-circle-check", "All clear", "Nothing needs your attention right now.");
+    var v = d.visits.slice(0, 3);
+    g("visits").innerHTML = v.length ? v.map(function (x) {
+      var dt = new Date(x.visit_date), p = d.placementMap[x.placement_id], s = d.supMap[x.supervisor_id];
+      return '<div class="visit-row"><div class="visit-date"><strong>' + dt.getDate() + '</strong><span>' + dt.toLocaleDateString("en-GB", { month: "short" }) + '</span></div><div class="visit-details"><h4>' + esc(I.company(d, p) || "Placement") + '</h4><span>' + esc((s && s.name) || "Supervisor") + ' &middot; ' + esc(I.name(d, p && p.student_id)) + '</span></div></div>';
+    }).join("") : I.empty("fa-calendar-check", "No visits logged", "Log supervisor visits from the Supervisors page.");
+  });
+})();
+</script>
 
 </body>
 

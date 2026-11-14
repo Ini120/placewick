@@ -22,6 +22,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="dash-extra.css">
+    <link rel="stylesheet" href="student-extra.css">
 </head>
 
 
@@ -42,54 +44,23 @@
         </button>
 
         <nav class="sidebar-nav">
-
-            <a href="institution-dashboard.html" class="sidebar-link">
-                <i class="fa-solid fa-grid-2"></i>
-                Dashboard
-            </a>
-
-            <a href="institution-placements.html" class="sidebar-link">
-                <i class="fa-solid fa-user-check"></i>
-                Placements
-            </a>
-
-            <a href="institution-logbooks.html" class="sidebar-link">
-                <i class="fa-solid fa-book-open"></i>
-                Logbooks &amp; Forms
-                <span class="badge">23</span>
-            </a>
-
-            <a href="institution-supervisors.html" class="sidebar-link active">
-                <i class="fa-solid fa-person-walking-luggage"></i>
-                Supervisors
-            </a>
-
-            <a href="institution-reports.html" class="sidebar-link">
-                <i class="fa-solid fa-chart-column"></i>
-                Reports
-            </a>
-
-            <span class="sidebar-section-label">Account</span>
-
-            <a href="institution-dashboard.html#profile" class="sidebar-link">
-                <i class="fa-solid fa-building-columns"></i>
-                Institution Profile
-            </a>
-
-            <a href="institution-dashboard.html#settings" class="sidebar-link">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
+<a href="institution-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="institution-placements.html" class="sidebar-link"><i class="fa-solid fa-user-check"></i> Placements </a>
+<a href="institution-logbooks.html" class="sidebar-link"><i class="fa-solid fa-book-open"></i> Logbooks <span class="badge" data-badge="review" hidden></span></a>
+<a href="institution-supervisors.html" class="sidebar-link active"><i class="fa-solid fa-person-walking-luggage"></i> Supervisors </a>
+<a href="institution-reports.html" class="sidebar-link"><i class="fa-solid fa-chart-column"></i> Reports </a>
+<span class="sidebar-section-label">Account</span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-building-columns"></i> Institution Profile <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
 
         <div class="sidebar-footer">
 
             <div class="sidebar-user">
-                <div class="sidebar-avatar">WU</div>
+                <div class="sidebar-avatar"></div>
                 <div class="sidebar-user-info">
-                    <h4>Westbrook University</h4>
-                    <span>SIWES Unit &middot; Demo</span>
+                    <h4>Your institution</h4>
+                    <span></span>
                 </div>
             </div>
 
@@ -114,178 +85,55 @@
 
                 <div>
                     <h1>Supervisors</h1>
-                    <p>Assign academic supervisors and track visitation reports.</p>
+<p>Add academic supervisors, assign them and log visits.</p>
                 </div>
 
             </div>
 
             <div class="dashboard-header-right">
 
-                <button type="button" class="icon-button" aria-label="Notifications">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="dot"></span>
-                </button>
+                
 
-                <a href="institution-dashboard.html" class="header-avatar">WU</a>
+                <a href="institution-dashboard.html" class="header-avatar"></a>
 
             </div>
 
         </header>
 
         <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
+<div class="verify-note" id="verify-note" hidden></div>
 
-            <section class="stats-row">
-
-                <div class="stat-card">
-                    <div class="stat-icon info"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <div>
-                        <div class="stat-value">24</div>
-                        <div class="stat-label">Academic Supervisors</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon warning"><i class="fa-solid fa-user-xmark"></i></div>
-                    <div>
-                        <div class="stat-value">18</div>
-                        <div class="stat-label">Unassigned Students</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon success"><i class="fa-solid fa-calendar-check"></i></div>
-                    <div>
-                        <div class="stat-value">27</div>
-                        <div class="stat-label">Visits Completed</div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon purple"><i class="fa-solid fa-file-circle-exclamation"></i></div>
-                    <div>
-                        <div class="stat-value">4</div>
-                        <div class="stat-label">Reports Overdue</div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="content-grid">
-
-                <div class="panel">
-                    <div class="panel-header"><h3>Assign Supervisors</h3><span class="cell-muted">Matched by company location</span></div>
-                    <div class="panel-body">
-                    <div class="assign-row">
-                        <div class="avatar-sm">TA</div>
-                        <div class="assign-details"><h4>Tunde Adebayo</h4><span>Dangote Refinery &middot; Lekki, Lagos</span><span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: Dr. Okonkwo (Lagos)</span></div>
-                        <div class="assign-controls">
-                            <select class="select-field select-sm" aria-label="Supervisor for Tunde Adebayo"><option value="">Choose supervisor</option><option>Dr. Okonkwo (Lagos)</option><option>Dr. Adeleke (Lagos)</option><option>Engr. Yakubu (Abuja)</option><option>Dr. Bamidele (Ibadan)</option><option>Mrs. Ekpo (Ogun)</option></select>
-                            <button type="button" class="btn btn-primary btn-sm" data-assign>Assign</button>
-                        </div>
-                        <span class="assigned-tag"><i class="fa-solid fa-circle-check"></i> <span class="assigned-name"></span></span>
-                    </div>
-
-                    <div class="assign-row">
-                        <div class="avatar-sm">FA</div>
-                        <div class="assign-details"><h4>Folake Adeyemi</h4><span>Flutterwave &middot; Yaba, Lagos</span><span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: Dr. Adeleke (Lagos)</span></div>
-                        <div class="assign-controls">
-                            <select class="select-field select-sm" aria-label="Supervisor for Folake Adeyemi"><option value="">Choose supervisor</option><option>Dr. Okonkwo (Lagos)</option><option>Dr. Adeleke (Lagos)</option><option>Engr. Yakubu (Abuja)</option><option>Dr. Bamidele (Ibadan)</option><option>Mrs. Ekpo (Ogun)</option></select>
-                            <button type="button" class="btn btn-primary btn-sm" data-assign>Assign</button>
-                        </div>
-                        <span class="assigned-tag"><i class="fa-solid fa-circle-check"></i> <span class="assigned-name"></span></span>
-                    </div>
-
-                    <div class="assign-row">
-                        <div class="avatar-sm">AB</div>
-                        <div class="assign-details"><h4>Amina Bello</h4><span>Julius Berger &middot; Abuja</span><span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: Engr. Yakubu (Abuja)</span></div>
-                        <div class="assign-controls">
-                            <select class="select-field select-sm" aria-label="Supervisor for Amina Bello"><option value="">Choose supervisor</option><option>Dr. Okonkwo (Lagos)</option><option>Dr. Adeleke (Lagos)</option><option>Engr. Yakubu (Abuja)</option><option>Dr. Bamidele (Ibadan)</option><option>Mrs. Ekpo (Ogun)</option></select>
-                            <button type="button" class="btn btn-primary btn-sm" data-assign>Assign</button>
-                        </div>
-                        <span class="assigned-tag"><i class="fa-solid fa-circle-check"></i> <span class="assigned-name"></span></span>
-                    </div>
-
-                    <div class="assign-row">
-                        <div class="avatar-sm">SO</div>
-                        <div class="assign-details"><h4>Segun Ogunleye</h4><span>Gilead Architects &middot; Ibadan</span><span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: Dr. Bamidele (Ibadan)</span></div>
-                        <div class="assign-controls">
-                            <select class="select-field select-sm" aria-label="Supervisor for Segun Ogunleye"><option value="">Choose supervisor</option><option>Dr. Okonkwo (Lagos)</option><option>Dr. Adeleke (Lagos)</option><option>Engr. Yakubu (Abuja)</option><option>Dr. Bamidele (Ibadan)</option><option>Mrs. Ekpo (Ogun)</option></select>
-                            <button type="button" class="btn btn-primary btn-sm" data-assign>Assign</button>
-                        </div>
-                        <span class="assigned-tag"><i class="fa-solid fa-circle-check"></i> <span class="assigned-name"></span></span>
-                    </div>
-
-                    <div class="assign-row">
-                        <div class="avatar-sm">KB</div>
-                        <div class="assign-details"><h4>Kemi Balogun</h4><span>Nestle Nigeria &middot; Agbara, Ogun</span><span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: Mrs. Ekpo (Ogun)</span></div>
-                        <div class="assign-controls">
-                            <select class="select-field select-sm" aria-label="Supervisor for Kemi Balogun"><option value="">Choose supervisor</option><option>Dr. Okonkwo (Lagos)</option><option>Dr. Adeleke (Lagos)</option><option>Engr. Yakubu (Abuja)</option><option>Dr. Bamidele (Ibadan)</option><option>Mrs. Ekpo (Ogun)</option></select>
-                            <button type="button" class="btn btn-primary btn-sm" data-assign>Assign</button>
-                        </div>
-                        <span class="assigned-tag"><i class="fa-solid fa-circle-check"></i> <span class="assigned-name"></span></span>
-                    </div>
-</div>
-                    <div class="panel-note"><button type="button" class="btn btn-outline btn-sm" id="auto-assign"><i class="fa-solid fa-wand-magic-sparkles"></i> Auto-assign all by location</button></div>
-                </div>
-
-                <div class="panel">
-                    <div class="panel-header"><h3>Supervisor Workload</h3></div>
-                    <div class="panel-body">
-                        <div class="supervisor-row">
-                            <div class="avatar-sm purple">DO</div>
-                            <div class="supervisor-details"><h4>Dr. Okonkwo</h4><span>Lagos Island &amp; Lekki</span></div>
-                            <div class="supervisor-load"><strong>18</strong> <span>/ 20 students</span><div class="mini-track"><div class="mini-fill" style="width:90%"></div></div></div>
-                        </div>
-
-                        <div class="supervisor-row">
-                            <div class="avatar-sm purple">DA</div>
-                            <div class="supervisor-details"><h4>Dr. Adeleke</h4><span>Yaba &amp; Ikeja</span></div>
-                            <div class="supervisor-load"><strong>16</strong> <span>/ 20 students</span><div class="mini-track"><div class="mini-fill" style="width:80%"></div></div></div>
-                        </div>
-
-                        <div class="supervisor-row">
-                            <div class="avatar-sm purple">EY</div>
-                            <div class="supervisor-details"><h4>Engr. Yakubu</h4><span>Abuja</span></div>
-                            <div class="supervisor-load"><strong>12</strong> <span>/ 15 students</span><div class="mini-track"><div class="mini-fill" style="width:80%"></div></div></div>
-                        </div>
-
-                        <div class="supervisor-row">
-                            <div class="avatar-sm purple">DB</div>
-                            <div class="supervisor-details"><h4>Dr. Bamidele</h4><span>Ibadan &amp; Oyo</span></div>
-                            <div class="supervisor-load"><strong>9</strong> <span>/ 15 students</span><div class="mini-track"><div class="mini-fill" style="width:60%"></div></div></div>
-                        </div>
-
-                        <div class="supervisor-row">
-                            <div class="avatar-sm purple">ME</div>
-                            <div class="supervisor-details"><h4>Mrs. Ekpo</h4><span>Ogun</span></div>
-                            <div class="supervisor-load"><strong>7</strong> <span>/ 15 students</span><div class="mini-track"><div class="mini-fill" style="width:47%"></div></div></div>
-                        </div>
-</div>
-                </div>
-
-            </section>
-
-            <div class="panel" style="margin-top:20px">
-                <div class="panel-header"><h3>Visitation Reports</h3></div>
-                <div class="table-wrap">
-                    <table class="data-table" style="min-width:640px">
-                        <thead><tr><th>Student</th><th>Supervisor</th><th>Company</th><th>Visit</th><th>Status</th></tr></thead>
-                        <tbody>
-                            <tr><td><div class="person-cell"><div class="avatar-sm">CN</div><div><h4>Chidinma Nwosu</h4></div></div></td><td>Dr. Okonkwo</td><td>Paystack, Lagos</td><td class="cell-muted">12 Oct</td><td><span class="status-badge placed"><span class="dot"></span>Completed</span></td></tr>
-
-                            <tr><td><div class="person-cell"><div class="avatar-sm">TA</div><div><h4>Tunde Adebayo</h4></div></div></td><td>Dr. Okonkwo</td><td>Dangote Refinery, Lagos</td><td class="cell-muted">18 Nov</td><td><span class="status-badge interview"><span class="dot"></span>Scheduled</span></td></tr>
-
-                            <tr><td><div class="person-cell"><div class="avatar-sm">AB</div><div><h4>Amina Bello</h4></div></div></td><td>Engr. Yakubu</td><td>Julius Berger, Abuja</td><td class="cell-muted">20 Nov</td><td><span class="status-badge interview"><span class="dot"></span>Scheduled</span></td></tr>
-
-                            <tr><td><div class="person-cell"><div class="avatar-sm">IM</div><div><h4>Ibrahim Musa</h4></div></div></td><td>Engr. Yakubu</td><td>Setraco, Abuja</td><td class="cell-muted">5 Oct</td><td><span class="status-badge rejected"><span class="dot"></span>Report overdue</span></td></tr>
-
-                            <tr><td><div class="person-cell"><div class="avatar-sm">FA</div><div><h4>Folake Adeyemi</h4></div></div></td><td>Dr. Adeleke</td><td>Flutterwave, Lagos</td><td class="cell-muted">25 Nov</td><td><span class="status-badge interview"><span class="dot"></span>Scheduled</span></td></tr>
-</tbody>
-                    </table>
-                </div>
-            </div>
-
-        </main>
+<section class="stats-row">
+  <div class="stat-card"><div class="stat-icon info"><i class="fa-solid fa-chalkboard-user"></i></div><div><div class="stat-value" id="s-sups">0</div><div class="stat-label">Academic Supervisors</div></div></div>
+  <div class="stat-card"><div class="stat-icon warning"><i class="fa-solid fa-user-xmark"></i></div><div><div class="stat-value" id="s-unassigned">0</div><div class="stat-label">Unassigned Students</div></div></div>
+  <div class="stat-card"><div class="stat-icon success"><i class="fa-solid fa-calendar-check"></i></div><div><div class="stat-value" id="s-visits">0</div><div class="stat-label">Visits Logged</div></div></div>
+  <div class="stat-card"><div class="stat-icon purple"><i class="fa-solid fa-user-check"></i></div><div><div class="stat-value" id="s-active">0</div><div class="stat-label">Active Placements</div></div></div>
+</section>
+<section class="content-grid">
+  <div class="panel">
+    <div class="panel-header"><h3>Assign Supervisors</h3><span class="cell-muted">Suggested by company location</span></div>
+    <div class="panel-body" id="assign"></div>
+  </div>
+  <div>
+    <div class="panel" style="margin-bottom:20px">
+      <div class="panel-header"><h3>Add a Supervisor</h3></div>
+      <form id="sup-form" class="form-row" style="grid-template-columns:1fr">
+        <input type="text" id="sf-name" placeholder="Full name (e.g. Dr. A. Okonkwo)" required>
+        <input type="text" id="sf-dept" placeholder="Department">
+        <input type="text" id="sf-loc" placeholder="Area they can visit (e.g. Lagos)">
+        <input type="email" id="sf-email" placeholder="Email">
+        <input type="tel" id="sf-phone" placeholder="Phone">
+        <button type="submit" class="btn btn-primary" id="sf-btn"><i class="fa-solid fa-plus"></i> Add supervisor</button>
+      </form>
+    </div>
+    <div class="panel">
+      <div class="panel-header"><h3>Your Supervisors</h3></div>
+      <div class="panel-body" id="sup-list"></div>
+    </div>
+  </div>
+</section>
+</main>
 
     </div>
 
@@ -293,8 +141,96 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
 <script src="applicant-dashboard.js"></script>
-<script src="institution-dashboard.js"></script>
+<script src="institution.js"></script>
+<script>
+(function () {
+  var I = window.placewickInst, esc = I.esc;
+  function g(id) { return document.getElementById(id); }
+  function set(id, v) { var e = g(id); if (e) { e.textContent = v; } }
+  function badges(d) {
+    document.querySelectorAll('[data-badge="review"]').forEach(function (e) { e.textContent = d.toReview.length; e.hidden = !d.toReview.length; });
+  }
+  function boot(render) {
+    I.init().then(function () { return I.load(); }).then(function (d) { badges(d); render(d); }).catch(function (e) { console.error(e); I.fail(); });
+  }
+
+  var D;
+  function suggest(d, p) {
+    var loc = (I.companyLoc(d, p) || "").toLowerCase();
+    if (!loc) { return null; }
+    return d.sups.filter(function (s) { var l = (s.location || "").toLowerCase(); return l && (loc.indexOf(l) !== -1 || l.indexOf(loc) !== -1); })[0] || null;
+  }
+  function draw() {
+    var d = D;
+    set("s-sups", d.sups.length); set("s-unassigned", d.unassigned.length); set("s-visits", d.visits.length); set("s-active", d.activePlacements.length);
+    var list = d.activePlacements.slice().sort(function (a, b) { return (a.academic_supervisor_id ? 1 : 0) - (b.academic_supervisor_id ? 1 : 0); });
+    g("assign").innerHTML = !list.length ? I.empty("fa-user-check", "No active placements", "Once a company accepts one of your students, they will appear here so you can assign a supervisor.") :
+      list.map(function (p) {
+        var nm = I.name(d, p.student_id), sug = !p.academic_supervisor_id && suggest(d, p);
+        var opts = '<option value="">Choose supervisor</option>' + d.sups.map(function (s) { return '<option value="' + esc(s.id) + '"' + (s.id === p.academic_supervisor_id ? " selected" : "") + '>' + esc(s.name) + (s.location ? " (" + esc(s.location) + ")" : "") + '</option>'; }).join("");
+        var cur = d.supMap[p.academic_supervisor_id];
+        return '<div class="assign-row" data-pid="' + p.id + '"><div class="avatar-sm">' + esc(I.initials(nm)) + '</div><div class="assign-details"><h4>' + esc(nm) + '</h4><span>' + esc([I.company(d, p), I.companyLoc(d, p)].filter(Boolean).join(" · ")) + '</span>' +
+          (cur ? '<span class="hint"><i class="fa-solid fa-circle-check"></i> Supervisor: ' + esc(cur.name) + '</span>' : sug ? '<span class="hint"><i class="fa-solid fa-location-dot"></i> Suggested: ' + esc(sug.name) + '</span>' : '') + '</div>' +
+          '<div class="assign-controls"><select class="select-field select-sm" aria-label="Supervisor for ' + esc(nm) + '">' + opts + '</select><button type="button" class="btn btn-primary btn-sm" data-assign>' + (cur ? 'Update' : 'Assign') + '</button>' +
+          (cur ? '<button type="button" class="btn btn-outline btn-sm" data-visit>Log visit</button>' : '') + '</div></div>';
+      }).join("");
+    g("sup-list").innerHTML = d.sups.length ? d.sups.map(function (s) {
+      var n = d.placements.filter(function (p) { return p.academic_supervisor_id === s.id; }).length;
+      return '<div class="application-row"><div class="application-logo">' + esc(I.initials(s.name)) + '</div><div class="application-details"><h4>' + esc(s.name) + '</h4><span>' + esc([s.department, s.location, n + (n === 1 ? " student" : " students")].filter(Boolean).join(" · ")) + '</span></div><button type="button" class="btn btn-outline btn-sm" data-del="' + s.id + '" aria-label="Remove ' + esc(s.name) + '"><i class="fa-solid fa-trash"></i></button></div>';
+    }).join("") : I.empty("fa-chalkboard-user", "No supervisors yet", "Add your academic supervisors using the form.");
+  }
+  function reload() { return I.load().then(function (d) { D = d; draw(); }); }
+  boot(function (d) {
+    D = d; draw();
+    g("sup-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btn = g("sf-btn"); btn.disabled = true;
+      function v(id) { return g(id).value.trim() || null; }
+      I.sb.from("institution_supervisors").insert({ institution_id: I.inst.id, name: v("sf-name"), department: v("sf-dept"), location: v("sf-loc"), email: v("sf-email"), phone: v("sf-phone") }).then(function (r) {
+        btn.disabled = false;
+        if (r.error) { I.toast("Could not add supervisor"); return; }
+        g("sup-form").reset(); I.toast("Supervisor added"); reload();
+      });
+    });
+    g("sup-list").addEventListener("click", function (e) {
+      var b = e.target.closest("[data-del]"); if (!b) { return; }
+      if (!confirm("Remove this supervisor? Students assigned to them will become unassigned.")) { return; }
+      I.sb.from("institution_supervisors").delete().eq("id", b.dataset.del).then(function (r) {
+        if (r.error) { I.toast("Could not remove supervisor"); return; }
+        I.toast("Supervisor removed"); reload();
+      });
+    });
+    g("assign").addEventListener("click", function (e) {
+      var row = e.target.closest(".assign-row"); if (!row) { return; }
+      var pid = row.dataset.pid;
+      if (e.target.closest("[data-assign]")) {
+        var sid = row.querySelector("select").value;
+        if (!sid) { I.toast("Choose a supervisor first"); return; }
+        I.sb.rpc("assign_supervisor", { pid: pid, sid: sid }).then(function (r) {
+          if (r.error) { I.toast("Could not assign supervisor"); return; }
+          I.toast("Supervisor assigned"); reload();
+        });
+      } else if (e.target.closest("[data-visit]")) {
+        var p = D.placementMap[pid];
+        I.modal('<div class="modal-head"><div><h2>Log a visit</h2><p>' + esc(I.name(D, p.student_id)) + ' &middot; ' + esc(I.company(D, p)) + '</p></div></div><label for="vd">Visit date</label><input type="date" id="vd"><label for="vn">Notes (optional)</label><textarea id="vn" placeholder="What was observed or discussed"></textarea><div class="modal-actions"><button type="button" class="btn btn-primary" id="vs">Save visit</button></div>', function (ov, close) {
+          g("vd").value = new Date().toISOString().slice(0, 10);
+          g("vs").onclick = function () {
+            if (!g("vd").value) { return; }
+            I.sb.rpc("log_supervisor_visit", { pid: pid, vdate: g("vd").value, vnotes: g("vn").value.trim() || null }).then(function (r) {
+              if (r.error) { I.toast("Could not log visit"); return; }
+              close(); I.toast("Visit logged"); reload();
+            });
+          };
+        });
+      }
+    });
+  });
+})();
+</script>
 
 </body>
 

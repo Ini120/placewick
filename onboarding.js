@@ -46,8 +46,10 @@
             ]);
         },
         "graduate-education.html": function (sb, uid) {
+            var isOther = val("institution") === "other";
             return sb.from("students").update({
-                institution_name_other: label("institution"),
+                institution_id: isOther ? null : (val("institution") || null),
+                institution_name_other: isOther ? (val("institution-other") || "Other / not listed") : label("institution"),
                 degree: label("degree"),
                 course: val("course"),
                 class_of_degree: label("class-of-degree"),
@@ -91,6 +93,31 @@
     if (!save) { return; }
     if (!A || !A.client) { return; }
     var sb = A.client;
+
+    // Education step: the school list comes from verified institutions on Placewick.
+    function loadSchools() {
+        var sel = document.getElementById("institution");
+        if (!sel) { return; }
+        var other = document.createElement("input");
+        other.type = "text"; other.id = "institution-other"; other.placeholder = "Type your institution's name";
+        other.style.cssText = "display:none;margin-top:10px;width:100%";
+        other.className = sel.className;
+        sel.parentNode.appendChild(other);
+        sel.addEventListener("change", function () {
+            var on = sel.value === "other";
+            other.style.display = on ? "block" : "none";
+            other.required = on;
+        });
+        sb.from("institutions").select("id,name").eq("status", "verified").order("name").then(function (r) {
+            var rows = (r && r.data) || [];
+            sel.innerHTML = "";
+            function opt(v, t, extra) { var o = document.createElement("option"); o.value = v; o.textContent = t; if (extra) { o.disabled = true; o.selected = true; } sel.appendChild(o); }
+            opt("", "Select your institution", true);
+            rows.forEach(function (i) { opt(i.id, i.name); });
+            opt("other", "Other / not listed");
+        });
+    }
+    loadSchools();
 
     function go(link, opts) {
         var form = document.querySelector("form");

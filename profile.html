@@ -141,7 +141,7 @@
   </div>
   <div class="panel profile-panel"><h3 class="profile-panel-title">Education</h3>
     <div class="profile-field-grid">
-      <label class="profile-field"><span>School</span><input type="text" name="school" id="f-school" value=""></label>
+      <label class="profile-field"><span>School</span><select name="school-select" id="f-school-select"><option value="">Select your school</option><option value="other">Other / not listed</option></select><input type="text" name="school" id="f-school" value="" placeholder="Type your school's name" hidden style="margin-top:8px"></label>
       <label class="profile-field"><span>Matric number</span><input type="text" name="matric" id="f-matric" value=""></label>
       <label class="profile-field"><span>Department</span><input type="text" name="department" id="f-department" value=""></label>
       <label class="profile-field"><span>Course of study</span><input type="text" name="course" id="f-course" value=""></label>
@@ -184,23 +184,43 @@
   var S = window.placewickStudent, sb = S.sb, esc = S.esc, skills = [];
   function g(id) { return document.getElementById(id); }
   function pct() {
-    var items = [!!g("f-fullName").value.trim(), !!(g("f-course").value.trim() && g("f-school").value.trim()), skills.length > 0, !!g("f-location").value.trim(), !!g("f-bio").value.trim()];
+    var items = [!!g("f-fullName").value.trim(), !!(g("f-course").value.trim() && !!schoolValues().institution_name_other), skills.length > 0, !!g("f-location").value.trim(), !!g("f-bio").value.trim()];
     return Math.round(items.filter(Boolean).length / items.length * 100);
   }
   function banner() {
     var n = g("f-fullName").value.trim() || S.profile.email;
     g("pb-avatar").textContent = S.initials(n);
     g("pb-name").textContent = n;
-    g("pb-sub").textContent = [g("f-course").value.trim(), g("f-school").value.trim(), g("f-level").value].filter(Boolean).join(" \u00b7 ") || "Complete your profile to stand out";
+    g("pb-sub").textContent = [g("f-course").value.trim(), schoolValues().institution_name_other, g("f-level").value].filter(Boolean).join(" \u00b7 ") || "Complete your profile to stand out";
     var p = pct(); g("pb-fill").style.width = p + "%"; g("pb-pct").textContent = "Profile " + p + "% complete";
   }
   function tags() {
     g("profile-skills").innerHTML = skills.map(function (s, i) { return '<span class="profile-skill-tag">' + esc(s) + ' <button type="button" aria-label="Remove skill" data-i="' + i + '">&times;</button></span>'; }).join("");
   }
+  var schools = [];
+  function schoolToggle() { var o = g("f-school-select").value === "other"; g("f-school").hidden = !o; }
+  function schoolInit(st) {
+    sb.from("institutions").select("id,name").eq("status", "verified").order("name").then(function (r) {
+      schools = (r && r.data) || [];
+      var sel = g("f-school-select");
+      sel.innerHTML = '<option value="">Select your school</option>' + schools.map(function (i) { return '<option value="' + esc(i.id) + '">' + esc(i.name) + '</option>'; }).join("") + '<option value="other">Other / not listed</option>';
+      if (st.institution_id) { sel.value = st.institution_id; }
+      else if (st.institution_name_other) { sel.value = "other"; g("f-school").value = st.institution_name_other; }
+      schoolToggle(); banner();
+    });
+  }
+  g("f-school-select").addEventListener("change", function () { schoolToggle(); banner(); });
+  function schoolValues() {
+    var v = g("f-school-select").value;
+    if (!v) { return { institution_id: null, institution_name_other: null }; }
+    if (v === "other") { return { institution_id: null, institution_name_other: g("f-school").value.trim() || null }; }
+    var m = schools.filter(function (i) { return i.id === v; })[0];
+    return { institution_id: v, institution_name_other: m ? m.name : null };
+  }
   S.init().then(function (st) {
     S.badges();
     g("f-fullName").value = S.profile.full_name || ""; g("f-email").value = S.profile.email || ""; g("f-phone").value = S.profile.phone || "";
-    g("f-location").value = st.location_pref || ""; g("f-school").value = st.institution_name_other || ""; g("f-matric").value = st.matric_no || "";
+    g("f-location").value = st.location_pref || ""; schoolInit(st); g("f-matric").value = st.matric_no || "";
     g("f-department").value = st.department || ""; g("f-course").value = st.course || ""; g("f-level").value = st.level || "";
     g("f-graduation").value = st.graduation_year || ""; g("f-bio").value = st.bio || ""; g("f-linkedin").value = st.linkedin || ""; g("f-portfolio").value = st.portfolio || "";
     skills = (st.skills || []).slice(); tags(); banner();
@@ -222,7 +242,7 @@
     Promise.all([
       sb.from("profiles").update({ full_name: v("f-fullName"), phone: v("f-phone") }).eq("id", uid),
       sb.from("students").update({
-        location_pref: v("f-location"), institution_name_other: v("f-school"), matric_no: v("f-matric"), department: v("f-department"),
+        location_pref: v("f-location"), institution_id: schoolValues().institution_id, institution_name_other: schoolValues().institution_name_other, matric_no: v("f-matric"), department: v("f-department"),
         course: v("f-course"), level: v("f-level"), graduation_year: v("f-graduation"), bio: v("f-bio"), skills: skills,
         linkedin: v("f-linkedin"), portfolio: v("f-portfolio")
       }).eq("id", uid)

@@ -21,3 +21,11 @@
 .status-select { font: inherit; font-size: 13px; font-weight: 600; padding: 7px 10px; border: 1px solid var(--border, #e5e7eb); border-radius: 8px; background: #fff; color: var(--text, #101a43); cursor: pointer; }
 .cell-sub { display: block; font-size: 12px; color: var(--text-light, #667085); margin-top: 2px; }
 @media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 18px; } }
+.verify-note { margin: 0 0 16px; padding: 12px 14px; border-radius: 10px; background: #fffaeb; color: #93370d; border: 1px solid #fedf89; font-size: 14px; line-height: 1.5; }
+.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; padding: 16px 20px; }
+.form-row input, .modal-card input, .modal-card textarea { width: 100%; padding: 10px 12px; border: 1px solid #d0d5dd; border-radius: 10px; font: inherit; font-size: 14px; box-sizing: border-box; }
+.modal-card textarea { min-height: 90px; resize: vertical; }
+.modal-card label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 6px; color: #344054; }
+.log-content { white-space: pre-wrap; background: #f6f8ff; border-radius: 12px; padding: 14px 16px; font-size: 14px; line-height: 1.6; max-height: 40vh; overflow-y: auto; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+.row-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
