@@ -46,6 +46,7 @@
         href="create-account.css"
     >
 
+    <link rel="stylesheet" href="auth.css">
 </head>
 
 
@@ -94,7 +95,7 @@
 
         <!-- Form -->
 
-        <form class="signup-form">
+        <form class="signup-form" data-role="student" data-next="login.html?registered=1">
 
 
             <!-- Email -->
@@ -208,9 +209,9 @@
 
                     <span>
                         I agree to the
-                        <a href="#">Terms of Service</a>
+                        <a href="terms.html">Terms of Service</a>
                         and
-                        <a href="#">Privacy Policy</a>
+                        <a href="privacy.html">Privacy Policy</a>
                     </span>
 
                 </label>
@@ -222,8 +223,9 @@
             <!-- Create Account -->
 
             <a
-                href="account-completed.html"
+                href="#"
                 class="create-button"
+                data-signup
             >
 
                 Create account
@@ -253,6 +255,7 @@
             <button
                 type="button"
                 class="google-button"
+                data-google
             >
 
                 <span class="google-icon">G</span>
@@ -283,6 +286,22 @@
 
 </main>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script>
+    document.querySelectorAll('.password-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+            var input = toggle.previousElementSibling, icon = toggle.querySelector('i');
+            if (!input) return;
+            var hidden = input.type === 'password';
+            input.type = hidden ? 'text' : 'password';
+            toggle.setAttribute('aria-label', hidden ? 'Hide password' : 'Show password');
+            if (icon) { icon.classList.toggle('fa-eye', !hidden); icon.classList.toggle('fa-eye-slash', hidden); }
+        });
+    });
+</script>
 
 </body>
 

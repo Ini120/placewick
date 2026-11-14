@@ -1,0 +1,9 @@
+/* Messages shown by auth.js on sign-up and login forms */
+.form-message { display: none; margin: 0 0 16px; padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.form-message.is-error { background: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+.form-message.is-success { background: #ecfdf3; color: #067647; border: 1px solid #abefc6; }
+.form-message.is-info { background: #eef1ff; color: #3155f5; border: 1px solid #c9d3fb; }
+.form-message a { color: inherit; text-decoration: underline; cursor: pointer; }
+.forgot-row { text-align: right; margin: -6px 0 18px; }
+.forgot-row a { font-size: 14px; font-weight: 700; color: #3155f5; text-decoration: none; }
+.forgot-row a:hover { text-decoration: underline; }

@@ -54,6 +54,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="auth.css">
 </head>
 
 
@@ -102,7 +103,7 @@
 
         <!-- Form -->
 
-        <form class="signup-form">
+        <form class="signup-form" data-role="institution" data-next="institution-account-completed.html">
 
 
             
@@ -112,7 +113,7 @@
                 <label for="inst-name">Institution name</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-building-columns"></i>
-                    <input type="text" id="inst-name" name="institution" placeholder="e.g. Federal University of Technology" required>
+                    <input type="text" id="inst-name" name="institution" data-meta="institution_name" placeholder="e.g. Federal University of Technology" required>
                 </div>
             </div>
 
@@ -122,12 +123,12 @@
                 <label for="inst-type">Institution type</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-school"></i>
-                    <select id="inst-type" name="type" required>
+                    <select id="inst-type" name="type" data-meta="institution_type" required>
                         <option value="" disabled selected>Select type</option>
-                        <option>University (NUC)</option>
-                        <option>Polytechnic (NBTE)</option>
-                        <option>College of Education (NCCE)</option>
-                        <option>Monotechnic (NBTE)</option>
+                        <option value="university">University (NUC)</option>
+                        <option value="polytechnic">Polytechnic (NBTE)</option>
+                        <option value="college_of_education">College of Education (NCCE)</option>
+                        <option value="monotechnic">Monotechnic (NBTE)</option>
                     </select>
                 </div>
             </div>
@@ -136,7 +137,7 @@
                 <label for="inst-state">State</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" id="inst-state" name="state" placeholder="e.g. Ogun" required>
+                    <input type="text" id="inst-state" name="state" data-meta="institution_state" placeholder="e.g. Ogun" required>
                 </div>
             </div>
 
@@ -144,7 +145,7 @@
                 <label for="inst-role">Your role</label>
                 <div class="input-wrapper">
                     <i class="fa-solid fa-id-badge"></i>
-                    <select id="inst-role" name="role" required>
+                    <select id="inst-role" name="role" data-meta="contact_role" required>
                         <option value="" disabled selected>Select role</option>
                         <option>SIWES Coordinator</option>
                         <option>Industrial Training Unit staff</option>
@@ -281,8 +282,9 @@
             <!-- Create Account -->
 
             <a
-                href="institution-account-completed.html"
+                href="#"
                 class="create-button"
+                data-signup
             >
 
                 Submit for verification
@@ -337,6 +339,10 @@
     });
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
 
 </body>
 

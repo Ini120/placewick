@@ -5,16 +5,20 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Login | Placewick</title>
+    <title>Log in | Placewick</title>
 
     <meta
         name="description"
-        content="Log in to your Placewick account and continue your journey."
+        content="Log in to your Placewick account."
     >
 
     <!-- Google Font: Manrope -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -28,174 +32,148 @@
         rel="stylesheet"
     >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="login.css">
+    <!-- Font Awesome -->
 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="company-account.css"
+    >
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="auth.css">
 </head>
 
 
 <body>
 
-    <main class="login-page">
 
-        <div class="login-container">
-
-            <!-- Logo -->
-            <section class="login-top">
-
-                <a href="index.html" class="logo">
-
-                    <img
-                        src="images/placewick-LOGO.png"
-                        alt="Placewick"
-                    >
-
-                </a>
-
-            </section>
+<main class="signup-page">
 
 
-            <!-- Header -->
-            <section class="login-header">
-
-                <h1>Welcome Back</h1>
-
-                <p>
-                    Log in to your Placewick account to continue.
-                </p>
-
-            </section>
+    <div class="signup-container">
 
 
-            <!-- Login Form -->
-            <section class="login-form">
+        <!-- Logo -->
 
-                <form action="#">
+        <section class="signup-top">
 
-                    <!-- Email -->
-                    <div class="form-group">
+            <a href="index.html" class="logo">
 
-                        <label for="email">
-                            Email Address
-                        </label>
+                <img
+                    src="images/placewick-LOGO.png"
+                    alt="Placewick"
+                >
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Enter your email address"
-                            required
-                        >
+            </a>
 
-                    </div>
+        </section>
 
 
-                    <!-- Password -->
-                    <div class="form-group password-group">
 
-                        <label for="password">
-                            Password
-                        </label>
+        <section class="signup-header">
+            <h1>Welcome back</h1>
+            <p>Log in to find opportunities, manage placements and track progress.</p>
+        </section>
 
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Enter your password"
-                            required
-                        >
+        <form class="signup-form" id="login-form" novalidate>
+            <div class="form-message" role="alert"></div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required>
+                    <button type="button" class="password-toggle" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+                </div>
+            </div>
+            <div class="forgot-row"><a href="#" id="forgot">Forgot password?</a></div>
+            <a href="#" class="create-button" id="login-btn">Log in <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="divider"><span></span><p>OR</p><span></span></div>
+            <button type="button" class="google-button" data-google><span class="google-icon">G</span> Continue with Google</button>
+        </form>
+        <p class="login-text">New to Placewick? <a href="sign-up.html">Create an account</a></p>
 
-                    </div>
+    </div>
+</main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script>
+    document.querySelectorAll('.password-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+            var input = toggle.previousElementSibling, icon = toggle.querySelector('i');
+            if (!input) return;
+            var hidden = input.type === 'password';
+            input.type = hidden ? 'text' : 'password';
+            toggle.setAttribute('aria-label', hidden ? 'Hide password' : 'Show password');
+            if (icon) { icon.classList.toggle('fa-eye', !hidden); icon.classList.toggle('fa-eye-slash', hidden); }
+        });
+    });
+</script>
+<script>
+(function () {
+    var A = window.placewickAuth, form = document.getElementById('login-form');
+    var email = document.getElementById('email'), pass = document.getElementById('password'), btn = document.getElementById('login-btn');
+    form.querySelector('.form-message').style.display = 'none';
+    if (!A || !A.client) { return; }
+    var sb = A.client;
 
-                    <!-- Forgot Password -->
-                    <div class="forgot-container">
+    var qs = new URLSearchParams(location.search);
+    if (qs.get('registered')) { A.note(form, 'Account created. We have sent a confirmation link to your email. Click it, then log in here.', 'success'); }
+    else if (qs.get('confirmed')) { A.note(form, 'Email confirmed. You can log in now.', 'success'); }
+    sb.auth.getSession().then(function (r) { if (r.data && r.data.session) { A.route(); } });
+    sb.auth.onAuthStateChange(function (ev, session) { if (ev === 'SIGNED_IN' && session) { A.route(); } });
 
-                        <a
-                            class="forgot-password"
-                            href="forgot-password.html"
-                        >
-                            Forgot password?
-                        </a>
+    function login(e) {
+        if (e) { e.preventDefault(); }
+        if (!email.value.trim() || !pass.value) { A.note(form, 'Enter your email and password.'); return; }
+        A.note(form, '', 'info'); A.setBusy(btn, true, 'Logging in...');
+        sb.auth.signInWithPassword({ email: email.value.trim(), password: pass.value }).then(function (res) {
+            if (res.error) {
+                A.setBusy(btn, false);
+                var el = A.note(form, A.friendly(res.error));
+                if (/not confirmed/i.test(res.error.message || '')) {
+                    el.appendChild(document.createTextNode(' '));
+                    var a = document.createElement('a'); a.textContent = 'Resend confirmation email';
+                    a.addEventListener('click', function () {
+                        sb.auth.resend({ type: 'signup', email: email.value.trim() }).then(function () { A.note(form, 'Confirmation email sent. Check your inbox.', 'success'); });
+                    });
+                    el.appendChild(a);
+                }
+                return;
+            }
+            A.route();
+        }).catch(function (err) { A.setBusy(btn, false); A.note(form, A.friendly(err)); });
+    }
+    btn.addEventListener('click', login);
+    [email, pass].forEach(function (i) { i.addEventListener('keydown', function (e) { if (e.key === 'Enter') { login(e); } }); });
 
-                    </div>
-
-
-                    <!-- Login Button -->
-                    <button
-                        type="submit"
-                        class="login-button"
-                    >
-                        Log in
-                    </button>
-
-
-                    <!-- Divider -->
-                    <div class="divider">
-
-                        <span>or</span>
-
-                    </div>
-
-
-                    <!-- Google Login -->
-                    <button
-                        type="button"
-                        class="google-button"
-                    >
-
-                        <svg
-                            class="google-logo"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
-
-                            <path
-                                fill="#4285F4"
-                                d="M21.35 12.27c0-.71-.06-1.39-.18-2.04H12v3.86h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.21z"
-                            />
-
-                            <path
-                                fill="#34A853"
-                                d="M12 21.8c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.29v2.53A9.74 9.74 0 0 0 12 21.8z"
-                            />
-
-                            <path
-                                fill="#FBBC05"
-                                d="M6.54 13.88A5.86 5.86 0 0 1 6.23 12c0-.65.11-1.28.31-1.88V7.59H3.29A9.8 9.8 0 0 0 2.25 12c0 1.58.38 3.08 1.04 4.41l3.25-2.53z"
-                            />
-
-                            <path
-                                fill="#EA4335"
-                                d="M12 6.09c1.43 0 2.71.49 3.72 1.46l2.79-2.79C16.84 3.13 14.63 2.2 12 2.2a9.74 9.74 0 0 0-8.71 5.39l3.25 2.53C7.31 7.81 9.46 6.09 12 6.09z"
-                            />
-
-                        </svg>
-
-                        <span>Continue with Google</span>
-
-                    </button>
-
-                </form>
-
-            </section>
-
-
-            <!-- Sign Up -->
-            <p class="signup-text">
-
-                Don't have an account?
-
-                <a href="sign-up.html">
-                    Sign up
-                </a>
-
-            </p>
-
-
-        </div>
-
-    </main>
+    document.getElementById('forgot').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!email.value.trim()) { A.note(form, 'Type your email address above first, then click "Forgot password?".'); return; }
+        sb.auth.resetPasswordForEmail(email.value.trim(), { redirectTo: location.origin + '/reset-password.html' }).then(function (r) {
+            A.note(form, r.error ? A.friendly(r.error) : 'If an account exists for that email, we have sent a link to reset your password.', r.error ? 'error' : 'success');
+        });
+    });
+})();
+</script>
 
 </body>
 
