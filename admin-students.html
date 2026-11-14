@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Students | Placewick Admin</title>
+
+    <meta
+        name="description"
+        content="Placewick platform administration — verification queue, moderation and platform-wide analytics."
+    >
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="admin-dashboard.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-v2/favicon-32x32-v2.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
+    <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="admin-extra.css">
+</head>
+
+
+<body>
+
+
+<div class="dashboard-shell">
+
+
+    <!-- Mobile overlay -->
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="admin-dashboard.html">
+                <img src="images/placewick-LOGO-admin.png" alt="Placewick">
+            </a>
+            <span class="admin-mode-tag">Admin</span>
+        </div>
+
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <nav class="sidebar-nav">
+<a href="admin-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Overview </a>
+<a href="admin-institutions.html" class="sidebar-link"><i class="fa-solid fa-building-columns"></i> Institutions <span class="badge" data-badge="inst" hidden></span></a>
+<a href="admin-companies.html" class="sidebar-link"><i class="fa-solid fa-building"></i> Companies <span class="badge" data-badge="comp" hidden></span></a>
+<a href="admin-students.html" class="sidebar-link active"><i class="fa-solid fa-user-graduate"></i> Students </a>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-briefcase"></i> Postings <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-flag"></i> Reports <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-chart-line"></i> Analytics <span class="soon-tag">Soon</span></span>
+</nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar"></div>
+
+                <div class="sidebar-user-info">
+                    <h4>Admin</h4>
+                    <span>Administrator</span>
+                </div>
+
+            </div>
+
+            <a href="admin-login.html" class="sidebar-logout" id="admin-logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <div class="dashboard-main">
+
+
+        <!-- Top Header -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1>Students</h1>
+<p>Everyone who has signed up as a student.</p>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                
+
+                
+
+                <span class="header-avatar"></span>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+
+        <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
+
+<div class="panel">
+  <div class="panel-header"><h3>All Students</h3><span class="cell-muted" id="count"></span></div>
+  <div class="search-box"><input type="text" id="search" placeholder="Search by name, email or school"></div>
+  <div class="panel-body" id="list"></div>
+</div>
+</main>
+
+
+    </div>
+
+
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="admin.js"></script>
+<script>
+(function () {
+  var M = window.placewickAdmin, esc = M.esc;
+  function g(id) { return document.getElementById(id); }
+  function set(id, v) { var e = g(id); if (e) { e.textContent = v; } }
+  function cnt(table, col, val) {
+    var q = M.sb.from(table).select("id", { count: "exact", head: true });
+    if (col) { q = q.eq(col, val); }
+    return q.then(function (r) { return r.count || 0; });
+  }
+
+  var rows = [], q = "";
+  function draw() {
+    var list = rows.filter(function (r) { return !q || [r.name, r.email, r.school, r.course].join(" ").toLowerCase().indexOf(q) !== -1; });
+    set("count", rows.length + (rows.length === 1 ? " student" : " students"));
+    g("list").innerHTML = list.length ? list.slice(0, 200).map(function (r) {
+      return '<div class="verify-row"><div class="verify-logo">' + esc(M.initials(r.name)) + '</div><div class="verify-details"><div class="verify-details-top"><h4>' + esc(r.name) + '</h4>' + (r.linked ? '<span class="verify-type-badge st-verified">Linked</span>' : '') + '</div><span>' + esc([r.school, r.course, r.email].filter(Boolean).join(" · ")) + ' &middot; joined ' + M.ago(r.created_at) + '</span></div></div>';
+    }).join("") : M.empty("fa-user-graduate", "No students found", "Students appear here after they sign up.");
+  }
+  M.init().then(function () {
+    M.badges();
+    return Promise.all([M.sb.from("students").select("id,course,institution_id,institution_name_other,created_at").order("created_at", { ascending: false }), M.sb.from("profiles").select("id,full_name,email").eq("role", "student")]);
+  }).then(function (r) {
+    var names = {}; (r[1].data || []).forEach(function (p) { names[p.id] = p; });
+    rows = (r[0].data || []).map(function (s) { var p = names[s.id] || {}; return { name: p.full_name || p.email || "Student", email: p.email, school: s.institution_name_other, course: s.course, linked: !!s.institution_id, created_at: s.created_at }; });
+    draw();
+  }).catch(function (e) { console.error(e); M.fail(); });
+  g("search").addEventListener("input", function () { q = this.value.trim().toLowerCase(); draw(); });
+})();
+</script>
+
+</body>
+
+</html>
