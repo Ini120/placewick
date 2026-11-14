@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>My Profile | Placewick</title>
+    <title>Profile | Placewick</title>
 
     <meta
         name="description"
@@ -36,6 +36,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-v2/favicon-16x16-v2.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-v2/apple-touch-icon-v2.png?v=2">
     <link rel="icon" type="image/x-icon" href="favicon-v2/favicon-v2.ico?v=2">
+    <link rel="stylesheet" href="student-extra.css">
 </head>
 
 
@@ -57,60 +58,24 @@
         </button>
 
         <nav class="sidebar-nav">
-
-            <a href="applicant-dashboard.html" class="sidebar-link">
-                <i class="fa-solid fa-grid-2"></i>
-                Dashboard
-            </a>
-
-            <a href="browse-opportunities.html" class="sidebar-link">
-                <i class="fa-solid fa-compass"></i>
-                Browse Opportunities
-            </a>
-
-            <a href="applications.html" class="sidebar-link">
-                <i class="fa-solid fa-file-lines"></i>
-                My Applications
-                <span class="badge">3</span>
-            </a>
-
-            <a href="documents.html" class="sidebar-link">
-                <i class="fa-solid fa-folder-open"></i>
-                Document Vault
-            </a>
-
-            <a href="saved.html" class="sidebar-link">
-                <i class="fa-solid fa-bookmark"></i>
-                Saved
-            </a>
-
-            <a href="messages.html" class="sidebar-link">
-                <i class="fa-regular fa-comments"></i>
-                Messages
-                <span class="badge">2</span>
-            </a>
-
-            <span class="sidebar-section-label">Account</span>
-
-            <a href="profile.html" class="sidebar-link active">
-                <i class="fa-regular fa-user"></i>
-                Profile
-            </a>
-
-            <a href="settings.html" class="sidebar-link">
-                <i class="fa-solid fa-gear"></i>
-                Settings
-            </a>
-
-        </nav>
+<a href="applicant-dashboard.html" class="sidebar-link"><i class="fa-solid fa-grid-2"></i> Dashboard </a>
+<a href="browse-opportunities.html" class="sidebar-link"><i class="fa-solid fa-compass"></i> Browse Opportunities </a>
+<a href="applications.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> My Applications <span class="badge" data-badge="apps" hidden></span></a>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-folder-open"></i> Document Vault <span class="soon-tag">Soon</span></span>
+<a href="saved.html" class="sidebar-link"><i class="fa-solid fa-bookmark"></i> Saved </a>
+<span class="sidebar-link is-soon"><i class="fa-regular fa-comments"></i> Messages <span class="soon-tag">Soon</span></span>
+<span class="sidebar-section-label">Account</span>
+<a href="profile.html" class="sidebar-link active"><i class="fa-regular fa-user"></i> Profile </a>
+<span class="sidebar-link is-soon"><i class="fa-solid fa-gear"></i> Settings <span class="soon-tag">Soon</span></span>
+</nav>
 
         <div class="sidebar-footer">
 
             <div class="sidebar-user">
-                <div class="sidebar-avatar">AO</div>
+                <div class="sidebar-avatar"></div>
                 <div class="sidebar-user-info">
-                    <h4>Ada Okafor</h4>
-                    <span>University of Lagos</span>
+                    <h4>Student</h4>
+                    <span></span>
                 </div>
             </div>
 
@@ -135,20 +100,17 @@
                 </button>
 
                 <div>
-                    <h1>My Profile</h1>
-                    <p>This is what companies see when you apply.</p>
+                    <h1>Profile</h1>
+<p>Keep your details up to date so companies can find you.</p>
                 </div>
 
             </div>
 
             <div class="dashboard-header-right">
 
-                <button type="button" class="icon-button" aria-label="Notifications">
-                    <i class="fa-regular fa-bell"></i>
-                    <span class="dot"></span>
-                </button>
+                
 
-                <a href="profile.html" class="header-avatar">AO</a>
+                <a href="profile.html" class="header-avatar"></a>
 
             </div>
 
@@ -156,164 +118,124 @@
 
 
         <main class="dashboard-content">
+<div class="page-error" id="page-error" hidden></div>
 
-            <div class="profile-banner-card">
-
-                <div class="profile-banner-left">
-                    <div class="profile-avatar-large">AO</div>
-                    <div>
-                        <h2>Ada Okafor</h2>
-                        <p>Computer Science &middot; University of Lagos &middot; Class of 2027</p>
-                        <div class="profile-completeness">
-                            <div class="profile-completeness-bar">
-                                <div class="profile-completeness-fill" style="width: 80%;"></div>
-                            </div>
-                            <span>Profile 80% complete</span>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="button" class="profile-btn profile-btn-outline profile-preview-button">
-                    <i class="fa-regular fa-eye"></i>
-                    Preview as company
-                </button>
-
-            </div>
-
-            <form id="profile-form">
-
-                <div class="panel profile-panel">
-
-                    <h3 class="profile-panel-title">Basic information</h3>
-
-                    <div class="profile-field-grid">
-
-                        <label class="profile-field">
-                            <span>Full name</span>
-                            <input type="text" name="fullName" value="Ada Okafor">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Email</span>
-                            <input type="email" name="email" value="ada.okafor@unilag.edu.ng">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Phone number</span>
-                            <input type="tel" name="phone" value="+234 802 345 6789">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Location</span>
-                            <input type="text" name="location" value="Lagos, Nigeria">
-                        </label>
-
-                    </div>
-
-                </div>
-
-                <div class="panel profile-panel">
-
-                    <h3 class="profile-panel-title">Education</h3>
-
-                    <div class="profile-field-grid">
-
-                        <label class="profile-field">
-                            <span>School</span>
-                            <input type="text" name="school" value="University of Lagos">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Field of study</span>
-                            <input type="text" name="field" value="Computer Science">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Level / year</span>
-                            <select name="level">
-                                <option>100 Level</option>
-                                <option>200 Level</option>
-                                <option>300 Level</option>
-                                <option selected>400 Level</option>
-                                <option>Graduate</option>
-                            </select>
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Expected graduation</span>
-                            <input type="text" name="graduation" value="July 2027">
-                        </label>
-
-                    </div>
-
-                </div>
-
-                <div class="panel profile-panel">
-
-                    <h3 class="profile-panel-title">About</h3>
-
-                    <label class="profile-field profile-field-full">
-                        <span>Short bio</span>
-                        <textarea name="bio" rows="4">Final-year Computer Science student passionate about frontend engineering and product design. I've built two personal projects with React and love working in fast-moving teams.</textarea>
-                    </label>
-
-                </div>
-
-                <div class="panel profile-panel">
-
-                    <h3 class="profile-panel-title">Skills</h3>
-
-                    <div class="profile-skills" id="profile-skills">
-                        <span class="profile-skill-tag">JavaScript <button type="button" aria-label="Remove skill">&times;</button></span>
-                        <span class="profile-skill-tag">React <button type="button" aria-label="Remove skill">&times;</button></span>
-                        <span class="profile-skill-tag">UI/UX Design <button type="button" aria-label="Remove skill">&times;</button></span>
-                        <span class="profile-skill-tag">Python <button type="button" aria-label="Remove skill">&times;</button></span>
-                        <span class="profile-skill-tag">SQL <button type="button" aria-label="Remove skill">&times;</button></span>
-                    </div>
-
-                    <div class="profile-skill-add">
-                        <input type="text" id="profile-skill-input" placeholder="Add a skill and press Enter">
-                    </div>
-
-                </div>
-
-                <div class="panel profile-panel">
-
-                    <h3 class="profile-panel-title">Links</h3>
-
-                    <div class="profile-field-grid">
-
-                        <label class="profile-field">
-                            <span>LinkedIn</span>
-                            <input type="url" name="linkedin" value="https://linkedin.com/in/ada-okafor">
-                        </label>
-
-                        <label class="profile-field">
-                            <span>Portfolio / GitHub</span>
-                            <input type="url" name="portfolio" value="https://github.com/adaokafor">
-                        </label>
-
-                    </div>
-
-                </div>
-
-                <div class="profile-form-actions">
-                    <span class="profile-save-status" id="profile-save-status"></span>
-                    <button type="submit" class="profile-btn profile-btn-filled">Save changes</button>
-                </div>
-
-            </form>
-
-        </main>
+<div class="profile-banner-card">
+  <div class="profile-banner-left">
+    <div class="profile-avatar-large" id="pb-avatar"></div>
+    <div>
+      <h2 id="pb-name"></h2>
+      <p id="pb-sub"></p>
+      <div class="profile-completeness"><div class="profile-completeness-bar"><div class="profile-completeness-fill" id="pb-fill" style="width:0%"></div></div><span id="pb-pct">Profile 0% complete</span></div>
+    </div>
+  </div>
+</div>
+<form id="profile-form" novalidate>
+  <div class="panel profile-panel"><h3 class="profile-panel-title">Basic information</h3>
+    <div class="profile-field-grid">
+      <label class="profile-field"><span>Full name</span><input type="text" name="fullName" id="f-fullName" value=""></label>
+      <label class="profile-field"><span>Email</span><input type="email" id="f-email" disabled></label>
+      <label class="profile-field"><span>Phone number</span><input type="tel" name="phone" id="f-phone" value=""></label>
+      <label class="profile-field"><span>Preferred location</span><input type="text" name="location" id="f-location" value=""></label>
+    </div>
+  </div>
+  <div class="panel profile-panel"><h3 class="profile-panel-title">Education</h3>
+    <div class="profile-field-grid">
+      <label class="profile-field"><span>School</span><input type="text" name="school" id="f-school" value=""></label>
+      <label class="profile-field"><span>Matric number</span><input type="text" name="matric" id="f-matric" value=""></label>
+      <label class="profile-field"><span>Department</span><input type="text" name="department" id="f-department" value=""></label>
+      <label class="profile-field"><span>Course of study</span><input type="text" name="course" id="f-course" value=""></label>
+      <label class="profile-field"><span>Level</span><select id="f-level"><option value="">Select level</option><option>ND1</option><option>ND2</option><option>HND1</option><option>HND2</option><option>100 Level</option><option>200 Level</option><option>300 Level</option><option>400 Level</option><option>500 Level</option><option>Graduate</option></select></label>
+      <label class="profile-field"><span>Expected graduation year</span><input type="text" name="graduation" id="f-graduation" value=""></label>
+    </div>
+  </div>
+  <div class="panel profile-panel"><h3 class="profile-panel-title">About</h3>
+    <label class="profile-field profile-field-full"><span>Short bio</span><textarea id="f-bio" rows="4" maxlength="800" placeholder="Tell companies a little about yourself."></textarea></label>
+  </div>
+  <div class="panel profile-panel"><h3 class="profile-panel-title">Skills</h3>
+    <div class="profile-skills" id="profile-skills"></div>
+    <div class="profile-skill-add"><input type="text" id="profile-skill-input" placeholder="Add a skill and press Enter"></div>
+  </div>
+  <div class="panel profile-panel"><h3 class="profile-panel-title">Links</h3>
+    <div class="profile-field-grid">
+      <label class="profile-field"><span>LinkedIn</span><input type="url" name="linkedin" id="f-linkedin" value=""></label>
+      <label class="profile-field"><span>Portfolio / GitHub</span><input type="url" name="portfolio" id="f-portfolio" value=""></label>
+    </div>
+  </div>
+  <div class="profile-form-actions"><span class="profile-save-status" id="profile-save-status"></span><button type="submit" class="profile-btn profile-btn-filled" id="save-btn">Save changes</button></div>
+</form>
+</main>
 
     </div>
 
 </div>
 
 
-<script src="applicant-dashboard.js"></script>
-<script src="profile.js"></script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="auth.js"></script>
+<script src="applicant-dashboard.js"></script>
+<script src="student.js"></script>
+<script>
+
+(function () {
+  var S = window.placewickStudent, sb = S.sb, esc = S.esc, skills = [];
+  function g(id) { return document.getElementById(id); }
+  function pct() {
+    var items = [!!g("f-fullName").value.trim(), !!(g("f-course").value.trim() && g("f-school").value.trim()), skills.length > 0, !!g("f-location").value.trim(), !!g("f-bio").value.trim()];
+    return Math.round(items.filter(Boolean).length / items.length * 100);
+  }
+  function banner() {
+    var n = g("f-fullName").value.trim() || S.profile.email;
+    g("pb-avatar").textContent = S.initials(n);
+    g("pb-name").textContent = n;
+    g("pb-sub").textContent = [g("f-course").value.trim(), g("f-school").value.trim(), g("f-level").value].filter(Boolean).join(" \u00b7 ") || "Complete your profile to stand out";
+    var p = pct(); g("pb-fill").style.width = p + "%"; g("pb-pct").textContent = "Profile " + p + "% complete";
+  }
+  function tags() {
+    g("profile-skills").innerHTML = skills.map(function (s, i) { return '<span class="profile-skill-tag">' + esc(s) + ' <button type="button" aria-label="Remove skill" data-i="' + i + '">&times;</button></span>'; }).join("");
+  }
+  S.init().then(function (st) {
+    S.badges();
+    g("f-fullName").value = S.profile.full_name || ""; g("f-email").value = S.profile.email || ""; g("f-phone").value = S.profile.phone || "";
+    g("f-location").value = st.location_pref || ""; g("f-school").value = st.institution_name_other || ""; g("f-matric").value = st.matric_no || "";
+    g("f-department").value = st.department || ""; g("f-course").value = st.course || ""; g("f-level").value = st.level || "";
+    g("f-graduation").value = st.graduation_year || ""; g("f-bio").value = st.bio || ""; g("f-linkedin").value = st.linkedin || ""; g("f-portfolio").value = st.portfolio || "";
+    skills = (st.skills || []).slice(); tags(); banner();
+  }).catch(function () { S.fail(); });
+  g("profile-form").addEventListener("input", banner);
+  g("profile-skills").addEventListener("click", function (e) { var b = e.target.closest("button[data-i]"); if (b) { skills.splice(+b.dataset.i, 1); tags(); banner(); } });
+  g("profile-skill-input").addEventListener("keydown", function (e) {
+    if (e.key !== "Enter") { return; }
+    e.preventDefault();
+    var v = this.value.trim();
+    if (v && skills.map(function (x) { return x.toLowerCase(); }).indexOf(v.toLowerCase()) === -1) { skills.push(v); tags(); banner(); }
+    this.value = "";
+  });
+  g("profile-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var btn = g("save-btn"), status = g("profile-save-status"), uid = S.user.id;
+    function v(id) { return g(id).value.trim() || null; }
+    btn.disabled = true; status.textContent = "Saving...";
+    Promise.all([
+      sb.from("profiles").update({ full_name: v("f-fullName"), phone: v("f-phone") }).eq("id", uid),
+      sb.from("students").update({
+        location_pref: v("f-location"), institution_name_other: v("f-school"), matric_no: v("f-matric"), department: v("f-department"),
+        course: v("f-course"), level: v("f-level"), graduation_year: v("f-graduation"), bio: v("f-bio"), skills: skills,
+        linkedin: v("f-linkedin"), portfolio: v("f-portfolio")
+      }).eq("id", uid)
+    ]).then(function (r) {
+      btn.disabled = false;
+      if (r[0].error || r[1].error) { status.textContent = "Could not save. Please try again."; return; }
+      status.textContent = "Saved"; S.toast("Profile saved");
+      document.querySelectorAll(".sidebar-user-info h4").forEach(function (x) { x.textContent = v("f-fullName") || S.profile.email; });
+      setTimeout(function () { status.textContent = ""; }, 2500);
+    });
+  });
+})();
+</script>
 </body>
 
 </html>
